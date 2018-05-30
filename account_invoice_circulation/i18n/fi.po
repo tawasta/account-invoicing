@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-30 09:35+0000\n"
-"PO-Revision-Date: 2018-05-30 14:10+0300\n"
+"PO-Revision-Date: 2018-05-30 14:41+0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,13 +21,13 @@ msgstr ""
 #: code:addons/account_invoice_circulation/models/account_invoice.py:32
 #, python-format
 msgid "%s has approved this invoice"
-msgstr "%s on hyväksynyt tämän laskun"
+msgstr "%s on tarkistanut tämän laskun"
 
 #. module: account_invoice_circulation
 #: code:addons/account_invoice_circulation/models/account_invoice.py:27
 #, python-format
 msgid "%s or a manager should approve the invoice first"
-msgstr "%s tai päällikkö voi hyväksyä laskun"
+msgstr "%s tai päällikkö voi tarkistaa laskun"
 
 #. module: account_invoice_circulation
 #: code:addons/account_invoice_circulation/models/account_invoice.py:44
@@ -38,22 +38,22 @@ msgstr "Kaikki hyväksyjät ovat hyväksyneet tämän laskun"
 #. module: account_invoice_circulation
 #: model:ir.ui.view,arch_db:account_invoice_circulation.invoice_supplier_form
 msgid "Approve"
-msgstr "Hyväksy"
+msgstr "Tarkista"
 
 #. module: account_invoice_circulation
 #: model:ir.model.fields,field_description:account_invoice_circulation.field_account_invoice_invoice_approved
 msgid "Approved"
-msgstr "Hyväksytty"
+msgstr "Tarkistettu"
 
 #. module: account_invoice_circulation
 #: model:ir.model.fields,field_description:account_invoice_circulation.field_account_invoice_circulation_line_user_id
 msgid "Approver"
-msgstr "Hyväksyjä"
+msgstr "Tarkistaja"
 
 #. module: account_invoice_circulation
 #: model:ir.model.fields,field_description:account_invoice_circulation.field_account_invoice_circulation_circulation_line_ids
 msgid "Approvers"
-msgstr "Hyväksyjät"
+msgstr "Tarkistajat"
 
 #. module: account_invoice_circulation
 #: model:ir.model.fields,field_description:account_invoice_circulation.field_account_invoice_account_invoice_circulation_id
@@ -131,7 +131,7 @@ msgstr "Järjestys"
 #. module: account_invoice_circulation
 #: model:ir.model.fields,field_description:account_invoice_circulation.field_account_invoice_circulation_user_id
 msgid "Validator"
-msgstr "Vahvistaja"
+msgstr "Hyväksyjä"
 
 #. module: account_invoice_circulation
 #: model:ir.model,name:account_invoice_circulation.model_account_invoice_circulation
