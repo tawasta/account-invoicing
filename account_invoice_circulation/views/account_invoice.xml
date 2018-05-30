@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="invoice_supplier_form" model="ir.ui.view">
+        <field name="name">account.invoice.supplier.circulation.form</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_supplier_form"/>
+        <field name="arch" type="xml">
+
+            <button name="action_invoice_open" position="attributes">
+                <attribute name="states"></attribute>
+                <attribute name="attrs">{'invisible': ['|',('state', 'not in', ['draft', 'proforma2']), ('invoice_approved', '=', False)]}</attribute>
+            </button>
+
+            <button name="action_invoice_open" position="after">
+                <button name="action_invoice_approve"
+                        type="object"
+                        groups="account.group_account_invoice"
+                        string="Approve"
+                        class="oe_highlight"
+                        attrs="{'invisible': [('invoice_approved', '=', True)]}"/>
+            </button>
+
+            <field name="currency_id" position="after">
+                <field name="invoice_approved"/>
+                <field name="account_invoice_circulation_id" groups="account.group_account_manager"/>
+            </field>
+
+        </field>
+    </record>
+</odoo>
