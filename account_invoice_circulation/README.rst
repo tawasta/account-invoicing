@@ -11,7 +11,7 @@ Adds invoice circulation for vendor invoices
 Configuration
 =============
 
-/-
+\-
 
 Usage
 =====
