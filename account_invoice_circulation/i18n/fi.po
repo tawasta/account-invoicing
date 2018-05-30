@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-30 09:35+0000\n"
-"PO-Revision-Date: 2018-05-30 12:37+0300\n"
+"PO-Revision-Date: 2018-05-30 14:10+0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -59,12 +59,12 @@ msgstr "Hyväksyjät"
 #: model:ir.model.fields,field_description:account_invoice_circulation.field_account_invoice_account_invoice_circulation_id
 #: model:ir.model.fields,field_description:account_invoice_circulation.field_procountor_account_invoice_account_invoice_circulation_id
 msgid "Circulation"
-msgstr "Kierto"
+msgstr "Laskun kierto"
 
 #. module: account_invoice_circulation
 #: model:ir.model.fields,field_description:account_invoice_circulation.field_account_invoice_circulation_line_circulation_id
 msgid "Circulation id"
-msgstr "Kierron id"
+msgstr "Laskun kierron id"
 
 #. module: account_invoice_circulation
 #: model:ir.model.fields,field_description:account_invoice_circulation.field_account_invoice_circulation_create_uid
