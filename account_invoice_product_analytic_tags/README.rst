@@ -6,7 +6,7 @@
 Product analytic tags on invoice lines
 ======================================
 
-Adds invoice lines analytic tags from products
+Adds invoice line analytic tags from products
 
 Configuration
 =============

@@ -6,7 +6,7 @@
 Analytic account analytic tags on invoice lines
 ===============================================
 
-Adds invoice lines analytic tags from analytic account
+Adds invoice line analytic tags from analytic account
 
 Configuration
 =============
