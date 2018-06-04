@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import api, fields, models
+from odoo import api, models
 
 
 class AccountInvoiceLine(models.Model):
@@ -10,4 +10,5 @@ class AccountInvoiceLine(models.Model):
     def onchange_product_id_update_analytic_tags(self):
         for record in self:
             if record.product_id and record.product_id.get_analytic_tags():
-                record.analytic_tag_ids = record.product_id.get_analytic_tags()
+                record.analytic_tag_ids += \
+                    record.product_id.get_analytic_tags()
