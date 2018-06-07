@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2017 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
+#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,7 +20,7 @@
 ##############################################################################
 
 {
-    'name': 'Sale Order Promised Delivery Date Range',
+    'name': 'Invoice Promised Delivery Date Range',
     'summary': 'Adds new fields for storing date range of promised delivery',
     'version': '10.0.1.0.0',
     'category': 'Sales',
