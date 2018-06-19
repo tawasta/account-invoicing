@@ -10,13 +10,15 @@
                 <button name="action_create_sale_order"
                         type="object"
                         string="Create sale"
-                        attrs="{'invisible': [('sale_order_id', '!=', False)]}"
+                        groups="sales_team.group_sale_salesman"
                 />
             </button>
 
-            <field name="date_invoice" position="after">
-                <field name="sale_order_id" />
-            </field>
+            <notebook position="inside">
+                <page name="sale_orders" string="Sale orders" groups="sales_team.group_sale_salesman" attrs="{'invisible': [('sale_order_ids', '=', [])]}">
+                    <field name="sale_order_ids" />
+                </page>
+            </notebook>
 
         </field>
     </record>

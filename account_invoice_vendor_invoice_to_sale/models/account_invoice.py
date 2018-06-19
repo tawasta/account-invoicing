@@ -7,17 +7,15 @@ class AccountInvoice(models.Model):
 
     _inherit = 'account.invoice'
 
-    sale_order_id = fields.Many2one(
-        string='Related sale',
+    sale_order_ids = fields.One2many(
+        string='Related sales',
         comodel_name='sale.order',
+        inverse_name='origin_invoice_id',
         copy=False,
     )
 
     def action_create_sale_order(self):
         self.ensure_one()
-
-        if self.sale_order_id:
-            raise UserError(_('A sale order already exists'))
 
         return {
             'type': 'ir.actions.act_window',
@@ -26,6 +24,6 @@ class AccountInvoice(models.Model):
             'target': 'new',
             'context': {
                 'default_origin': self.number,
-                'default_origin_invoice_ids': [(6, 0, [self.id])],
+                'default_origin_invoice_id': self.id,
             },
         }
