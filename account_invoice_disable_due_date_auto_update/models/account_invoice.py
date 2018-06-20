@@ -1,0 +1,26 @@
+# -*- coding: utf-8 -*-
+from odoo import api, fields, models, _
+
+
+class AccountInvoice(models.Model):
+
+    _inherit = 'account.invoice'
+
+    def _onchange_payment_term_date_invoice(self):
+        # Override payment term onchange to prefer preset due date
+
+        override_due_date = False
+
+        # Store the due date
+        if self.type in ['in_invoice', 'in_refund'] and self.date_due:
+            override_due_date = True
+
+        if override_due_date:
+            date_due = self.date_due
+
+        # Run the normal onchange
+        res = super(AccountInvoice, self)._onchange_payment_term_date_invoice()
+
+        # Restore the overwritten due date
+        if override_due_date:
+            self.date_due = date_due
