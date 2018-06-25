@@ -22,7 +22,7 @@
 {
     'name': 'Create Sale order from vendor invoice',
     'summary': 'Adds a wizard for creating a SO from vendor invoice',
-    'version': '10.0.1.1.0',
+    'version': '10.0.1.1.1',
     'category': 'Accounting',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -39,6 +39,7 @@
     ],
     'data': [
         'views/account_invoice_form.xml',
+        'views/sale_order.xml',
     ],
     'demo': [
     ],
