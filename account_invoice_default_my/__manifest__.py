@@ -22,7 +22,7 @@
 {
     'name': 'Show my invoices by default',
     'summary': 'Show invoices by default',
-    'category': 'Purchase',
+    'category': 'Invoicing',
     'version': '10.0.1.0.0',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
