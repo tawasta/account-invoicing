@@ -12,14 +12,14 @@ class AccountInvoice(models.Model):
         override_due_date = False
 
         # Store the due date
-        if self.type in ['in_invoice', 'in_refund'] and self.date_due:
+        if self.date_due:
             override_due_date = True
 
         if override_due_date:
             date_due = self.date_due
 
         # Run the normal onchange
-        res = super(AccountInvoice, self)._onchange_payment_term_date_invoice()
+        super(AccountInvoice, self)._onchange_payment_term_date_invoice()
 
         # Restore the overwritten due date
         if override_due_date:
