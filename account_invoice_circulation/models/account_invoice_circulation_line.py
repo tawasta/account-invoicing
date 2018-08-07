@@ -5,7 +5,7 @@ from odoo import api, fields, models
 class AccountInvoiceCirculationLine(models.Model):
 
     _name = 'account.invoice.circulation.line'
-    order = 'sequence'
+    _order = 'sequence'
 
     circulation_id = fields.Many2one(
         comodel_name='account.invoice.circulation',

@@ -2,6 +2,7 @@
 from odoo import api, fields, models, _
 from odoo.exceptions import UserError
 
+
 class AccountInvoice(models.Model):
 
     _inherit = 'account.invoice'
@@ -32,10 +33,10 @@ class AccountInvoice(models.Model):
             msg = _('%s has approved this invoice' % current_user.name)
             record.sudo().message_post(msg)
 
-            circulation =  record.account_invoice_circulation_id
+            circulation = record.account_invoice_circulation_id
             lines = circulation.circulation_line_ids
 
-            current_line = lines.filtered(lambda r: current_user == r.user_id)
+            current_line = lines.filtered(lambda r: self.user_id == r.user_id)
             next_lines = lines.filtered(
                 lambda r: current_line.sequence < r.sequence
             )

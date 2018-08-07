@@ -22,3 +22,32 @@ class AccountInvoiceCirculation(models.Model):
         inverse_name='circulation_id',
         string='Approvers',
     )
+
+    @api.model
+    def create(self, values):
+        res = super(AccountInvoiceCirculation, self).create(values)
+
+        res._update_line_sequence()
+
+        return res
+
+    @api.multi
+    def write(self, values):
+        res = super(AccountInvoiceCirculation, self).write(values)
+
+        self._update_line_sequence()
+
+        return res
+
+    def _update_line_sequence(self):
+        for record in self:
+            # Check if the sequences aren't set
+            sequences = record.circulation_line_ids.mapped('sequence')
+
+            if len(sequences) == len(set(sequences)):
+                # No duplicates. Don't do anything
+                continue
+
+            # Sequences are ambiguous or not set. Recalculate them
+            for index, line in enumerate(record.circulation_line_ids):
+                line.sequence = index
