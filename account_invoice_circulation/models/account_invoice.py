@@ -19,6 +19,7 @@ class AccountInvoice(models.Model):
     )
 
     def action_invoice_approve(self):
+
         current_user = self.env.user
 
         for record in self:
@@ -36,7 +37,9 @@ class AccountInvoice(models.Model):
             circulation = record.account_invoice_circulation_id
             lines = circulation.circulation_line_ids
 
-            current_line = lines.filtered(lambda r: self.user_id == r.user_id)
+            current_line = lines.filtered(
+                lambda r: record.user_id == r.user_id
+            )
             next_lines = lines.filtered(
                 lambda r: current_line.sequence < r.sequence
             )

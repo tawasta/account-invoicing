@@ -3,3 +3,5 @@
 "manager_invoice_circulation_line","manager_invoice_circulation_line","model_account_invoice_circulation_line","account.group_account_manager",1,1,1,1
 "billing_invoice_circulation","billing_invoice_circulation","model_account_invoice_circulation","account.group_account_invoice",1,0,0,0
 "billing_invoice_circulation_line","billing_invoice_circulation_line","model_account_invoice_circulation_line","account.group_account_invoice",1,0,0,0
+"approver_invoice_circulation","approver_invoice_circulation","model_account_invoice_circulation","account.group_invoice_approver",1,0,0,0
+"approver_invoice_circulation_line","approver_invoice_circulation_line","model_account_invoice_circulation_line","account.group_invoice_approver",1,0,0,0
