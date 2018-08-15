@@ -21,8 +21,8 @@
 
 {
     'name': 'Separate Invoice Address for Invoices',
-    'summary': "Separates partner and invoice address fields",
-    'version': '10.0.1.1.0',
+    'summary': 'Separates partner and invoice address fields',
+    'version': '10.0.1.2.0',
     'category': 'Invoicing',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
