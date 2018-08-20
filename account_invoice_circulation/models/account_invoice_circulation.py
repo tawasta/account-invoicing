@@ -23,6 +23,10 @@ class AccountInvoiceCirculation(models.Model):
         string='Approvers',
     )
 
+    active = fields.Boolean(
+        default=True,
+    )
+
     @api.model
     def create(self, values):
         res = super(AccountInvoiceCirculation, self).create(values)
