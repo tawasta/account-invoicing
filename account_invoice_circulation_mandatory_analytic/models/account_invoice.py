@@ -8,7 +8,6 @@ class AccountInvoice(models.Model):
     _inherit = 'account.invoice'
 
     def action_invoice_approve(self):
-        print "ovrride"
         if not all(line.account_analytic_id for line in self.invoice_line_ids):
             msg = \
                 _('Please add analytic accounts to all lines before approving')
