@@ -9,7 +9,7 @@ class AccountInvoice(models.Model):
 
     invoice_approved = fields.Boolean(
         string='Approved',
-        default=True,
+        default=False,
         readonly=True,
     )
 
