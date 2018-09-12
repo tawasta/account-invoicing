@@ -17,7 +17,7 @@
                         groups="account.group_account_invoice,account.group_invoice_approver"
                         string="Approve"
                         class="oe_highlight"
-                        attrs="{'invisible': [('invoice_approved', '=', True)]}"/>
+                        attrs="{'invisible': ['|',('invoice_approved', '=', True),('account_invoice_circulation_id', '=', False)]}"/>
             </button>
 
             <field name="currency_id" position="after">
