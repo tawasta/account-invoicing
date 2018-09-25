@@ -22,7 +22,7 @@
 
             <field name="currency_id" position="after">
                 <field name="invoice_approved"/>
-                <field name="account_invoice_circulation_id" groups="account.group_account_manager"/>
+                <field name="account_invoice_circulation_id" groups="account.group_account_manager,account.group_invoice_approver"/>
             </field>
 
         </field>
