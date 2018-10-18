@@ -10,6 +10,7 @@ addon | version | summary
 [account_invoice_circulation](account_invoice_circulation/) | 10.0.1.6.1 | Adds invoice circulation for vendor invoices
 [account_invoice_circulation_mandatory_analytic](account_invoice_circulation_mandatory_analytic/) | 10.0.1.0.0 | Analytic account info is required on invoice lines
 [account_invoice_client_order_ref](account_invoice_client_order_ref/) | 10.0.1.0.0 | Pass SO core reference field's contents to invoice
+[account_invoice_commission](account_invoice_commission/) | 10.0.1.0.0 | Add a commission field to the Invoice
 [account_invoice_default_my](account_invoice_default_my/) | 10.0.1.0.0 | Show invoices by default
 [account_invoice_default_parent](account_invoice_default_parent/) | 10.0.1.0.0 | Default parent for new shipping addresses
 [account_invoice_disable_due_date_auto_update](account_invoice_disable_due_date_auto_update/) | 10.0.1.1.0 | Disable due date auto update on invoices
