@@ -10,4 +10,14 @@
       </field>
       </field>
   </record>
+
+  <record id="invoice_supplier_form_inherited_search" model="ir.ui.view">
+    <field name="model">account.invoice</field>
+    <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+    <field name="arch" type="xml">
+        <filter name="refunds" position="after">
+            <filter name="commission_paid" string="Commission paid" domain="[('commission_paid','ilike',self)]"/>
+        </filter>
+    </field>
+</record>
 </odoo>
