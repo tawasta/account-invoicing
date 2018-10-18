@@ -17,7 +17,7 @@
     <field name="arch" type="xml">
         <filter name="refunds" position="after">
           <separator />
-            <filter name="commission_paid" string="Commission paid" domain="[('commission_paid','ilike',self)]"/>
+            <filter name="commission_paid" string="Commission paid" filter_domain="[('commission_paid','=',True)]"/>
             <separator />
         </filter>
     </field>
