@@ -20,9 +20,9 @@
 ##############################################################################
 
 {
-    'name': 'account_invoice_commission',
+    'name': 'Account invoice commission',
     'summary': 'account_invoice_commission',
-    'version': '10.0.1.0.0',
+    'version': '10.0.1.0.1',
     'category': 'Invoicing',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -40,10 +40,9 @@
     ],
     'data': [
         'views/account_invoice_commission.xml',
-        'views/account_invoice_commission_search.xml',
     ],
     'images': [
-        'static/description/cover.png'
+        'static/description/icon.png'
     ],
     'demo': [
     ],
