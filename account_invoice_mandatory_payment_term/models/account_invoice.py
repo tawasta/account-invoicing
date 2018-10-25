@@ -15,4 +15,7 @@ class AccountInvoice(models.Model):
 
     def _check_invoice_payment_term(self):
         for record in self:
-            raise UserError(_('Please set a payment term before validating'))
+            if not record.payment_term_id:
+                raise UserError(
+                    _('Please set a payment term before validating')
+                )
