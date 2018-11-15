@@ -33,6 +33,8 @@ addon | version | summary
 [account_invoice_partner_quick_insert](account_invoice_partner_quick_insert/) | 10.0.1.0.0 | Partner address fields as editable on invoice
 [account_invoice_partner_strict](account_invoice_partner_strict/) | 10.0.1.1.0 | Only allow correct type and parent for invoice addresses
 [account_invoice_promised_delivery_range](account_invoice_promised_delivery_range/) | 10.0.1.0.0 | Adds new fields for storing date range of promised delivery
+[account_invoice_transmit_method_einvoice](account_invoice_transmit_method_einvoice/) | 10.0.1.0.0 | Add einvoice transmit method
+[account_invoice_transmit_type_translatable](account_invoice_transmit_type_translatable/) | 10.0.1.0.0 | Add translations to transmit methods
 [account_invoice_vendor_invoice_to_sale](account_invoice_vendor_invoice_to_sale/) | 10.0.1.1.2 | Adds a wizard for creating a SO from vendor invoice
 [account_invoice_vendor_invoice_tree_untaxed](account_invoice_vendor_invoice_tree_untaxed/) | 10.0.1.0.0 | Show untaxed amount in the list of vendor invoices
 [account_refund_form_total_string](account_refund_form_total_string/) | 10.0.1.0.0 | The string better indicates a refund
