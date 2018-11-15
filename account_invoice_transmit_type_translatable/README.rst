@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-========================
-einvoice transmit method
-========================
+============================
+Transmit Method Translations
+============================
 
-Add einvoice transmit method
+Add translations to transmit methods.
 
 Configuration
 =============
@@ -26,7 +26,7 @@ Credits
 Contributors
 ------------
 
-* Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
+* Aleksi Savijoki <aleksi.savijoki@tawasta.fi>
 
 Maintainer
 ----------
