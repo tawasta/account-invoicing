@@ -19,7 +19,7 @@ addon | version | summary
 [account_invoice_invoice_address_defaults](account_invoice_invoice_address_defaults/) | 10.0.1.1.0 | Change invoice defaults to be fetched from invoicing partner
 [account_invoice_line_margin_percent](account_invoice_line_margin_percent/) | 10.0.1.0.0 | Adds margins (percent) in Invoice lines
 [account_invoice_mandatory_payment_term](account_invoice_mandatory_payment_term/) | 10.0.1.2.0 | Set invoice payment term as mandatory
-[account_invoice_margin](account_invoice_margin/) | 10.0.1.0.0 | Margin functionality for invoices
+[account_invoice_margin](account_invoice_margin/) | 10.0.1.4.0 | Margin functionality for invoices
 [account_invoice_margin_from_sale](account_invoice_margin_from_sale/) | 10.0.1.0.0 | Pass margin data from sale to invoice
 [account_invoice_margin_ignore](account_invoice_margin_ignore/) | 10.0.1.0.0 | Ignore products when calculating invoice margins
 [account_invoice_margin_in_tree](account_invoice_margin_in_tree/) | 10.0.1.0.0 | Show the margin field in invoice list
