@@ -25,6 +25,6 @@ class AccountInvoiceReport(models.Model):
     def _sub_select(self):
         select_str = super(AccountInvoiceReport, self)._sub_select()
 
-        select_str += ',SUM(ail.margin * invoice_type.sign) AS margin'
+        select_str += ',SUM(ail.margin) AS margin'
 
         return select_str
