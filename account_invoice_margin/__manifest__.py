@@ -22,7 +22,7 @@
 {
     'name': 'Margins in Customer Invoices',
     'summary': "Margin functionality for invoices",
-    'version': '10.0.1.2.0',
+    'version': '10.0.1.3.0',
     'category': 'Invoicing',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
