@@ -41,4 +41,11 @@ addon | version | summary
 [account_refund_form_total_string](account_refund_form_total_string/) | 10.0.1.0.0 | The string better indicates a refund
 [account_refund_line_negative_warning](account_refund_line_negative_warning/) | 10.0.1.0.0 | Show a warning when trying to add negative lines to a refund
 
+
+Unported addons
+---------------
+addon | version | summary
+--- | --- | ---
+[account_invoice_review](account_invoice_review/) | 10.0.0.1.0 (unported) | Allows marking invoices as reviewed
+
 [//]: # (end addons)
