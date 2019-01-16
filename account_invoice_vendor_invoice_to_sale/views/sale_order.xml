@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
 
             <field name="payment_term_id" position="after">
-                <field name="origin_invoice_id" attrs="{'invisible': [('origin_invoice_id', '=', False)]}"/>
+                <field name="origin_invoice_id" />
             </field>
 
         </field>

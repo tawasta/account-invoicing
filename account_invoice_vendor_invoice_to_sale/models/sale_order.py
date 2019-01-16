@@ -10,5 +10,5 @@ class SaleOrder(models.Model):
         string='Origin invoice',
         comodel_name='account.invoice',
         copy=False,
-        readonly=True,
+        readonly=False,
     )
