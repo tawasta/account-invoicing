@@ -37,7 +37,7 @@ addon | version | summary
 [account_invoice_refund_preserve_analytic_tags](account_invoice_refund_preserve_analytic_tags/) | 10.0.1.0.0 | Preserve analytic tags for refunds
 [account_invoice_transmit_method_einvoice](account_invoice_transmit_method_einvoice/) | 10.0.1.0.0 | Add einvoice transmit method
 [account_invoice_transmit_type_translatable](account_invoice_transmit_type_translatable/) | 10.0.1.0.0 | Add translations to transmit methods
-[account_invoice_vendor_invoice_to_sale](account_invoice_vendor_invoice_to_sale/) | 10.0.1.1.2 | Adds a wizard for creating a SO from vendor invoice
+[account_invoice_vendor_invoice_to_sale](account_invoice_vendor_invoice_to_sale/) | 10.0.1.2.1 | Adds a wizard for creating a SO from vendor invoice
 [account_invoice_vendor_invoice_tree_untaxed](account_invoice_vendor_invoice_tree_untaxed/) | 10.0.1.0.0 | Show untaxed amount in the list of vendor invoices
 [account_refund_form_total_string](account_refund_form_total_string/) | 10.0.1.0.0 | The string better indicates a refund
 [account_refund_line_negative_warning](account_refund_line_negative_warning/) | 10.0.1.0.0 | Show a warning when trying to add negative lines to a refund
