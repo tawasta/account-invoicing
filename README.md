@@ -15,6 +15,7 @@ addon | version | summary
 [account_invoice_default_my](account_invoice_default_my/) | 10.0.1.0.0 | Show invoices by default
 [account_invoice_default_parent](account_invoice_default_parent/) | 10.0.1.0.0 | Default parent for new shipping addresses
 [account_invoice_disable_due_date_auto_update](account_invoice_disable_due_date_auto_update/) | 10.0.1.1.0 | Disable due date auto update on invoices
+[account_invoice_disable_invoice_reference_check](account_invoice_disable_invoice_reference_check/) | 10.0.1.0.0 | Allow using duplicate vendor references on vendor invoices
 [account_invoice_invoice_address](account_invoice_invoice_address/) | 10.0.1.2.0 | Separates partner and invoice address fields
 [account_invoice_invoice_address_defaults](account_invoice_invoice_address_defaults/) | 10.0.1.1.0 | Change invoice defaults to be fetched from invoicing partner
 [account_invoice_line_margin_percent](account_invoice_line_margin_percent/) | 10.0.1.0.0 | Adds margins (percent) in Invoice lines
