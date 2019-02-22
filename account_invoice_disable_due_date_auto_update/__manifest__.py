@@ -20,11 +20,11 @@
 ##############################################################################
 
 {
-    'name': 'Disable due date auto update on invoices',
-    'summary': 'Disable due date auto update on invoices',
-    'version': '10.0.1.1.0',
+    'name': 'Disable due date auto update on vendor invoices',
+    'summary': 'Disable due date auto update on vendor invoices',
+    'version': '10.0.1.2.0',
     'category': 'Invoicing',
-    'website': 'http://www.tawasta.fi',
+    'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
     'application': False,
