@@ -7,7 +7,7 @@ class AccountInvoiceLine(models.Model):
     _inherit = 'account.invoice.line'
 
     price_total = fields.Monetary(
-        string='Total',
+        string='Taxable amount',
         readonly=True,
         compute='_compute_price_total'
     )

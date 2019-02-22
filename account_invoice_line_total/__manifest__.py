@@ -23,7 +23,7 @@
     'name': 'Invoice total in invoice lines',
     'summary': 'Adds invoice line total (with taxes) to invoice lines',
     'category': 'Invoicing',
-    'version': '10.0.1.1.0',
+    'version': '10.0.1.1.1',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
