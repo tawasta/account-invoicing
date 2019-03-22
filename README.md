@@ -14,11 +14,12 @@ addon | version | summary
 [account_invoice_commission](account_invoice_commission/) | 10.0.1.0.1 | account_invoice_commission
 [account_invoice_default_my](account_invoice_default_my/) | 10.0.1.0.0 | Show invoices by default
 [account_invoice_default_parent](account_invoice_default_parent/) | 10.0.1.0.0 | Default parent for new shipping addresses
-[account_invoice_disable_due_date_auto_update](account_invoice_disable_due_date_auto_update/) | 10.0.1.1.0 | Disable due date auto update on invoices
+[account_invoice_disable_due_date_auto_update](account_invoice_disable_due_date_auto_update/) | 10.0.1.2.0 | Disable due date auto update on vendor invoices
 [account_invoice_disable_invoice_reference_check](account_invoice_disable_invoice_reference_check/) | 10.0.1.0.0 | Allow using duplicate vendor references on vendor invoices
 [account_invoice_invoice_address](account_invoice_invoice_address/) | 10.0.1.2.0 | Separates partner and invoice address fields
 [account_invoice_invoice_address_defaults](account_invoice_invoice_address_defaults/) | 10.0.1.1.0 | Change invoice defaults to be fetched from invoicing partner
 [account_invoice_line_margin_percent](account_invoice_line_margin_percent/) | 10.0.1.0.0 | Adds margins (percent) in Invoice lines
+[account_invoice_line_total](account_invoice_line_total/) | 10.0.1.1.1 | Adds invoice line total (with taxes) to invoice lines
 [account_invoice_mandatory_payment_term](account_invoice_mandatory_payment_term/) | 10.0.1.2.0 | Set invoice payment term as mandatory
 [account_invoice_margin](account_invoice_margin/) | 10.0.1.4.0 | Margin functionality for invoices
 [account_invoice_margin_from_sale](account_invoice_margin_from_sale/) | 10.0.1.0.0 | Pass margin data from sale to invoice
@@ -27,7 +28,7 @@ addon | version | summary
 [account_invoice_margin_percent](account_invoice_margin_percent/) | 10.0.1.0.0 | Shows the margin profit percentage in invoices
 [account_invoice_merge_line_info](account_invoice_merge_line_info/) | 10.0.1.0.0 | Show order number and date on new invoice's lines
 [account_invoice_merge_never_merge_lines](account_invoice_merge_never_merge_lines/) | 10.0.1.0.0 | Account Invoice Merge - never merge lines
-[account_invoice_merge_ordered](account_invoice_merge_ordered/) | 10.0.1.0.0 | Account Invoice Merge - keep line order
+[account_invoice_merge_ordered](account_invoice_merge_ordered/) | 10.0.1.0.1 | Account Invoice Merge - keep line order
 [account_invoice_notice_period](account_invoice_notice_period/) | 10.0.1.0.0 | Notice period field for invoices and partners
 [account_invoice_order_number_in_comments](account_invoice_order_number_in_comments/) | 10.0.1.0.0 | Invoicing a SO stores the order # in invoice's comment field
 [account_invoice_overdue_interest](account_invoice_overdue_interest/) | 10.0.1.0.0 | Overdue interest % field for invoices and partners
