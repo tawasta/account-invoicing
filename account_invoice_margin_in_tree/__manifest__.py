@@ -28,7 +28,7 @@
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
     'application': False,
-    'installable': True,
+    'installable': False,
     'auto_install': True,
     'depends': [
         'account_invoice_margin',
