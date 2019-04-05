@@ -8,9 +8,20 @@
 
             <button name="action_invoice_cancel" position="before">
                 <button name="action_create_sale_order"
+                        id="create_first_sale_order"
                         type="object"
                         string="Create sale"
                         groups="sales_team.group_sale_salesman"
+                        attrs="{'invisible': [('sale_order_ids', '!=', [])]}"
+                />
+
+                <button name="action_create_sale_order"
+                        id="create_sale_order"
+                        type="object"
+                        string="Create sale"
+                        groups="sales_team.group_sale_salesman"
+                        attrs="{'invisible': [('sale_order_ids', '=', [])]}"
+                        confirm="Are you sure? A sale has already been created."
                 />
             </button>
 
