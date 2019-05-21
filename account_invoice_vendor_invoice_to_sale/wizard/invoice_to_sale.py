@@ -29,6 +29,11 @@ class InvoiceToSale(models.TransientModel):
         required=True,
     )
 
+    analytic_account = fields.Boolean(
+        string='Analytic account from the first line?',
+        default=True,
+    )
+
     order_lines = fields.Selection(
         string='Order lines',
         selection=[
@@ -58,6 +63,9 @@ class InvoiceToSale(models.TransientModel):
         # Decide product lines
         order_lines = []
 
+        # Placeholder for analytic account
+        account_analytic_id = False
+
         # If order lines (type) is none, don't do any SO lines
         if self.order_lines != 'none':
             invoice = AccountInvoice.browse([invoice_id])
@@ -65,13 +73,16 @@ class InvoiceToSale(models.TransientModel):
             if self.order_lines == 'copy':
                 # Copy all lines from invoice to order
                 for line in invoice.invoice_line_ids:
+                    if self.analytic_account and not account_analytic_id:
+                        # Use first line analytic id as order analytic id
+                        account_analytic_id = line.account_analytic_id.id
+
                     order_lines.append((0, 0, dict(
                         product_id=line.product_id.id,
                         price_unit=line.price_unit,
                         name=line.name,
                         product_uom_qty=line.quantity,
                         product_uom=line.uom_id.id,
-                        analytic_account_id=line.analytic_account_id.id,
                         analytic_tag_ids=line.analytic_tag_ids,
                     )))
 
@@ -81,6 +92,11 @@ class InvoiceToSale(models.TransientModel):
                 analytic_tag_ids = list()
 
                 for line in invoice.invoice_line_ids:
+                    if self.analytic_account and not account_analytic_id:
+                        # Use first line analytic id as order analytic id
+                        account_analytic_id = line.account_analytic_id.id
+
+                    # Line price unit will be the invoice subtotal
                     price_unit += line.price_unit * line.quantity
 
                     for analytic in line.analytic_tag_ids:
@@ -112,6 +128,7 @@ class InvoiceToSale(models.TransientModel):
                 partner_id=self.partner_id.id,
                 user_id=self.user_id.id,
                 order_line=order_lines,
+                related_project_id=account_analytic_id,
             )
 
             sale_order = SaleOrder.create(

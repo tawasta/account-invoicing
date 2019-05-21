@@ -8,6 +8,7 @@
                 <group>
                     <field name="auto_confirm" />
                     <field name="merge_order" />
+                    <field name="analytic_account" />
                     <field name="partner_id" />
                     <field name="user_id" />
                     <field name="order_lines" />
