@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="action_invoice_to_sale_wizard" model="ir.ui.view">
+        <field name="model">invoice.to.sale</field>
+        <field name="arch" type="xml">
+            <form string="Invoice to sale">
+                <group>
+                    <field name="auto_confirm" />
+                    <field name="merge_order" />
+                    <field name="partner_id" />
+                    <field name="user_id" />
+                    <field name="order_lines" />
+                    <field name="product_id"
+                           attrs="{'invisible': [('order_lines', '!=', 'merge')], 'required': [('order_lines', '=', 'merge')]}" />
+                </group>
+
+                <footer>
+                    <button string="Confirm" 
+                        type="object" 
+                        class="oe_highlight"
+                        name="confirm"/>
+                    or
+                    <button string="Cancel" 
+                        class="oe_link"
+                        special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

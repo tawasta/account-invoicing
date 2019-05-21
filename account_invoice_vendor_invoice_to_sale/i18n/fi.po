@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-05 13:03+0000\n"
-"PO-Revision-Date: 2019-04-05 16:04+0300\n"
+"POT-Creation-Date: 2019-05-21 05:26+0000\n"
+"PO-Revision-Date: 2019-05-21 08:30+0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,12 +15,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
 "Language: fi\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #. module: account_invoice_vendor_invoice_to_sale
-#: model:ir.ui.view,arch_db:account_invoice_vendor_invoice_to_sale.invoice_supplier_form
-msgid "Are you sure? A sale has already been created."
-msgstr "Oletko varma? Laskusta on jo luotu myynti."
+#: model:ir.model.fields,field_description:account_invoice_vendor_invoice_to_sale.field_invoice_to_sale_auto_confirm
+msgid "Auto-confirm sale order?"
+msgstr "Vahvista myynti automaattisesti?"
+
+#. module: account_invoice_vendor_invoice_to_sale
+#: model:ir.ui.view,arch_db:account_invoice_vendor_invoice_to_sale.action_invoice_to_sale_wizard
+msgid "Cancel"
+msgstr "Peruuta"
+
+#. module: account_invoice_vendor_invoice_to_sale
+#: model:ir.ui.view,arch_db:account_invoice_vendor_invoice_to_sale.action_invoice_to_sale_wizard
+msgid "Confirm"
+msgstr "Vahvista"
+
+#. module: account_invoice_vendor_invoice_to_sale
+#: selection:invoice.to.sale,order_lines:0
+msgid "Copy lines (use the products on the invoice)"
+msgstr "Kopio rivit (käytä laskun tuotteita)"
 
 #. module: account_invoice_vendor_invoice_to_sale
 #: model:ir.ui.view,arch_db:account_invoice_vendor_invoice_to_sale.invoice_supplier_form
@@ -28,9 +43,74 @@ msgid "Create sale"
 msgstr "Luo myynti"
 
 #. module: account_invoice_vendor_invoice_to_sale
+#: model:ir.model.fields,field_description:account_invoice_vendor_invoice_to_sale.field_invoice_to_sale_create_uid
+msgid "Created by"
+msgstr "Luonut"
+
+#. module: account_invoice_vendor_invoice_to_sale
+#: model:ir.model.fields,field_description:account_invoice_vendor_invoice_to_sale.field_invoice_to_sale_create_date
+msgid "Created on"
+msgstr "Luotu"
+
+#. module: account_invoice_vendor_invoice_to_sale
+#: model:ir.model.fields,field_description:account_invoice_vendor_invoice_to_sale.field_invoice_to_sale_partner_id
+msgid "Customer"
+msgstr "Asiakas"
+
+#. module: account_invoice_vendor_invoice_to_sale
+#: model:ir.model.fields,field_description:account_invoice_vendor_invoice_to_sale.field_invoice_to_sale_display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: account_invoice_vendor_invoice_to_sale
+#: model:ir.model.fields,field_description:account_invoice_vendor_invoice_to_sale.field_invoice_to_sale_id
+msgid "ID"
+msgstr "Tunniste (ID)"
+
+#. module: account_invoice_vendor_invoice_to_sale
 #: model:ir.model,name:account_invoice_vendor_invoice_to_sale.model_account_invoice
 msgid "Invoice"
 msgstr "Lasku"
+
+#. module: account_invoice_vendor_invoice_to_sale
+#: model:ir.ui.view,arch_db:account_invoice_vendor_invoice_to_sale.action_invoice_to_sale_wizard
+msgid "Invoice to sale"
+msgstr "Lasku myynniksi"
+
+#. module: account_invoice_vendor_invoice_to_sale
+#: model:ir.model.fields,field_description:account_invoice_vendor_invoice_to_sale.field_invoice_to_sale___last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
+
+#. module: account_invoice_vendor_invoice_to_sale
+#: model:ir.model.fields,field_description:account_invoice_vendor_invoice_to_sale.field_invoice_to_sale_write_uid
+msgid "Last Updated by"
+msgstr "Viimeksi päivittänyt"
+
+#. module: account_invoice_vendor_invoice_to_sale
+#: model:ir.model.fields,field_description:account_invoice_vendor_invoice_to_sale.field_invoice_to_sale_write_date
+msgid "Last Updated on"
+msgstr "Viimeksi päivitetty"
+
+#. module: account_invoice_vendor_invoice_to_sale
+#: selection:invoice.to.sale,order_lines:0
+msgid "Merge lines (select a new product)"
+msgstr "Yhdistä rivit (valitse uusi tuote)"
+
+#. module: account_invoice_vendor_invoice_to_sale
+#: model:ir.model.fields,field_description:account_invoice_vendor_invoice_to_sale.field_invoice_to_sale_merge_order
+msgid "Merge order to existing?"
+msgstr "Yhdistä myynti olemassaolevaan?"
+
+#. module: account_invoice_vendor_invoice_to_sale
+#: selection:invoice.to.sale,order_lines:0
+msgid "No lines (empty sale order)"
+msgstr "Ei rivejä (tyhjä myyntitilaus)"
+
+#. module: account_invoice_vendor_invoice_to_sale
+#: model:ir.model.fields,field_description:account_invoice_vendor_invoice_to_sale.field_invoice_to_sale_order_lines
+msgid "Order lines"
+msgstr "Tilausrivit"
 
 #. module: account_invoice_vendor_invoice_to_sale
 #: model:ir.model.fields,field_description:account_invoice_vendor_invoice_to_sale.field_sale_order_origin_invoice_id
@@ -38,10 +118,20 @@ msgid "Origin invoice"
 msgstr "Lähdelasku"
 
 #. module: account_invoice_vendor_invoice_to_sale
+#: model:ir.model.fields,field_description:account_invoice_vendor_invoice_to_sale.field_invoice_to_sale_product_id
+msgid "Product"
+msgstr "Tuote"
+
+#. module: account_invoice_vendor_invoice_to_sale
 #: model:ir.model.fields,field_description:account_invoice_vendor_invoice_to_sale.field_account_invoice_sale_order_ids
-#: model:ir.model.fields,field_description:account_invoice_vendor_invoice_to_sale.field_apix_account_invoice_sale_order_ids
+#: model:ir.model.fields,field_description:account_invoice_vendor_invoice_to_sale.field_procountor_account_invoice_sale_order_ids
 msgid "Related sales"
 msgstr "Liittyvät myynnit"
+
+#. module: account_invoice_vendor_invoice_to_sale
+#: model:ir.model.fields,field_description:account_invoice_vendor_invoice_to_sale.field_invoice_to_sale_user_id
+msgid "Responsible"
+msgstr "Vastuuhenkilö"
 
 #. module: account_invoice_vendor_invoice_to_sale
 #: model:ir.ui.view,arch_db:account_invoice_vendor_invoice_to_sale.invoice_supplier_form
@@ -52,3 +142,23 @@ msgstr "Myyntitilaukset"
 #: model:ir.model,name:account_invoice_vendor_invoice_to_sale.model_sale_order
 msgid "Sales Order"
 msgstr "Myyntitilaus"
+
+#. module: account_invoice_vendor_invoice_to_sale
+#: model:ir.model.fields,help:account_invoice_vendor_invoice_to_sale.field_invoice_to_sale_merge_order
+msgid "Uncheck this if you want to always create a new sale order"
+msgstr "Poista valinta, jos haluat aina luoda uuden myyntitilauksen"
+
+#. module: account_invoice_vendor_invoice_to_sale
+#: model:ir.model.fields,help:account_invoice_vendor_invoice_to_sale.field_invoice_to_sale_auto_confirm
+msgid "Uncheck this if you want to leave the sale order as draft"
+msgstr "Poista valinta, jos haluat jättää luodun myyntitilauksen luonnokseksi"
+
+#. module: account_invoice_vendor_invoice_to_sale
+#: model:ir.model,name:account_invoice_vendor_invoice_to_sale.model_invoice_to_sale
+msgid "invoice.to.sale"
+msgstr "invoice.to.sale"
+
+#. module: account_invoice_vendor_invoice_to_sale
+#: model:ir.ui.view,arch_db:account_invoice_vendor_invoice_to_sale.action_invoice_to_sale_wizard
+msgid "or"
+msgstr "tai"

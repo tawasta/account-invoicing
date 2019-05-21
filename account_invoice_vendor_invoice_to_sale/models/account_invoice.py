@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import models, fields, _
-from odoo.exceptions import UserError
+from odoo import models, fields
 
 
 class AccountInvoice(models.Model):
@@ -19,7 +18,7 @@ class AccountInvoice(models.Model):
 
         return {
             'type': 'ir.actions.act_window',
-            'res_model': 'sale.order',
+            'res_model': 'invoice.to.sale',
             'view_mode': 'form',
             'target': 'new',
             'context': {
