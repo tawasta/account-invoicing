@@ -15,8 +15,8 @@ class AccountInvoiceLine(models.Model):
     @api.multi
     def _compute_price_total(self):
         for record in self:
-            currency = record.invoice_id and \
-                       record.invoice_id.currency_id or None
+            currency = record.invoice_id and record.invoice_id.currency_id \
+                or None
             price = record.price_unit * (1 - (record.discount or 0.0) / 100.0)
             taxes = False
 
@@ -27,7 +27,7 @@ class AccountInvoiceLine(models.Model):
                     record.quantity,
                     product=record.product_id,
                     partner=record.invoice_id.partner_id
-            )
+                )
 
             record.price_total = taxes['total_included'] if \
                 taxes else \

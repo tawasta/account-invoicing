@@ -1,31 +1,16 @@
 # -*- coding: utf-8 -*-
-
-# 1. Standard library imports:
-
-# 2. Known third party imports:
-
-# 3. Odoo imports (openerp):
 from odoo import api, fields, models
-
-# 4. Imports from Odoo modules:
-
-# 5. Local imports in the relative form:
-
-# 6. Unknown third party imports:
 
 
 class AccountInvoice(models.Model):
 
-    # 1. Private attributes
     _inherit = 'account.invoice'
 
-    # 2. Fields declaration
     partner_invoice_id = fields.Many2one(
         comodel_name='res.partner',
         string='Invoicing address',
     )
 
-    # 3. Default methods
     def _get_refund_common_fields(self):
         res = super(AccountInvoice, self)._get_refund_common_fields()
 
@@ -33,9 +18,6 @@ class AccountInvoice(models.Model):
 
         return res
 
-    # 4. Compute and search fields, in the same order that fields declaration
-
-    # 5. Constraints and onchanges
     @api.onchange('partner_id')
     def onchange_partner_id_update_partner_invoice_id(self):
         for record in self:
@@ -47,7 +29,6 @@ class AccountInvoice(models.Model):
                 and invoice_addresses[0] \
                 or record.partner_id
 
-    # 6. CRUD methods
     @api.model
     def create(self, vals):
         # Force using partner_invoice_id
@@ -70,9 +51,6 @@ class AccountInvoice(models.Model):
 
         return super(AccountInvoice, self).write(vals)
 
-    # 7. Action methods
-
-    # 8. Business methods
     @api.model
     def _init_invoicing_address(self):
         invoices = self.search([('partner_invoice_id', '=', False)])

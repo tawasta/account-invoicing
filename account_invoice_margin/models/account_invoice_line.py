@@ -8,7 +8,7 @@ class AccountInvoiceLine(models.Model):
     _inherit = "account.invoice.line"
 
     margin = fields.Float(
-        compute='_product_margin',
+        compute='_compute_product_margin',
         digits=dp.get_precision('Product Price'),
         store=True
     )
@@ -61,7 +61,7 @@ class AccountInvoiceLine(models.Model):
 
     @api.depends('product_id', 'purchase_price', 'quantity',
                  'price_unit', 'price_subtotal')
-    def _product_margin(self):
+    def _compute_product_margin(self):
         for line in self:
 
             if line.invoice_id.type not in ['out_invoice', 'out_refund']:

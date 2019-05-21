@@ -14,5 +14,4 @@ class AccountInvoice(models.Model):
     @api.onchange('partner_id')
     def onchange_partner_id(self):
         self.notice_period = self.partner_id.notice_period \
-                                or self.company_id.default_notice_period
-
+            or self.company_id.default_notice_period
