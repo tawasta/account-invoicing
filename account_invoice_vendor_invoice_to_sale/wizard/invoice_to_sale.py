@@ -17,6 +17,13 @@ class InvoiceToSale(models.TransientModel):
         default=True,
     )
 
+    merge_order_id = fields.Many2one(
+        comodel_name='sale.order',
+        string='Merge to order',
+        help='Manually select an order to merge to',
+        domain=[('state', 'in', ['draft', 'sent', 'sale'])],
+    )
+
     partner_id = fields.Many2one(
         comodel_name='res.partner',
         string='Customer',
@@ -116,11 +123,15 @@ class InvoiceToSale(models.TransientModel):
 
                 order_lines.append((0, 0, merged_line))
 
-        # Check if a sale order exists
-        sale_order = SaleOrder.search([
-            ('origin_invoice_id', '=', invoice_id),
-            ('state', 'in', ['draft', 'sent', 'sale']),
-        ], limit=1)
+        if self.merge_order_id:
+            # Manually selected order to merge
+            sale_order = self.merge_order_id
+        else:
+            # Automatically selected order to merge
+            sale_order = SaleOrder.search([
+                ('origin_invoice_id', '=', invoice_id),
+                ('state', 'in', ['draft', 'sent', 'sale']),
+            ], limit=1)
 
         if self.merge_order and sale_order:
             # Merge lines to an existing order
