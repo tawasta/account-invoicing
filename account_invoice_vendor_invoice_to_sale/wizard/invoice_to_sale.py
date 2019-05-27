@@ -97,6 +97,7 @@ class InvoiceToSale(models.TransientModel):
                 # Merge invoice lines to one sale order line
                 price_unit = 0
                 analytic_tag_ids = list()
+                add_analytic_tags = True
 
                 for line in invoice.invoice_line_ids:
                     if self.analytic_account and not account_analytic_id:
@@ -107,11 +108,11 @@ class InvoiceToSale(models.TransientModel):
                     price_unit += line.price_unit * line.quantity
 
                     for analytic in line.analytic_tag_ids:
-                        analytic_tag_ids.append(analytic.id)
-
-                    if self.analytic_account:
-                        # Only use first row analytic tags
-                        break
+                        if add_analytic_tags:
+                            analytic_tag_ids.append(analytic.id)
+                            if self.analytic_account:
+                                # Only add the first row analytic tags
+                                add_analytic_tags = False
 
                 merged_line = dict(
                     product_id=self.product_id.id,
