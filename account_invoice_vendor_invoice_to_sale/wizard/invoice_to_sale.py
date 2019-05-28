@@ -110,9 +110,11 @@ class InvoiceToSale(models.TransientModel):
                     for analytic in line.analytic_tag_ids:
                         if add_analytic_tags:
                             analytic_tag_ids.append(analytic.id)
-                            if self.analytic_account:
-                                # Only add the first row analytic tags
-                                add_analytic_tags = False
+
+                    if self.analytic_account:
+                        # Only add the first row analytic tags
+                        add_analytic_tags = False                            
+                            
 
                 merged_line = dict(
                     product_id=self.product_id.id,
