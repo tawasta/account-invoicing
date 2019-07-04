@@ -6,10 +6,8 @@
         <field name="inherit_id" ref="account.invoice_supplier_form" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='reference']" position="after">
-                <group>
-                    <field string="Invoice description"
-                               name="description"/>
-                </group>
+                <field string="Invoice description"
+                    name="description"/>
             </xpath>
         </field>
     </record>
