@@ -1,2 +1,3 @@
 account-invoicing
 product https://github.com/tawasta/product
+account-analytic https://github.com/tawasta/account-analytic
