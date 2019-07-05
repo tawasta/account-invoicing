@@ -16,6 +16,5 @@ class AccountInvoice(models.Model):
     def action_invoice_open(self):
         res = super(AccountInvoice, self).action_invoice_open()
         if self.type not in ['out_refund', 'out_invoice', 'in_refund']:
-            self.comment += "\n" + (self.origin or '') + "\n" + \
-                (self.analytic_account_id.display_name or '')
+            self.comment += "\n" + (self.origin or '')
         return res
