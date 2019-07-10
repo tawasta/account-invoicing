@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="view_account_invoice_line_filter" model="ir.ui.view">
+        <field name="name">account.invoice.line.select</field>
+        <field name="model">account.invoice.line</field>
+        <field name="arch" type="xml">
+            <search string="Search Account invoice lines">
+                <filter name="draft" string="Draft" domain="[('state','in',('draft', 'proforma'))]"/>
+                <filter name="proforma" string="Proforma" domain="[('state','=','proforma2')]" groups="account.group_proforma_invoices"/>
+                <filter name="invoices" string="Invoices" domain="['&amp;', ('state','in',['open','paid']),('invoice_type','in',('out_invoice','in_invoice'))]"/>
+                <filter name="refunds" string="Refunds" domain="['&amp;', ('state','in',['open','paid']),('invoice_type','in',('out_refund','in_refund'))]"/>
+                <separator/>
+
+                <filter name="unpaid" string="Not Paid" domain="[('state','=','open')]"/>
+                <separator/>
+
+                <field name="partner_id" operator="child_of"/>
+                <field name="user_id" string="Salesperson"/>
+                <field name="product_id"/>
+                <field name="product_categ_id"/>
+                <field name="date_invoice"/>
+                <separator/>
+
+                <filter string="Current Month"
+                        name="current_month"
+                        domain="[('date_invoice','&lt;',(context_today()+relativedelta(months=1)).strftime('%%Y-%%m-01')), ('date_invoice','&gt;=',time.strftime('%%Y-%%m-01'))]" />
+                <filter string="Last Month"
+                        name="last_month"
+                        domain="[('date_invoice','&gt;=',(context_today()-relativedelta(months=1)).strftime('%%Y-%%m-01')),('date_invoice','&lt;',time.strftime('%%Y-%%m-01'))]"/>
+                <separator />
+
+                <filter domain="[('user_id','=',uid)]" help="My Invoices"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_by_partner_id" string="Partner" context="{'group_by':'commercial_partner_id'}"/>
+                    <filter name="group_by_user_id"  string="Responsible" context="{'group_by':'user_id'}"/>
+                    <filter name="group_by_status" string="Status" context="{'group_by':'state'}"/>
+                    <filter name="group_by_product" string="Product" context="{'group_by':'product_id'}"/>
+                    <filter name="group_by_product_category" string="Product category" context="{'group_by':'product_categ_id'}"/>
+                    <separator/>
+                    <filter string="Invoice Date" context="{'group_by':'date_invoice'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+</odoo>

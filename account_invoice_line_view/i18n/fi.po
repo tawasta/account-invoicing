@@ -1,0 +1,177 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_invoice_line_view
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-09 13:00+0000\n"
+"PO-Revision-Date: 2019-07-09 16:03+0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fi\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: account_invoice_line_view
+#: model:ir.model.fields,help:account_invoice_line_view.field_account_invoice_line_state
+msgid ""
+" * The 'Draft' status is used when a user is encoding a new and unconfirmed Invoice.\n"
+" * The 'Pro-forma' status is used when the invoice does not have an invoice number.\n"
+" * The 'Open' status is used when user creates invoice, an invoice number is generated. It stays in the open status till the user pays the invoice.\n"
+" * The 'Paid' status is set automatically when the invoice is paid. Its related journal entries may or may not be reconciled.\n"
+" * The 'Cancelled' status is used when user cancel invoice."
+msgstr ""
+"* Tilaa \"Ehdotus\" käytetään, kun käyttäjä on luonut uuden vahvistamattoman laskun.\n"
+"* Tilaa \"Proforma\" käytetään tarvittaessa ennen virallisen laskun tekoa. Tässä vaiheessa laskulla ei ole vielä laskunumeroa.\n"
+"* Tilaa \"Avoin\" käytetään, kun käyttäjä luo laskun ja sille generoidaan laskunumero. Lasku säilyy avoimena, kunnes se on maksettu. \n"
+"* Tila \"Maksettu\" asetetaan automaattisesti, kun lasku on maksettu. Vastaavat päiväkirjaviennit eivät ole välttämättä vielä täsmäytettyjä. \n"
+"* Tilaa \"Peruttu\" käytetään, kun käyttäjä peruuttaa laskun."
+
+#. module: account_invoice_line_view
+#: model:ir.model.fields,field_description:account_invoice_line_view.field_account_invoice_line_product_categ_id
+msgid "Category"
+msgstr "Kategoria"
+
+#. module: account_invoice_line_view
+#: model:ir.ui.view,arch_db:account_invoice_line_view.view_account_invoice_line_filter
+msgid "Current Month"
+msgstr "Kuluva kuukausi"
+
+#. module: account_invoice_line_view
+#: model:ir.actions.act_window,name:account_invoice_line_view.account_invoice_line_customer_action
+#: model:ir.ui.menu,name:account_invoice_line_view.menu_account_invoice_line_customer
+msgid "Customer invoice lines"
+msgstr "Asiakaslaskujen rivit"
+
+#. module: account_invoice_line_view
+#: model:ir.ui.view,arch_db:account_invoice_line_view.view_account_invoice_line_filter
+msgid "Draft"
+msgstr "Luonnos"
+
+#. module: account_invoice_line_view
+#: model:ir.ui.view,arch_db:account_invoice_line_view.view_account_invoice_line_filter
+msgid "Group By"
+msgstr "Ryhmittely"
+
+#. module: account_invoice_line_view
+#: model:ir.ui.view,arch_db:account_invoice_line_view.view_account_invoice_line_filter
+msgid "Invoice Date"
+msgstr "Laskun päiväys"
+
+#. module: account_invoice_line_view
+#: model:ir.model,name:account_invoice_line_view.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Laskun rivi"
+
+#. module: account_invoice_line_view
+#: model:ir.ui.view,arch_db:account_invoice_line_view.view_account_invoice_line_line_tree
+msgid "Invoice Lines"
+msgstr "Laskurivit"
+
+#. module: account_invoice_line_view
+#: model:ir.model.fields,field_description:account_invoice_line_view.field_account_invoice_line_date_invoice
+msgid "Invoice date"
+msgstr "Laskun päivä"
+
+#. module: account_invoice_line_view
+#: model:ir.ui.view,arch_db:account_invoice_line_view.view_account_invoice_line_filter
+msgid "Invoices"
+msgstr "Laskut"
+
+#. module: account_invoice_line_view
+#: model:ir.model.fields,help:account_invoice_line_view.field_account_invoice_line_date_invoice
+msgid "Keep empty to use the current date"
+msgstr "Jätä tyhjäksi käyttääksesi nykyistä päivämäärää"
+
+#. module: account_invoice_line_view
+#: model:ir.ui.view,arch_db:account_invoice_line_view.view_account_invoice_line_filter
+msgid "Last Month"
+msgstr "Edellinen kuukausi"
+
+#. module: account_invoice_line_view
+#: model:ir.ui.view,arch_db:account_invoice_line_view.view_account_invoice_line_filter
+msgid "My Invoices"
+msgstr "Omat laskut"
+
+#. module: account_invoice_line_view
+#: model:ir.ui.view,arch_db:account_invoice_line_view.view_account_invoice_line_filter
+msgid "Not Paid"
+msgstr "Maksamaton"
+
+#. module: account_invoice_line_view
+#: model:ir.model.fields,field_description:account_invoice_line_view.field_account_invoice_line_commercial_partner_id
+#: model:ir.ui.view,arch_db:account_invoice_line_view.view_account_invoice_line_filter
+msgid "Partner"
+msgstr "Kumppani"
+
+#. module: account_invoice_line_view
+#: model:ir.ui.view,arch_db:account_invoice_line_view.view_account_invoice_line_filter
+msgid "Product"
+msgstr "Tuote"
+
+#. module: account_invoice_line_view
+#: model:ir.ui.view,arch_db:account_invoice_line_view.view_account_invoice_line_filter
+msgid "Product category"
+msgstr "Tuotekategoria"
+
+#. module: account_invoice_line_view
+#: model:ir.ui.view,arch_db:account_invoice_line_view.view_account_invoice_line_filter
+msgid "Proforma"
+msgstr "Proforma"
+
+#. module: account_invoice_line_view
+#: model:ir.ui.view,arch_db:account_invoice_line_view.view_account_invoice_line_filter
+msgid "Refunds"
+msgstr "Hyvitykset"
+
+#. module: account_invoice_line_view
+#: model:ir.model.fields,field_description:account_invoice_line_view.field_account_invoice_line_user_id
+#: model:ir.ui.view,arch_db:account_invoice_line_view.view_account_invoice_line_filter
+msgid "Responsible"
+msgstr "Vastuuhenkilö"
+
+#. module: account_invoice_line_view
+#: model:ir.ui.view,arch_db:account_invoice_line_view.view_account_invoice_line_filter
+msgid "Salesperson"
+msgstr "Myyjä"
+
+#. module: account_invoice_line_view
+#: model:ir.ui.view,arch_db:account_invoice_line_view.view_account_invoice_line_filter
+msgid "Search Account invoice lines"
+msgstr "Hae laskurivejä"
+
+#. module: account_invoice_line_view
+#: model:ir.model.fields,help:account_invoice_line_view.field_account_invoice_line_product_categ_id
+msgid "Select category for the current product"
+msgstr "Valitse nykyiselle tuotteelle ryhmä (kategoria)"
+
+#. module: account_invoice_line_view
+#: model:ir.model.fields,field_description:account_invoice_line_view.field_account_invoice_line_state
+msgid "State"
+msgstr "Osavaltio/Maakunta"
+
+#. module: account_invoice_line_view
+#: model:ir.ui.view,arch_db:account_invoice_line_view.view_account_invoice_line_filter
+msgid "Status"
+msgstr "Tila"
+
+#. module: account_invoice_line_view
+#: model:ir.model.fields,help:account_invoice_line_view.field_account_invoice_line_commercial_partner_id
+msgid "The commercial entity that will be used on Journal Entries for this invoice"
+msgstr "The commercial entity that will be used on Journal Entries for this invoice"
+
+#. module: account_invoice_line_view
+#: model:ir.model.fields,field_description:account_invoice_line_view.field_account_invoice_line_invoice_type
+msgid "Type"
+msgstr "Tyyppi"
+
+#. module: account_invoice_line_view
+#: model:ir.actions.act_window,name:account_invoice_line_view.account_invoice_line_vendor_action
+#: model:ir.ui.menu,name:account_invoice_line_view.menu_account_invoice_line_vendor
+msgid "Vendor invoice lines"
+msgstr "Toimittajalaskujen rivit"

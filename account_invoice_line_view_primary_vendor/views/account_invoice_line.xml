@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="view_account_invoice_line_line_tree" model="ir.ui.view">
+        <field name="name">account.invoice.line.tree.primary.vendor</field>
+        <field name="inherit_id" ref="account_invoice_line_view.view_account_invoice_line_line_tree" />
+        <field name="model">account.invoice.line</field>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="primary_vendor_id" />
+            </field>
+        </field>
+    </record>
+
+</odoo>
