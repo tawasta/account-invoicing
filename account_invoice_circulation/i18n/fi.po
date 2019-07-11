@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-18 11:24+0000\n"
-"PO-Revision-Date: 2018-06-21 11:07+0300\n"
+"POT-Creation-Date: 2019-07-10 13:05+0000\n"
+"PO-Revision-Date: 2019-07-10 16:12+0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,28 +15,40 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
 "Language: fi\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #. module: account_invoice_circulation
-#: code:addons/account_invoice_circulation/models/account_invoice.py:32
-#: code:addons/mpg/account-invoicing/account_invoice_circulation/models/account_invoice.py:32
+#: code:addons/account_invoice_circulation/models/account_invoice.py:48
+#: code:addons/mpg/account-invoicing/account_invoice_circulation/models/account_invoice.py:48
 #, python-format
 msgid "%s has approved this invoice"
 msgstr "%s on tarkistanut tämän laskun"
 
 #. module: account_invoice_circulation
-#: code:addons/account_invoice_circulation/models/account_invoice.py:27
-#: code:addons/mpg/account-invoicing/account_invoice_circulation/models/account_invoice.py:27
+#: code:addons/account_invoice_circulation/models/account_invoice.py:44
+#: code:addons/mpg/account-invoicing/account_invoice_circulation/models/account_invoice.py:44
+#, python-format
+msgid "%s has force approved this invoice"
+msgstr "%s on pakottanut tämän laskun tarkistuksen"
+
+#. module: account_invoice_circulation
+#: code:addons/account_invoice_circulation/models/account_invoice.py:37
+#: code:addons/mpg/account-invoicing/account_invoice_circulation/models/account_invoice.py:37
 #, python-format
 msgid "%s or a manager should approve the invoice first"
 msgstr "%s tai päällikkö voi tarkistaa laskun"
 
 #. module: account_invoice_circulation
-#: code:addons/account_invoice_circulation/models/account_invoice.py:44
-#: code:addons/mpg/account-invoicing/account_invoice_circulation/models/account_invoice.py:44
+#: model:ir.model.fields,field_description:account_invoice_circulation.field_account_invoice_circulation_active
+msgid "Active"
+msgstr "Aktiivinen"
+
+#. module: account_invoice_circulation
+#: code:addons/account_invoice_circulation/models/account_invoice.py:64
+#: code:addons/mpg/account-invoicing/account_invoice_circulation/models/account_invoice.py:64
 #, python-format
 msgid "All approvers have approved this invoice"
-msgstr "Kaikki hyväksyjät ovat hyväksyneet tämän laskun"
+msgstr "Kaikki hyväksyjät ovat tarkistaneet tämän laskun"
 
 #. module: account_invoice_circulation
 #: model:ir.ui.view,arch_db:account_invoice_circulation.invoice_supplier_form
@@ -45,7 +57,6 @@ msgstr "Hyväksy"
 
 #. module: account_invoice_circulation
 #: model:ir.model.fields,field_description:account_invoice_circulation.field_account_invoice_invoice_approved
-#: model:ir.model.fields,field_description:account_invoice_circulation.field_procountor_account_invoice_invoice_approved
 msgid "Approved"
 msgstr "Tarkistettu"
 
@@ -60,8 +71,12 @@ msgid "Approvers"
 msgstr "Tarkistajat"
 
 #. module: account_invoice_circulation
+#: model:ir.model.fields,field_description:account_invoice_circulation.field_account_invoice_allow_approve
+msgid "Can invoice be approved"
+msgstr "Voiko laskun tarkistaa"
+
+#. module: account_invoice_circulation
 #: model:ir.model.fields,field_description:account_invoice_circulation.field_account_invoice_account_invoice_circulation_id
-#: model:ir.model.fields,field_description:account_invoice_circulation.field_procountor_account_invoice_account_invoice_circulation_id
 msgid "Circulation"
 msgstr "Laskun kierto"
 
@@ -83,6 +98,11 @@ msgid "Created on"
 msgstr "Luotu"
 
 #. module: account_invoice_circulation
+#: model:ir.model.fields,help:account_invoice_circulation.field_account_invoice_allow_approve
+msgid "Current user can approve the invoice"
+msgstr "Tämänhetkinen käyttäjä voi tarkistaa laskun"
+
+#. module: account_invoice_circulation
 #: model:ir.ui.view,arch_db:account_invoice_circulation.invoice_circulation_form
 msgid "Description"
 msgstr "Kuvaus"
@@ -91,13 +111,18 @@ msgstr "Kuvaus"
 #: model:ir.model.fields,field_description:account_invoice_circulation.field_account_invoice_circulation_display_name
 #: model:ir.model.fields,field_description:account_invoice_circulation.field_account_invoice_circulation_line_display_name
 msgid "Display Name"
-msgstr "Nimi"
+msgstr "Näyttönimi"
+
+#. module: account_invoice_circulation
+#: model:ir.ui.view,arch_db:account_invoice_circulation.invoice_supplier_form
+msgid "Force Approve"
+msgstr "Pakota hyväksyntä"
 
 #. module: account_invoice_circulation
 #: model:ir.model.fields,field_description:account_invoice_circulation.field_account_invoice_circulation_id
 #: model:ir.model.fields,field_description:account_invoice_circulation.field_account_invoice_circulation_line_id
 msgid "ID"
-msgstr "ID"
+msgstr "Tunniste (ID)"
 
 #. module: account_invoice_circulation
 #: model:ir.model,name:account_invoice_circulation.model_account_invoice

@@ -18,11 +18,19 @@ class AccountInvoice(models.Model):
         string='Circulation',
     )
 
+    allow_approve = fields.Boolean(
+        comodel_name='res.users',
+        compute='_compute_allow_approve',
+        string='Can invoice be approved',
+        help='Current user can approve the invoice',
+    )
+
     def action_invoice_approve(self):
 
         current_user = self.env.user
 
         for record in self:
+            # Only the responsible or an account manager can approve
             if current_user != record.user_id and not \
                     current_user.has_group('account.group_account_manager'):
 
@@ -31,7 +39,15 @@ class AccountInvoice(models.Model):
 
                 raise UserError(msg)
 
-            msg = _('%s has approved this invoice' % current_user.name)
+            if current_user != record.user_id:
+                # Force approving
+                msg = _('%s has force approved this invoice' %
+                        current_user.name)
+            else:
+                # Default approving
+                msg = _('%s has approved this invoice' %
+                        current_user.name)
+
             record.sudo().message_post(msg)
 
             circulation = record.account_invoice_circulation_id
@@ -48,14 +64,20 @@ class AccountInvoice(models.Model):
                 msg = _('All approvers have approved this invoice')
                 record.sudo().message_post(msg)
 
-                # Set as approved
-                record.invoice_approved = True
+                # Set as approved with security suspended
+                record.suspend_security().invoice_approved = True
 
-                # Assign to validator
-                record.user_id = circulation.user_id.id
+                # Assign to validator with security suspended
+                record.suspend_security().user_id = circulation.user_id.id
 
             else:
                 record.user_id = next_lines[0].user_id.id
+
+    def _compute_allow_approve(self):
+        for record in self:
+            user_match = record.user_id == self.env.user
+
+            record.allow_approve = user_match and not record.invoice_approved
 
     @api.multi
     def write(self, vals):

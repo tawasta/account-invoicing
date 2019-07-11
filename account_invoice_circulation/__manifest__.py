@@ -22,7 +22,7 @@
 {
     'name': 'Invoice circulation',
     'summary': 'Adds invoice circulation for vendor invoices',
-    'version': '10.0.1.6.1',
+    'version': '10.0.1.7.0',
     'category': 'Invoicing',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -35,6 +35,7 @@
     },
     'depends': [
         'account',
+        'base_suspend_security',
     ],
     'data': [
         'security/account_invoice_circulation.xml',
