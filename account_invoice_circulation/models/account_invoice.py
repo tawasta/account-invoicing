@@ -11,6 +11,7 @@ class AccountInvoice(models.Model):
         string='Approved',
         default=False,
         readonly=True,
+        copy=False,
     )
 
     account_invoice_circulation_id = fields.Many2one(
