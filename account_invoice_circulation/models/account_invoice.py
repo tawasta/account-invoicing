@@ -71,7 +71,7 @@ class AccountInvoice(models.Model):
                 record.suspend_security().user_id = circulation.user_id.id
 
             else:
-                record.user_id = next_lines[0].user_id.id
+                record.suspend_security().user_id = next_lines[0].user_id.id
 
     def _compute_allow_approve(self):
         for record in self:
