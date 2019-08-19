@@ -84,9 +84,15 @@ class InvoiceToSale(models.TransientModel):
                         # Use first line analytic id as order analytic id
                         account_analytic_id = line.account_analytic_id.id
 
+                    # Check is invoice line's tax Included In Price
+                    if line.invoice_line_tax_ids.price_include:
+                        price = line.price_subtotal
+                    else:
+                        price = line.price_unit
+
                     order_lines.append((0, 0, dict(
                         product_id=line.product_id.id,
-                        price_unit=line.price_unit,
+                        price_unit=price,
                         name=line.name,
                         product_uom_qty=line.quantity,
                         product_uom=line.uom_id.id,
@@ -104,8 +110,8 @@ class InvoiceToSale(models.TransientModel):
                         # Use first line analytic id as order analytic id
                         account_analytic_id = line.account_analytic_id.id
 
-                    # Line price unit will be the invoice subtotal
-                    price_unit += line.price_unit * line.quantity
+                    # Untaxed Amount will be the invoice subtotal
+                    price_unit = invoice.amount_untaxed
 
                     for analytic in line.analytic_tag_ids:
                         if add_analytic_tags:
