@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
-from odoo import models, fields, api
+
+
+from odoo import models, fields, api, _
+from odoo.exceptions import UserError
 
 
 class InvoiceToSale(models.TransientModel):
@@ -85,6 +88,12 @@ class InvoiceToSale(models.TransientModel):
                         account_analytic_id = line.account_analytic_id.id
 
                     # Check is invoice line's tax Included In Price
+
+                    if len(line.invoice_line_tax_ids) > 1:
+                        raise UserError(_('Too many taxes per line! The '
+                                          'number of taxes per line should be '
+                                          'one or none.'))
+
                     if line.invoice_line_tax_ids.price_include:
                         price = line.price_subtotal
                     else:
