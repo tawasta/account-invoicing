@@ -22,7 +22,7 @@
 {
     'name': 'Invoice Description',
     'summary': 'Invoice Description',
-    'version': '10.0.0.1.0',
+    'version': '10.0.1.0.0',
     'category': 'Invoicing & Payments',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
