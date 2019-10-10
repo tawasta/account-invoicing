@@ -23,7 +23,7 @@
     'name': 'Automatically select partner bank for outgoing invoices',
     'summary': 'Automatically select partner bank for outgoing invoices',
     'category': 'Invoicing',
-    'version': '10.0.1.0.0',
+    'version': '10.0.1.0.1',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',

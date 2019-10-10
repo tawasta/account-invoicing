@@ -11,7 +11,8 @@ class AccountInvoice(models.Model):
         """ Auto-add partner_bank_id if it is not given """
         res = super(AccountInvoice, self).create(vals)
 
-        if not res.partner_bank_id and res.type == 'out_invoice':
+        if not res.partner_bank_id and res.type in \
+                ('out_invoice', 'out_refund'):
             res.partner_bank_id = res._get_partner_bank_id()
 
         return res
