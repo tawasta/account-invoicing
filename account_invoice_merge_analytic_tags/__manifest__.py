@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2019 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,19 +20,25 @@
 ##############################################################################
 
 {
-    'name': 'Invoice Description',
-    'summary': 'Invoice Description',
+    'name': 'Account invoice merge - merge analytic tags',
+    'summary': 'Preserve analytic tags when merging invoices',
     'version': '10.0.1.0.0',
-    'category': 'Invoicing & Payments',
+    'category': 'Invoicing',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
     'application': False,
     'installable': True,
+    'auto-install': True,
+    'external_dependencies': {
+        'python': [],
+        'bin': [],
+    },
     'depends': [
-        'account',
+        'account_invoice_merge',
     ],
     'data': [
-        'views/account_invoice.xml',
+    ],
+    'demo': [
     ],
 }
