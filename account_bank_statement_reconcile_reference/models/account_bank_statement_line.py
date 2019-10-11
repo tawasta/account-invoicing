@@ -39,12 +39,8 @@ class AccountBankStatementLine(models.Model):
             amount = self.amount_currency or self.amount
             company_currency = self.journal_id.company_id.currency_id
             st_line_currency = self.currency_id or self.journal_id.currency_id
-            currency = (
-                st_line_currency and st_line_currency != company_currency) \
-                       and st_line_currency.id or False
-
             precision = st_line_currency and st_line_currency.decimal_places \
-                        or company_currency.decimal_places
+                or company_currency.decimal_places
 
             # Match invoice via payment reference. Skip amount matching here
             invoice = account_invoice.search([
