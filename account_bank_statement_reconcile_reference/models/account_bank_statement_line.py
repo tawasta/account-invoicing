@@ -49,7 +49,7 @@ class AccountBankStatementLine(models.Model):
             ], limit=1)
             # Limit 1 should be safe here, as payment reference are unique
 
-            # HERE we could try to mactch via "structured refernce", but it
+            # HERE we could try to match via "structured reference", but it
             # can be very ambiguous and lead to false matches
 
             # If invoice is not found, try to match via partner and amount
