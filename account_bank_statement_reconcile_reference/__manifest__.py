@@ -23,7 +23,7 @@
     'name': 'Use invoice reference for reconciliation proposition',
     'summary': 'Use invoice reference for reconciliation proposition',
     'category': 'Invoicing',
-    'version': '10.0.1.0.0',
+    'version': '10.0.1.1.0',
     'website': 'Use invoice reference for reconciliation proposition',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
