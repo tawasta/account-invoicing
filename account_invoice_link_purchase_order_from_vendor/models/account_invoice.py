@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 
-from odoo import api, fields, models
+from odoo import fields, models
 
 
 class AccountInvoice(models.Model):
@@ -13,4 +13,3 @@ class AccountInvoice(models.Model):
         comodel_name='purchase.order',
         copy=False,
     )
-
