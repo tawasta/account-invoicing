@@ -6,4 +6,4 @@ class AccountInvoice(models.Model):
 
     _inherit = 'account.invoice'
 
-    payment_settled = fields.Boolean(string="Payment settled?")
+    vendor_invoice_created = fields.Boolean(string="Vendor invoice created?")

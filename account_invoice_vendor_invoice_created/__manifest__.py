@@ -19,7 +19,7 @@
 ##############################################################################
 
 {
-    'name': 'Account Invoice Payment Settled',
+    'name': 'Account Invoice Vendor Invoice Created',
     'summary': '',
     'version': '12.0.1.0.0',
     'category': 'Invoicing',
