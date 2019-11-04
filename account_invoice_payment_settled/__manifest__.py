@@ -20,7 +20,7 @@
 
 {
     'name': 'Account Invoice Payment Settled',
-    'summary': 'Adds invoice circulation for vendor invoices',
+    'summary': '',
     'version': '12.0.1.0.0',
     'category': 'Invoicing',
     'website': 'https://tawasta.fi',
