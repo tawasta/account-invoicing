@@ -2,12 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-=================================
-Warning for negative refund lines 
-=================================
+======================================
+Account Invoice Vendor Invoice Created
+======================================
 
-* Shows a warning when trying to set negative quantities or amounts to 
-  a refund line
+Show related vendor invoice on customer invoices
 
 Configuration
 =============
@@ -27,7 +26,7 @@ Credits
 Contributors
 ------------
 
-* Timo Talvitie <timo.talvitie@tawasta.fi>
+* Joona Isoaho <joona.isoaho@tawasta.fi>
 
 Maintainer
 ----------
