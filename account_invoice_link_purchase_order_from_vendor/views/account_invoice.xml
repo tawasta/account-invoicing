@@ -9,7 +9,7 @@
             <notebook position="inside">
                 <page name="partner_purchase_orders" string="Purchase Orders">
                     <field name="purchase_orders" />
-		    <!-- Old filter was: domain="[('partner_id','=', partner_id)]" -->
+            <!-- Old filter was: domain="[('partner_id','=', partner_id)]" -->
                 </page>
             </notebook>
         </field>
