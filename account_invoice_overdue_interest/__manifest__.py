@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
@@ -22,13 +21,13 @@
 {
     'name': 'Overdue Interest for Invoices',
     'summary': "Overdue interest % field for invoices and partners",
-    'version': '10.0.1.0.0',
+    'version': '12.0.1.0.0',
     'category': 'Invoicing',
-    'website': 'https://tawasta.fi',
+    'website': 'https://github.com/Tawasta/account-invoicing',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
     'application': False,
-    'installable': False,
+    'installable': True,
     'external_dependencies': {
         'python': [],
         'bin': [],
@@ -38,8 +37,8 @@
     ],
     'data': [
         'views/account_invoice.xml',
+        'views/res_config_settings.xml',
         'views/res_partner.xml',
-        'views/account_config_settings.xml',
     ],
     'demo': [
     ],
