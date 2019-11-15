@@ -23,7 +23,8 @@ class AccountInvoice(models.Model):
         partner_bank = self.env['res.partner.bank']
 
         partner_bank_id = partner_bank.search([
-            ('partner_id.ref_company_ids', '=', self.company_id.id)
+            ('company_id', '=', self.company_id.id),
+            ('partner_id', '=', self.partner_id.id),
         ], limit=1, order='sequence')
 
         if partner_bank_id:
