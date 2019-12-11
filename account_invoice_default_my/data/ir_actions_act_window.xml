@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <record model="ir.actions.act_window" id="account.action_invoice_tree1">
+        <field name="context">{'default_type': 'in_invoice', 'type': 'in_invoice', 'journal_type': 'purchase', 'search_default_draft':1, 'search_default_invoices':1, 'search_default_my':1}</field>
+    </record>
+
     <record model="ir.actions.act_window" id="account.action_invoice_tree2">
         <field name="context">{'default_type': 'in_invoice', 'type': 'in_invoice', 'journal_type': 'purchase', 'search_default_draft':1, 'search_default_invoices':1, 'search_default_my':1}</field>
     </record>
