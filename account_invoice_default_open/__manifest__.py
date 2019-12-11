@@ -20,10 +20,10 @@
 ##############################################################################
 
 {
-    'name': 'Show my invoices by default',
-    'summary': 'Show invoices by default',
+    'name': 'Show only open and draft invoices by default',
+    'summary': 'Show only open and draft invoices by default',
     'category': 'Invoicing',
-    'version': '10.0.1.1.0',
+    'version': '10.0.1.0.0',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
@@ -31,11 +31,9 @@
     'installable': True,
     'depends': [
         'account',
-        'account_invoice_default_open',
         'purchase',
     ],
     'data': [
         'data/ir_actions_act_window.xml',
-        'views/account_invoice_search.xml',
     ],
 }
