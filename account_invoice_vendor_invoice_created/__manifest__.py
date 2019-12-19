@@ -20,7 +20,7 @@
 
 {
     'name': 'Account Invoice Vendor Invoice Created',
-    'summary': '',
+    'summary': 'Show related vendor invoice on customer invoices',
     'version': '12.0.1.0.0',
     'category': 'Invoicing',
     'website': 'https://tawasta.fi',
