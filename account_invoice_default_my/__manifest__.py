@@ -23,7 +23,7 @@
     'name': 'Show my invoices by default',
     'summary': 'Show invoices by default',
     'category': 'Invoicing',
-    'version': '10.0.1.2.0',
+    'version': '10.0.1.2.1',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
@@ -31,7 +31,6 @@
     'installable': True,
     'depends': [
         'account',
-        'account_invoice_default_open',
         'purchase',
     ],
     'data': [
