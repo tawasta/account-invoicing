@@ -23,7 +23,7 @@
     'name': 'Strict domain filters for partners on invoice',
     'summary': 'Only allow correct type and parent for invoice addresses',
     'category': 'Invoicing',
-    'version': '10.0.1.1.0',
+    'version': '11.0.1.1.0',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',

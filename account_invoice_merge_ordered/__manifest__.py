@@ -22,7 +22,7 @@
 {
     'name': 'Account Invoice Merge - keep line order',
     'summary': 'Account Invoice Merge - keep line order',
-    'version': '10.0.1.0.1',
+    'version': '11.0.1.0.1',
     'category': 'Invoicing',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

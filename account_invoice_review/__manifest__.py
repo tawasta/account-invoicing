@@ -22,7 +22,7 @@
 {
     'name': 'Invoice Review Checkbox',
     'summary': 'Allows marking invoices as reviewed',
-    'version': '10.0.0.1.0',
+    'version': '11.0.0.1.0',
     'category': 'Accounting & Finance',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

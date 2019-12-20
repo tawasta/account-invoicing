@@ -23,7 +23,7 @@
     'name': 'Warning for negative refund lines',
     'summary': 'Show a warning when trying to add negative lines to a refund',
     'category': 'Invoicing',
-    'version': '10.0.1.0.0',
+    'version': '11.0.1.0.0',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',

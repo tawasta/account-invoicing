@@ -22,7 +22,7 @@
 {
     'name': 'Sale Order Number in Invoice Comments',
     'summary': "Invoicing a SO stores the order # in invoice's comment field",
-    'version': '10.0.1.0.0',
+    'version': '11.0.1.0.0',
     'category': 'Invoicing',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

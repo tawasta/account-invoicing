@@ -22,7 +22,7 @@
 {
     'name': 'Invoice Promised Delivery Date Range',
     'summary': 'Adds new fields for storing date range of promised delivery',
-    'version': '10.0.1.0.0',
+    'version': '11.0.1.0.0',
     'category': 'Sales',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

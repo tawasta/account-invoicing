@@ -22,7 +22,7 @@
 {
     'name': 'Change invoice defaults to be fetched from invoicing partner',
     'summary': 'Change invoice defaults to be fetched from invoicing partner',
-    'version': '10.0.1.1.0',
+    'version': '11.0.1.1.0',
     'category': 'Invoicing',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

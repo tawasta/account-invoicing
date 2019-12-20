@@ -22,7 +22,7 @@
 {
     'name': 'Account invoice merge - additional line info',
     'summary': "Show order number and date on new invoice's lines",
-    'version': '10.0.1.0.0',
+    'version': '11.0.1.0.0',
     'category': 'Invoicing',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

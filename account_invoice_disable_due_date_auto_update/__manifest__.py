@@ -22,7 +22,7 @@
 {
     'name': 'Disable due date auto update on vendor invoices',
     'summary': 'Disable due date auto update on vendor invoices',
-    'version': '10.0.1.2.0',
+    'version': '11.0.1.2.0',
     'category': 'Invoicing',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
