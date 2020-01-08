@@ -2,7 +2,7 @@
 <odoo>
 
     <record model="ir.actions.act_window" id="account.action_invoice_tree1">
-        <field name="context">{'default_type': 'in_invoice', 'type': 'in_invoice', 'journal_type': 'sale', 'search_default_draft':1, 'search_default_invoices':1, 'search_default_refunds': 1, 'search_default_proforma': 1}</field>
+        <field name="context">{'default_type': 'out_invoice', 'type': 'out_invoice', 'journal_type': 'sale', 'search_default_draft':1, 'search_default_invoices':1, 'search_default_refunds': 1, 'search_default_proforma': 1}</field>
     </record>
 
     <record model="ir.actions.act_window" id="account.action_invoice_tree2">
