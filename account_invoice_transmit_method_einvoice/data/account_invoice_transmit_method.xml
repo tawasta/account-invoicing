@@ -3,7 +3,7 @@
 
     <record id="account_invoice_transmit_method.einvoice" model="transmit.method">
         <field name="code">einvoice</field>
-        <field name="name">eInvoice</field>
+        <field name="name">Verkkolasku</field>
     </record>
 
 </odoo>

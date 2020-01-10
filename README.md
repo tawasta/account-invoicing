@@ -11,6 +11,7 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
+[account_invoice_invoice_transmit_method_required](account_invoice_invoice_transmit_method_required/) | 12.0.1.0.0 | Account Invoice Invoice Transmit Method Required
 [account_invoice_vendor_invoice_created](account_invoice_vendor_invoice_created/) | 12.0.1.0.0 | Account Invoice Vendor Invoice Created
 
 
