@@ -19,10 +19,8 @@
 ##############################################################################
 
 {
-    'name': """Account Invoice - Salesperson Phonenumber and e-mail to
-        note field""",
-    'summary': """Account Invoice - Salesperson Phonenumber and e-mail to
-        note field""",
+    'name': "Account Invoice - Salesperson e-mail to note field",
+    'summary': "Account Invoice - Salesperson e-mail to note field",
     'version': '12.0.1.0.0',
     'category': 'Invoicing',
     'website': 'https://tawasta.fi',

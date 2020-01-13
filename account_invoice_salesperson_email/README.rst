@@ -2,13 +2,14 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-===========================================================
-Account Invoice Salesperson Phone and Email to Invoice note
-===========================================================
+=================================================
+Account Invoice Salesperson Email to Invoice note
+=================================================
 
-If Salesperson has phonenumber and/or email-address, insert those to Invoice's
-note-field. This module also has onchange-method for Salesperson that preserves
-original comment and only adds new phone and email values.
+When an invoice is created from Sale Order, the invoice's note-field is appended
+with the Salesperson's email-address. This module also has an onchange-method
+depending on Salesperson, so that the original comment is preserved and only a
+new email-address is changed.
 
 Configuration
 =============
@@ -17,8 +18,7 @@ No special configuration necessary.
 Usage
 =====
 Go to Sale Order and create and Invoice. The created invoice has
-Salesperson's phonenumber and/or email-address if those values have been
-assigned.
+Salesperson's email-address if it has been set.
 
 Known issues / Roadmap
 ======================
