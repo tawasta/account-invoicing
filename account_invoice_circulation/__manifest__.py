@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
@@ -22,13 +21,13 @@
 {
     'name': 'Invoice circulation',
     'summary': 'Adds invoice circulation for vendor invoices',
-    'version': '10.0.1.6.1',
+    'version': '12.0.1.6.1',
     'category': 'Invoicing',
     'website': 'https://tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
+    'author': 'Tawasta',
     'license': 'AGPL-3',
     'application': False,
-    'installable': False,
+    'installable': True,
     'external_dependencies': {
         'python': [],
         'bin': [],
