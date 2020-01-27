@@ -11,6 +11,8 @@ class AccountInvoice(models.Model):
     def user_id_onchange_phone_and_email(self):
         email = self.user_id.partner_id.email or ''
 
+        self.comment = self.comment or ''
+
         if self.salesperson_email:
             self.comment = self.comment.replace(
                 '\n' + _("Handler: ") + self.salesperson_email, '').replace(
