@@ -9,7 +9,8 @@ class AccountBankStatementLine(models.Model):
     @api.model
     def create(self, vals):
         # If name (label) is empty, use reference (and partner name)
-        if not vals.get('name') or vals['name'] == '/' and vals.get('ref'):
+        if not vals.get('name') or vals['name'] in ['/', '-'] \
+                and vals.get('ref'):
             if vals.get('partner_name'):
                 # Use format:
                 # {partner_name}: {reference}
