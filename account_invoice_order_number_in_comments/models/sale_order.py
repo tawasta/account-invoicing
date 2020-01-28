@@ -1,10 +1,9 @@
-# -*- coding: utf-8 -*-
-from odoo import models, fields, api, _
+from odoo import _, api, models
 
 
 class SaleOrder(models.Model):
 
-    _inherit = 'sale.order'
+    _inherit = "sale.order"
 
     @api.multi
     def _prepare_invoice(self):
@@ -12,10 +11,11 @@ class SaleOrder(models.Model):
         self.ensure_one()
         invoice_vals = super(SaleOrder, self)._prepare_invoice()
 
-        if not invoice_vals['comment']:
-            invoice_vals['comment'] = ''
+        if not invoice_vals["comment"]:
+            invoice_vals["comment"] = ""
 
-        invoice_vals['comment'] += \
-            u'\n%s: %s' % (_('Our Order Reference'), self.name)
+        invoice_vals["comment"] += u"\n{}: {}".format(
+            _("Our Order Reference"), self.name
+        )
 
         return invoice_vals

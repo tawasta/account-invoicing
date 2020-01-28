@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
@@ -20,19 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Invoice total in invoice lines',
-    'summary': 'Adds invoice line total (with taxes) to invoice lines',
-    'category': 'Invoicing',
-    'version': '10.0.1.1.1',
-    'website': 'https://tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': False,
-    'depends': [
-        'account',
-    ],
-    'data': [
-        'views/account_invoice.xml',
-    ],
+    "name": "Invoice total in invoice lines",
+    "summary": "Adds invoice line total (with taxes) to invoice lines",
+    "category": "Invoicing",
+    "version": "12.0.1.1.1",
+    "website": "https://github.com/Tawasta/account-invoicing",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": False,
+    "depends": ["account"],
+    "data": ["views/account_invoice.xml"],
 }

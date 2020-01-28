@@ -19,26 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Vendor invoice review',
-    'summary': 'Link vendor invoices to purchases and review the invoices',
-    'version': '12.0.1.0.0',
-    'category': 'https://github.com/Tawasta/account-invoicing',
-    'website': 'https://tawasta.fi',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'account',
-        'purchase',
-    ],
-    'data': [
-        'views/account_invoice.xml',
-    ],
-    'demo': [
-    ],
+    "name": "Vendor invoice review",
+    "summary": "Link vendor invoices to purchases and review the invoices",
+    "version": "12.0.1.0.0",
+    "category": "https://github.com/Tawasta/account-invoicing",
+    "website": "https://github.com/Tawasta/account-invoicing",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["account", "purchase"],
+    "data": ["views/account_invoice.xml"],
+    "demo": [],
 }

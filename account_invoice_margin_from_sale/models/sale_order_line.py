@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-from odoo import models, api
+from odoo import api, models
 
 
 class SaleOrderLine(models.Model):
@@ -12,8 +11,6 @@ class SaleOrderLine(models.Model):
         res = super(SaleOrderLine, self)._prepare_invoice_line(qty)
 
         if self.purchase_price:
-            res.update({
-                'purchase_price': self.purchase_price
-            })
+            res.update({"purchase_price": self.purchase_price})
 
         return res

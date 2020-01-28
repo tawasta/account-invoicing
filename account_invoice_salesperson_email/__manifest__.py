@@ -19,20 +19,15 @@
 ##############################################################################
 
 {
-    'name': "Account Invoice - Salesperson e-mail to note field",
-    'summary': "Account Invoice - Salesperson e-mail to note field",
-    'version': '12.0.1.0.0',
-    'category': 'Invoicing',
-    'website': 'https://tawasta.fi',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        'account',
-        'sale',
-    ],
-    'data': [
-        'views/account_invoice.xml',
-    ],
+    "name": "Account Invoice - Salesperson e-mail to note field",
+    "summary": "Account Invoice - Salesperson e-mail to note field",
+    "version": "12.0.1.0.0",
+    "category": "Invoicing",
+    "website": "https://github.com/Tawasta/account-invoicing",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["account", "sale"],
+    "data": ["views/account_invoice.xml"],
 }

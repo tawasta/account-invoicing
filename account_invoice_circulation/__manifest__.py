@@ -19,30 +19,23 @@
 ##############################################################################
 
 {
-    'name': 'Invoice circulation',
-    'summary': 'Adds invoice circulation for vendor invoices',
-    'version': '12.0.1.6.1',
-    'category': 'Invoicing',
-    'website': 'https://tawasta.fi',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'account',
+    "name": "Invoice circulation",
+    "summary": "Adds invoice circulation for vendor invoices",
+    "version": "12.0.1.6.1",
+    "category": "Invoicing",
+    "website": "https://github.com/Tawasta/account-invoicing",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["account"],
+    "data": [
+        "security/account_invoice_circulation.xml",
+        "security/ir.model.access.csv",
+        "views/account_invoice.xml",
+        "views/account_invoice_circulation_form.xml",
+        "views/account_invoice_tree.xml",
     ],
-    'data': [
-        'security/account_invoice_circulation.xml',
-        'security/ir.model.access.csv',
-
-        'views/account_invoice.xml',
-        'views/account_invoice_circulation_form.xml',
-        'views/account_invoice_tree.xml',
-    ],
-    'demo': [
-    ],
+    "demo": [],
 }

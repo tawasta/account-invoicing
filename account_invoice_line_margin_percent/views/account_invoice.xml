@@ -14,7 +14,7 @@
 
             <xpath expr="//field[@name='invoice_line_ids']//tree/field[@name='price_subtotal']" position="after">
                 <field name="margin_percent"/>
-            </xpath>            
+            </xpath>
 
         </field>
     </record>

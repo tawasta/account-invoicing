@@ -1,17 +1,4 @@
-# -*- coding: utf-8 -*-
-
-# 1. Standard library imports:
-
-# 2. Known third party imports:
-
-# 3. Odoo imports (openerp):
-from odoo import api, fields, models, _
-
-# 4. Imports from Odoo modules:
-
-# 5. Local imports in the relative form:
-
-# 6. Unknown third party imports:
+from odoo import api, models
 
 
 class SaleAdvancePaymentInv(models.TransientModel):
@@ -35,7 +22,9 @@ class SaleAdvancePaymentInv(models.TransientModel):
     @api.multi
     def _create_invoice(self, order, so_line, amount):
         # Handling for when invoicing a down payment
-        invoice = super(SaleAdvancePaymentInv, self)._create_invoice(order, so_line, amount)
+        invoice = super(SaleAdvancePaymentInv, self)._create_invoice(
+            order, so_line, amount
+        )
         invoice.partner_id = order.partner_id.id
         invoice.partner_invoice_id = order.partner_invoice_id.id
         return invoice

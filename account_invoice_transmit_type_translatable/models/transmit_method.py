@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 # 1. Standard library imports:
 
 # 2. Known third party imports:
@@ -17,12 +15,10 @@ from odoo import fields, models
 class TransmitMethod(models.Model):
 
     # 1. Private attributes
-    _inherit = 'transmit.method'
+    _inherit = "transmit.method"
 
     # 2. Fields declaration
-    name = fields.Char(
-        translate=True,
-    )
+    name = fields.Char(translate=True)
 
     # 3. Default methods
 

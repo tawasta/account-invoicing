@@ -1,10 +1,10 @@
-from odoo import models, api
+from odoo import api, models
 from odoo.osv import expression
 from odoo.tools import formatLang
 
 
 class PurchaseOrderLine(models.Model):
-    _inherit = 'purchase.order.line'
+    _inherit = "purchase.order.line"
 
     def name_get(self):
         """
@@ -13,13 +13,10 @@ class PurchaseOrderLine(models.Model):
         result = []
         for doc in self:
             price = formatLang(
-                self.env,
-                doc.price_unit,
-                monetary=True,
-                currency_obj=doc.currency_id
+                self.env, doc.price_unit, monetary=True, currency_obj=doc.currency_id
             )
 
-            name = '[{0}] {1}: {2} {3}, {4}'.format(
+            name = "[{}] {}: {} {}, {}".format(
                 doc.order_id.name,
                 doc.name,
                 doc.product_qty,
@@ -31,8 +28,9 @@ class PurchaseOrderLine(models.Model):
         return result
 
     @api.model
-    def _name_search(self, name, args=None, operator='ilike', limit=100,
-                     name_get_uid=None):
+    def _name_search(
+        self, name, args=None, operator="ilike", limit=100, name_get_uid=None
+    ):
         """
         Override name search to allow searching by qty or price
         """
@@ -40,16 +38,14 @@ class PurchaseOrderLine(models.Model):
         domain = []
         if name:
             domain = [
-                '|',
-                '|',
-                ('name', operator, name),
-                ('product_qty', operator, name),
-                ('price_unit', operator, name),
+                "|",
+                "|",
+                ("name", operator, name),
+                ("product_qty", operator, name),
+                ("price_unit", operator, name),
             ]
 
         order_line_ids = self._search(
-            expression.AND([domain, args]),
-            limit=limit,
-            access_rights_uid=name_get_uid
+            expression.AND([domain, args]), limit=limit, access_rights_uid=name_get_uid
         )
         return self.browse(order_line_ids).name_get()

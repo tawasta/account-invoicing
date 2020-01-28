@@ -19,22 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Account Invoice Vendor Invoice Created',
-    'summary': 'Show related vendor invoice on customer invoices',
-    'version': '12.0.1.0.0',
-    'category': 'Invoicing',
-    'website': 'https://tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {},
-    'depends': [
-        'account',
-    ],
-    'data': [
-        'views/account_invoice_form.xml'
-    ],
-    'demo': [
-    ],
+    "name": "Account Invoice Vendor Invoice Created",
+    "summary": "Show related vendor invoice on customer invoices",
+    "version": "12.0.1.0.0",
+    "category": "Invoicing",
+    "website": "https://github.com/Tawasta/account-invoicing",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {},
+    "depends": ["account"],
+    "data": ["views/account_invoice_form.xml"],
+    "demo": [],
 }

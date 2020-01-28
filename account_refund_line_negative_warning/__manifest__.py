@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
@@ -20,18 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Warning for negative refund lines',
-    'summary': 'Show a warning when trying to add negative lines to a refund',
-    'category': 'Invoicing',
-    'version': '10.0.1.0.0',
-    'website': 'https://tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': False,
-    'depends': [
-        'account',
-    ],
-    'data': [
-    ],
+    "name": "Warning for negative refund lines",
+    "summary": "Show a warning when trying to add negative lines to a refund",
+    "category": "Invoicing",
+    "version": "12.0.1.0.0",
+    "website": "https://github.com/Tawasta/account-invoicing",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": False,
+    "depends": ["account"],
+    "data": [],
 }

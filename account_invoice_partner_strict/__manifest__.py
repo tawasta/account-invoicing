@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
@@ -20,20 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Strict domain filters for partners on invoice',
-    'summary': 'Only allow correct type and parent for invoice addresses',
-    'category': 'Invoicing',
-    'version': '10.0.1.1.0',
-    'website': 'https://tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': False,
-    'depends': [
-        'account',
-        'account_invoice_invoice_address',
-    ],
-    'data': [
-        'views/account_invoice.xml',
-    ],
+    "name": "Strict domain filters for partners on invoice",
+    "summary": "Only allow correct type and parent for invoice addresses",
+    "category": "Invoicing",
+    "version": "12.0.1.1.0",
+    "website": "https://github.com/Tawasta/account-invoicing",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": False,
+    "depends": ["account", "account_invoice_invoice_address"],
+    "data": ["views/account_invoice.xml"],
 }

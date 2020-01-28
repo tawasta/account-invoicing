@@ -3,13 +3,8 @@ from odoo import fields, models
 
 class AccountInvoiceLine(models.Model):
 
-    _inherit = 'account.invoice.line'
+    _inherit = "account.invoice.line"
 
-    partner_id = fields.Many2one(
-        related='invoice_id.partner_id',
-        store=True,
-    )
+    partner_id = fields.Many2one(related="invoice_id.partner_id", store=True)
 
-    purchase_line_id = fields.Many2one(
-        domain="[('partner_id', '=', partner_id)]",
-    )
+    purchase_line_id = fields.Many2one(domain="[('partner_id', '=', partner_id)]")

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
@@ -20,21 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Show my invoices by default',
-    'summary': 'Show invoices by default',
-    'category': 'Invoicing',
-    'version': '10.0.1.0.0',
-    'website': 'https://tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': False,
-    'depends': [
-        'account',
-        'purchase',
-    ],
-    'data': [
-        'data/ir_actions_act_window.xml',
-        'views/account_invoice_search.xml',
-    ],
+    "name": "Show my invoices by default",
+    "summary": "Show invoices by default",
+    "category": "Invoicing",
+    "version": "12.0.1.0.0",
+    "website": "https://github.com/Tawasta/account-invoicing",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": False,
+    "depends": ["account", "purchase"],
+    "data": ["data/ir_actions_act_window.xml", "views/account_invoice_search.xml"],
 }

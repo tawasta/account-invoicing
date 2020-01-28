@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
@@ -20,27 +19,21 @@
 ##############################################################################
 
 {
-    'name': 'Notice period for Invoices',
-    'summary': 'Notice period field for invoices and partners',
-    'version': '10.0.1.0.0',
-    'category': 'Invoicing',
-    'website': 'https://tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': False,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'sale',
+    "name": "Notice period for Invoices",
+    "summary": "Notice period field for invoices and partners",
+    "version": "12.0.1.0.0",
+    "category": "Invoicing",
+    "website": "https://github.com/Tawasta/account-invoicing",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": False,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["sale"],
+    "data": [
+        "views/account_invoice.xml",
+        "views/res_partner.xml",
+        "views/account_config_settings.xml",
     ],
-    'data': [
-        'views/account_invoice.xml',
-        'views/res_partner.xml',
-        'views/account_config_settings.xml',
-    ],
-    'demo': [
-    ],
+    "demo": [],
 }

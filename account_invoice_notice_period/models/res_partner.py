@@ -1,10 +1,9 @@
-# -*- coding: utf-8 -*-
 from odoo import fields, models
 
 
 class ResPartner(models.Model):
 
-    _inherit = 'res.partner'
+    _inherit = "res.partner"
 
     def _get_default_notice_period(self):
         if self.company_id:
@@ -13,7 +12,7 @@ class ResPartner(models.Model):
             return self.env.user.company_id.default_notice_period
 
     notice_period = fields.Integer(
-        string='Notice period (days)',
+        string="Notice period (days)",
         default=_get_default_notice_period,
-        help='Default notice period (days) for new customers and invoices',
+        help="Default notice period (days) for new customers and invoices",
     )

@@ -6,7 +6,7 @@
 Sale Order Number in Invoice Comments
 =====================================
 
-* When creating an invoice from Sale Order, the SO number gets stored in the 
+* When creating an invoice from Sale Order, the SO number gets stored in the
   invoice's Terms and Conditions freetext field
 * Intended for situations where the invoices get transferred to external
   billing/accounting software that does not have a designated place for the SO

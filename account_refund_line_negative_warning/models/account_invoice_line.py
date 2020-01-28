@@ -1,24 +1,22 @@
-# -*- coding: utf-8 -*-
-from odoo import models, api, _
+from odoo import _, api, models
 
 
 class AccountInvoiceLine(models.Model):
 
-    _inherit = 'account.invoice.line'
+    _inherit = "account.invoice.line"
 
-    @api.onchange('quantity', 'price_unit')
+    @api.onchange("quantity", "price_unit")
     def onchange_check_negative_values(self):
 
         res = dict()
-        if self.invoice_id.type in ['in_refund', 'out_refund']:
+        if self.invoice_id.type in ["in_refund", "out_refund"]:
             if self.quantity < 0 or self.price_unit < 0:
-                msg = _("Please use positive values for refund "
-                        "lines' prices and quantities. The conversion "
-                        "to negative values is done automatically.")
-                warning = dict(
-                    title=_('Warning'),
-                    message=msg
+                msg = _(
+                    "Please use positive values for refund "
+                    "lines' prices and quantities. The conversion "
+                    "to negative values is done automatically."
                 )
-                res['warning'] = warning
+                warning = dict(title=_("Warning"), message=msg)
+                res["warning"] = warning
 
         return res

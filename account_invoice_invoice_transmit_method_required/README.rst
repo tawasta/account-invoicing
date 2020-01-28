@@ -2,26 +2,22 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-============================================================
-Change invoice defaults to be fetched from invoicing partner
-============================================================
+================================================
+Account Invoice Invoice Transmit Method Required
+================================================
 
-Change invoice defaults to be fetched from invoicing partner
-
+Set invoice transmit method as required
 
 Configuration
 =============
-
 \-
 
 Usage
 =====
-
 \-
 
 Known issues / Roadmap
 ======================
-
 \-
 
 Credits
@@ -29,7 +25,8 @@ Credits
 
 Contributors
 ------------
-* Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
+
+* Joona Isoaho <joona.isoaho@tawasta.fi>
 
 Maintainer
 ----------

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
@@ -20,30 +19,18 @@
 ##############################################################################
 
 {
-    'name': 'Account invoice commission',
-    'summary': 'account_invoice_commission',
-    'version': '10.0.1.0.1',
-    'category': 'Invoicing',
-    'website': 'https://tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': False,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'account',
-
-
-    ],
-    'data': [
-        'views/account_invoice_commission.xml',
-    ],
-    'images': [
-        'static/description/icon.png'
-    ],
-    'demo': [
-    ],
+    "name": "Account invoice commission",
+    "summary": "account_invoice_commission",
+    "version": "12.0.1.0.1",
+    "category": "Invoicing",
+    "website": "https://github.com/Tawasta/account-invoicing",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": False,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["account"],
+    "data": ["views/account_invoice_commission.xml"],
+    "images": ["static/description/icon.png"],
+    "demo": [],
 }
