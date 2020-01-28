@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2017 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,25 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Customer Reference for Invoices',
-    'summary': "Pass SO core reference field's contents to invoice",
-    'version': '10.0.1.0.0',
-    'category': 'Invoicing',
-    'website': 'https://tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': False,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'sale',
-    ],
-    'data': [
-        'views/account_invoice.xml',
-    ],
-    'demo': [
-    ],
+    "name": "Vendor invoice review",
+    "summary": "Link vendor invoices to purchases and review the invoices",
+    "version": "12.0.1.0.0",
+    "category": "https://github.com/Tawasta/account-invoicing",
+    "website": "https://github.com/Tawasta/account-invoicing",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["account", "purchase"],
+    "data": ["views/account_invoice.xml"],
+    "demo": [],
 }

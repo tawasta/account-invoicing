@@ -1,9 +1,9 @@
-from odoo import fields, models, api
+from odoo import api, fields, models
 
 
 class ResPartner(models.Model):
 
-    _inherit = 'res.partner'
+    _inherit = "res.partner"
 
     def _get_overdue_interest(self):
         if self.company_id:
@@ -12,10 +12,10 @@ class ResPartner(models.Model):
             return self.env.user.company_id.overdue_interest
 
     overdue_interest = fields.Float(
-        string='Overdue interest %',
+        string="Overdue interest %",
         digits=(4, 2),
         default=_get_overdue_interest,
-        help='Default overdue interest % for customer invoices'
+        help="Default overdue interest % for customer invoices",
     )
 
     @api.model
@@ -26,4 +26,4 @@ class ResPartner(models.Model):
         delegated to the parent `commercial entity`. The list is meant to be
         extended by inheriting classes. """
         commercial_fields = super(ResPartner, self)._commercial_fields()
-        return commercial_fields + ['overdue_interest']
+        return commercial_fields + ["overdue_interest"]

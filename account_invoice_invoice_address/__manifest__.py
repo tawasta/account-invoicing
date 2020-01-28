@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
@@ -20,26 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Separate Invoice Address for Invoices',
-    'summary': 'Separates partner and invoice address fields',
-    'version': '10.0.1.2.0',
-    'category': 'Invoicing',
-    'website': 'https://tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': False,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'sale',
-    ],
-    'data': [
-        'data/init.xml',
-        'views/account_invoice.xml',
-    ],
-    'demo': [
-    ],
+    "name": "Separate Invoice Address for Invoices",
+    "summary": "Separates partner and invoice address fields",
+    "version": "12.0.1.2.0",
+    "category": "Invoicing",
+    "website": "https://github.com/Tawasta/account-invoicing",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": False,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["sale"],
+    "data": ["data/init.xml", "views/account_invoice.xml"],
+    "demo": [],
 }

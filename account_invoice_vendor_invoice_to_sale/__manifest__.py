@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
@@ -20,27 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Create Sale order from vendor invoice',
-    'summary': 'Adds a wizard for creating a SO from vendor invoice',
-    'version': '10.0.1.2.1',
-    'category': 'Accounting',
-    'website': 'https://tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': False,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'account',
-        'sale',
-    ],
-    'data': [
-        'views/account_invoice_form.xml',
-        'views/sale_order.xml',
-    ],
-    'demo': [
-    ],
+    "name": "Create Sale order from vendor invoice",
+    "summary": "Adds a wizard for creating a SO from vendor invoice",
+    "version": "12.0.1.2.1",
+    "category": "Accounting",
+    "website": "https://github.com/Tawasta/account-invoicing",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": False,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["account", "sale"],
+    "data": ["views/account_invoice_form.xml", "views/sale_order.xml"],
+    "demo": [],
 }

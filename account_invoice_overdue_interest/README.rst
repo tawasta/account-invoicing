@@ -13,7 +13,7 @@ Configuration
 =============
 
 * Set the default interest rate in Accounting -> Configuration -> Settings
-* Optional: define custom interest rates for specific partners in Sales 
+* Optional: define custom interest rates for specific partners in Sales
   -> Customers
 
 Usage
@@ -25,8 +25,8 @@ Usage
 Known issues / Roadmap
 ======================
 
-* Note that this module only provides an extra field to be used with PDF 
-  prints, accounting integrations etc. It has no functionality related to e.g. 
+* Note that this module only provides an extra field to be used with PDF
+  prints, accounting integrations etc. It has no functionality related to e.g.
   creating reminder invoices with increased totals, if the original invoice was
   not paid in time.
 
@@ -41,8 +41,8 @@ Contributors
 Maintainer
 ----------
 
-.. image:: http://tawasta.fi/templates/tawastrap/images/logo.png
+.. image:: https://tawasta.fi/templates/tawastrap/images/logo.png
    :alt: Oy Tawasta OS Technologies Ltd.
-   :target: http://tawasta.fi/
+   :target: https://tawasta.fi/
 
 This module is maintained by Oy Tawasta OS Technologies Ltd.

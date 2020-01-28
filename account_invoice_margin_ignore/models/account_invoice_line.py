@@ -1,13 +1,13 @@
-# -*- coding: utf-8 -*-
 from odoo import api, models
 
 
 class AccountInvoiceLine(models.Model):
 
-    _inherit = 'account.invoice.line'
+    _inherit = "account.invoice.line"
 
-    @api.depends('product_id', 'purchase_price', 'quantity',
-                 'price_unit', 'price_subtotal')
+    @api.depends(
+        "product_id", "purchase_price", "quantity", "price_unit", "price_subtotal"
+    )
     def _product_margin(self):
 
         super(AccountInvoiceLine, self)._product_margin()

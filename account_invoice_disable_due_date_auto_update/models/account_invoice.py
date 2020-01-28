@@ -1,17 +1,16 @@
-# -*- coding: utf-8 -*-
-from odoo import api, fields, models, _
+from odoo import models
 
 
 class AccountInvoice(models.Model):
 
-    _inherit = 'account.invoice'
+    _inherit = "account.invoice"
 
     def _onchange_payment_term_date_invoice(self):
         # Override payment term onchange to prefer preset due date
 
         override_due_date = False
 
-        if self.type == 'in_invoice':
+        if self.type == "in_invoice":
             # Store the due date
             if self.date_due:
                 override_due_date = True

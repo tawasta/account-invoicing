@@ -14,7 +14,7 @@
             <button name="action_invoice_open" position="after">
                 <button name="action_invoice_approve"
                         type="object"
-                        groups="account.group_account_invoice,account.group_invoice_approver"
+                        groups="account.group_account_invoice,account_invoice_circulation.group_invoice_approver"
                         string="Approve"
                         class="oe_highlight"
                         attrs="{'invisible': ['|',('invoice_approved', '=', True),('account_invoice_circulation_id', '=', False)]}"/>
@@ -22,7 +22,7 @@
 
             <field name="currency_id" position="after">
                 <field name="invoice_approved"/>
-                <field name="account_invoice_circulation_id" groups="account.group_account_manager,account.group_invoice_approver"/>
+                <field name="account_invoice_circulation_id" groups="account.group_account_manager,account_invoice_circulation.group_invoice_approver"/>
             </field>
 
         </field>
@@ -31,7 +31,7 @@
     <record id="invoice_supplier_form_approver" model="ir.ui.view" >
         <field name="model">account.invoice</field>
         <field name="inherit_id" ref="invoice_supplier_form" />
-        <field name="groups_id" eval="[(6, 0, [ref('account.group_invoice_approver')])]"/>
+        <field name="groups_id" eval="[(6, 0, [ref('account_invoice_circulation.group_invoice_approver')])]"/>
         <field name="arch" type="xml">
 
             <field name="account_invoice_circulation_id" position="attributes">

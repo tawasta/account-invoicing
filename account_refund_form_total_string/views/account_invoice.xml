@@ -7,11 +7,11 @@
         <field name="arch" type="xml">
             <field name="amount_total" position="replace">
                 <field name="amount_total"
-                       class="oe_subtotal_footer_separator" 
+                       class="oe_subtotal_footer_separator"
                        attrs="{'invisible': [('type', '=', 'in_refund')]}"/>
-                <field name="amount_total" 
-                       class="oe_subtotal_footer_separator" 
-                       string="Total to refund" 
+                <field name="amount_total"
+                       class="oe_subtotal_footer_separator"
+                       string="Total to refund"
                        attrs="{'invisible': [('type', '!=', 'in_refund')]}"/>
             </field>
         </field>
@@ -24,13 +24,13 @@
         <field name="arch" type="xml">
             <field name="amount_total" position="replace">
                 <field name="amount_total"
-                       class="oe_subtotal_footer_separator" 
+                       class="oe_subtotal_footer_separator"
                        attrs="{'invisible': [('type', '=', 'out_refund')]}"/>
-                <field name="amount_total" 
-                       class="oe_subtotal_footer_separator" 
-                       string="Total to refund" 
+                <field name="amount_total"
+                       class="oe_subtotal_footer_separator"
+                       string="Total to refund"
                        attrs="{'invisible': [('type', '!=', 'out_refund')]}"/>
             </field>
         </field>
-    </record>    
+    </record>
 </odoo>

@@ -1,16 +1,16 @@
-# -*- coding: utf-8 -*-
 from odoo import fields, models
+
 from odoo.addons import decimal_precision as dp
 
 
 class AccountInvoiceLine(models.Model):
 
-    _inherit = 'account.invoice.line'
+    _inherit = "account.invoice.line"
 
     margin_percent = fields.Float(
-        string='Margin (%)',
-        digits=dp.get_precision('Margin'),
-        compute='_compute_margin_percent',
+        string="Margin (%)",
+        digits=dp.get_precision("Margin"),
+        compute="_compute_margin_percent",
     )
 
     def _compute_margin_percent(self):

@@ -1,23 +1,10 @@
-# -*- coding: utf-8 -*-
-
-# 1. Standard library imports:
-
-# 2. Known third party imports:
-
-# 3. Odoo imports (openerp):
-from odoo import api, fields, models
-
-# 4. Imports from Odoo modules:
-
-# 5. Local imports in the relative form:
-
-# 6. Unknown third party imports:
+from odoo import api, models
 
 
 class SaleOrder(models.Model):
 
     # 1. Private attributes
-    _inherit = 'sale.order'
+    _inherit = "sale.order"
 
     # 2. Fields declaration
 
@@ -37,6 +24,6 @@ class SaleOrder(models.Model):
         # Handling for when invoicing the invoiceable lines
         self.ensure_one()
         invoice_vals = super(SaleOrder, self)._prepare_invoice()
-        invoice_vals['partner_id'] = self.partner_id.id
-        invoice_vals['partner_invoice_id'] = self.partner_invoice_id.id
+        invoice_vals["partner_id"] = self.partner_id.id
+        invoice_vals["partner_invoice_id"] = self.partner_invoice_id.id
         return invoice_vals

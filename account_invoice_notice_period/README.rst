@@ -25,8 +25,8 @@ Usage
 Known issues / Roadmap
 ======================
 
-* Note that this module only provides an extra field to be used with PDF 
-  prints, accounting integrations etc. It has no functionality related to e.g. 
+* Note that this module only provides an extra field to be used with PDF
+  prints, accounting integrations etc. It has no functionality related to e.g.
   creating reminder invoices with increased totals, if the original invoice was
   not paid in time.
 
