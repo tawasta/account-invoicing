@@ -8,7 +8,7 @@ class AccountInvoice(models.Model):
 
     @api.model
     def create(self, vals):
-        if ('transmit_method_id' not in vals and vals.get('type') and
+        if ('transmit_method_code' not in vals and vals.get('type') and
                 vals.get('partner_id')):
 
             partner = self.env['res.partner'].browse(vals['partner_id'])
