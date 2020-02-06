@@ -18,7 +18,8 @@ class AccountInvoiceLine(models.Model):
     def create(self, vals):
         res = super(AccountInvoiceLine, self).create(vals)
 
-        res._member_line_partner_from_anaytic_account()
+        if res:
+            res._member_line_partner_from_anaytic_account()
 
         return res
 
