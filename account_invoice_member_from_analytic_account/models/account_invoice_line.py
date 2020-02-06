@@ -10,7 +10,8 @@ class AccountInvoiceLine(models.Model):
     def write(self, vals):
         res = super(AccountInvoiceLine, self).write(vals)
 
-        res._member_line_partner_from_anaytic_account()
+        if res:
+            res._member_line_partner_from_anaytic_account()
 
         return res
 
