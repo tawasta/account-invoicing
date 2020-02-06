@@ -23,7 +23,7 @@
     'name': 'Invoice member from line analytic account',
     'summary': 'Related member linked to line analytic account partner',
     'category': 'Invoicing',
-    'version': '10.0.1.0.2',
+    'version': '10.0.1.0.3',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',

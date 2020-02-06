@@ -10,7 +10,7 @@ class AccountInvoiceLine(models.Model):
     def write(self, vals):
         res = super(AccountInvoiceLine, self).write(vals)
 
-        if res:
+        if res and not isinstance(res, bool):
             res._member_line_partner_from_anaytic_account()
 
         return res
@@ -19,7 +19,7 @@ class AccountInvoiceLine(models.Model):
     def create(self, vals):
         res = super(AccountInvoiceLine, self).create(vals)
 
-        if res:
+        if res and not isinstance(res, bool):
             res._member_line_partner_from_anaytic_account()
 
         return res
