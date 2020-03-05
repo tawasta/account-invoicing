@@ -15,14 +15,14 @@ class AccountInvoice(models.Model):
 
         return res
 
-    def _get_partner_bank_id(self):
+    def _get_partner_bank_id(self, company_id):
         """ Get partner bank id with lowest sequence number """
 
         partner_bank = self.env["res.partner.bank"]
 
         partner_bank_id = partner_bank.search(
             [
-                ("company_id", "=", self.company_id.id),
+                ("company_id", "=", company_id),
                 ("partner_id", "=", self.company_id.partner_id.id),
             ],
             limit=1,
