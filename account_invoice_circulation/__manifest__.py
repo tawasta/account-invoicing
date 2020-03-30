@@ -21,7 +21,7 @@
 {
     "name": "Invoice circulation",
     "summary": "Adds invoice circulation for vendor invoices",
-    "version": "12.0.1.6.1",
+    "version": "12.0.1.6.2",
     "category": "Invoicing",
     "website": "https://github.com/Tawasta/account-invoicing",
     "author": "Tawasta",

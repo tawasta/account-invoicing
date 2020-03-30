@@ -16,7 +16,7 @@
                         type="object"
                         groups="account.group_account_invoice,account_invoice_circulation.group_invoice_approver"
                         string="Approve"
-                        class="oe_highlight"
+                        class="oe_highlight oe_read_only"
                         attrs="{'invisible': ['|',('invoice_approved', '=', True),('account_invoice_circulation_id', '=', False)]}"/>
             </button>
 
