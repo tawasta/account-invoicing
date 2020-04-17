@@ -9,7 +9,8 @@ class AccountInvoice(models.Model):
     invoice_approved = fields.Boolean(string="Approved", default=False, readonly=True)
 
     account_invoice_circulation_id = fields.Many2one(
-        comodel_name="account.invoice.circulation", string="Circulation"
+        comodel_name="account.invoice.circulation", string="Circulation",
+        readonly=True, states={'draft': [('readonly', False)]}
     )
 
     def action_invoice_approve(self):

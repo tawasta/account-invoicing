@@ -4,6 +4,7 @@ from odoo import api, fields, models
 class AccountInvoiceCirculation(models.Model):
 
     _name = "account.invoice.circulation"
+    _description = "Invoice circulation rule"
 
     name = fields.Char(string="Invoice circulation", required=True)
 
