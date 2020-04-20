@@ -30,7 +30,7 @@ class AccountInvoice(models.Model):
                 raise UserError(msg)
 
             msg = _("%s has approved this invoice" % current_user.name)
-            record.sudo().message_post(msg)
+            record.sudo().message_post(body=msg)
 
             circulation = record.account_invoice_circulation_id
             lines = circulation.circulation_line_ids
@@ -40,7 +40,7 @@ class AccountInvoice(models.Model):
 
             if not next_lines:
                 msg = _("All approvers have approved this invoice")
-                record.sudo().message_post(msg)
+                record.sudo().message_post(body=msg)
 
                 # Set as approved
                 record.invoice_approved = True
