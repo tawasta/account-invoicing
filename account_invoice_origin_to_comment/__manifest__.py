@@ -21,7 +21,7 @@
 {
     "name": "Invoice origin to the comment",
     "summary": "When confirming invoice, copy origin to the comment",
-    "version": "12.0.1.0.1",
+    "version": "12.0.1.0.2",
     "category": "Invoicing",
     "website": "https://github.com/Tawasta/account-invoicing",
     "author": "Tawasta",
