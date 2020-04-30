@@ -10,8 +10,10 @@ class AccountInvoice(models.Model):
 
         for record in self:
             if record.origin:
-                record.comment += '{}\nOrigin: {}'.format(
-                    record.comment,
-                    record.origin,
-                )
+                origin = "Origin: {}".format(record.origin)
+
+                if record.comment:
+                    record.comment += "\n{}".format(origin)
+                else:
+                    record.comment = origin
         return super(AccountInvoice, self).action_invoice_open()
