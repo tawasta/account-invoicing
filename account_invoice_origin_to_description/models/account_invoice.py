@@ -10,6 +10,9 @@ class AccountInvoice(models.Model):
 
         for record in self:
             if record.origin:
-                record.description += '\nOrigin: {}'.format(record.origin)
+                record.description += '{}\nOrigin: {}'.format(
+                    record.description,
+                    record.origin,
+                )
 
         return super(AccountInvoice, self).action_invoice_open()
