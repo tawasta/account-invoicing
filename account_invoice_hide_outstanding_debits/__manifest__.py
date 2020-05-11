@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2019 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,15 +19,19 @@
 ##############################################################################
 
 {
-    "name": "Disable account invoice reference check",
-    "summary": "Allow using duplicate vendor references on vendor invoices",
-    "category": "Invoicing",
+    "name": "Hide outstanding debits from vendor invoices",
+    "summary": "Don't show outstanding debit -info in vendor invoices",
     "version": "12.0.1.0.0",
+    "category": "Invoicing",
     "website": "https://github.com/Tawasta/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
-    "installable": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": []},
     "depends": ["account"],
-    "data": [],
+    "data": [
+        "views/account_invoice.xml",
+    ],
+    "demo": [],
 }

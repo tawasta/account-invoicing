@@ -2,35 +2,31 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-=======================================
-Disable account invoice reference check
-=======================================
+============================================
+Hide outstanding debits from vendor invoices
+============================================
 
-Allow using duplicate vendor references on vendor invoices.
-
-PLEASE NOTE! You probably do not want to install this on any installation that
-uses supplier invoicing. The purpose of this module is to cut corners in
-installations that only use invoicing proforma-style.
-
+Don't show outstanding debit -info in vendor invoices
 
 Configuration
 =============
-\-
+
+-
 
 Usage
 =====
-\-
+
+-
 
 Known issues / Roadmap
 ======================
-\-
+-
 
 Credits
 =======
 
 Contributors
 ------------
-
 * Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
 
 Maintainer
