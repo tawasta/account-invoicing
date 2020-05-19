@@ -19,17 +19,24 @@
 ##############################################################################
 
 {
-    "name": "Preserve analytic tags for refunds",
-    "summary": "Preserve analytic tags for refunds",
-    "version": "12.0.1.0.0",
-    "category": "Invoicing",
-    "website": "https://github.com/Tawasta/account-invoicing",
-    "author": "Tawasta",
-    "license": "AGPL-3",
-    "application": False,
-    "installable": False,
-    "external_dependencies": {"python": [], "bin": []},
-    "depends": ["account"],
-    "data": [],
-    "demo": [],
+    'name': 'Preserve analytic tags for refunds',
+    'summary': 'Preserve analytic tags for refunds',
+    'version': '12.0.1.0.0',
+    'category': 'Invoicing',
+    'website': 'https://tawasta.fi',
+    'author': 'Oy Tawasta Technologies Ltd.',
+    'license': 'AGPL-3',
+    'application': False,
+    'installable': True,
+    'external_dependencies': {
+        'python': [],
+        'bin': [],
+    },
+    'depends': [
+        'account',
+    ],
+    'data': [
+    ],
+    'demo': [
+    ],
 }
