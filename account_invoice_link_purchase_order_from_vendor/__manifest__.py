@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2019 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,24 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Preserve analytic tags for refunds',
-    'summary': 'Preserve analytic tags for refunds',
-    'version': '12.0.1.0.0',
-    'category': 'Invoicing',
-    'website': 'https://tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'account',
-    ],
-    'data': [
-    ],
-    'demo': [
-    ],
+    "name": "Link Purchase order to Vendor bill",
+    "summary": "Link Purchase order to Vendor bill",
+    "version": "12.0.1.0.0",
+    "category": "Accounting & Finance",
+    "website": "https://tawasta.fi",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["account", "purchase",],
+    "data": ["views/account_invoice.xml",],
 }

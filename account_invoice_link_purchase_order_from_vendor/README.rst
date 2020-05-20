@@ -3,30 +3,30 @@
    :alt: License: AGPL-3
 
 ==================================
-Preserve analytic tags for refunds
+Link Purchase order to Vendor bill
 ==================================
 
-Preserve analytic tags for refunds
+This module allows linking Purchase orders to Vendor bills.
 
 Configuration
 =============
-
 \-
 
 Usage
 =====
-\-
+Install this module from Apps.
 
 Known issues / Roadmap
 ======================
-\-
+There are no known issues with this module.
 
 Credits
 =======
 
 Contributors
 ------------
-* Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
+
+* Timo Kekäläinen <timo.kekalainen@tawasta.fi>
 
 Maintainer
 ----------
