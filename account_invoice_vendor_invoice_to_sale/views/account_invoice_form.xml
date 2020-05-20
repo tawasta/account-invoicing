@@ -6,12 +6,12 @@
         <field name="inherit_id" ref="account.invoice_supplier_form"/>
         <field name="arch" type="xml">
 
-            <button name="action_invoice_cancel" position="before">
+            <button name="action_invoice_draft" position="before">
                 <button name="action_create_sale_order"
-                        type="object"
-                        string="Create sale"
-                        groups="sales_team.group_sale_salesman"
-                />
+                    type="object"
+                    string="Create sale"
+                    groups="sales_team.group_sale_salesman"
+                    />
             </button>
 
             <notebook position="inside">
