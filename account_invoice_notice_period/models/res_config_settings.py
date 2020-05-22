@@ -5,8 +5,9 @@ class AccountConfigSettings(models.TransientModel):
 
     _inherit = "res.config.settings"
 
-    default_notice_period = fields.Integer(
+    notice_period = fields.Integer(
         string="Notice period (days)",
-        default_model="company_id.default_notice_period",
+        related="company_id.notice_period",
         help="Default notice period (days) for new customers and invoices",
+        readonly=False,
     )
