@@ -1,5 +1,3 @@
-from datetime import datetime
-
 from babel.dates import format_date
 
 from odoo import api, models
