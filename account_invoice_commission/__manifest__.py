@@ -27,10 +27,9 @@
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
-    "installable": False,
+    "installable": True,
     "external_dependencies": {"python": [], "bin": []},
     "depends": ["account"],
     "data": ["views/account_invoice_commission.xml"],
-    "images": ["static/description/icon.png"],
     "demo": [],
 }
