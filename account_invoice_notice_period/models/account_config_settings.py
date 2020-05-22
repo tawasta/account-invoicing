@@ -3,7 +3,7 @@ from odoo import fields, models
 
 class AccountConfigSettings(models.TransientModel):
 
-    _inherit = "account.config.settings"
+    _inherit = "res.config.settings"
 
     default_notice_period = fields.Integer(
         string="Notice period (days)",
