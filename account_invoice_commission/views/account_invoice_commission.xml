@@ -15,7 +15,7 @@
     <field name="model">account.invoice</field>
     <field name="inherit_id" ref="account.view_account_invoice_filter"/>
     <field name="arch" type="xml">
-        <filter name="refunds" position="after">
+        <filter name="activities_upcoming_all" position="after">
           <separator />
             <filter name="commission_paid" string="Commission paid" domain="[('commission_paid','=',True)]"/>
             <filter name="commission_paid" string="Commission has not been paid" domain="[('commission_paid','=',False)]"/>
