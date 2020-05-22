@@ -18,15 +18,18 @@ class InvoiceMerge(models.TransientModel):
                 for sol in line.sale_line_ids
             ]
         )
-        return " (%s)" % info
+
+        info_str = " (%s)" % info if info else ""
+
+        return info_str
 
     def _get_order_date_with_locale(self, sale_line):
-        order_date = datetime.strptime(
-            sale_line.order_id.date_order, "%Y-%m-%d %H:%M:%S"
-        ).date()
+        order_date = sale_line.order_id.date_order
 
         order_date_with_locale = format_date(
-            order_date, format="short", locale=sale_line.order_id.partner_id.lang
+            order_date,
+            format="short",
+            locale=sale_line.order_id.partner_id.lang
         )
 
         return order_date_with_locale
