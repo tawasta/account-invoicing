@@ -4,6 +4,7 @@
         <field name="name">account.invoice.form.hide.outstanding.debit</field>
         <field name="model">account.invoice</field>
         <field name="inherit_id" ref="account.invoice_supplier_form"/>
+        <field name="priority">99</field>
         <field name="arch" type="xml">
             <xpath expr="//div[@role='alert']" position="replace" />
 
