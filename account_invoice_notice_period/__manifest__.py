@@ -33,7 +33,7 @@
     "data": [
         "views/account_invoice.xml",
         "views/res_partner.xml",
-        "views/account_config_settings.xml",
+        "views/res_config_settings.xml",
     ],
     "demo": [],
 }
