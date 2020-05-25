@@ -21,7 +21,7 @@
 {
     "name": "Notice period for Invoices",
     "summary": "Notice period field for invoices and partners",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "category": "Invoicing",
     "website": "https://github.com/Tawasta/account-invoicing",
     "author": "Tawasta",
