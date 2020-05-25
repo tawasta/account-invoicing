@@ -13,7 +13,7 @@ class SaleAdvancePaymentInv(models.TransientModel):
         )
 
         invoice.notice_period = (
-            order.partner_id.notice_period or order.company_id.default_notice_period
+            order.partner_id.notice_period or order.company_id.notice_period
         )
 
         return invoice
