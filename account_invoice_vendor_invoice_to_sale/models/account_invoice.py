@@ -17,7 +17,7 @@ class AccountInvoice(models.Model):
 
         return {
             "type": "ir.actions.act_window",
-            "res_model": "sale.order",
+            "res_model": "invoice.to.sale",
             "view_mode": "form",
             "target": "new",
             "context": {
