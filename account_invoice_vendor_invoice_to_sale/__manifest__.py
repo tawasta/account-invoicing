@@ -21,7 +21,7 @@
 {
     "name": "Create Sale order from vendor invoice",
     "summary": "Adds a wizard for creating a SO from vendor invoice",
-    "version": "12.0.1.2.1",
+    "version": "12.0.1.2.2",
     "category": "Accounting",
     "website": "https://github.com/Tawasta/account-invoicing",
     "author": "Tawasta",
@@ -30,6 +30,10 @@
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
     "depends": ["account", "sale"],
-    "data": ["views/account_invoice_form.xml", "views/sale_order.xml"],
+    "data": [
+        "wizard/invoice_to_sale.xml",
+        "views/account_invoice_form.xml",
+        "views/sale_order.xml",
+    ],
     "demo": [],
 }
