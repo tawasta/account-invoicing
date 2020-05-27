@@ -5,7 +5,7 @@
         <field name="name">invoice.to.sale.form</field>
         <field name="model">invoice.to.sale</field>
         <field name="arch" type="xml">
-            <form string="Invoice to sale">
+            <form id="invoice_to_sale">
                 <group>
                     <field name="auto_confirm" />
                     <field name="merge_order" />
@@ -36,7 +36,7 @@
     </record>
 
     <record id="action_invoice_to_sale_wizard" model="ir.actions.act_window">
-        <field name="name">invoice.to.sale.action</field>
+        <field name="name">Create sale from invoice</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">invoice.to.sale</field>
         <field name="view_mode">form</field>
