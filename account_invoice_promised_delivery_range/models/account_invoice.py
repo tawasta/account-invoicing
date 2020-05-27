@@ -1,7 +1,7 @@
 from odoo import fields, models
 
 
-class SaleOrder(models.Model):
+class AccountInvoice(models.Model):
 
     _inherit = "account.invoice"
 
