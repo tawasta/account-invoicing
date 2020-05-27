@@ -159,7 +159,7 @@ class InvoiceToSale(models.TransientModel):
                 partner_id=self.partner_id.id,
                 user_id=self.user_id.id,
                 order_line=order_lines,
-                related_project_id=account_analytic_id,
+                analytic_account_id=account_analytic_id,
             )
 
             sale_order = SaleOrder.create(
