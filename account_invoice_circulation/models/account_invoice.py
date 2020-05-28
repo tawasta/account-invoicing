@@ -13,6 +13,11 @@ class AccountInvoice(models.Model):
         readonly=True, states={'draft': [('readonly', False)]}
     )
 
+    allow_approve = fields.Boolean(
+        comodel_name='res.users', compute='_compute_allow_approve',
+        string='Can invoice be approved', help='Current user can approve the invoice',
+    )
+
     def action_invoice_approve(self):
 
         current_user = self.env.user
@@ -50,6 +55,12 @@ class AccountInvoice(models.Model):
 
             else:
                 record.user_id = next_lines[0].user_id.id
+
+    def _compute_allow_approve(self):
+        for record in self:
+            user_match = record.user_id == self.env.user
+
+            record.allow_approve = user_match and not record.invoice_approved
 
     @api.multi
     def write(self, vals):
