@@ -12,12 +12,22 @@
             </button>
 
             <button name="action_invoice_open" position="after">
+
+                <field name="allow_approve" invisible="1"/>
+
                 <button name="action_invoice_approve"
                         type="object"
                         groups="account.group_account_invoice,account_invoice_circulation.group_invoice_approver"
                         string="Approve"
                         class="oe_highlight oe_read_only"
-                        attrs="{'invisible': ['|',('invoice_approved', '=', True),('account_invoice_circulation_id', '=', False)]}"/>
+                        attrs="{'invisible': ['|', ('invoice_approved', '=', True),('allow_approve', '=', False)]}"/>
+
+                <button name="action_invoice_approve"
+                        type="object"
+                        groups="account.group_account_manager"
+                        string="Force Approve"
+                        class="oe_highlight oe_read_only"
+                        attrs="{'invisible': ['|', ('invoice_approved', '=', True),('allow_approve', '=', True)]}"/>
             </button>
 
             <field name="currency_id" position="after">
