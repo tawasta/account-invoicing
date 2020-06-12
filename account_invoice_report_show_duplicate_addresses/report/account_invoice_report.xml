@@ -1,7 +1,7 @@
 <odoo>
     <template id="report_account_invoice_document"
         inherit_id="sale.report_invoice_document_inherit_sale">
-        <xpath expr="//t[starts-with(@t-if='o.partner_shipping_id and')]" position="replace">
+        <xpath expr="//t[starts-with(@t-if, 'o.partner_shipping_id and')]" position="replace">
             <t t-if="o.partner_shipping_id">
                 <t t-set="information_block">
                     <div groups="sale.group_delivery_invoice_address">
