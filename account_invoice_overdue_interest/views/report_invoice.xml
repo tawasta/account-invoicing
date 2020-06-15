@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_invoice_document"
+              inherit_id="account.report_invoice_document">
+
+        <xpath expr="//div[@name='reference']" position="after">
+            <div class="col-auto mw-100 mb-2" t-if="o.overdue_interest" name="overdue_interest">
+                <strong>Overdue interest:</strong>
+                <p class="m-0" t-field="o.overdue_interest"/>
+            </div>
+        </xpath>
+
+    </template>
+
+</odoo>

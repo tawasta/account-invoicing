@@ -21,7 +21,7 @@
 {
     "name": "Overdue Interest for Invoices",
     "summary": "Overdue interest % field for invoices and partners",
-    "version": "12.0.1.0.1",
+    "version": "12.0.1.1.0",
     "category": "Invoicing",
     "website": "https://github.com/Tawasta/account-invoicing",
     "author": "Tawasta",
@@ -32,6 +32,7 @@
     "depends": ["account", "sale"],
     "data": [
         "views/account_invoice.xml",
+        "views/report_invoice.xml",
         "views/res_config_settings.xml",
         "views/res_partner.xml",
     ],
