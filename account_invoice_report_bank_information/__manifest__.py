@@ -21,7 +21,7 @@
 {
     "name": "Invoice template - Bank information",
     "summary": "Banking information to invoice template",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "category": "Reporting",
     "website": "https://tawasta.fi",
     "author": "Tawasta",
