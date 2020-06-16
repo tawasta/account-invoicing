@@ -1,0 +1,10 @@
+<odoo>
+    <template id="report_account_invoice_document"
+        inherit_id="account.report_invoice_document">
+        <xpath expr="//t[@t-set='address']" position="inside">
+            <strong>Customer:</strong>
+            <address t-field="o.partner_customer_id"
+                t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: True}"/>
+        </xpath>
+    </template>
+</odoo>
