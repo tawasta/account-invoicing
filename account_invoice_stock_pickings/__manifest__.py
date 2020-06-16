@@ -21,7 +21,7 @@
 {
     "name": "Invoice stock pickings",
     "summary": "Stock pickings in invoice",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "category": "Accounting & Finance",
     "website": "https://github.com/Tawasta/account-invoicing",
     "author": "Tawasta",
