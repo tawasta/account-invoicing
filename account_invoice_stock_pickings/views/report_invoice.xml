@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_invoice_document"
+              inherit_id="account.report_invoice_document">
+
+        <xpath expr="//div[@name='reference']" position="after">
+            <div class="col-auto mw-100 mb-2" t-if="o.date_delivered" name="date_delivered">
+                <strong>Pickings:</strong>
+                <p class="m-0">
+                    <t t-foreach="o.picking_ids" t-as="picking">
+                        <span t-field="picking.name" /><br t-if="not picking_last" />
+                    </t>
+                </p>
+            </div>
+        </xpath>
+
+    </template>
+
+</odoo>
