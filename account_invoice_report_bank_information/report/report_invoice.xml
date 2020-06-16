@@ -5,7 +5,7 @@
               inherit_id="account.report_invoice_document">
 
         <xpath expr="//div[@id='qrcode']" position="before">
-            <div id="banking-info" t-if="o.partner_bank_id.acc_number != False">
+            <div id="banking-info" style="page-break-inside: avoid;" class="mt16" t-if="o.partner_bank_id.acc_number != False">
                 <strong>BANK DETAILS</strong><br/>
                 <t t-if="o.partner_bank_id.bank_id">
                     <span t-field="o.partner_bank_id.bank_id.name" />
