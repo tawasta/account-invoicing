@@ -3,8 +3,11 @@
 <odoo>
     <template id="report_account_invoice_document" inherit_id="account.report_invoice_document">
         <xpath expr="//t[@t-set='o']" position="before">
-            <t t-if="o.type in ['out_invoice', 'in_invoice']" t-set="report_title">Invoice</t>
-            <t t-else="" t-set="report_title">Refund</t>
+            <t t-set="report_title">
+                <t t-if="o.type in ['out_invoice', 'in_invoice']">Invoice</t>
+                <t t-else="">Refund</t>
+                <span t-if="'invoice_number' in o.fields_get()" t-esc="o.invoice_number" />
+            </t>
         </xpath>
     </template>
 </odoo>

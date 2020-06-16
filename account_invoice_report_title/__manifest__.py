@@ -21,7 +21,7 @@
 {
     "name": "Account Invoice - Report Title",
     "summary": "Report Titles for account invoices",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.1.0",
     "category": "Reporting",
     "website": "https://tawasta.fi",
     "author": "Tawasta",
