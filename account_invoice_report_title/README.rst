@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-=======================
-Sale Order Report Title
-=======================
+==============================
+Account Invoice - Report Title
+==============================
 
-Sale Order Report Title
+Report Titles for account invoices
 
 Configuration
 =============
