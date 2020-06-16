@@ -7,7 +7,7 @@
         <xpath expr="//div[@name='reference']" position="after">
             <div class="col-auto mw-100 mb-2" t-if="o.notice_period" name="notice_period">
                 <strong>Notice period:</strong>
-                <p class="m-0" t-field="o.notice_period"/>
+                <p class="m-0"><span t-field="o.notice_period"/> days</p>
             </div>
         </xpath>
 
