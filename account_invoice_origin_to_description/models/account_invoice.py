@@ -1,20 +1,21 @@
-from odoo import api, models
+from odoo import api
+from odoo import models
+from odoo import _
 
 
 class AccountInvoice(models.Model):
 
     _inherit = "account.invoice"
 
-    @api.multi
-    def action_invoice_open(self):
+    @api.model
+    def create(self, values):
+        if values.get('description') == False:
+            values['description'] = ''
 
-        for record in self:
-            if record.origin:
-                origin = "Origin: {}".format(record.origin)
+        if 'origin' in values:
+            values['description'] = "{}\n{}".format(
+                values['description'],
+                _("Origin: {}").format(values['origin'])
+            )
 
-                if record.description:
-                    record.description += "\n{}".format(origin)
-                else:
-                    record.description = origin
-
-        return super(AccountInvoice, self).action_invoice_open()
+        return super(AccountInvoice, self).create(values)
