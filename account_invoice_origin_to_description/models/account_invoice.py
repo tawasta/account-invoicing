@@ -14,7 +14,7 @@ class AccountInvoice(models.Model):
 
         if 'origin' in values:
             values['description'] = "{}\n{}".format(
-                values['description'],
+                values.get('description', ''),
                 _("Origin: {}").format(values['origin'])
             )
 
