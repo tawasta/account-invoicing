@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="invoice_form" model="ir.ui.view">
+        <field name="name">account.invoice.form.optional.autofollow</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//button[@name='action_invoice_sent'][1]" position="attributes">
+                <attribute name="context">{'default_notify_followers': False}</attribute>
+            </xpath>
+
+            <xpath expr="//button[@name='action_invoice_sent'][2]" position="attributes">
+                <attribute name="context">{'default_notify_followers': False}</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>
