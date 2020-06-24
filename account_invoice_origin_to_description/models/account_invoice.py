@@ -9,7 +9,7 @@ class AccountInvoice(models.Model):
 
     @api.model
     def create(self, values):
-        if values.get('description') == False:
+        if values.get('description') is False:
             values['description'] = ''
 
         if 'origin' in values:
