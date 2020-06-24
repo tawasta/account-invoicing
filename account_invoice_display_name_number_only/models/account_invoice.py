@@ -24,6 +24,4 @@ class AccountInvoice(models.Model):
         for inv in self:
             result.append((inv.id, "%s" % inv.number or types[inv.type]))
 
-        print(result)
-
         return result
