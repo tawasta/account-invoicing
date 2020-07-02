@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_invoice_document"
+        inherit_id="account.report_invoice_document">
+
+        <xpath expr="//span[@t-field='line.price_subtotal']"
+            position="replace">
+            <span t-field="line.price_subtotal_signed"
+                groups="account.group_show_line_subtotals_tax_excluded"/>
+        </xpath>
+
+        <xpath expr="//span[@t-field='o.amount_untaxed']"
+            position="replace">
+            <span t-field="o.amount_untaxed_signed"/>
+        </xpath>
+
+        <xpath expr="//td[@class='text-right o_price_total']//span[1]"
+            position="replace">
+            <span t-field="line.price_subtotal_signed"
+                groups="account.group_show_line_subtotals_tax_excluded"/>
+        </xpath>
+
+        <xpath expr="//span[@t-esc='current_subtotal']"
+            position="before">
+            <t t-set="current_subtotal"
+                t-value="current_subtotal * -1"></t>
+        </xpath>
+
+    </template>
+
+</odoo>
