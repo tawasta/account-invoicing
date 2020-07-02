@@ -15,7 +15,7 @@
             <span t-field="o.amount_untaxed_signed"/>
         </xpath>
 
-        <xpath expr="//span[@t-field='line.price_subtotal']"
+        <xpath expr="//td[@class='text-right o_price_total']//span[1]"
             position="replace">
             <span t-field="line.price_subtotal_signed"
                 groups="account.group_show_line_subtotals_tax_excluded"/>
