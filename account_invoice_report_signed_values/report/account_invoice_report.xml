@@ -27,6 +27,19 @@
                 t-value="current_subtotal * -1"></t>
         </xpath>
 
+        <xpath expr="//span[@t-field='line.price_unit']"
+            position="replace">
+            <span>
+                <t t-esc="line.price_unit * -1"
+                    t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"></t>
+            </span>
+        </xpath>
+
+        <xpath expr="//span[@t-field='o.amount_total']"
+            position="replace">
+            <span t-field="o.amount_total_signed"></span>
+        </xpath>
+
     </template>
 
 </odoo>
