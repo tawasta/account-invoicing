@@ -29,7 +29,7 @@
 
         <xpath expr="//span[@t-field='o.amount_total']"
             position="replace">
-            <span t-file="o.amount_total_signed"></span>
+            <span t-field="o.amount_total_signed"></span>
         </xpath>
 
     </template>
