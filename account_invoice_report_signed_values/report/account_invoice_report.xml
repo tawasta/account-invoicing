@@ -31,7 +31,7 @@
             position="replace">
             <span>
                 <t t-esc="line.price_unit"
-                    t-options="{'widget': 'monetary'}"></t>
+                    t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"></t>
             </span>
         </xpath>
 
