@@ -23,15 +23,22 @@
 
         <xpath expr="//span[@t-esc='current_subtotal']"
             position="before">
-            <t t-set="current_subtotal"
-                t-value="current_subtotal * -1"></t>
+            <t t-if="o.type == 'out_refund' or o.type == 'in_refund'">
+                <t t-set="current_subtotal"
+                    t-value="current_subtotal * -1"></t>
+            </t>
         </xpath>
 
         <xpath expr="//span[@t-field='line.price_unit']"
             position="replace">
             <span>
-                <t t-esc="line.price_unit * -1"
-                    t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"></t>
+                <t t-if="o.type == 'out_refund' or o.type == 'in_refund'">
+                    <t t-esc="line.price_unit * -1"
+                        t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"></t>
+                </t>
+                <t t-else="">
+                    <span t-field="line.price_unit"/>
+                </t>
             </span>
         </xpath>
 
