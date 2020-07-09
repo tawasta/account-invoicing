@@ -3,10 +3,10 @@
     <record id="sales_agent_invoice_line_view" model="ir.ui.view">
         <field name="name">account.invoice.line.sales.agent</field>
         <field name="inherit_id" ref="account_invoice_line_view.view_account_invoice_line_line_tree"/>
-        <field name="model">account.invoice</field>
+        <field name="model">account.invoice.line</field>
         <field name="arch" type="xml">
 
-            <field name="product_id" position="before">
+            <field name="name" position="after">
                 <field name="sales_agent"></field>
             </field>
 
