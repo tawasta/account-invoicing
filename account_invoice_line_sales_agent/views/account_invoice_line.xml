@@ -6,7 +6,7 @@
         <field name="model">account.invoice</field>
         <field name="arch" type="xml">
 
-            <field name="invoice_id" position="after">
+            <field name="product_id" position="before">
                 <field name="sales_agent"></field>
             </field>
 
