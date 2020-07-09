@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <record id="invoice_line_view" model="ir.ui.view">
+    <record id="sales_agent_invoice_line_view" model="ir.ui.view">
         <field name="name">account.invoice.line.sales.agent</field>
         <field name="inherit_id" ref="account_invoice_line_view.view_account_invoice_line_line_tree"/>
         <field name="model">account.invoice</field>
         <field name="arch" type="xml">
 
-            <field name="invoice_id" position="after">
+            <field name="product_id" position="before">
                 <field name="sales_agent"></field>
             </field>
 
