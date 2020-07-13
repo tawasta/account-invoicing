@@ -13,7 +13,4 @@ class AccountInvoiceLine(models.Model):
         for sale_order in self.sale_order_ids:
             numbers = "{} {}".format(numbers, sale_order.name,)
 
-        print("============")
-        print(numbers)
-        print("============")
         self.sale_order_numbers = numbers
