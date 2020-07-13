@@ -1,4 +1,4 @@
-from odoo import fields, models
+from odoo import api, fields, models
 
 
 class AccountInvoiceLine(models.Model):
@@ -8,6 +8,7 @@ class AccountInvoiceLine(models.Model):
 
     sale_order_numbers = fields.Char(compute="_compute_sale_order_numbers",)
 
+    @api.multi
     def _compute_sale_order_numbers(self):
         for record in self:
             numbers = ""
