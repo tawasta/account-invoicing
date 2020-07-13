@@ -6,7 +6,7 @@ class AccountInvoiceLine(models.Model):
 
     sale_order_ids = fields.One2many(related="invoice_id.sale_order_ids")
 
-    sale_order_numbers = fields.Char(compute="_compute_sale_order_numbers",)
+    sale_order_numbers = fields.Char(compute="_compute_sale_order_numbers", default="")
 
     @api.multi
     def _compute_sale_order_numbers(self):
