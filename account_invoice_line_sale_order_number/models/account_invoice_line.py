@@ -12,7 +12,7 @@ class AccountInvoiceLine(models.Model):
     def _compute_sale_order_numbers(self):
         for record in self:
             numbers = ""
-            for sale_order in self.sale_order_ids:
+            for sale_order in record.sale_order_ids:
                 numbers = "{} {}".format(numbers, sale_order.name,)
 
             record.sale_order_numbers = numbers
