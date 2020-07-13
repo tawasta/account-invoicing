@@ -13,6 +13,6 @@ class AccountInvoiceLine(models.Model):
         for record in self:
             numbers = ""
             for sale_order in record.sale_order_ids:
-                numbers = "{} {}".format(numbers, sale_order.name,)
+                numbers = "{} {}".format(numbers, sale_order.number,)
 
             record.sale_order_numbers = numbers
