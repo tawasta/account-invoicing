@@ -9,8 +9,9 @@ class AccountInvoiceLine(models.Model):
     sale_order_numbers = fields.Char(compute="_compute_sale_order_numbers",)
 
     def _compute_sale_order_numbers(self):
-        numbers = ""
-        for sale_order in self.sale_order_ids:
-            numbers = "{} {}".format(numbers, sale_order.name,)
+        for record in self:
+            numbers = ""
+            for sale_order in self.sale_order_ids:
+                numbers = "{} {}".format(numbers, sale_order.name,)
 
-        self.sale_order_numbers = numbers
+            record.sale_order_numbers = numbers
