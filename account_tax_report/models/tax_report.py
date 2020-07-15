@@ -233,9 +233,14 @@ class AccountTaxReport(models.Model):
             self.report_file = base64.encodestring(report_str)
 
     def _check_move_values(self, move):
+        country_group_european_union = self.env['country.group'].search([
+            'id',
+            '=',
+            'base.european_union'
+        ])
         return (
             # OLD: move.partner_id.country_id.eu_member
-            'base.european_union' in move.partner_id.country_id.country_group_ids
+            country_group_european_union in move.partner_id.country_id.country_group_ids
             and move.partner_id.country_id.code != "FI"
             and move.move_id.state == "posted"
             and (move.credit > 0 or move.debit > 0)
@@ -265,6 +270,7 @@ class AccountTaxReport(models.Model):
             move_ids = account_move_obj.search(move_domain)
 
             for move in move_ids:
+                amount = 0
                 if self._check_move_values(move):
                     if move.credit > 0:
                         amount = move.credit
