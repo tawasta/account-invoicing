@@ -28,8 +28,8 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "external_dependencies": {"python": [], "bin": [],},
-    "depends": ["account",],
+    "external_dependencies": {"python": [], "bin": [], },
+    "depends": ["account", "l10n_fi_country_groups", ],
     "data": [
         "views/tax_report_view.xml",
         "views/account_view.xml",
