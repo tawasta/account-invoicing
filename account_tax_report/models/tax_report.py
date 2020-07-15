@@ -246,12 +246,6 @@ class AccountTaxReport(models.Model):
 
     def _check_move_values(self, move):
         country_group_ids = [x.id for x in self.env.ref('l10n_fi_liikekirjuri.eu_wo_finland').country_ids]
-        print("===============")
-        print(country_group_ids)
-        print("===============")
-        print("===============")
-        print(move.partner_id.country_id.id)
-        print("===============")
         return (
             move.move_id.state == "posted"
             and move.partner_id.country_id.id in country_group_ids
