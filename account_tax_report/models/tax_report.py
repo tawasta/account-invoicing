@@ -254,8 +254,7 @@ class AccountTaxReport(models.Model):
         print("===============")
         return (
             move.move_id.state == "posted"
-            and move.partner_id.country_id.id
-            in self.env.ref('l10n_fi_liikekirjuri.eu_wo_finland').country_ids
+            and move.partner_id.country_id.id in country_group_ids
             and (move.credit > 0 or move.debit > 0)
         )
 
