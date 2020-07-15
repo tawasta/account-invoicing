@@ -60,7 +60,7 @@
         <field name="arch" type="xml">
             <tree string="Account Tax Report">
                 <field name="name"/>
-                <!--<field name="company_id"/>-->
+                <field name="company_id"/>
                 <!--<field name="period_id"/>-->
             </tree>
         </field>
