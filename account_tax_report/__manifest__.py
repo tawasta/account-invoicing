@@ -29,7 +29,7 @@
     "application": False,
     "installable": True,
     "external_dependencies": {"python": [], "bin": [], },
-    "depends": ["account", "l10n_fi_country_groups", ],
+    "depends": ["account", ],
     "data": [
         "views/tax_report_view.xml",
         "views/account_view.xml",
