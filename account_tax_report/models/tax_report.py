@@ -251,7 +251,7 @@ class AccountTaxReport(models.Model):
             move.move_id.state == "posted"
             and move.partner_id.country_id
             in self.env.ref('l10n_fi_liikekirjuri.eu_wo_finland').country_ids
-            and (move.credit > 0 or move.devit > 0)
+            and (move.credit > 0 or move.debit > 0)
         )
 
     @api.multi
