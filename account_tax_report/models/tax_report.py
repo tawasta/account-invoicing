@@ -326,14 +326,12 @@ class AccountTaxReport(models.Model):
 
     @api.model
     def create(self, vals):
-        name = self._get_name()
-        vals["name"] = name
+        vals["name"] = self.name
         return super(AccountTaxReport, self).create(vals)
 
     @api.multi
     def write(self, vals):
-        name = self._get_name()
-        vals["name"] = name
+        vals["name"] = self.name
         return super(AccountTaxReport, self).write(vals)
 
 
