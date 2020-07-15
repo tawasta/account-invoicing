@@ -233,21 +233,25 @@ class AccountTaxReport(models.Model):
             # OLD: self.report_file = base64.encodestring(report_str)
             self.report_file = base64.b64encode(report_str.encode("UTF-8"))
 
+    # OLD
+    """
     def _check_move_values(self, move):
         # TODO
         # Dont search with country group name
-        country_group_european_union = self.env['res.country.group'].search([
-            (
-                'name',
-                '=',
-                'European union'
-            )])
         return (
-            # OLD: move.partner_id.country_id.eu_member
-            country_group_european_union in move.partner_id.country_id.country_group_ids
+            move.partner_id.country_id.eu_member
             and move.partner_id.country_id.code != "FI"
             and move.move_id.state == "posted"
             and (move.credit > 0 or move.debit > 0)
+        )
+    """
+
+    def _check_move_values(self, move):
+        return (
+            move.move_id.state == "posted"
+            and move.partner_id.country_id
+            in self.env.ref('l10n_fi_liikekirjuri.eu_wo_finland').country_ids
+            and (move.credit > 0 or move.devit > 0)
         )
 
     @api.multi
