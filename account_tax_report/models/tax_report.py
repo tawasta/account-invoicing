@@ -234,7 +234,8 @@ class AccountTaxReport(models.Model):
 
     def _check_move_values(self, move):
         return (
-            move.partner_id.country_id.eu_member
+            # OLD: move.partner_id.country_id.eu_member
+            'base.european_union' in move.partner_id.country_id.country_group_ids
             and move.partner_id.country_id.code != "FI"
             and move.move_id.state == "posted"
             and (move.credit > 0 or move.debit > 0)
