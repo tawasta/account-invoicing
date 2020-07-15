@@ -233,7 +233,7 @@ class AccountTaxReport(models.Model):
             self.report_file = base64.encodestring(report_str)
 
     def _check_move_values(self, move):
-        country_group_european_union = self.env['country.group'].search([
+        country_group_european_union = self.env['res.country.group'].search([
             'id',
             '=',
             'base.european_union'
