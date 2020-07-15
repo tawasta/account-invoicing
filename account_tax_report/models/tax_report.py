@@ -208,8 +208,8 @@ class AccountTaxReport(models.Model):
             header["000"] = "VSRALVYV"
             header["198"] = self._get_timestamp()
             header["010"] = self.company_registry
-            header["052"] = self._format_period(self.period_id.code)
-            header["053"] = self.period_id.fiscalyear_id.name
+            # TODO
+            # header["053"] = self.period_id.fiscalyear_id.name
             header["001"] = self.amount_partners
             header_str = "\n".join(
                 ["{}:{}".format(key, value) for key, value in header.items()]
@@ -233,12 +233,14 @@ class AccountTaxReport(models.Model):
             self.report_file = base64.encodestring(report_str)
 
     def _check_move_values(self, move):
+        # TODO
+        # Dont search with country group name
         country_group_european_union = self.env['res.country.group'].search([
             (
                 'name',
                 '=',
                 'European union'
-            )])[0]
+            )])
         return (
             # OLD: move.partner_id.country_id.eu_member
             country_group_european_union in move.partner_id.country_id.country_group_ids
