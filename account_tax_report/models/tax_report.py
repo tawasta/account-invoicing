@@ -315,7 +315,7 @@ class AccountTaxReport(models.Model):
 
     @api.model
     def create(self, vals):
-        name = self._get_name(vals)
+        name = self._get_name()
         vals["name"] = name
         return super(AccountTaxReport, self).create(vals)
 
