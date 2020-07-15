@@ -237,7 +237,7 @@ class AccountTaxReport(models.Model):
             'id',
             '=',
             'base.european_union'
-        ])
+        ])[0]
         return (
             # OLD: move.partner_id.country_id.eu_member
             country_group_european_union in move.partner_id.country_id.country_group_ids
