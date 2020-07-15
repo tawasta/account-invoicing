@@ -332,7 +332,7 @@ class AccountTaxReport(models.Model):
 
     @api.multi
     def write(self, vals):
-        name = self._get_name(vals)
+        name = self._get_name()
         vals["name"] = name
         return super(AccountTaxReport, self).write(vals)
 
