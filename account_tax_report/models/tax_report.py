@@ -100,8 +100,8 @@ class AccountTaxReport(models.Model):
                 if line.vat_code not in vat_codes:
                     vat_codes.append(line.vat_code)
 
-                    report.amount_total = amount_total
-                    report.amount_partners = len(vat_codes)
+            report.amount_total = amount_total
+            report.amount_partners = len(vat_codes)
 
     @api.model
     def _get_filename(self):
