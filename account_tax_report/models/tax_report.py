@@ -235,9 +235,9 @@ class AccountTaxReport(models.Model):
     def _check_move_values(self, move):
         country_group_european_union = self.env['res.country.group'].search([
             (
-                'id',
+                'name',
                 '=',
-                'base.european_union'
+                'European union'
             )])[0]
         return (
             # OLD: move.partner_id.country_id.eu_member
