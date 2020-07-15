@@ -231,7 +231,7 @@ class AccountTaxReport(models.Model):
             report_str = header_str + "\n" + line_str + footer_str
 
             # OLD: self.report_file = base64.encodestring(report_str)
-            self.report_file = base64.b64encode(report_str)
+            self.report_file = base64.b64encode(report_str.encode("UTF-8"))
 
     def _check_move_values(self, move):
         # TODO
