@@ -24,7 +24,6 @@
                     type="object"
                     help="Create Tax Report Lines for selected company and period"/>
 
-                <!--TODO
                     <button name="action_download_report"
                         string="Download Report"
                         type="object"
@@ -43,7 +42,6 @@
                             <field name="product_type"/>
                         </tree>
                     </field>
-                    -->
 
                     <group class="oe_subtotal_footer oe_right">
                         <!--TODO
