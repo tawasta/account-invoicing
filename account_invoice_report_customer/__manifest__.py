@@ -25,5 +25,5 @@
     "license": "AGPL-3",
     "website": "https://github.com/Tawasta/account-invoicing",
     "depends": ["account", "sale"],
-    "data": ["report/account_invoice.xml",],
+    "data": ["report/account_invoice.xml"],
 }

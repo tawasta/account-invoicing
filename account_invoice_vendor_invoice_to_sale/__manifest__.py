@@ -20,7 +20,7 @@
 
 {
     "name": "Create Sale order from vendor invoice",
-    "summary": "Adds a wizard for creating a SO from vendor invoice",
+    "summary": "Adds a wizards for creating a SO from vendor invoice",
     "version": "12.0.1.2.2",
     "category": "Accounting",
     "website": "https://github.com/Tawasta/account-invoicing",

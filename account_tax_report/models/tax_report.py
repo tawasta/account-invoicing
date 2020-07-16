@@ -278,7 +278,7 @@ class AccountTaxReport(models.Model):
         attachment = (
             self.env["ir.attachment"]
             .sudo()
-            .create({"name": "test", "datas": self.report_file, "type": "binary",})
+            .create({"name": "test", "datas": self.report_file, "type": "binary"})
         )
 
         return {
