@@ -247,26 +247,29 @@ class AccountTaxReport(models.Model):
 
             move_ids = account_move_obj.search(move_domain)
 
+            european_union = self.sudo().env.ref('base.european_union').country_ids.ids
+
             for move in move_ids:
-                amount = 0
-                if self._check_move_values(move):
-                    if move.credit > 0:
-                        amount = move.credit
-                    else:
-                        amount = -move.debit
+                if move.partner_id.country_id.id in european_union:
+                    amount = 0
+                    if self._check_move_values(move):
+                        if move.credit > 0:
+                            amount = move.credit
+                        else:
+                            amount = -move.debit
 
-                vals = {
-                    "partner_id": move.partner_id.id,
-                    "country_code": move.partner_id.country_id.code,
-                    "vat_code": move.partner_id.vat,
-                    "amount": amount,
-                    "product_id": move.product_id.id,
-                    "product_type": move.product_id.type,
-                    "report_id": self.id,
-                    "move_line_id": move.id,
-                }
+                    vals = {
+                        "partner_id": move.partner_id.id,
+                        "country_code": move.partner_id.country_id.code,
+                        "vat_code": move.partner_id.vat,
+                        "amount": amount,
+                        "product_id": move.product_id.id,
+                        "product_type": move.product_id.type,
+                        "report_id": self.id,
+                        "move_line_id": move.id,
+                    }
 
-                line_obj.create(vals)
+                    line_obj.create(vals)
 
             self._set_report_file()
 
