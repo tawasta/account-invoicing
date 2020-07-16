@@ -233,22 +233,12 @@ class AccountTaxReport(models.Model):
             # OLD: self.report_file = base64.encodestring(report_str)
             self.report_file = base64.b64encode(report_str.encode("UTF-8"))
 
-    # OLD
-    """
     def _check_move_values(self, move):
         return (
-            move.partner_id.country_id.eu_member
-            and move.partner_id.country_id.code != "FI"
+            # TODO Put check here
+            # move.partner_id.country_id.eu_member and
+            move.partner_id.country_id.code != "FI"
             and move.move_id.state == "posted"
-            and (move.credit > 0 or move.debit > 0)
-        )
-    """
-
-    def _check_move_values(self, move):
-        country_group_ids = [x.id for x in self.env.ref('l10n_fi_liikekirjuri.eu_wo_finland').country_ids]
-        return (
-            move.move_id.state == "posted"
-            and move.partner_id.country_id.id in country_group_ids
             and (move.credit > 0 or move.debit > 0)
         )
 
@@ -302,29 +292,20 @@ class AccountTaxReport(models.Model):
 
     @api.multi
     def action_download_report(self):
-        if self.partner_ids:
-            partner_ids = [x.id for x in self.partner_ids]
-            return {
-                "name": "Missing VAT codes",
-                "view_type": "form",
-                "view_mode": "form",
-                "type": "ir.actions.act_window",
-                "target": "new",
-                "res_model": "account_tax_report.info_window",
-                "context": {
-                    "default_report_id": self.id,
-                    "default_filename": self.filename,
-                    "default_partner_ids": partner_ids,
-                },
-            }
-        else:
-            return {
-                "type": "ir.actions.act_url",
-                "url": "/web/binary/download_document?model=account_tax_report\
-                .tax.report&field=report_file&id=%s&filename=%s"
-                % (self.id, self.filename),
-                "target": "self",
-            }
+        attachment = (
+            self.env["ir.attachment"]
+            .sudo()
+            .create({
+                "name": "test",
+                "datas": self.report_file,
+                "type": "binary",
+            })
+        )
+
+        return {
+            "type": "ir.actions.act_url",
+            "url": attachment.local_url,
+        }
 
     @api.model
     def create(self, vals):
