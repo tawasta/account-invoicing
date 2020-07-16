@@ -25,23 +25,6 @@ class AccountTaxReport(models.Model):
         period_end = date.today()
         return period_start and period_end
 
-    """
-    current_month = date.today().month
-        if current_month > 1:
-            current_month = -1
-
-        first_day = date(
-            date.today().year,
-            date.today().month,
-            1,
-        ).strftime("%Y-%m-%d")
-        res = self.env['account.period'].search([
-            ('date_start', '=', first_day),
-            ('company_id', '=', self.env.user.company_id.id)
-        ])
-        return res and res[0] or False
-    """
-
     name = fields.Char(string="Name", default="/", compute="_get_name",)
     period_start = fields.Date(string="Period start", required=True,)
     period_end = fields.Date(string="Period end", required=True,)

@@ -20,7 +20,7 @@
 
 {
     "name": "Account Tax Report",
-    "description": "Finnish VAT-summary report.",
+    "summary": "Finnish VAT-summary report.",
     "version": "12.0.1.0.0",
     "category": "",
     "website": "",
