@@ -208,8 +208,7 @@ class AccountTaxReport(models.Model):
             header["000"] = "VSRALVYV"
             header["198"] = self._get_timestamp()
             header["010"] = self.company_registry
-            # TODO
-            # header["053"] = self.period_id.fiscalyear_id.name
+            header["053"] = self.period_start.year
             header["001"] = self.amount_partners
             header_str = "\n".join(
                 ["{}:{}".format(key, value) for key, value in header.items()]
@@ -234,10 +233,10 @@ class AccountTaxReport(models.Model):
             self.report_file = base64.b64encode(report_str.encode("UTF-8"))
 
     def _check_move_values(self, move):
+        european_union = self.sudo().env.ref('base.european_union').country_ids.ids
         return (
-            # TODO Put check here
-            # move.partner_id.country_id.eu_member and
-            move.partner_id.country_id.code != "FI"
+            move.partner_id.country_id.id in european_union
+            and move.partner_id.country_id.code != "FI"
             and move.move_id.state == "posted"
             and (move.credit > 0 or move.debit > 0)
         )
