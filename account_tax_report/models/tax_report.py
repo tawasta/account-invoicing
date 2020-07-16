@@ -26,7 +26,7 @@ class AccountTaxReport(models.Model):
         period_end = date.today()
         return period_start and period_end
 
-    name = fields.Char(string="Name", default="/", compute="_get_name",)
+    name = fields.Char(string="Name", default="/", compute="_compute_name",)
     period_start = fields.Date(string="Period start", required=True,)
     period_end = fields.Date(string="Period end", required=True,)
     company_id = fields.Many2one(
@@ -42,7 +42,7 @@ class AccountTaxReport(models.Model):
         # required=True,
     )
     report_file = fields.Binary(string="Download Report")
-    filename = fields.Char(compute="_get_filename", string="Filename")
+    filename = fields.Char(compute="_compute_filename", string="Filename")
     line_ids = fields.One2many(
         "account_tax_report.tax.report.line", "report_id", string="Lines",
     )
@@ -66,7 +66,7 @@ class AccountTaxReport(models.Model):
         # 'partner_rel',
         # 'partner_ids',
         # 'report_id',
-        compute="_get_partner_ids",
+        compute="_compute_partner_ids",
         string="Partners",
     )
     amount_total = fields.Float(string="Total amount", compute="_get_total_amounts",)
@@ -88,7 +88,7 @@ class AccountTaxReport(models.Model):
             report.amount_partners = len(vat_codes)
 
     @api.model
-    def _get_filename(self):
+    def _compute_filename(self):
         if self.name != "/":
             self.filename = "ALV_yhteenveto_%s.csv" % self.name.replace(
                 " ", "_"
@@ -98,13 +98,13 @@ class AccountTaxReport(models.Model):
 
     @api.depends("line_ids")
     @api.model
-    def _get_partner_ids(self):
+    def _compute_partner_ids(self):
         for record in self:
             for line in record.line_ids:
                 if not line.partner_id.vat:
                     self.partner_ids = [(4, line.partner_id.id)]
 
-    def _get_name(self):
+    def _compute_name(self):
         for record in self:
             name = "/"
 
@@ -217,7 +217,7 @@ class AccountTaxReport(models.Model):
             self.report_file = base64.b64encode(report_str.encode("UTF-8"))
 
     def _check_move_values(self, move):
-        european_union = self.sudo().env.ref("base.european_union").country_ids.ids
+        european_union = self.sudo().env.ref("base.europe").country_ids.ids
         return (
             move.partner_id.country_id.id in european_union
             and move.partner_id.country_id.code not in ["FI"]
@@ -278,12 +278,19 @@ class AccountTaxReport(models.Model):
         attachment = (
             self.env["ir.attachment"]
             .sudo()
-            .create({"name": "test", "datas": self.report_file, "type": "binary"})
+            .create(
+                {
+                    "name": self.filename,
+                    "datas": self.report_file,
+                    "datas_fname": self.filename,
+                    "type": "binary",
+                }
+            )
         )
 
         return {
             "type": "ir.actions.act_url",
-            "url": attachment.local_url,
+            "url": "{}{}".format(attachment.local_url, "&download=true"),
         }
 
     @api.model
