@@ -1,4 +1,5 @@
 import base64
+
 # import json
 from collections import OrderedDict
 from datetime import date, datetime
@@ -216,10 +217,10 @@ class AccountTaxReport(models.Model):
             self.report_file = base64.b64encode(report_str.encode("UTF-8"))
 
     def _check_move_values(self, move):
-        european_union = self.sudo().env.ref('base.european_union').country_ids.ids
+        european_union = self.sudo().env.ref("base.european_union").country_ids.ids
         return (
             move.partner_id.country_id.id in european_union
-            and move.partner_id.country_id.code not in ["FI", "GB"]
+            and move.partner_id.country_id.code not in ["FI"]
             and move.move_id.state == "posted"
             and (move.credit > 0 or move.debit > 0)
         )
@@ -277,11 +278,7 @@ class AccountTaxReport(models.Model):
         attachment = (
             self.env["ir.attachment"]
             .sudo()
-            .create({
-                "name": "test",
-                "datas": self.report_file,
-                "type": "binary",
-            })
+            .create({"name": "test", "datas": self.report_file, "type": "binary",})
         )
 
         return {
