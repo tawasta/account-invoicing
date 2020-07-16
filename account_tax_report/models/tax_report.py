@@ -217,7 +217,7 @@ class AccountTaxReport(models.Model):
             self.report_file = base64.b64encode(report_str.encode("UTF-8"))
 
     def _check_move_values(self, move):
-        european_union = self.sudo().env.ref("base.europe").country_ids.ids
+        european_union = self.sudo().env.ref("base.european_union").country_ids.ids
         return (
             move.partner_id.country_id.id in european_union
             and move.partner_id.country_id.code not in ["FI"]
