@@ -236,7 +236,7 @@ class AccountTaxReport(models.Model):
         european_union = self.sudo().env.ref('base.european_union').country_ids.ids
         return (
             move.partner_id.country_id.id in european_union
-            and move.partner_id.country_id.code != "FI"
+            and move.partner_id.country_id.code not in ["FI", "GB"]
             and move.move_id.state == "posted"
             and (move.credit > 0 or move.debit > 0)
         )
