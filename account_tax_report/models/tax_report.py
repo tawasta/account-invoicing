@@ -191,6 +191,7 @@ class AccountTaxReport(models.Model):
             header["000"] = "VSRALVYV"
             header["198"] = self._get_timestamp()
             header["010"] = self.company_registry
+            header["052"] = self.period_start.month
             header["053"] = self.period_start.year
             header["001"] = self.amount_partners
             header_str = "\n".join(
@@ -212,7 +213,6 @@ class AccountTaxReport(models.Model):
 
             report_str = header_str + "\n" + line_str + footer_str
 
-            # OLD: self.report_file = base64.encodestring(report_str)
             self.report_file = base64.b64encode(report_str.encode("UTF-8"))
 
     def _check_move_values(self, move):
