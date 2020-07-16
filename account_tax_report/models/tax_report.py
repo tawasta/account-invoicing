@@ -1,11 +1,12 @@
 import base64
-# import json
+import logging
+
 from collections import OrderedDict
 from datetime import date, datetime
 
 from odoo import api, fields, models
 
-# from odoo .exceptions import Warning
+_logger = logging.getLogger(__name__)
 
 
 class AccountTaxReport(models.Model):
@@ -25,7 +26,7 @@ class AccountTaxReport(models.Model):
         period_end = date.today()
         return period_start and period_end
 
-    name = fields.Char(string="Name", default="/", compute="_get_name",)
+    name = fields.Char(string="Name", default="/", compute="_compute_name",)
     period_start = fields.Date(string="Period start", required=True,)
     period_end = fields.Date(string="Period end", required=True,)
     company_id = fields.Many2one(
@@ -41,7 +42,7 @@ class AccountTaxReport(models.Model):
         # required=True,
     )
     report_file = fields.Binary(string="Download Report")
-    filename = fields.Char(compute="_get_filename", string="Filename")
+    filename = fields.Char(compute="_compute_filename", string="Filename")
     line_ids = fields.One2many(
         "account_tax_report.tax.report.line", "report_id", string="Lines",
     )
@@ -65,16 +66,18 @@ class AccountTaxReport(models.Model):
         # 'partner_rel',
         # 'partner_ids',
         # 'report_id',
-        compute="_get_partner_ids",
+        compute="_compute_partner_ids",
         string="Partners",
     )
-    amount_total = fields.Float(string="Total amount", compute="_get_total_amounts",)
+    amount_total = fields.Float(
+        string="Total amount", compute="_compute_total_amounts",
+    )
     amount_partners = fields.Integer(
-        string="Total number of partners", compute="_get_total_amounts"
+        string="Total number of partners", compute="_compute_total_amounts"
     )
 
     @api.model
-    def _get_total_amounts(self):
+    def _compute_total_amounts(self):
         for report in self:
             amount_total = 0
             vat_codes = []
@@ -87,7 +90,7 @@ class AccountTaxReport(models.Model):
             report.amount_partners = len(vat_codes)
 
     @api.model
-    def _get_filename(self):
+    def _compute_filename(self):
         if self.name != "/":
             self.filename = "ALV_yhteenveto_%s.csv" % self.name.replace(
                 " ", "_"
@@ -97,13 +100,13 @@ class AccountTaxReport(models.Model):
 
     @api.depends("line_ids")
     @api.model
-    def _get_partner_ids(self):
+    def _compute_partner_ids(self):
         for record in self:
             for line in record.line_ids:
                 if not line.partner_id.vat:
                     self.partner_ids = [(4, line.partner_id.id)]
 
-    def _get_name(self):
+    def _compute_name(self):
         for record in self:
             name = "/"
 
@@ -123,7 +126,7 @@ class AccountTaxReport(models.Model):
                 if key == "103":
                     vatcode = values[key]
                     if vatcode in vat_codes:
-                        print("duplicate vat code: %s" % vatcode)
+                        _logger.warning("duplicate vat code: %s" % vatcode)
                     vat_codes.append(vatcode)
 
                 if key in ["210", "211", "212"]:
@@ -216,10 +219,10 @@ class AccountTaxReport(models.Model):
             self.report_file = base64.b64encode(report_str.encode("UTF-8"))
 
     def _check_move_values(self, move):
-        european_union = self.sudo().env.ref('base.european_union').country_ids.ids
+        european_union = self.sudo().env.ref("base.european_union").country_ids.ids
         return (
             move.partner_id.country_id.id in european_union
-            and move.partner_id.country_id.code not in ["FI", "GB"]
+            and move.partner_id.country_id.code not in ["FI"]
             and move.move_id.state == "posted"
             and (move.credit > 0 or move.debit > 0)
         )
@@ -227,8 +230,7 @@ class AccountTaxReport(models.Model):
     @api.multi
     def action_create_tax_report_lines(self):
         if not self.account_ids:
-            print("No accounts selected.")
-            # raise Warning("No accounts selected.")
+            _logger.warning("No accounts selected.")
 
         line_obj = self.env["account_tax_report.tax.report.line"]
         account_move_obj = self.env["account.move.line"]
@@ -277,16 +279,19 @@ class AccountTaxReport(models.Model):
         attachment = (
             self.env["ir.attachment"]
             .sudo()
-            .create({
-                "name": "test",
-                "datas": self.report_file,
-                "type": "binary",
-            })
+            .create(
+                {
+                    "name": self.filename,
+                    "datas": self.report_file,
+                    "datas_fname": self.filename,
+                    "type": "binary",
+                }
+            )
         )
 
         return {
             "type": "ir.actions.act_url",
-            "url": attachment.local_url,
+            "url": "{}{}".format(attachment.local_url, "&download=true"),
         }
 
     @api.model
