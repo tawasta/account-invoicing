@@ -1,12 +1,12 @@
 import base64
+import logging
 
-# import json
 from collections import OrderedDict
 from datetime import date, datetime
 
 from odoo import api, fields, models
 
-# from odoo .exceptions import Warning
+_logger = logging.getLogger(__name__)
 
 
 class AccountTaxReport(models.Model):
@@ -126,7 +126,7 @@ class AccountTaxReport(models.Model):
                 if key == "103":
                     vatcode = values[key]
                     if vatcode in vat_codes:
-                        print("duplicate vat code: %s" % vatcode)
+                        _logger.warning("duplicate vat code: %s" % vatcode)
                     vat_codes.append(vatcode)
 
                 if key in ["210", "211", "212"]:
@@ -230,8 +230,7 @@ class AccountTaxReport(models.Model):
     @api.multi
     def action_create_tax_report_lines(self):
         if not self.account_ids:
-            print("No accounts selected.")
-            # raise Warning("No accounts selected.")
+            _logger.warning("No accounts selected.")
 
         line_obj = self.env["account_tax_report.tax.report.line"]
         account_move_obj = self.env["account.move.line"]
