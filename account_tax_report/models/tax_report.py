@@ -69,13 +69,15 @@ class AccountTaxReport(models.Model):
         compute="_compute_partner_ids",
         string="Partners",
     )
-    amount_total = fields.Float(string="Total amount", compute="_get_total_amounts",)
+    amount_total = fields.Float(
+        string="Total amount", compute="_compute_total_amounts",
+    )
     amount_partners = fields.Integer(
-        string="Total number of partners", compute="_get_total_amounts"
+        string="Total number of partners", compute="_compute_total_amounts"
     )
 
     @api.model
-    def _get_total_amounts(self):
+    def _compute_total_amounts(self):
         for report in self:
             amount_total = 0
             vat_codes = []
