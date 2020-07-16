@@ -1,7 +1,6 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2020 Oy Tawasta OS Technologies Ltd.
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -10,24 +9,21 @@
 #
 #    This program is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #    GNU Affero General Public License for more details.
 #
 #    You should have received a copy of the GNU Affero General Public License
-#    along with this program. If not, see http://www.gnu.org/licenses/agpl.html
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
 {
-    "name": "Account invoice line - Sale order number",
-    "summary": "Adds sale order number to invoice line",
+    "name": "Invoice Report - Customer",
+    "category": "Customer information for invoice reports",
     "version": "12.0.1.0.0",
-    "category": "Account",
-    "website": "https://github.com/Tawasta/account-invoicing",
+    "installable": True,
     "author": "Tawasta",
     "license": "AGPL-3",
-    "application": False,
-    "installable": True,
-    "depends": ["account", "account_invoice_line_view",],
-    "data": ["views/account_invoice_line.xml"],
+    "website": "https://github.com/Tawasta/account-invoicing",
+    "depends": ["account", "sale"],
+    "data": ["report/account_invoice.xml",],
 }

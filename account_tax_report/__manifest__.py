@@ -19,15 +19,22 @@
 ##############################################################################
 
 {
-    "name": "Account invoice line - Sale order number",
-    "summary": "Adds sale order number to invoice line",
+    "name": "Account Tax Report",
+    "summary": "Finnish VAT-summary report.",
     "version": "12.0.1.0.0",
-    "category": "Account",
-    "website": "https://github.com/Tawasta/account-invoicing",
+    "category": "",
+    "website": "",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["account", "account_invoice_line_view",],
-    "data": ["views/account_invoice_line.xml"],
+    "external_dependencies": {"python": [], "bin": [], },
+    "depends": ["account", "l10n_fi_country_groups", ],
+    "data": [
+        "views/tax_report_view.xml",
+        "views/account_view.xml",
+        "views/report_info_window.xml",
+        "security/ir.model.access.csv",
+    ],
+    "demo": [],
 }
