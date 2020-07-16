@@ -237,6 +237,7 @@ class AccountTaxReport(models.Model):
         return (
             move.partner_id.country_id.id in european_union
             and move.partner_id.country_id.code != "FI"
+            and move.partner_id.country_id.code != "GB"
             and move.move_id.state == "posted"
             and (move.credit > 0 or move.debit > 0)
         )
