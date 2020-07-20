@@ -4,7 +4,7 @@
         <xpath expr="//div[@id='informations']" position="inside">
             <div class="col-auto mw-100 mb-2" t-if="o.name" name="description">
                 <strong>Header:</strong>
-                <span t-field="o.header_text"></span>
+                <p class="m-0" t-field="o.header_text"></p>
             </div>
         </xpath>
     </template>
