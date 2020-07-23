@@ -7,7 +7,6 @@
         <field name="arch" type="xml">
             <search string="Search Account invoice lines">
                 <filter name="draft" string="Draft" domain="[('state','in',('draft', 'proforma'))]"/>
-                <filter name="proforma" string="Proforma" domain="[('state','=','proforma2')]" groups="account.group_proforma_invoices"/>
                 <filter name="invoices" string="Invoices" domain="['&amp;', ('state','in',['open','paid']),('invoice_type','in',('out_invoice','in_invoice'))]"/>
                 <filter name="refunds" string="Refunds" domain="['&amp;', ('state','in',['open','paid']),('invoice_type','in',('out_refund','in_refund'))]"/>
                 <separator/>
