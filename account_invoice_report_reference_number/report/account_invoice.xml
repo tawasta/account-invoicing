@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_invoice_document"
+        inherit_id="account.report_invoice_document">
+
+        <xpath expr="//div[@name='reference']" position="replace">
+            <t t-set="show_ref_number" t-value="o.partner_id.country_id and o.partner_id.country_id.code == 'FI' and o.ref_number and True" />
+
+            <div t-if="show_ref_number" class="col-auto mw-100 mb-2" name="ref_number">
+                <strong>Payment reference:</strong>
+                <p class="m-0" t-field="o.ref_number"/>
+            </div>
+        </xpath>
+
+        <xpath expr="//p[@t-if='o.reference']" position="replace">
+            <p t-if="show_ref_number">Please use this payment reference: <b><span t-field="o.ref_number"/></b></p>
+            <t t-else=""><p t-if="o.reference">Please use the following communication for your payment : <b><span t-field="o.reference"/></b></p></t>
+        </xpath>
+
+    </template>
+</odoo>
