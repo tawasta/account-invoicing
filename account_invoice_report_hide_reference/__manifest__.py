@@ -19,11 +19,11 @@
 {
     "name": "Invoice Report - Hide reference",
     "category": "Hide reference from account invoice report",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "installable": True,
     "author": "Tawasta",
     "license": "AGPL-3",
     "website": "https://github.com/Tawasta/account-invoicing",
-    "depends": ["account", ],
-    "data": ["report/account_invoice.xml", ],
+    "depends": ["account"],
+    "data": ["report/account_invoice.xml"],
 }

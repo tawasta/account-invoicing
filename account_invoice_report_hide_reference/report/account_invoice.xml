@@ -3,7 +3,8 @@
     <template id="report_invoice_document"
         inherit_id="account.report_invoice_document">
         <xpath expr="//div[@name='reference']"
-            position="replace">
+            position="attributes">
+            <attribute name="style">display: none;</attribute>
         </xpath>
     </template>
 </odoo>
