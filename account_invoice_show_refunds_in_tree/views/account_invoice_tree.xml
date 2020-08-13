@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record id="purchase.action_invoice_pending" model="ir.actions.act_window">
+        <field name="domain">[('type','in',('in_invoice', 'in_refund'))]</field>
+    </record>
+
+    <record id="account.action_vendor_bill_template" model="ir.actions.act_window">
+        <field name="domain">[('type','in',('in_invoice', 'in_refund'))]</field>
+    </record>
+</odoo>
