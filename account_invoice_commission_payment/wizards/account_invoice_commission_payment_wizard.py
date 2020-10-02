@@ -132,3 +132,4 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
                 )
 
             invoice.commission_payment_id = payment.id
+            invoice.commission_paid = True
