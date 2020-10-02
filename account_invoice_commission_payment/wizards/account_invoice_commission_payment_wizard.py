@@ -41,6 +41,13 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
                     ).format(invoice.number)
                 )
 
+            if invoice.refund_invoice_ids:
+                raise UserError(
+                    _(
+                        "You can't make a commission payment for an invoice that has been refunded: {}"
+                    ).format(invoice.number)
+                )
+
             if invoice.commission_payment_id:
                 raise UserError(
                     _("Commission payment is already created for {}").format(
