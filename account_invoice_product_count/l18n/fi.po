@@ -1,0 +1,64 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_invoice_product_count
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-20 09:48+0000\n"
+"PO-Revision-Date: 2020-10-20 12:50+0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fi\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#. module: account_invoice_product_count
+#: model:ir.model,name:account_invoice_product_count.model_res_company
+msgid "Companies"
+msgstr "Yritykset"
+
+#. module: account_invoice_product_count
+#: model:ir.model,name:account_invoice_product_count.model_res_config_settings
+msgid "Config Settings"
+msgstr "Konfiguraatio-asetukset"
+
+#. module: account_invoice_product_count
+#: model:ir.model,name:account_invoice_product_count.model_account_invoice
+msgid "Invoice"
+msgstr "Lasku"
+
+#. module: account_invoice_product_count
+#: model:ir.model.fields,help:account_invoice_product_count.field_res_company__product_unit_count_category_id
+#: model:ir.model.fields,help:account_invoice_product_count.field_res_config_settings__product_unit_count_category_id
+msgid "Leave empty to count any products"
+msgstr "Jätä tyhjäksi laskeaksesi kaikki tuotteet"
+
+#. module: account_invoice_product_count
+#: model:ir.model.fields,field_description:account_invoice_product_count.field_res_company__product_unit_count_category_id
+#: model:ir.model.fields,field_description:account_invoice_product_count.field_res_config_settings__product_unit_count_category_id
+msgid "Product unit count category"
+msgstr "Kappaletuotteiden määrän kategoria"
+
+#. module: account_invoice_product_count
+#: model_terms:ir.ui.view,arch_db:account_invoice_product_count.report_invoice_document
+msgid "Total units:"
+msgstr "Kappalemäärä yhteensä:"
+
+#. module: account_invoice_product_count
+#: model:ir.model.fields,field_description:account_invoice_product_count.field_account_invoice__product_unit_count
+msgid "Units count"
+msgstr "Kappalemäärä"
+
+#. module: account_invoice_product_count
+#: model_terms:ir.ui.view,arch_db:account_invoice_product_count.res_config_settings_view_form
+msgid ""
+"Which product categories are computed to invoice product count.\n"
+"                            Leave empty to compute all products."
+msgstr ""
+"Mitkä tuotekategoriat lasketaan laskun tuotteiden kappalemäärään.\n"
+"                            Jätä tyhjäksi, jos haluat laskea kaikki tuotteet."
