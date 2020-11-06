@@ -9,6 +9,20 @@ class AccountInvoiceMassRefund(models.TransientModel):
 
     unreconcile = fields.Boolean(string="Unreconcile before refunding")
     description = fields.Char(string="Description for refunds", required=True,)
+    filter_refund = fields.Selection(
+        [
+            ("refund", "Create a draft credit note"),
+            ("cancel", "Cancel: create credit note and reconcile"),
+            (
+                "modify",
+                "Modify: create credit note, reconcile and create a new draft invoice",
+            ),
+        ],
+        default="refund",
+        string="Credit Method",
+        required=True,
+        help="Choose how you want to credit this invoice. You cannot Modify and Cancel if the invoice is already reconciled",
+    )
 
     def get_cancellable_states(self):
         return ["open", "paid"]
@@ -38,5 +52,4 @@ class AccountInvoiceMassRefund(models.TransientModel):
         refund = account_invoice_refund.create({"description": self.description})
 
         # Create draft refunds
-        # Note: we could also do a "cancel" or "modify" -type refund here
-        refund.compute_refund()
+        refund.compute_refund(self.filter_refund)
