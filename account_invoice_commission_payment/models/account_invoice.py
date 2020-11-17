@@ -1,5 +1,6 @@
 from odoo import fields
 from odoo import models
+from odoo.addons import decimal_precision as dp
 
 
 class AccountInvoice(models.Model):
@@ -16,9 +17,21 @@ class AccountInvoice(models.Model):
         compute="_compute_commission_payment_state",
     )
 
+    purchase_price = fields.Float(
+        digits=dp.get_precision("Product Price"),
+        string="Cost",
+        compute="_compute_purchase_price",
+    )
+
     def _compute_commission_payment_state(self):
         for record in self:
             if not record.commission_payment_id:
                 continue
 
             record.commission_payment_state = record.commission_payment_id.state
+
+    def _compute_purchase_price(self):
+        for record in self:
+            record.purchase_price = sum(
+                record.invoice_line_ids.mapped("purchase_price")
+            )

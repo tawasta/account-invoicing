@@ -5,9 +5,19 @@
         <field name="model">account.payment</field>
         <field name="inherit_id" ref="account.view_account_payment_form"/>
         <field name="arch" type="xml">
+            <xpath expr="//button[@name='button_invoices']" position="after">
+                <button class="oe_stat_button"
+                        name="button_commission_invoices"
+                        string="Commission invoices"
+                        type="object"
+                        attrs="{'invisible':[('commission_invoice_ids','=',False)]}"
+                        icon="fa-bars"/>
+            </xpath>
+
             <xpath expr="//sheet/group[last()]" position="after">
                 <group attrs="{'invisible': [('commission_invoice_ids', '=', False)]}" string="Commission invoices">
-                    <field name="commission_invoice_ids" nolabel="1" />
+                    <field name="commission_invoice_ids" nolabel="1"
+                           context="{'tree_view_ref': 'account_invoice_commission_payment.invoice_tree_commission'}" />
                 </group>
             </xpath>
         </field>

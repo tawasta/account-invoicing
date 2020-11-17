@@ -29,9 +29,10 @@
     "application": False,
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
-    "depends": ["account", "account_invoice_commission"],
+    "depends": ["account", "account_invoice_commission", "account_invoice_margin"],
     "data": [
         "views/account_invoice.xml",
+        "views/account_invoice_tree.xml",
         "views/account_payment.xml",
         "wizards/account_invoice_commission_payment_wizard.xml",
     ],

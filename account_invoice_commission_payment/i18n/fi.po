@@ -1,21 +1,19 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* account_invoice_commission_payment
+#	* account_invoice_commission_payment
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-09 09:23+0000\n"
-"PO-Revision-Date: 2020-11-09 11:26+0200\n"
+"POT-Creation-Date: 2020-11-17 14:42+0000\n"
+"PO-Revision-Date: 2020-11-17 14:42+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-"Language: fi\n"
-"X-Generator: Poedit 2.4.1\n"
 
 #. module: account_invoice_commission_payment
 #: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:99
@@ -32,9 +30,16 @@ msgstr "Peruuta"
 #: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:135
 #: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_invoice__commission_payment_state
 #: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.invoice_tree
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.invoice_tree_commission
 #, python-format
 msgid "Commission"
 msgstr "Komissio"
+
+#. module: account_invoice_commission_payment
+#: code:addons/account_invoice_commission_payment/models/account_payment.py:18
+#, python-format
+msgid "Commission Invoices"
+msgstr "Komissiolaskut"
 
 #. module: account_invoice_commission_payment
 #: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.view_account_invoice_filter
@@ -77,6 +82,11 @@ msgstr "Komissiomaksun tila"
 #: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.account_invoice_commission_payment_wizard_form
 msgid "Confirm"
 msgstr "Vahvista"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_invoice__purchase_price
+msgid "Cost"
+msgstr "Kustannus"
 
 #. module: account_invoice_commission_payment
 #: selection:account.invoice.commission.payment.wizard,commission_method:0
@@ -126,6 +136,7 @@ msgstr "Tunniste (ID)"
 
 #. module: account_invoice_commission_payment
 #: model:ir.model,name:account_invoice_commission_payment.model_account_invoice
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.invoice_tree_commission
 msgid "Invoice"
 msgstr "Lasku"
 
@@ -177,6 +188,21 @@ msgid "Product owner"
 msgstr "Tuotteen omistaja"
 
 #. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.invoice_tree_commission
+msgid "Tax"
+msgstr "Vero"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.invoice_tree_commission
+msgid "Tax Excluded"
+msgstr "Vero ei sisälly"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.invoice_tree_commission
+msgid "Total"
+msgstr "Yhteensä"
+
+#. module: account_invoice_commission_payment
 #: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:46
 #, python-format
 msgid "You can't make a commission payment for an invoice that has been refunded: {}"
@@ -186,9 +212,10 @@ msgstr "Komissiomaksua ei voi luoda hyvitetylle laskulle: {}"
 #: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:39
 #, python-format
 msgid "You can't make payment from invoice that is not paid: '{}'"
-msgstr "Et voi luoda komissiomaksua laskulle jota ei ole maksettu: '{}'"
+msgstr "Et voi luota maksuja laskulle jota ei ole maksettu: '{}'"
 
 #. module: account_invoice_commission_payment
 #: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.account_invoice_commission_payment_wizard_form
 msgid "or"
 msgstr "tai"
+
