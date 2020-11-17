@@ -58,7 +58,7 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
             # Decide the cost for the payment
             amount = 0
             if self.commission_method == "cost":
-                amount = invoice.invoice_line_ids.mapped("product_id.standard_price")[0]
+                amount = invoice.margin_signed
 
             partner_id = False
             if self.commission_partner == "product_owner":
