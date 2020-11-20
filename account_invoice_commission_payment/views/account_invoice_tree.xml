@@ -9,12 +9,10 @@
             <tree string="Invoice">
                 <field name="partner_id"/>
                 <field name="date_invoice"/>
-                <field name="number"/>
                 <field name="date_due"/>
+                <field name="margin" string="Commission"/>
+                <field name="purchase_price" string="Payment" />
                 <field name="amount_untaxed_invoice_signed" string="Tax Excluded" sum="Total"/>
-                <field name="amount_tax_signed" string="Tax" sum="Total"/>
-                <field name="amount_total_signed" string="Total" sum="Total"/>
-                <field name="purchase_price" string="Commission" sum="Commission"/>
                 <field name="currency_id" invisible="1"/>
                 <field name="company_currency_id" invisible="1"/>
                 <field name="state"/>
