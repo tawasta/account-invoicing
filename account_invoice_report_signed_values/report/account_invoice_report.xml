@@ -6,19 +6,12 @@
 
         <xpath expr="//span[@t-field='line.price_subtotal']"
             position="replace">
-            <span t-field="line.price_subtotal_signed"
-                groups="account.group_show_line_subtotals_tax_excluded"/>
+            <span t-esc="line.price_subtotal_signed" groups="account.group_show_line_subtotals_tax_excluded" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
         </xpath>
 
         <xpath expr="//span[@t-field='o.amount_untaxed']"
             position="replace">
-            <span t-field="o.amount_untaxed_signed"/>
-        </xpath>
-
-        <xpath expr="//td[@class='text-right o_price_total']//span[1]"
-            position="replace">
-            <span t-field="line.price_subtotal_signed"
-                groups="account.group_show_line_subtotals_tax_excluded"/>
+            <span t-esc="o.amount_untaxed_signed" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
         </xpath>
 
         <xpath expr="//span[@t-esc='current_subtotal']"
