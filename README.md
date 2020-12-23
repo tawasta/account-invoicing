@@ -14,6 +14,7 @@ addon | version | summary
 [account_invoice_circulation](account_invoice_circulation/) | 12.0.1.6.4 | Adds invoice circulation for vendor invoices
 [account_invoice_circulation_mandatory_analytic](account_invoice_circulation_mandatory_analytic/) | 12.0.1.0.0 | Analytic account info is required on invoice lines
 [account_invoice_commission](account_invoice_commission/) | 12.0.1.0.1 | account_invoice_commission
+[account_invoice_commission_payment](account_invoice_commission_payment/) | 12.0.1.2.0 | Allows Making commission payments from invoices
 [account_invoice_country_group_text](account_invoice_country_group_text/) | 12.0.1.0.0 | Get account invoice report text from country groups setting
 [account_invoice_customer](account_invoice_customer/) | 12.0.1.0.0 | Invoice Customer
 [account_invoice_description](account_invoice_description/) | 12.0.1.0.0 | Invoice internal note, that is not shown to partners
@@ -29,7 +30,7 @@ addon | version | summary
 [account_invoice_mail_light_template](account_invoice_mail_light_template/) | 12.0.1.0.1 | Invoice emails use light mail template
 [account_invoice_mail_optional_follower_notification](account_invoice_mail_optional_follower_notification/) | 12.0.1.0.0 | Don't send invoice emails to followers by default
 [account_invoice_mandatory_payment_term](account_invoice_mandatory_payment_term/) | 12.0.1.2.0 | Set invoice payment term as mandatory
-[account_invoice_merge](account_invoice_merge/) | 12.0.1.0.1 | Merge invoices in draft
+[account_invoice_mass_refund](account_invoice_mass_refund/) | 12.0.1.1.0 | Allows refunding and unreconciling multiple invoices
 [account_invoice_merge_line_info](account_invoice_merge_line_info/) | 12.0.1.0.0 | Show order number and date on new invoice's lines
 [account_invoice_merge_never_merge_lines](account_invoice_merge_never_merge_lines/) | 12.0.1.0.0 | Account Invoice Merge - never merge lines
 [account_invoice_merge_ordered](account_invoice_merge_ordered/) | 12.0.1.0.1 | Account Invoice Merge - keep line order
@@ -37,8 +38,11 @@ addon | version | summary
 [account_invoice_origin_to_comment](account_invoice_origin_to_comment/) | 12.0.1.0.2 | When confirming invoice, copy origin to the comment
 [account_invoice_origin_to_description](account_invoice_origin_to_description/) | 12.0.1.1.1 | When confirming invoice, copy origin to the description
 [account_invoice_overdue_interest](account_invoice_overdue_interest/) | 12.0.1.1.2 | Overdue interest % field for invoices and partners
+[account_invoice_partner_income_expense_account](account_invoice_partner_income_expense_account/) | 12.0.1.0.0 | Partner-specific income and expense accounts for invoice lines
 [account_invoice_partner_warning_text](account_invoice_partner_warning_text/) | 12.0.1.0.0 | Adds Partner warning text to Invoice
 [account_invoice_payment_ref](account_invoice_payment_ref/) | 12.0.1.0.0 | Backported payment reference from 13.0
+[account_invoice_pivot_report_delivery_address_country](account_invoice_pivot_report_delivery_address_country/) | 12.0.1.0.0 | Group pivot report by Delivery address country
+[account_invoice_product_count](account_invoice_product_count/) | 12.0.1.0.0 | Show product total count on invoice
 [account_invoice_promised_delivery_range](account_invoice_promised_delivery_range/) | 12.0.1.0.0 | Adds new fields for storing date range of promised delivery
 [account_invoice_purchase_review](account_invoice_purchase_review/) | 12.0.1.0.0 | Link vendor invoices to purchases and review the invoices
 [account_invoice_refund_preserve_analytic_tags](account_invoice_refund_preserve_analytic_tags/) | 12.0.1.0.0 | Preserve analytic tags for refunds
@@ -55,6 +59,7 @@ addon | version | summary
 [account_invoice_report_title](account_invoice_report_title/) | 12.0.1.1.0 | Report Titles for account invoices
 [account_invoice_salesperson_email](account_invoice_salesperson_email/) | 12.0.1.0.0 | Account Invoice - Salesperson e-mail to note field
 [account_invoice_salesperson_phone_and_email](account_invoice_salesperson_phone_and_email/) | 12.0.1.0.0 | Account Invoice - Salesperson Phonenumber and e-mail to note field
+[account_invoice_show_refunds_in_tree](account_invoice_show_refunds_in_tree/) | 12.0.1.0.0 | Show also refund invoices in tree view
 [account_invoice_stock_pickings](account_invoice_stock_pickings/) | 12.0.1.0.1 | Stock pickings in invoice
 [account_invoice_vendor_invoice_created](account_invoice_vendor_invoice_created/) | 12.0.1.0.0 | Show related vendor invoice on customer invoices
 [account_invoice_vendor_invoice_to_sale](account_invoice_vendor_invoice_to_sale/) | 12.0.1.2.2 | Adds a wizards for creating a SO from vendor invoice
@@ -72,7 +77,6 @@ addon | version | summary
 [account_invoice_default_parent](account_invoice_default_parent/) | 12.0.1.0.0 (unported) | Default parent for new shipping addresses
 [account_invoice_line_margin_percent](account_invoice_line_margin_percent/) | 12.0.1.0.0 (unported) | Adds margins (percent) in Invoice lines
 [account_invoice_line_total](account_invoice_line_total/) | 12.0.1.1.1 (unported) | Adds invoice line total (with taxes) to invoice lines
-[account_invoice_margin](account_invoice_margin/) | 12.0.1.4.0 (unported) | Margin functionality for invoices
 [account_invoice_margin_from_sale](account_invoice_margin_from_sale/) | 12.0.1.0.0 (unported) | Pass margin data from sale to invoice
 [account_invoice_margin_ignore](account_invoice_margin_ignore/) | 12.0.1.0.0 (unported) | Ignore products when calculating invoice margins
 [account_invoice_margin_in_tree](account_invoice_margin_in_tree/) | 12.0.1.0.0 (unported) | Show the margin field in invoice list
