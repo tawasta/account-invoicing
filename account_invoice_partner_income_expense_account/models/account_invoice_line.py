@@ -8,7 +8,7 @@ class AccountInvoiceLine(models.Model):
 
     @api.model
     def create(self, vals):
-        res = super().create(vals)
+        res = super(AccountInvoiceLine, self).create(vals)
 
         if not vals.get("sequence"):
             # TODO: a better way to decide if the line is done from UI or programmatically
@@ -21,7 +21,7 @@ class AccountInvoiceLine(models.Model):
 
     @api.onchange("product_id")
     def _onchange_product_id(self):
-        res = super()._onchange_product_id()
+        res = super(AccountInvoiceLine, self)._onchange_product_id()
 
         for record in self:
             if not record.invoice_id.partner_id:
