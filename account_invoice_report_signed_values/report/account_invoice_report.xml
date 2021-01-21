@@ -6,12 +6,28 @@
 
         <xpath expr="//span[@t-field='line.price_subtotal']"
             position="replace">
-            <span t-esc="line.price_subtotal_signed" groups="account.group_show_line_subtotals_tax_excluded" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+            <span>
+                <t t-if="o.type == 'out_refund' or o.type == 'in_refund'">
+                    <t t-esc="line.price_subtotal * -1" groups="account.group_show_line_subtotals_tax_excluded"
+                       t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"></t>
+                    </t>
+                    <t t-else="">
+                        <span t-field="line.price_subtotal" groups="account.group_show_line_subtotals_tax_excluded"/>
+                </t>
+            <span>
         </xpath>
 
         <xpath expr="//span[@t-field='o.amount_untaxed']"
             position="replace">
-            <span t-esc="o.amount_untaxed_signed" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+            <span>
+                <t t-if="o.type == 'out_refund' or o.type == 'in_refund'">
+                    <t t-esc="o.amount_untaxed * -1"
+                        t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"></t>
+                </t>
+                <t t-else="">
+                    <span t-field="o.amount_untaxed"/>
+                </t>
+            </span>
         </xpath>
 
         <xpath expr="//span[@t-esc='current_subtotal']"
@@ -37,7 +53,15 @@
 
         <xpath expr="//span[@t-field='o.amount_total']"
             position="replace">
-            <span t-field="o.amount_total_signed"></span>
+            <span>
+                <t t-if="o.type == 'out_refund' or o.type == 'in_refund'">
+                    <t t-esc="o.amount_total * -1"
+                        t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"></t>
+                </t>
+                <t t-else="">
+                    <span t-field="o.amount_total * -1"/>
+                </t>
+            </span>
         </xpath>
 
     </template>
