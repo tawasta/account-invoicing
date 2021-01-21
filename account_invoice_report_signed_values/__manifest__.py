@@ -21,7 +21,7 @@
 {
     "name": "Account Invoice - Refund report signed values",
     "summary": "Changes some values to signed versions on refund reports",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "category": "Reporting",
     "website": "https://tawasta.fi",
     "author": "Tawasta",
