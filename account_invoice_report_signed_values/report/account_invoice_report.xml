@@ -59,7 +59,7 @@
                         t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"></t>
                 </t>
                 <t t-else="">
-                    <span t-field="o.amount_total * -1"/>
+                    <span t-field="o.amount_total"/>
                 </t>
             </span>
         </xpath>
