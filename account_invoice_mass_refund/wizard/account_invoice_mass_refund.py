@@ -6,6 +6,7 @@ from odoo import models
 
 class AccountInvoiceMassRefund(models.TransientModel):
     _name = "account.invoice.mass.refund"
+    _description = "Mass refund invoices"
 
     unreconcile = fields.Boolean(string="Unreconcile before refunding")
     description = fields.Char(string="Description for refunds", required=True,)
