@@ -27,7 +27,7 @@
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
-    "installable": False,
+    "installable": True,
     "depends": ["account_invoice_margin"],
     "data": ["views/account_invoice.xml"],
 }
