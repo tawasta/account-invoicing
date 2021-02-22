@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2017 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,15 +19,17 @@
 ##############################################################################
 
 {
-    "name": "Ignore products from invoice margin calculation",
-    "summary": "Ignore products when calculating invoice margins",
-    "category": "Invoicing",
+    "name": "Margins in Customer Invoices",
+    "summary": "Margin functionality for invoices",
     "version": "12.0.1.0.0",
-    "website": "https://github.com/Tawasta/account-invoicing",
+    "category": "Invoicing",
+    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["product_margin_ignore", "account_invoice_margin"],
-    "data": [],
+    "depends": ["account", "uom"],
+    "data": [
+        "views/account_invoice.xml",
+    ],
 }

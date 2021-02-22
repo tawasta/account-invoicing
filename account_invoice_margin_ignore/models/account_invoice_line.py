@@ -8,9 +8,9 @@ class AccountInvoiceLine(models.Model):
     @api.depends(
         "product_id", "purchase_price", "quantity", "price_unit", "price_subtotal"
     )
-    def _product_margin(self):
+    def _compute_product_margin(self):
 
-        super(AccountInvoiceLine, self)._product_margin()
+        super(AccountInvoiceLine, self)._compute_product_margin()
 
         for line in self:
             if line.product_id.margin_ignore:
