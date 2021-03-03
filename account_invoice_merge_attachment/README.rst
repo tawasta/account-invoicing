@@ -3,10 +3,10 @@
    :alt: License: AGPL-3
 
 ================================
-Margin percents in Invoice lines
+Account Invoice Merge Attachment
 ================================
 
-Adds margins (percent) in invoice lines
+This module allows to link attachment on merged invoices
 
 Configuration
 =============
@@ -26,14 +26,13 @@ Credits
 Contributors
 ------------
 
-* Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
-* Timo Talvitie <timo.talvitie@tawasta.fi>
+* Timo Kekäläinen <timo.kekalainen@tawasta.fi>
 
 Maintainer
 ----------
 
-.. image:: https://tawasta.fi/templates/tawastrap/images/logo.png
+.. image:: http://tawasta.fi/templates/tawastrap/images/logo.png
    :alt: Oy Tawasta OS Technologies Ltd.
-   :target: https://tawasta.fi/
+   :target: http://tawasta.fi/
 
 This module is maintained by Oy Tawasta OS Technologies Ltd.
