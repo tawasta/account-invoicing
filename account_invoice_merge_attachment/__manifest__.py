@@ -28,6 +28,6 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["account_invoice_merge","document"],
+    "depends": ["account_invoice_merge", "document"],
     "data": ["wizards/invoice_merge.xml"],
 }
