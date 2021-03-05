@@ -15,10 +15,12 @@ class AccountReconciliation(models.AbstractModel):
 
             if not line.get("st_line"):
                 # Statement line is missing (this shouldn't happen)
+                new_lines.append(new_line)
                 continue
 
             if line["st_line"].get("partner_id"):
                 # Partner is already matched
+                new_lines.append(new_line)
                 continue
 
             ref = line["st_line"].get("ref")
