@@ -77,8 +77,11 @@ class AccountInvoiceMassCreate(models.TransientModel):
         for partner in partners:
             invoice_values["partner_id"] = partner.id
             invoice_values["account_id"] = partner.property_account_receivable_id.id
+            invoice_values['fiscal_position_id'] = partner.property_account_position_id.id
+            invoice_values["message_follower_ids"] = False
 
             invoice = invoice_model.create(invoice_values)
+            invoice.message_subscribe([invoice.partner_id.id, self.env.user.partner_id.id])
             line_values["invoice_id"] = invoice.id
 
             invoice_line_model.create(line_values)
