@@ -21,7 +21,7 @@
 {
     "name": "Invoices - Mass Create",
     "summary": "Mass create invoices for partners",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.1.0",
     "category": "Invoicing",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
