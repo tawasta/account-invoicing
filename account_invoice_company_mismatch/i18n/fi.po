@@ -1,0 +1,72 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* account_invoice_company_mismatch
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-17 18:05+0000\n"
+"PO-Revision-Date: 2021-05-17 18:05+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_invoice_company_mismatch
+#: model:ir.model.fields,field_description:account_invoice_company_mismatch.field_account_invoice__company_mismatch_account_id
+msgid "Company account mismatch"
+msgstr "Tilin yritysvaroitus"
+
+#. module: account_invoice_company_mismatch
+#: model:ir.model.fields,field_description:account_invoice_company_mismatch.field_account_invoice__company_mismatch_account_ids
+msgid "Company accounts mismatch"
+msgstr "Tilien yritysvaroitus"
+
+#. module: account_invoice_company_mismatch
+#: model:ir.model.fields,field_description:account_invoice_company_mismatch.field_account_invoice__company_mismatch_fiscal_position_id
+msgid "Company fiscal position mismatch"
+msgstr "Verokannan yritysvaroitus"
+
+#. module: account_invoice_company_mismatch
+#: model:ir.model.fields,field_description:account_invoice_company_mismatch.field_account_invoice__company_mismatch_journal_id
+msgid "Company journal mismatch"
+msgstr "Päiväkirjan yritysvaroitus"
+
+#. module: account_invoice_company_mismatch
+#: model:ir.model.fields,field_description:account_invoice_company_mismatch.field_account_invoice__company_mismatch_tax_ids
+msgid "Company taxes mismatch"
+msgstr "Verojen yritysvaroitus"
+
+#. module: account_invoice_company_mismatch
+#: model:ir.model,name:account_invoice_company_mismatch.model_account_invoice
+msgid "Invoice"
+msgstr "Lasku"
+
+#. module: account_invoice_company_mismatch
+#: model_terms:ir.ui.view,arch_db:account_invoice_company_mismatch.invoice_form
+msgid "Invoice company and account company are mismatched!"
+msgstr "Laskun yritys ja kirjanpidontilin yritys eivät täsmää!"
+
+#. module: account_invoice_company_mismatch
+#: model_terms:ir.ui.view,arch_db:account_invoice_company_mismatch.invoice_form
+msgid "Invoice company and fiscal position company are mismatched!"
+msgstr "Laskun yritys ja verokannan yritys eivät täsmää!"
+
+#. module: account_invoice_company_mismatch
+#: model_terms:ir.ui.view,arch_db:account_invoice_company_mismatch.invoice_form
+msgid "Invoice company and journal company are mismatched!"
+msgstr "Laskun yritys ja päiväkirjan yritys eivät täsmää!"
+
+#. module: account_invoice_company_mismatch
+#: model_terms:ir.ui.view,arch_db:account_invoice_company_mismatch.invoice_form
+msgid "Invoice company and line account company are mismatched!"
+msgstr "Laskun yritys ja laskurivien kirjanpidon tilien yritys eivät täsmää!"
+
+#. module: account_invoice_company_mismatch
+#: model_terms:ir.ui.view,arch_db:account_invoice_company_mismatch.invoice_form
+msgid "Invoice company and line taxes company are mismatched!"
+msgstr "Laskun yritys ja laskurivien verojen yritys eivät täsmää!"
+
