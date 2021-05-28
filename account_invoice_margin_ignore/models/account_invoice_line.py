@@ -13,4 +13,5 @@ class AccountInvoiceLine(models.Model):
         for line in self:
             if line.product_id.margin_ignore:
                 line.margin = 0
+                line.margin_signed = 0
                 line.margin_percent = 0
