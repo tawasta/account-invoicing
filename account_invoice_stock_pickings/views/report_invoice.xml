@@ -12,7 +12,7 @@
                         <!-- It is possible that a picking is cancelled later -->
                         <t t-if="picking.state != 'cancel'">
                             <span t-field="picking.name" /><br t-if="not picking_last" />
-                        <t/>
+                        </t>
                     </t>
                 </p>
             </div>
