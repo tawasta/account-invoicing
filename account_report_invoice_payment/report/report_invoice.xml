@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template id="report_invoice_document" inherit_id="account.report_invoice_document">
+        <xpath expr='//span[@t-if="o.move_type == &apos;out_invoice&apos; and o.state == &apos;posted&apos;"]' position="replace">
+            <span t-if="o.move_type == 'out_invoice' and o.state == 'posted'">Receipt</span>
+        </xpath>
+        <!-- <xpath expr="//p[@t-if='o.reference']" position="replace"></xpath>
+        <xpath expr="//p[@t-if='o.payment_term_id']" position="replace"></xpath> -->
+    </template>
+</odoo>
