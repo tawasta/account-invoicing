@@ -29,5 +29,8 @@
     'application': False,
     'installable': True,
     'depends': ["account"],
-    'data': ["report/report_invoice.xml"],
+    'data': [
+        "data/report_invoice_document.xml",
+        "report/report_invoice.xml"
+    ],
 }
