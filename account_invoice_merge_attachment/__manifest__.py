@@ -21,7 +21,7 @@
 {
     "name": "Account Invoice Merge Attachment",
     "summary": "Consider attachment during invoice merge process",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.1.0",
     "category": "Accounting",
     "website": "https://github.com/Tawasta/account-invoicing",
     "author": "Tawasta",
