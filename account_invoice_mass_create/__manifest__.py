@@ -21,15 +21,13 @@
 {
     "name": "Invoices - Mass Create",
     "summary": "Mass create invoices for partners",
-    "version": "12.0.1.1.0",
+    "version": "12.0.1.1.1",
     "category": "Invoicing",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "external_dependencies": {"python": [], "bin": []},
     "depends": ["sale"],
     "data": ["wizard/account_invoice_mass_create.xml"],
-    "demo": [],
 }
