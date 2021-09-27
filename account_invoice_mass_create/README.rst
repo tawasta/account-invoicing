@@ -5,8 +5,7 @@
 ======================
 Invoices - Mass Create
 ======================
-
-Mass create invoices for partners
+* Mass create invoices for partners
 
 Configuration
 =============
@@ -27,6 +26,7 @@ Contributors
 ------------
 * Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
 * Timo Talvitie <timo.talvitie@tawasta.fi>
+* Miika Nissi <miika.nissi@tawasta.fi>
 
 Maintainer
 ----------
