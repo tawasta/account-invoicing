@@ -6,7 +6,7 @@
 Account Report Invoice payment
 ==============================
 
-Account Report Invoice payment
+* Changes the term invoice to a receipt from the report as well as a message post
 
 Configuration
 =============
