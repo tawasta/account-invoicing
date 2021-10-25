@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 12.0-20210809\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-20 12:18+0000\n"
-"PO-Revision-Date: 2020-11-20 12:18+0000\n"
+"POT-Creation-Date: 2021-10-25 13:34+0000\n"
+"PO-Revision-Date: 2021-10-25 13:34+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: account_invoice_commission_payment
-#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:99
+#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:106
 #, python-format
 msgid "Bank account could not be determined for '{}'"
 msgstr "Pankkitiliä ei voitu määritellä kohteelle '{}'"
@@ -27,11 +27,9 @@ msgid "Cancel"
 msgstr "Peruuta"
 
 #. module: account_invoice_commission_payment
-#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:135
 #: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_invoice__commission_payment_state
 #: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.invoice_tree
 #: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.invoice_tree_commission
-#, python-format
 msgid "Commission"
 msgstr "Komissio"
 
@@ -68,7 +66,7 @@ msgid "Commission payment"
 msgstr "Komission maksu"
 
 #. module: account_invoice_commission_payment
-#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:53
+#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:60
 #, python-format
 msgid "Commission payment is already created for {}"
 msgstr "Komissiolle on jo luotu maksu kohteelle {}"
@@ -77,6 +75,21 @@ msgstr "Komissiolle on jo luotu maksu kohteelle {}"
 #: model:ir.model.fields,help:account_invoice_commission_payment.field_account_invoice__commission_payment_state
 msgid "Commission payment state"
 msgstr "Komissiomaksun tila"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_invoice_commission_payment_wizard__communication
+msgid "Communication"
+msgstr "Viesti"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model,name:account_invoice_commission_payment.model_res_company
+msgid "Companies"
+msgstr "Yritykset"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model,name:account_invoice_commission_payment.model_res_config_settings
+msgid "Config Settings"
+msgstr "Konfiguraatio-asetukset"
 
 #. module: account_invoice_commission_payment
 #: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.account_invoice_commission_payment_wizard_form
@@ -94,7 +107,7 @@ msgid "Cost price"
 msgstr "Kustannushinta"
 
 #. module: account_invoice_commission_payment
-#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:92
+#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:99
 #, python-format
 msgid "Could not find a payment journal for for '{}'"
 msgstr "Kohteen '{}' maksupäiväkirjaa ei löytynyt"
@@ -125,6 +138,17 @@ msgid "Created on"
 msgstr "Luotu"
 
 #. module: account_invoice_commission_payment
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_res_company__commission_communication
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_res_config_settings__commission_communication
+msgid "Default commission communication"
+msgstr "Oletusviesti komissiomaksuille"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.res_config_settings_view_form
+msgid "Default communication for commission payments"
+msgstr "Oletusviesti komissiomaksuille"
+
+#. module: account_invoice_commission_payment
 #: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_invoice_commission_payment_wizard__display_name
 msgid "Display Name"
 msgstr "Näyttönimi"
@@ -141,7 +165,7 @@ msgid "Invoice"
 msgstr "Lasku"
 
 #. module: account_invoice_commission_payment
-#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:71
+#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:78
 #, python-format
 msgid "Invoice lines can't have products from different owners"
 msgstr "Laskuriveillä ei voi olla tuotteita eri omistajilta"
@@ -167,7 +191,7 @@ msgid "No commission"
 msgstr "Ei komissiota"
 
 #. module: account_invoice_commission_payment
-#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:87
+#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:94
 #, python-format
 msgid "Partner could not be determined for '{}'"
 msgstr "Kumppania ei voitu määritellä kohteelle '{}'"
@@ -175,7 +199,7 @@ msgstr "Kumppania ei voitu määritellä kohteelle '{}'"
 #. module: account_invoice_commission_payment
 #: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.invoice_tree_commission
 msgid "Payment"
-msgstr "Tilitetty"
+msgstr "Maksu"
 
 #. module: account_invoice_commission_payment
 #: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_invoice_commission_payment_wizard__payment_date
@@ -195,7 +219,7 @@ msgstr "Tuotteen omistaja"
 #. module: account_invoice_commission_payment
 #: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.invoice_tree_commission
 msgid "Tax Excluded"
-msgstr "Veroton"
+msgstr "Vero ei sisälly"
 
 #. module: account_invoice_commission_payment
 #: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.invoice_tree_commission
@@ -203,13 +227,13 @@ msgid "Total"
 msgstr "Yhteensä"
 
 #. module: account_invoice_commission_payment
-#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:46
+#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:53
 #, python-format
 msgid "You can't make a commission payment for an invoice that has been refunded: {}"
 msgstr "Komissiomaksua ei voi luoda hyvitetylle laskulle: {}"
 
 #. module: account_invoice_commission_payment
-#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:39
+#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:46
 #, python-format
 msgid "You can't make payment from invoice that is not paid: '{}'"
 msgstr "Et voi luota maksuja laskulle jota ei ole maksettu: '{}'"

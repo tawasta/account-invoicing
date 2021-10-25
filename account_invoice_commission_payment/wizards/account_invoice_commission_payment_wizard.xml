@@ -10,6 +10,7 @@
                     <field name="payment_date" />
                     <field name="commission_method" />
                     <field name="commission_partner" />
+                    <field name="communication" />
                 </group>
 
                 <footer>

@@ -21,7 +21,7 @@
 {
     "name": "Account Invoice - Create payments from invoices",
     "summary": "Allows Making commission payments from invoices",
-    "version": "12.0.1.2.0",
+    "version": "12.0.1.3.0",
     "category": "Invoicing",
     "website": "https://github.com/Tawasta/account-invoicing",
     "author": "Tawasta",
@@ -34,6 +34,7 @@
         "views/account_invoice.xml",
         "views/account_invoice_tree.xml",
         "views/account_payment.xml",
+        "views/config_settings.xml",
         "wizards/account_invoice_commission_payment_wizard.xml",
     ],
     "demo": [],
