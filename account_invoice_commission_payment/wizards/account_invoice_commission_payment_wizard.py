@@ -23,6 +23,13 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
         default="product_owner",
         required=True,
     )
+    communication = fields.Char(
+        string="Communication",
+        default=lambda self: self._default_communication(),
+    )
+
+    def _default_communication(self):
+        return self.env.user.company_id.commission_communication
 
     @api.multi
     def action_create_commission_payments(self):
@@ -132,7 +139,7 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
                     "payment_method_id": payment_method.id,
                     "partner_bank_account_id": partner_bank_account_id.id,
                     "payment_date": payment_date,
-                    "communication": _("Commission"),
+                    "communication": self.communication,
                 }
                 payment = account_payment.with_context(active_ids=False).create(
                     payment_values
