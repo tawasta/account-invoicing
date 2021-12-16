@@ -1,13 +1,10 @@
 from odoo import api
-from odoo import fields
 from odoo import models
 
 
 class AccountMove(models.Model):
 
     _inherit = "account.move"
-
-    date = fields.Date(string="Accounting date")
 
     @api.onchange("invoice_date", "highest_name", "company_id")
     def _onchange_invoice_date(self):
