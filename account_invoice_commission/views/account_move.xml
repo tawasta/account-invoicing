@@ -34,7 +34,7 @@
             <filter name="late" position="after">
                 <separator/>
                 <filter name="commission_paid" string="Commission paid" domain="[('commission_paid','=',True)]"/>
-                <filter name="commission_not_paid" string="Commission has not been paid"
+                <filter name="commission_not_paid" string="Commission not paid"
                         domain="[('commission_paid','=',False)]"/>
                 <separator/>
             </filter>
