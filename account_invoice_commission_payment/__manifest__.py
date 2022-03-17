@@ -36,6 +36,7 @@
         "views/account_move_line.xml",
         "views/account_payment.xml",
         "views/config_settings.xml",
+        "views/report_payment_commission.xml",
         "wizards/account_invoice_commission_payment_wizard.xml",
     ],
     "demo": [],
