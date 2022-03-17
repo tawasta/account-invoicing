@@ -44,7 +44,7 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
                 raise UserError(
                     _(
                         "You can't make payment from invoice that is not paid: '{}'"
-                    ).format(invoice.number)
+                    ).format(invoice.name)
                 )
 
             journal = self.env["account.journal"].search(
@@ -66,16 +66,18 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
             for line in invoice.invoice_line_ids:
                 if line.commission_payment_id:
                     # Commission is already made
+                    _logger.info(
+                        _("Commission is already paid for move line {}").format(line.id)
+                    )
                     continue
 
                 # Decide the cost for the payment
-                amount = 0
                 if self.commission_method == "cost":
-                    amount = line.purchase_price
+                    amount = line.purchase_price * line.quantity
+                else:
+                    raise ValidationError(_("Commission method is not set."))
 
-                partner_id = False
-                if self.commission_partner == "product_owner":
-                    partner_id = line.product_id.company_id.partner_id
+                partner_id = self.get_commission_partner(line)
 
                 if not partner_id:
                     _logger.warning(
@@ -83,6 +85,7 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
                     )
                     # No commission partner. Mark as commissioned
                     line.commission_paid = True
+                    continue
 
                 partner_bank_id = partner_id.bank_ids and partner_id.bank_ids[0]
 
@@ -136,3 +139,11 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
             if False not in invoice.invoice_line_ids.mapped("commission_paid"):
                 # All lines are has a commission payment (or are marked as paid)
                 invoice.commission_paid = True
+
+    def get_commission_partner(self, invoice_line):
+        partner_id = False
+
+        if self.commission_partner == "product_owner":
+            partner_id = invoice_line.product_id.company_id.partner_id
+
+        return partner_id
