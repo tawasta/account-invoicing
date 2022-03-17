@@ -19,7 +19,7 @@
 ##############################################################################
 
 {
-    "name": "Account Invoice - Create payments from invoices",
+    "name": "Account Invoice - Create commission payments from invoices",
     "summary": "Allows Making commission payments from invoices",
     "version": "14.0.1.3.1",
     "category": "Invoicing",

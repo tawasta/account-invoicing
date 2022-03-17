@@ -2,9 +2,9 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-===============================================
-Account Invoice - Create payments from invoices
-===============================================
+==========================================================
+Account Invoice - Create commission payments from invoices
+==========================================================
 
 Allows Making commission payments from invoices
 
