@@ -5,7 +5,7 @@ class AccountMoveLine(models.Model):
     _inherit = "account.move.line"
 
     commission_payment_id = fields.Many2one(
-        "account.payment", string="Commission payment"
+        "account.payment", string="Commission payment", copy=False
     )
 
     commission_payment_state = fields.Selection(

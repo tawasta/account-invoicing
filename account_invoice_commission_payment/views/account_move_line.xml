@@ -11,12 +11,13 @@
                 <field name="move_name"/>
                 <field name="product_id"/>
                 <field name="name"/>
-                <field name="margin" string="Commission"/>
-                <field name="purchase_price" string="Payment" />
+                <field name="margin" string="Margin" sum="Total margin"/>
+                <field name="purchase_price" string="Payment" sum="Total payment" />
                 <field name="price_subtotal" string="Tax Excluded" sum="Total"/>
                 <field name="currency_id" invisible="1"/>
                 <field name="company_currency_id" invisible="1"/>
                 <field name="parent_state"/>
+                <field name="commission_paid"/>
             </tree>
 
         </field>

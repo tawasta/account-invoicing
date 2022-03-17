@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="account.view_invoice_tree"/>
         <field name="arch" type="xml">
             <field name="state" position="before">
-                <field name="commission_paid" optional="hide" />
+                <field name="commission_paid"  optional="hide" />
             </field>
         </field>
     </record>
