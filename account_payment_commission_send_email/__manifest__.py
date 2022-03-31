@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Author: Jarmo Kortetjärvi
+#    Copyright 2015 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,25 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Account Invoice - Create commission payments from invoices",
-    "summary": "Allows Making commission payments from invoices",
-    "version": "14.0.1.4.0",
-    "category": "Invoicing",
+    "name": "Account payment commission send email",
+    "summary": "Account payment commission send email",
+    "version": "14.0.0.1.0",
+    "category": "Accounting & Finance",
     "website": "https://github.com/Tawasta/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "external_dependencies": {"python": [], "bin": []},
-    "depends": ["account", "account_invoice_commission", "account_invoice_margin"],
-    "data": [
-        "security/ir.model.access.csv",
-        # "views/account_move.xml",
-        "views/account_move_line.xml",
-        "views/account_payment.xml",
-        "views/config_settings.xml",
-        "views/report_payment_commission.xml",
-        "wizards/account_invoice_commission_payment_wizard.xml",
-    ],
-    "demo": [],
+    "depends": ["account","account_invoice_commission_payment"],
+    "data": ["data/mail_template_data.xml","security/ir.model.access.csv","views/account_payment.xml", "wizard/account_payment_email.xml"],
 }
