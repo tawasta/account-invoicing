@@ -19,7 +19,7 @@ class SaleAdvancePaymentInv(models.TransientModel):
 
             if is_first:
                 for picking in order.picking_ids:
-                    picking.sudo().write({'priority': '0'})
+                    picking.sudo().write({'priority': '4'})
             for pick in order.picking_ids:
                 invoice.sudo().write({"stock_picking_ids": [(4, pick.id)]})
 
