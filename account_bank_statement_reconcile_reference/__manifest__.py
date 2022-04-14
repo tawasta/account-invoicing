@@ -22,7 +22,7 @@
     "name": "Use invoice reference for reconciliation proposition",
     "summary": "Use invoice reference for reconciliation proposition",
     "category": "Invoicing",
-    "version": "12.0.1.3.1",
+    "version": "12.0.1.4.0",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
