@@ -7,18 +7,9 @@ class AccountBankStatementLine(models.Model):
 
     @api.model
     def create(self, vals):
-        # If name (label) is empty, use reference (and partner name)
-        if not vals.get("name") or vals["name"] in ["/", "-"] and vals.get("ref"):
-            if vals.get("partner_name"):
-                # Use format:
-                # {partner_name}: {reference}
-                vals["name"] = "%s: %s" % (vals["partner_name"], vals["ref"])
-            else:
-                # Use format:
-                # {reference}
-                vals["name"] = vals["ref"]
-
-        if not vals.get("partner_id") and vals.get("ref"):
+        if vals.get("ref"):
+            # If reference is given and an invoice can be found with it,
+            # reference will be used as top priority
             invoice = self.env["account.invoice"].search(
                 [
                     "|",
@@ -29,5 +20,8 @@ class AccountBankStatementLine(models.Model):
             )
             if invoice:
                 vals["partner_id"] = invoice.partner_id.id
+                vals["name"] = invoice.reference
+
+        return super(AccountBankStatementLine, self).create(vals)
 
         return super(AccountBankStatementLine, self).create(vals)
