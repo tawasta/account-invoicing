@@ -19,7 +19,7 @@
 {
     "name": "Partner-specific income and expense accounts for invoice lines",
     "category": "Allow defining income and expense accounts for partner",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "installable": True,
     "author": "Tawasta",
     "license": "AGPL-3",
