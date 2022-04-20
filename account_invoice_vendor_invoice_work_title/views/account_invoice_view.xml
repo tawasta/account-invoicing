@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- FORM VIEW -->
+    <record id="invoice_supplier_form_work_title" model="ir.ui.view">
+        <field name="name">account.invoice.supplier.form.work.title</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_supplier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='other_info']//group//group//field[@name='company_id']" position="after">
+                <field name="work_title"/>
+            </xpath>
+        </field>
+    </record>
+    <!-- SEARCH VIEW -->
+    <record id="view_account_invoice_filter_work_title" model="ir.ui.view">
+        <field name="name">account.invoice.select.work.title</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+        <field name="arch" type="xml">
+            <field name="date" position="after">
+                <field name="work_title"/>
+            </field>
+        </field>
+    </record>
+</odoo>
