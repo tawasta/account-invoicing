@@ -35,15 +35,20 @@ class AccountInvoiceLine(models.Model):
 
     def get_invoice_line_partner_account(self):
         self.ensure_one()
+        res = False
 
         if (
             self.invoice_id.type in ("out_invoice", "out_refund")
             and self.invoice_id.partner_id.property_account_income_id
+            and not self.product_id.property_account_income_id
         ):
-            return self.invoice_id.partner_id.property_account_income_id
+            res = self.invoice_id.partner_id.property_account_income_id
 
-        if (
+        elif (
             self.invoice_id.type in ("in_invoice", "in_refund")
             and self.invoice_id.partner_id.property_account_expense_id
+            and not self.product_id.property_account_expense_id
         ):
-            return self.invoice_id.partner_id.property_account_expense_id
+            res = self.invoice_id.partner_id.property_account_expense_id
+
+        return res
