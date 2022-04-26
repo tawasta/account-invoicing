@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0-20211220\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-17 11:06+0000\n"
-"PO-Revision-Date: 2022-03-17 11:06+0000\n"
+"POT-Creation-Date: 2022-04-26 12:51+0000\n"
+"PO-Revision-Date: 2022-04-26 12:51+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -63,12 +63,17 @@ msgstr "<strong>Maksun määrä: </strong>"
 #. module: account_invoice_commission_payment
 #: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.report_payment_commissions_document
 msgid "<strong>Payment Date: </strong>"
-msgstr ""
+msgstr "<strong>Maksupäivä: </strong>"
 
 #. module: account_invoice_commission_payment
 #: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.report_payment_commissions_document
 msgid "<strong>Vendor: </strong>"
 msgstr "<strong>Toimittaja: </strong>"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_invoice_commission_payment_wizard__add_zero_sum_invoices
+msgid "Add zero-sum invoices"
+msgstr "Lisää myös nollalaskut"
 
 #. module: account_invoice_commission_payment
 #: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:0
@@ -216,6 +221,13 @@ msgstr "Näyttönimi"
 #: model:ir.model.fields,field_description:account_invoice_commission_payment.field_res_config_settings__id
 msgid "ID"
 msgstr "Tunniste (ID)"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,help:account_invoice_commission_payment.field_account_invoice_commission_payment_wizard__add_zero_sum_invoices
+msgid ""
+"If unselected, zero-sum invoices are marked as commissioned and not added to"
+" the payment"
+msgstr "Jos tämä ei ole valittuna, nollalaskut merkataan käsitellyiksi, mutta ei lisätä maksulle"
 
 #. module: account_invoice_commission_payment
 #: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.move_line_tree_commission

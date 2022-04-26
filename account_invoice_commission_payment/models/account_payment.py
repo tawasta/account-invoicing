@@ -53,3 +53,11 @@ class AccountPayment(models.Model):
                 line.onchange_commission_paid()
 
         return res
+
+    def unlink(self):
+        for record in self:
+            for line in record.commission_move_line_ids:
+                line.commission_paid = False
+                line.onchange_commission_paid()
+
+        return super().unlink()
