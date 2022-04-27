@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="0">
+
+    <!-- Sale invoices -->
+    <record
+    id="job_function_commission_payment"
+    model="queue.job.function"
+  >
+        <field
+      name="model_id"
+      ref="account_invoice_commission_payment_queue.model_account_invoice_commission_payment_wizard"
+    />
+        <field name="method">create_commission_payment</field>
+        <field name="retry_pattern" eval="{1: 480, 2: 720, 3: 1440}" />
+    </record>
+
+</odoo>

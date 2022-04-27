@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2022 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,9 +19,9 @@
 ##############################################################################
 
 {
-    "name": "Account Invoice - Create commission payments from invoices",
-    "summary": "Allows Making commission payments from invoices",
-    "version": "14.0.1.4.1",
+    "name": "Account Invoice - Commission payments in queue",
+    "summary": "Create commission payments as queued jobs",
+    "version": "14.0.1.0.0",
     "category": "Invoicing",
     "website": "https://github.com/Tawasta/account-invoicing",
     "author": "Tawasta",
@@ -29,14 +29,9 @@
     "application": False,
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
-    "depends": ["account", "account_invoice_commission", "account_invoice_margin"],
+    "depends": ["account_invoice_commission_payment", "queue_job_batch"],
     "data": [
-        "security/ir.model.access.csv",
-        # "views/account_move.xml",
-        "views/account_move_line.xml",
-        "views/account_payment.xml",
-        "views/config_settings.xml",
-        "views/report_payment_commission.xml",
+        "data/job_function.xml",
         "wizards/account_invoice_commission_payment_wizard.xml",
     ],
     "demo": [],
