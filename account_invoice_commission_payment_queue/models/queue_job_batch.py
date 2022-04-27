@@ -8,10 +8,13 @@ class QueueJobBatch(models.Model):
     _inherit = "queue.job.batch"
 
     def check_state(self):
+        pre_state = self.state
+
         res = super().check_state()
 
         if (
-            self.job_ids
+            pre_state != "finished"
+            and self.job_ids
             and self.job_ids[0].job_function_id
             and self.job_ids[0].job_function_id.method == "create_commission_payment"
         ):

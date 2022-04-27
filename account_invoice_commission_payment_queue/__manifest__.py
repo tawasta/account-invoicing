@@ -21,7 +21,7 @@
 {
     "name": "Account Invoice - Commission payments in queue",
     "summary": "Create commission payments as queued jobs",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Invoicing",
     "website": "https://github.com/Tawasta/account-invoicing",
     "author": "Tawasta",
