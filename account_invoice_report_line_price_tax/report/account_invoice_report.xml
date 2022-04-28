@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+	<template id="report_invoice_document" inherit_id="account.report_invoice_document">
+        <xpath expr="//t[@name='account_invoice_line_accountable']//td[@class='text-right o_price_total']" position="before">
+            <td class="text-right" name="price_tax_line">
+                <span t-field="line.price_tax" id="line_price_tax"/>
+            </td>
+        </xpath>
+
+        <xpath expr='//thead//th[@t-attf-class="text-left {{ &apos;d-none d-md-table-cell&apos; if report_type == &apos;html&apos; else &apos;&apos; }}"]' position="after">
+            <th class="text-right">
+                <span name="price_tax_column">Tax Amount</span>
+            </th>
+        </xpath>
+	</template>
+</odoo>
