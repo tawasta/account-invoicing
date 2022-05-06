@@ -20,10 +20,10 @@ class ResPartner(models.Model):
 
     @api.model
     def _commercial_fields(self):
-        """ Returns the list of fields that are managed by the commercial entity
+        """Returns the list of fields that are managed by the commercial entity
         to which a partner belongs. These fields are meant to be hidden on
         partners that aren't `commercial entities` themselves, and will be
         delegated to the parent `commercial entity`. The list is meant to be
-        extended by inheriting classes. """
+        extended by inheriting classes."""
         commercial_fields = super(ResPartner, self)._commercial_fields()
         return commercial_fields + ["overdue_interest"]

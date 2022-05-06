@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
-
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <record id="view_invoice_tree" model="ir.ui.view">
         <field name="name">account.move.tree: post button</field>
         <field name="model">account.move</field>
-        <field name="inherit_id" ref="account.view_invoice_tree"/>
+        <field name="inherit_id" ref="account.view_invoice_tree" />
         <field name="arch" type="xml">
 
             <button name="action_register_payment" position="after">
-                <button name="action_post"
-                        type="object"
-                        string="Confirm invoices"
-                        groups="account.group_account_user"
-                        class="oe_highlight"
-                        invisible="context.get('default_move_type') not in ('out_invoice', 'out_refund', 'out_receipt', 'in_invoice', 'in_refund','in_receipt')"
+                <button
+                    name="action_post"
+                    type="object"
+                    string="Confirm invoices"
+                    groups="account.group_account_user"
+                    class="oe_highlight"
+                    invisible="context.get('default_move_type') not in ('out_invoice', 'out_refund', 'out_receipt', 'in_invoice', 'in_refund','in_receipt')"
                 />
             </button>
 

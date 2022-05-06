@@ -1,6 +1,4 @@
-from odoo import models
-from odoo import _
-from odoo import SUPERUSER_ID
+from odoo import SUPERUSER_ID, _, models
 
 
 class QueueJobBatch(models.Model):
