@@ -1,7 +1,7 @@
 import logging
-from odoo import models, fields, _
-from odoo.exceptions import UserError
-from odoo.exceptions import ValidationError
+
+from odoo import _, fields, models
+from odoo.exceptions import UserError, ValidationError
 
 _logger = logging.getLogger(__name__)
 
@@ -31,7 +31,8 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
     )
     add_zero_sum_invoices = fields.Boolean(
         string="Add zero-sum invoices",
-        help="If unselected, zero-sum invoices are marked as commissioned and not added to the payment",
+        help="If unselected, zero-sum invoices are "
+        "marked as commissioned and not added to the payment",
         default=False,
     )
 
