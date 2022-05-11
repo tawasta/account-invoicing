@@ -21,7 +21,7 @@
 {
     "name": "Account invoice commission",
     "summary": "account_invoice_commission",
-    "version": "14.0.1.0.2",
+    "version": "14.0.1.0.3",
     "category": "Invoicing",
     "website": "https://gitlab.com/Tawasta/odoo/account-invoicing",
     "author": "Tawasta",
