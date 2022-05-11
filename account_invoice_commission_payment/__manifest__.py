@@ -21,7 +21,7 @@
 {
     "name": "Account Invoice - Create commission payments from invoices",
     "summary": "Allows Making commission payments from invoices",
-    "version": "14.0.1.4.2",
+    "version": "14.0.1.4.3",
     "category": "Invoicing",
     "website": "https://gitlab.com/Tawasta/odoo/account-invoicing",
     "author": "Tawasta",
