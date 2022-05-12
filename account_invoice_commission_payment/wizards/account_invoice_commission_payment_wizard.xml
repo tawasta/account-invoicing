@@ -15,7 +15,7 @@
                     <field name="commission_method" />
                     <field name="commission_partner" />
                     <field name="communication" />
-                    <field name="add_zero_sum_invoices" />
+                    <field name="add_zero_sum_lines" />
                 </group>
 
                 <footer>
