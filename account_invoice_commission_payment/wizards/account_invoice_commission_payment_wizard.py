@@ -29,9 +29,9 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
         string="Communication",
         default=lambda self: self._default_communication(),
     )
-    add_zero_sum_invoices = fields.Boolean(
-        string="Add zero-sum invoices",
-        help="If unselected, zero-sum invoices are "
+    add_zero_sum_lines = fields.Boolean(
+        string="Add zero-sum invoice lines",
+        help="If unselected, zero-sum invoice lines are "
         "marked as commissioned and not added to the payment",
         default=False,
     )
@@ -59,7 +59,7 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
                 )
             )
 
-        if invoice.amount_total_signed == 0 and not self.add_zero_sum_invoices:
+        if invoice.amount_total_signed == 0 and not self.add_zero_sum_lines:
             # Skip adding zero sum invoices to payments
             invoice.commission_paid = True
             invoice.invoice_line_ids.write({"commission_paid": True})
@@ -80,6 +80,11 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
             )
 
         for line in invoice.invoice_line_ids:
+            if line.price_total == 0 and not self.add_zero_sum_lines:
+                _logger.info("Skipping a zero sum line")
+                line.commission_paid = True
+                continue
+
             if line.commission_payment_id:
                 # Commission is already made
                 _logger.info(
