@@ -23,7 +23,7 @@
     "summary": "Adds audit log rules for account.move and account.move.line",
     "author": "Tawasta",
     "license": "AGPL-3",
-    "website": "https://gitlab.com/Tawasta/odoo/account-invoicing",
+    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "category": "Logging",
     "application": False,
     "installable": True,

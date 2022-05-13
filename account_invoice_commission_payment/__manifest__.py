@@ -23,7 +23,7 @@
     "summary": "Allows Making commission payments from invoices",
     "version": "14.0.1.5.0",
     "category": "Invoicing",
-    "website": "https://gitlab.com/Tawasta/odoo/account-invoicing",
+    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
