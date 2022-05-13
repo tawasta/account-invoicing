@@ -3,6 +3,7 @@
     <template
         id="report_invoice_document"
         inherit_id="account.report_invoice_document"
+        priority="100"
     >
         <xpath
             expr='//span[@t-if="o.move_type == &apos;out_invoice&apos; and o.state == &apos;posted&apos;"]'
