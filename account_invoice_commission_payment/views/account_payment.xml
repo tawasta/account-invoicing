@@ -3,7 +3,7 @@
     <record id="view_account_payment_form" model="ir.ui.view">
         <field name="name">account.payment.form.commission</field>
         <field name="model">account.payment</field>
-        <field name="inherit_id" ref="account.view_account_payment_form"/>
+        <field name="inherit_id" ref="account.view_account_payment_form" />
         <field name="arch" type="xml">
             <xpath expr="//button[@name='unmark_as_sent']" position="after">
                 <button
@@ -39,10 +39,10 @@
                         options="{'no_create_edit': True}"
                     >
                         <tree string="Invoice lines" delete="false">
-                            <field name="date"/>
-                            <field name="move_name" optional="show"/>
-                            <field name="product_id" optional="show"/>
-                            <field name="name" optional="show"/>
+                            <field name="date" />
+                            <field name="move_name" optional="show" />
+                            <field name="product_id" optional="show" />
+                            <field name="name" optional="show" />
                             <field
                                 name="margin"
                                 string="Margin"
@@ -61,8 +61,8 @@
                                 sum="Total"
                                 optional="show"
                             />
-                            <field name="currency_id" invisible="1"/>
-                            <field name="company_currency_id" invisible="1"/>
+                            <field name="currency_id" invisible="1" />
+                            <field name="company_currency_id" invisible="1" />
                             <button
                                 name="action_unlink_commission"
                                 type="object"
@@ -70,8 +70,8 @@
                                 optional="show"
                                 class="oe_edit_only"
                             />
-                            <field name="parent_state" optional="show"/>
-                            <field name="commission_paid" optional="show"/>
+                            <field name="parent_state" optional="show" />
+                            <field name="commission_paid" optional="show" />
                         </tree>
                     </field>
                 </group>
@@ -79,7 +79,7 @@
                     attrs="{'invisible': [('commission_method', '=', False)]}"
                 >
                     <group>
-                        <field name="commission_method" readonly="1"/>
+                        <field name="commission_method" readonly="1" />
                     </group>
                     <group>
 
