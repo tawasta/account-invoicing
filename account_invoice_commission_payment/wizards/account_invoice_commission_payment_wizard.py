@@ -92,12 +92,6 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
                 )
                 continue
 
-            # Decide the cost for the payment
-            if self.commission_method == "cost":
-                amount = line.purchase_price * line.quantity
-            else:
-                raise ValidationError(_("Commission method is not set."))
-
             partner_id = self.get_commission_partner(line)
 
             if not partner_id:
@@ -129,30 +123,32 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
                     ("journal_id", "=", journal.id),
                     ("partner_bank_id", "=", partner_bank_id.id),
                     ("date", "=", payment_date),
+                    ("commission_method", "=", self.commission_method),
                 ],
                 limit=1,
             )
 
             if payment:
-                # Just update the amount
-                payment.amount = payment.amount + amount
+                # Just recompute the amount
+                payment.action_compute_commission_amount()
             else:
                 # Create a new payment
                 payment_values = {
                     "payment_type": "outbound",
                     "partner_type": "supplier",
                     "partner_id": partner_id.id,
-                    "amount": amount,
                     "currency_id": line.currency_id.id,
                     "journal_id": journal.id,
                     "payment_method_id": payment_method.id,
                     "partner_bank_id": partner_bank_id.id,
                     "date": payment_date,
                     "ref": self.communication,
+                    "commission_method": self.commission_method,
                 }
                 payment = account_payment.with_context(active_ids=False).create(
                     payment_values
                 )
+                payment.action_compute_commission_amount()
 
             line.commission_payment_id = payment.id
             line.commission_paid = True
