@@ -21,9 +21,9 @@
 {
     "name": "Account invoice commission",
     "summary": "account_invoice_commission",
-    "version": "14.0.1.0.2",
+    "version": "14.0.1.0.3",
     "category": "Invoicing",
-    "website": "https://github.com/Tawasta/account-invoicing",
+    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

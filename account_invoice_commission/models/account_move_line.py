@@ -1,6 +1,4 @@
-from odoo import api
-from odoo import fields
-from odoo import models
+from odoo import api, fields, models
 
 
 class AccountMoveLine(models.Model):
@@ -16,4 +14,4 @@ class AccountMoveLine(models.Model):
     @api.depends("commission_paid")
     def onchange_commission_paid(self):
         for record in self:
-            record.move_id._get_commission_paid()
+            record.move_id._compute_commission_paid()

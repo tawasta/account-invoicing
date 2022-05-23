@@ -19,18 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Account Report Invoice payment',
-    'summary': 'Account Report Invoice payment',
-    'version': '14.0.1.0.0',
-    'category': 'Reporting',
-    'website': 'https://tawasta.fi',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': ["account"],
-    'data': [
-        "data/report_invoice_document.xml",
-        "report/report_invoice.xml"
-    ],
+    "name": "Account Report Invoice payment",
+    "summary": "Account Report Invoice payment",
+    "version": "14.0.1.0.0",
+    "category": "Reporting",
+    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["account"],
+    "data": ["data/report_invoice_document.xml", "report/report_invoice.xml"],
 }

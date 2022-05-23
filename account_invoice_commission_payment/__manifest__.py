@@ -21,9 +21,9 @@
 {
     "name": "Account Invoice - Create commission payments from invoices",
     "summary": "Allows Making commission payments from invoices",
-    "version": "14.0.1.3.1",
+    "version": "14.0.1.6.1",
     "category": "Invoicing",
-    "website": "https://github.com/Tawasta/account-invoicing",
+    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
@@ -32,8 +32,6 @@
     "depends": ["account", "account_invoice_commission", "account_invoice_margin"],
     "data": [
         "security/ir.model.access.csv",
-        # "views/account_move.xml",
-        "views/account_move_line.xml",
         "views/account_payment.xml",
         "views/config_settings.xml",
         "views/report_payment_commission.xml",

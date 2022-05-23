@@ -1,6 +1,5 @@
-from odoo import _
-from odoo import fields
-from odoo import models
+from odoo import _, fields, models
+from odoo.exceptions import ValidationError
 
 
 class AccountPayment(models.Model):
@@ -10,7 +9,13 @@ class AccountPayment(models.Model):
     commission_move_line_ids = fields.One2many(
         comodel_name="account.move.line",
         inverse_name="commission_payment_id",
-        string="Commission invoices",
+        string="Commissioned lines",
+    )
+
+    commission_method = fields.Selection(
+        [("cost", "Cost price")],
+        string="Commission method",
+        default=False,
     )
 
     def button_commission_invoices(self):
@@ -34,22 +39,37 @@ class AccountPayment(models.Model):
 
         return action
 
-    def action_cancel(self):
-        res = super().action_cancel()
-
+    def action_compute_commission_amount(self):
         for record in self:
-            for line in record.commission_move_line_ids:
-                line.commission_paid = False
-                line.onchange_commission_paid()
-
-        return res
+            # Decide the cost for the payment
+            if record.commission_method == "cost":
+                record.amount = sum(
+                    record.commission_move_line_ids.mapped("purchase_price_total")
+                )
+            else:
+                raise ValidationError(_("Commission method is not set."))
 
     def action_draft(self):
         res = super().action_draft()
 
         for record in self:
-            for line in record.commission_move_line_ids:
-                line.commission_paid = True
-                line.onchange_commission_paid()
+            record.commission_move_line_ids.write({"commission_paid": True})
+            record.commission_move_line_ids.mapped("move_id")._compute_commission_paid()
 
         return res
+
+    def action_cancel(self):
+        res = super().action_cancel()
+
+        for record in self:
+            record.commission_move_line_ids.write({"commission_paid": False})
+            record.commission_move_line_ids.mapped("move_id")._compute_commission_paid()
+
+        return res
+
+    def unlink(self):
+        for record in self:
+            record.commission_move_line_ids.write({"commission_paid": False})
+            record.commission_move_line_ids.mapped("move_id")._compute_commission_paid()
+
+        return super().unlink()

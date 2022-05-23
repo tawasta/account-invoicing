@@ -1,12 +1,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
+import base64
 import logging
 import re
-import base64
 
-from odoo import _
-from odoo import api
-from odoo import fields
-from odoo import models
+from odoo import _, api, fields, models
 from odoo.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
@@ -29,7 +26,12 @@ class AccountPaymentEmail(models.TransientModel):
         readonly=False,
         store=True,
     )
-    attachment_ids = fields.Many2many("ir.attachment", string="Attachments", compute="_get_attachment", readonly=False)
+    attachment_ids = fields.Many2many(
+        "ir.attachment",
+        string="Attachments",
+        compute="_compute_attachment_ids",
+        readonly=False,
+    )
     template_id = fields.Many2one(
         "mail.template",
         "Use template",
@@ -38,11 +40,15 @@ class AccountPaymentEmail(models.TransientModel):
     )
     # recipients
     partner_ids = fields.Many2many(
-        "res.partner", string="Recipients", compute="_get_recipients", readonly=False,
+        "res.partner",
+        string="Recipients",
+        compute="_compute_partner_ids",
+        readonly=False,
     )
 
-    account_payment_id = fields.Many2one("account.payment", string="Account payment", required=True)
-
+    account_payment_id = fields.Many2one(
+        "account.payment", string="Account payment", required=True
+    )
 
     @api.depends("template_id")
     def _compute_subject(self):
@@ -53,7 +59,7 @@ class AccountPaymentEmail(models.TransientModel):
                 record.subject = False
 
     @api.depends("template_id")
-    def _get_attachment(self):
+    def _compute_attachment_ids(self):
         for record in self:
             if record.template_id:
                 pdf = self.env.ref('account_invoice_commission_payment.action_report_payment_commissions').sudo()._render_qweb_pdf(record.account_payment_id.id)
@@ -81,7 +87,7 @@ class AccountPaymentEmail(models.TransientModel):
                 record.body = False
 
     @api.depends("template_id")
-    def _get_recipients(self):
+    def _compute_partner_ids(self):
         for record in self:
             if record.template_id:
                 record.partner_ids = record.account_payment_id.partner_id.ids

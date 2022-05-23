@@ -1,5 +1,4 @@
-from odoo import api
-from odoo import models
+from odoo import api, models
 
 
 class AccountMove(models.Model):
@@ -8,7 +7,8 @@ class AccountMove(models.Model):
 
     @api.onchange("invoice_date", "highest_name", "company_id")
     def _onchange_invoice_date(self):
-        # Save accounting date for a temporary variable to allow setting a different accounting date
+        # Save accounting date for a temporary variable
+        # to allow setting a different accounting date
         accounting_date = self.date
 
         res = super()._onchange_invoice_date()
