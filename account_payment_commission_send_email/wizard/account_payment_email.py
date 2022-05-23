@@ -62,17 +62,29 @@ class AccountPaymentEmail(models.TransientModel):
     def _compute_attachment_ids(self):
         for record in self:
             if record.template_id:
-                pdf = self.env.ref('account_invoice_commission_payment.action_report_payment_commissions').sudo()._render_qweb_pdf(record.account_payment_id.id)
+                pdf = (
+                    self.env.ref(
+                        "account_invoice_commission_payment.action_report_payment_commissions"
+                    )
+                    .sudo()
+                    ._render_qweb_pdf(record.account_payment_id.id)
+                )
                 name = "payment_settlements"
-                filename = name + '.pdf'
-                create_attachment = self.env['ir.attachment'].sudo().create({
-                    'name': filename,
-                    'type': 'binary',
-                    'datas': base64.b64encode(pdf[0]),
-                    'store_fname': filename,
-                    'res_model': 'account.payment',
-                    'mimetype': 'application/pdf'
-                })
+                filename = name + ".pdf"
+                create_attachment = (
+                    self.env["ir.attachment"]
+                    .sudo()
+                    .create(
+                        {
+                            "name": filename,
+                            "type": "binary",
+                            "datas": base64.b64encode(pdf[0]),
+                            "store_fname": filename,
+                            "res_model": "account.payment",
+                            "mimetype": "application/pdf",
+                        }
+                    )
+                )
 
                 record.attachment_ids = create_attachment
             elif not record.subject:
