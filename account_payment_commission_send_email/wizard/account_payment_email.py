@@ -44,6 +44,7 @@ class AccountPaymentEmail(models.TransientModel):
         string="Recipients",
         compute="_compute_partner_ids",
         readonly=False,
+        store=True,
     )
 
     account_payment_id = fields.Many2one(
@@ -103,8 +104,8 @@ class AccountPaymentEmail(models.TransientModel):
         for record in self:
             if record.template_id:
                 record.partner_ids = record.account_payment_id.partner_id.ids
-            elif not record.body:
-                record.body = False
+            elif not record.partner_ids:
+                record.partner_ids = False
 
     def action_send(self):
         self.ensure_one()
@@ -129,7 +130,6 @@ class AccountPaymentEmail(models.TransientModel):
         return {"type": "ir.actions.act_window_close"}
 
     def _add_mail_values(self, payment_id, partner):
-
         subject = self.env["mail.render.mixin"]._render_template(
             self.subject, "account.payment", payment_id.ids, post_process=True
         )[payment_id.id]

@@ -5,7 +5,7 @@
 =====================================
 Account payment commission send email
 =====================================
-
+Send account payment as email
 
 
 Installation
@@ -32,6 +32,7 @@ Contributors
 ------------
 
 * Valtteri Lattu <valtteri.lattu@tawasta.fi>
+* Miika Nissi <miika.nissi@tawasta.fi>
 
 Maintainer
 ----------

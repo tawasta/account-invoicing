@@ -21,7 +21,7 @@
 {
     "name": "Account payment commission send email",
     "summary": "Account payment commission send email",
-    "version": "14.0.0.1.0",
+    "version": "14.0.1.0.1",
     "category": "Accounting & Finance",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
