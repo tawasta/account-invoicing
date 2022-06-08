@@ -20,11 +20,10 @@
 {
     "name": "Account Invoice Vendor Invoice Work Title",
     "summary": "Add new field work_title to Account Invoice",
-    "description": "Add new field work_title to Account Invoice",
     "version": "12.0.1.0.0",
     "category": "Invoice Management",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
-    "author": "Miika Nissi",
+    "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,

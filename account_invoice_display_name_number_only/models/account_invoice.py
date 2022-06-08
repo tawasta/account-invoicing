@@ -1,6 +1,4 @@
-from odoo import api
-from odoo import models
-from odoo import _
+from odoo import _, api, models
 
 
 class AccountInvoice(models.Model):

@@ -1,6 +1,4 @@
-from odoo import api
-from odoo import models
-from odoo import _
+from odoo import _, api, models
 from odoo.exceptions import UserError
 
 
@@ -28,7 +26,8 @@ class AccountInvoiceConfirm(models.TransientModel):
             if record.state != "draft":
                 raise UserError(
                     _(
-                        "Selected invoice(s) cannot be confirmed as they are not in 'Draft' state."
+                        "Selected invoice(s) cannot be confirmed as they are "
+                        "not in 'Draft' state."
                     )
                 )
             job_desc = _("Confirm invoice '{}'".format(record.id))

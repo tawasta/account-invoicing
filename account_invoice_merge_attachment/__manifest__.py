@@ -23,7 +23,7 @@
     "summary": "Consider attachment during invoice merge process",
     "version": "12.0.1.1.0",
     "category": "Accounting",
-    "website": "https://github.com/Tawasta/account-invoicing",
+    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

@@ -23,7 +23,7 @@
     "summary": "Partner address fields as editable on invoice",
     "version": "12.0.1.0.0",
     "category": "Invoicing",
-    "website": "https://github.com/Tawasta/account-invoicing",
+    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

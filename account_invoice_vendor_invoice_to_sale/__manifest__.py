@@ -23,7 +23,7 @@
     "summary": "Adds a wizards for creating a SO from vendor invoice",
     "version": "12.0.1.2.2",
     "category": "Accounting",
-    "website": "https://github.com/Tawasta/account-invoicing",
+    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

@@ -23,7 +23,7 @@
     "summary": "Add einvoice transmit method",
     "category": "Invoicing",
     "version": "12.0.1.0.0",
-    "website": "https://github.com/Tawasta/account-invoicing",
+    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

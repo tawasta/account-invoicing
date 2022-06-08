@@ -1,6 +1,4 @@
-from odoo import api
-from odoo import fields
-from odoo import models
+from odoo import api, fields, models
 
 
 class AccountInvoice(models.Model):
@@ -20,7 +18,8 @@ class AccountInvoice(models.Model):
         compute="_compute_company_mismatch_fiscal_position_id",
     )
     company_mismatch_tax_ids = fields.Boolean(
-        string="Company taxes mismatch", compute="_compute_company_mismatch_tax_ids",
+        string="Company taxes mismatch",
+        compute="_compute_company_mismatch_tax_ids",
     )
     company_mismatch_account_ids = fields.Boolean(
         string="Company accounts mismatch",

@@ -14,7 +14,7 @@ class SaleOrder(models.Model):
         if not invoice_vals["comment"]:
             invoice_vals["comment"] = ""
 
-        invoice_vals["comment"] += u"\n{}: {}".format(
+        invoice_vals["comment"] += "\n{}: {}".format(
             _("Our Order Reference"), self.name
         )
 

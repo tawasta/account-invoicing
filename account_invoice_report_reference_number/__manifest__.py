@@ -23,7 +23,7 @@
     "installable": True,
     "author": "Tawasta",
     "license": "AGPL-3",
-    "website": "https://github.com/Tawasta/account-invoicing",
+    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "depends": ["account", "l10n_fi_invoice_numbers"],
     "data": ["report/account_invoice.xml"],
 }

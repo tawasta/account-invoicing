@@ -1,9 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <template id="report_invoice_document"
-        inherit_id="account.report_invoice_document">
-        <xpath expr="//div[@name='customer_code']"
-            position="replace">
+    <template id="report_invoice_document" inherit_id="account.report_invoice_document">
+        <xpath expr="//div[@name='customer_code']" position="replace">
         </xpath>
     </template>
 </odoo>

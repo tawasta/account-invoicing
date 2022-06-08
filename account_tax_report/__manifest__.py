@@ -23,7 +23,7 @@
     "summary": "Finnish VAT-summary report.",
     "version": "12.0.1.0.3",
     "category": "",
-    "website": "",
+    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

@@ -1,19 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
 
-    <template id="report_invoice_document"
-              inherit_id="account.report_invoice_document">
+    <template id="report_invoice_document" inherit_id="account.report_invoice_document">
 
         <xpath expr="//div[@id='qrcode']" position="before">
-            <div id="banking-info" style="page-break-inside: avoid;" class="mt16" t-if="o.partner_bank_id.acc_number != False">
-                <strong>BANK DETAILS</strong><br/>
+            <div
+                id="banking-info"
+                style="page-break-inside: avoid;"
+                class="mt16"
+                t-if="o.partner_bank_id.acc_number != False"
+            >
+                <strong>BANK DETAILS</strong><br />
                 <t t-if="o.partner_bank_id.bank_id">
                     <span t-field="o.partner_bank_id.bank_id.name" />
-                    <t t-if="o.partner_bank_id.bank_id.city">, <span t-field="o.partner_bank_id.bank_id.city" /></t>
-                    <t t-if="o.partner_bank_id.bank_id.country">, <span t-field="o.partner_bank_id.bank_id.country" /></t>
+                    <t t-if="o.partner_bank_id.bank_id.city">, <span
+                            t-field="o.partner_bank_id.bank_id.city"
+                        /></t>
+                    <t t-if="o.partner_bank_id.bank_id.country">, <span
+                            t-field="o.partner_bank_id.bank_id.country"
+                        /></t>
                 </t>
-                <span><br/>IBAN: <span t-field="o.partner_bank_id.acc_number" /></span>
-                <span t-if="o.partner_bank_id.bank_id.bic"><br/>BIC: <span t-field="o.partner_bank_id.bank_id.bic" /></span>
+                <span><br />IBAN: <span t-field="o.partner_bank_id.acc_number" /></span>
+                <span t-if="o.partner_bank_id.bank_id.bic"><br />BIC: <span
+                        t-field="o.partner_bank_id.bank_id.bic"
+                    /></span>
             </div>
         </xpath>
 

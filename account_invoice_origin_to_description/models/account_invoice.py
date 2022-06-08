@@ -1,6 +1,4 @@
-from odoo import api
-from odoo import models
-from odoo import _
+from odoo import _, api, models
 
 
 class AccountInvoice(models.Model):
@@ -9,13 +7,12 @@ class AccountInvoice(models.Model):
 
     @api.model
     def create(self, values):
-        if values.get('description') is False:
-            values['description'] = ''
+        if values.get("description") is False:
+            values["description"] = ""
 
-        if 'origin' in values:
-            values['description'] = "{}\n{}".format(
-                values.get('description', ''),
-                _("Origin: {}").format(values['origin'])
+        if "origin" in values:
+            values["description"] = "{}\n{}".format(
+                values.get("description", ""), _("Origin: {}").format(values["origin"])
             )
 
         return super(AccountInvoice, self).create(values)

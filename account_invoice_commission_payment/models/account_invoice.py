@@ -1,5 +1,5 @@
-from odoo import fields
-from odoo import models
+from odoo import fields, models
+
 from odoo.addons import decimal_precision as dp
 
 

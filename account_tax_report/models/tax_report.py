@@ -1,6 +1,5 @@
 import base64
 import logging
-
 from collections import OrderedDict
 from datetime import date, datetime
 
@@ -26,9 +25,19 @@ class AccountTaxReport(models.Model):
         period_end = date.today()
         return period_start and period_end
 
-    name = fields.Char(string="Name", default="/", compute="_compute_name",)
-    period_start = fields.Date(string="Period start", required=True,)
-    period_end = fields.Date(string="Period end", required=True,)
+    name = fields.Char(
+        string="Name",
+        default="/",
+        compute="_compute_name",
+    )
+    period_start = fields.Date(
+        string="Period start",
+        required=True,
+    )
+    period_end = fields.Date(
+        string="Period end",
+        required=True,
+    )
     company_id = fields.Many2one(
         comodel_name="res.company",
         string="Company",
@@ -44,7 +53,9 @@ class AccountTaxReport(models.Model):
     report_file = fields.Binary(string="Download Report")
     filename = fields.Char(compute="_compute_filename", string="Filename")
     line_ids = fields.One2many(
-        "account_tax_report.tax.report.line", "report_id", string="Lines",
+        "account_tax_report.tax.report.line",
+        "report_id",
+        string="Lines",
     )
     company_registry = fields.Char(
         string="Company Registry",
@@ -70,7 +81,8 @@ class AccountTaxReport(models.Model):
         string="Partners",
     )
     amount_total = fields.Float(
-        string="Total amount", compute="_compute_total_amounts",
+        string="Total amount",
+        compute="_compute_total_amounts",
     )
     amount_partners = fields.Integer(
         string="Total number of partners", compute="_compute_total_amounts"
@@ -143,20 +155,20 @@ class AccountTaxReport(models.Model):
         return period
 
     def _format_country_code(self, code):
-        """ Changes Greece code to EL that is used by ilmoitin.fi """
+        """Changes Greece code to EL that is used by ilmoitin.fi"""
         if code == "GR":
             code = "EL"
         return code.replace(" ", "")
 
     def _format_vat_code(self, code):
-        """ Removes country code from vat code"""
+        """Removes country code from vat code"""
         if code:
             return code.replace(" ", "")[2:]
         else:
             return "NOVATCODE"
 
     def _get_timestamp(self):
-        """ Returns current datetime in DDMMYYYYHHMMSS format"""
+        """Returns current datetime in DDMMYYYYHHMMSS format"""
         # Returns the current datetime, taking into account
         # the current user's timezone
         now = fields.Datetime.context_timestamp(self, datetime.now())

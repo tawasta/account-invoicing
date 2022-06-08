@@ -19,24 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Preserve analytic tags for refunds',
-    'summary': 'Preserve analytic tags for refunds',
-    'version': '12.0.1.0.0',
-    'category': 'Invoicing',
-    'website': 'https://tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'account',
+    "name": "Preserve analytic tags for refunds",
+    "summary": "Preserve analytic tags for refunds",
+    "version": "12.0.1.0.0",
+    "category": "Invoicing",
+    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": [
+        "account",
     ],
-    'data': [
-    ],
-    'demo': [
-    ],
+    "data": [],
 }

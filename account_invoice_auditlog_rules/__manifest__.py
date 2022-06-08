@@ -19,21 +19,19 @@
 ##############################################################################
 
 {
-    'name': "Audit Log Rules - Account Invoicing",
-    'summary': "Adds audit log rules for account.invoice and account.invoice.line",
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'website': "https://gitlab.com/Tawasta/account-invoicing",
-    'category': 'Logging',
-    'application': False,
-    'installable': True,
-    'version': '12.0.1.0.0',
-    'depends': [
-        'account',
-        'auditlog',
+    "name": "Audit Log Rules - Account Invoicing",
+    "summary": "Adds audit log rules for account.invoice and account.invoice.line",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
+    "category": "Logging",
+    "application": False,
+    "installable": True,
+    "version": "12.0.1.0.0",
+    "depends": [
+        "account",
+        "auditlog",
     ],
-    'data': [
-        'data/rules.xml'
-    ],
-    'demo': [],
+    "data": ["data/rules.xml"],
+    "demo": [],
 }

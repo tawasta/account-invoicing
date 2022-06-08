@@ -23,7 +23,7 @@
     "summary": "Stock pickings in invoice",
     "version": "12.0.1.0.1",
     "category": "Accounting & Finance",
-    "website": "https://github.com/Tawasta/account-invoicing",
+    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

@@ -1,9 +1,8 @@
-
 from odoo import fields, models
 
 
 class AccountInvoice(models.Model):
 
-    _inherit = 'account.invoice'
+    _inherit = "account.invoice"
 
     invoice_warn_msg = fields.Text(related="partner_id.invoice_warn_msg")

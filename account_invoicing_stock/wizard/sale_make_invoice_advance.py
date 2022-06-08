@@ -12,14 +12,14 @@ class SaleAdvancePaymentInv(models.TransientModel):
         invoice = super(SaleAdvancePaymentInv, self)._create_invoice(
             order, so_line, amount
         )
-        if self.advance_payment_method in ('percentage', 'fixed'):
+        if self.advance_payment_method in ("percentage", "fixed"):
             for i in current_invoices:
                 if i.stock_picking_ids:
                     is_first = False
 
             if is_first:
                 for picking in order.picking_ids:
-                    picking.sudo().write({'priority': '4'})
+                    picking.sudo().write({"priority": "4"})
             for pick in order.picking_ids:
                 invoice.sudo().write({"stock_picking_ids": [(4, pick.id)]})
 

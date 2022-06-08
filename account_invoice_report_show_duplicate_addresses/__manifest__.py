@@ -23,7 +23,7 @@
     "summary": "Show delivery address even if it is same as invoicing address",
     "version": "12.0.1.0.0",
     "category": "Reporting",
-    "website": "https://tawasta.fi",
+    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
