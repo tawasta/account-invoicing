@@ -52,7 +52,7 @@ addon | version | maintainers | summary
 [account_invoice_partner_income_expense_account](account_invoice_partner_income_expense_account/) | 12.0.1.0.1 |  | Partner-specific income and expense accounts for invoice lines
 [account_invoice_partner_warning_text](account_invoice_partner_warning_text/) | 12.0.1.0.0 |  | Adds Partner warning text to Invoice
 [account_invoice_payment_ref](account_invoice_payment_ref/) | 12.0.1.0.0 |  | Backported payment reference from 13.0
-[account_invoice_pivot_report_delivery_address_country](account_invoice_pivot_report_delivery_address_country/) | 12.0.1.0.0 |  | Group pivot report by Delivery address country
+[account_invoice_pivot_report_delivery_address_country](account_invoice_pivot_report_delivery_address_country/) | 12.0.1.0.1 |  | Group pivot report by Delivery Address Country
 [account_invoice_pivot_report_product_template](account_invoice_pivot_report_product_template/) | 12.0.1.0.0 |  | Group pivot report by Product Template
 [account_invoice_product_count](account_invoice_product_count/) | 12.0.1.0.0 |  | Show product total count on invoice
 [account_invoice_promised_delivery_range](account_invoice_promised_delivery_range/) | 12.0.1.0.0 |  | Adds new fields for storing date range of promised delivery
