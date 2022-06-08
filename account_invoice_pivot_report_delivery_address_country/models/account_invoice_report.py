@@ -13,7 +13,7 @@ class AccountInvoiceReport(models.Model):
         # Adds Delivery address to from-clause
         return (
             super(AccountInvoiceReport, self)._from()
-            + """JOIN res_partner shipping_ai ON
+            + """ JOIN res_partner shipping_ai ON
             ai.partner_shipping_id = shipping_ai.id"""
         )
 

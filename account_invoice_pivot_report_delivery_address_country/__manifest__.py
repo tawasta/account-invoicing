@@ -19,9 +19,9 @@
 ##############################################################################
 
 {
-    "name": "Account Invoice pivot report - Delivery address country",
-    "summary": "Group pivot report by Delivery address country",
-    "version": "12.0.1.0.0",
+    "name": "Account Invoice Pivot Report - Delivery Address Country",
+    "summary": "Group pivot report by Delivery Address Country",
+    "version": "12.0.1.0.1",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",

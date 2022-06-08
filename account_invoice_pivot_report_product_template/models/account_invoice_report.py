@@ -21,7 +21,7 @@ class AccountInvoiceReport(models.Model):
     def _from(self):
         return (
             super(AccountInvoiceReport, self)._from()
-            + """LEFT JOIN product_template prt ON
+            + """ LEFT JOIN product_template prt ON
             prt.id = pt.id"""
         )
 
