@@ -23,14 +23,13 @@
     "summary": "Invoice emails use light mail template",
     "version": "12.0.1.0.1",
     "category": "Invoicing",
-    "website": "https://github.com/Tawasta/account-invoicing",
+    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
     "depends": ["account", "mail"],
-    "data": [
-    ],
+    "data": [],
     "demo": [],
 }

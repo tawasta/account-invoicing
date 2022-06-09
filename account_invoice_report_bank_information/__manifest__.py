@@ -23,7 +23,7 @@
     "summary": "Banking information to invoice template",
     "version": "12.0.1.0.1",
     "category": "Reporting",
-    "website": "https://tawasta.fi",
+    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

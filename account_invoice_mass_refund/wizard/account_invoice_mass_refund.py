@@ -1,7 +1,5 @@
-from odoo import _
-from odoo import fields
+from odoo import _, fields, models
 from odoo.exceptions import UserError
-from odoo import models
 
 
 class AccountInvoiceMassRefund(models.TransientModel):
@@ -9,7 +7,10 @@ class AccountInvoiceMassRefund(models.TransientModel):
     _description = "Mass refund invoices"
 
     unreconcile = fields.Boolean(string="Unreconcile before refunding")
-    description = fields.Char(string="Description for refunds", required=True,)
+    description = fields.Char(
+        string="Description for refunds",
+        required=True,
+    )
     filter_refund = fields.Selection(
         [
             ("refund", "Create a draft credit note"),
@@ -22,7 +23,8 @@ class AccountInvoiceMassRefund(models.TransientModel):
         default="refund",
         string="Credit Method",
         required=True,
-        help="Choose how you want to credit this invoice. You cannot Modify and Cancel if the invoice is already reconciled",
+        help="Choose how you want to credit this invoice. You cannot Modify and Cancel "
+        "if the invoice is already reconciled",
     )
 
     def get_cancellable_states(self):

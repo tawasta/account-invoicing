@@ -1,10 +1,10 @@
-from odoo import fields
-from odoo import models
-from odoo.addons import decimal_precision as dp
+from odoo import fields, models
 
 
 class ResCompany(models.Model):
 
     _inherit = "res.company"
 
-    commission_communication = fields.Char(string='Default commission communication', translate=True)
+    commission_communication = fields.Char(
+        string="Default commission communication", translate=True
+    )

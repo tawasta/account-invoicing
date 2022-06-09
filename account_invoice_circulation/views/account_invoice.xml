@@ -1,47 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="invoice_supplier_form" model="ir.ui.view">
         <field name="name">account.invoice.supplier.circulation.form</field>
         <field name="model">account.invoice</field>
-        <field name="inherit_id" ref="account.invoice_supplier_form"/>
+        <field name="inherit_id" ref="account.invoice_supplier_form" />
         <field name="arch" type="xml">
 
             <button name="action_invoice_open" position="attributes">
-                <attribute name="states"></attribute>
-                <attribute name="attrs">{'invisible': ['|',('state', 'not in', ['draft', 'proforma2']), ('invoice_approved', '=', False)]}</attribute>
+                <attribute name="states" />
+                <attribute
+                    name="attrs"
+                >{'invisible': ['|',('state', 'not in', ['draft', 'proforma2']), ('invoice_approved', '=', False)]}</attribute>
             </button>
 
             <button name="action_invoice_open" position="after">
 
-                <field name="allow_approve" invisible="1"/>
+                <field name="allow_approve" invisible="1" />
 
-                <button name="action_invoice_approve"
-                        type="object"
-                        groups="account.group_account_invoice,account_invoice_circulation.group_invoice_approver"
-                        string="Approve"
-                        class="oe_highlight oe_read_only"
-                        attrs="{'invisible': ['|', ('invoice_approved', '=', True),('allow_approve', '=', False)]}"/>
+                <button
+                    name="action_invoice_approve"
+                    type="object"
+                    groups="account.group_account_invoice,account_invoice_circulation.group_invoice_approver"
+                    string="Approve"
+                    class="oe_highlight oe_read_only"
+                    attrs="{'invisible': ['|', ('invoice_approved', '=', True),('allow_approve', '=', False)]}"
+                />
 
-                <button name="action_invoice_approve"
-                        type="object"
-                        groups="account.group_account_manager"
-                        string="Force Approve"
-                        class="oe_highlight oe_read_only"
-                        attrs="{'invisible': ['|', ('invoice_approved', '=', True),('allow_approve', '=', True)]}"/>
+                <button
+                    name="action_invoice_approve"
+                    type="object"
+                    groups="account.group_account_manager"
+                    string="Force Approve"
+                    class="oe_highlight oe_read_only"
+                    attrs="{'invisible': ['|', ('invoice_approved', '=', True),('allow_approve', '=', True)]}"
+                />
             </button>
 
             <field name="currency_id" position="after">
-                <field name="invoice_approved"/>
-                <field name="account_invoice_circulation_id" groups="account.group_account_manager,account_invoice_circulation.group_invoice_approver"/>
+                <field name="invoice_approved" />
+                <field
+                    name="account_invoice_circulation_id"
+                    groups="account.group_account_manager,account_invoice_circulation.group_invoice_approver"
+                />
             </field>
 
         </field>
     </record>
 
-    <record id="invoice_supplier_form_approver" model="ir.ui.view" >
+    <record id="invoice_supplier_form_approver" model="ir.ui.view">
         <field name="model">account.invoice</field>
         <field name="inherit_id" ref="invoice_supplier_form" />
-        <field name="groups_id" eval="[(6, 0, [ref('account_invoice_circulation.group_invoice_approver')])]"/>
+        <field
+            name="groups_id"
+            eval="[(6, 0, [ref('account_invoice_circulation.group_invoice_approver')])]"
+        />
         <field name="arch" type="xml">
 
             <field name="account_invoice_circulation_id" position="attributes">

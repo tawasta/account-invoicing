@@ -12,7 +12,7 @@ class SaleAdvancePaymentInv(models.TransientModel):
             order, so_line, amount
         )
 
-        invoice.comment = u"{}{}: {}".format(
+        invoice.comment = "{}{}: {}".format(
             invoice.comment and (invoice.comment + "\n") or "",
             _("Our Order Reference"),
             order.name,

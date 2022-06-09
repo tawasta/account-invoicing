@@ -1,65 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
 
-    <template id="report_invoice_document"
-        inherit_id="account.report_invoice_document">
+    <template id="report_invoice_document" inherit_id="account.report_invoice_document">
 
-        <xpath expr="//span[@t-field='line.price_subtotal']"
-            position="replace">
+        <xpath expr="//span[@t-field='line.price_subtotal']" position="replace">
             <span>
                 <t t-if="o.type == 'out_refund' or o.type == 'in_refund'">
-                    <t t-esc="line.price_subtotal * -1" groups="account.group_show_line_subtotals_tax_excluded"
-                       t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"></t>
+                    <t
+                        t-esc="line.price_subtotal * -1"
+                        groups="account.group_show_line_subtotals_tax_excluded"
+                        t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"
+                    />
                     </t>
                     <t t-else="">
-                        <span t-field="line.price_subtotal" groups="account.group_show_line_subtotals_tax_excluded"/>
+                        <span
+                        t-field="line.price_subtotal"
+                        groups="account.group_show_line_subtotals_tax_excluded"
+                    />
                 </t>
             </span>
         </xpath>
 
-        <xpath expr="//span[@t-field='o.amount_untaxed']"
-            position="replace">
+        <xpath expr="//span[@t-field='o.amount_untaxed']" position="replace">
             <span>
                 <t t-if="o.type == 'out_refund' or o.type == 'in_refund'">
-                    <t t-esc="o.amount_untaxed * -1"
-                        t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"></t>
+                    <t
+                        t-esc="o.amount_untaxed * -1"
+                        t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"
+                    />
                 </t>
                 <t t-else="">
-                    <span t-field="o.amount_untaxed"/>
+                    <span t-field="o.amount_untaxed" />
                 </t>
             </span>
         </xpath>
 
-        <xpath expr="//span[@t-esc='current_subtotal']"
-            position="before">
+        <xpath expr="//span[@t-esc='current_subtotal']" position="before">
             <t t-if="o.type == 'out_refund' or o.type == 'in_refund'">
-                <t t-set="current_subtotal"
-                    t-value="current_subtotal * -1"></t>
+                <t t-set="current_subtotal" t-value="current_subtotal * -1" />
             </t>
         </xpath>
 
-        <xpath expr="//span[@t-field='line.price_unit']"
-            position="replace">
+        <xpath expr="//span[@t-field='line.price_unit']" position="replace">
             <span>
                 <t t-if="o.type == 'out_refund' or o.type == 'in_refund'">
-                    <t t-esc="line.price_unit * -1"
-                        t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"></t>
+                    <t
+                        t-esc="line.price_unit * -1"
+                        t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"
+                    />
                 </t>
                 <t t-else="">
-                    <span t-field="line.price_unit"/>
+                    <span t-field="line.price_unit" />
                 </t>
             </span>
         </xpath>
 
-        <xpath expr="//span[@t-field='o.amount_total']"
-            position="replace">
+        <xpath expr="//span[@t-field='o.amount_total']" position="replace">
             <span>
                 <t t-if="o.type == 'out_refund' or o.type == 'in_refund'">
-                    <t t-esc="o.amount_total * -1"
-                        t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"></t>
+                    <t
+                        t-esc="o.amount_total * -1"
+                        t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"
+                    />
                 </t>
                 <t t-else="">
-                    <span t-field="o.amount_total"/>
+                    <span t-field="o.amount_total" />
                 </t>
             </span>
         </xpath>

@@ -3,7 +3,7 @@
    :alt: License: AGPL-3
 
 =======================================================
-Account Invoice pivot report - Delivery address country
+Account Invoice Pivot Report - Delivery Address Country
 =======================================================
 
 * Group pivot report by Delivery address country
@@ -27,6 +27,7 @@ Contributors
 ------------
 
 * Timo Kekäläinen <timo.kekalainen@tawasta.fi>
+* Miika Nissi <miika.nissi@tawasta.fi>
 
 Maintainer
 ----------

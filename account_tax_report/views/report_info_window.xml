@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="tax_report_info_window" model="ir.ui.view">
         <field name="name">tax.report.info.window</field>
@@ -9,7 +9,7 @@
                 <p>
                     Some partners on this report are missing VAT codes.
                 </p>
-                <br/>
+                <br />
                 <p>
                     Fill in the VAT codes for partners listed below
                     and recompute report lines.
@@ -18,27 +18,31 @@
 
                 <field name="partner_ids">
                     <tree string="Partners">
-                        <field name="name"/>
-                        <field name="vat"/>
+                        <field name="name" />
+                        <field name="vat" />
                     </tree>
                 </field>
 
 
                 <footer>
 
-                    <button name="action_recompute_lines"
+                    <button
+                        name="action_recompute_lines"
                         string="Recompute"
                         type="object"
                         class="oe_highlight"
-                        help="Recompute tax report lines."/>
+                        help="Recompute tax report lines."
+                    />
 
-                    <button name="action_create_report"
+                    <button
+                        name="action_create_report"
                         string="Download anyway"
                         type="object"
-                        help="Print tax report with missing information"/>
+                        help="Print tax report with missing information"
+                    />
                     or
 
-                    <button string="Cancel" class="oe_link" special="cancel"/>
+                    <button string="Cancel" class="oe_link" special="cancel" />
                 </footer>
 
             </form>

@@ -1,5 +1,4 @@
-from odoo import api
-from odoo import models
+from odoo import api, models
 
 
 class AccountInvoiceSend(models.TransientModel):
@@ -8,5 +7,5 @@ class AccountInvoiceSend(models.TransientModel):
 
     @api.multi
     def _send_email(self):
-        self = self.with_context(custom_layout='mail.mail_notification_light')
+        self = self.with_context(custom_layout="mail.mail_notification_light")
         return super(AccountInvoiceSend, self)._send_email()

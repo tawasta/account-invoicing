@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="res_config_settings_view_form" model="ir.ui.view">
-        <field name="name">res.config.settings.view.form.account.commission.payment</field>
+        <field
+            name="name"
+        >res.config.settings.view.form.account.commission.payment</field>
         <field name="model">res.config.settings</field>
-        <field name="priority" eval="100"/>
-        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="priority" eval="100" />
+        <field name="inherit_id" ref="account.res_config_settings_view_form" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='module_account_sepa']/../.." position="after">
                 <div id="commission_payment" class="col-12 col-lg-6 o_setting_box">
@@ -12,8 +14,8 @@
 
                     </div>
                     <div class="o_setting_right_pane">
-                        <label for="commission_communication"/>
-                        <field name="commission_communication"/>
+                        <label for="commission_communication" />
+                        <field name="commission_communication" />
                         <div class="text-muted">
                             Default communication for commission payments
                         </div>

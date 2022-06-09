@@ -23,7 +23,7 @@
     "summary": "Account Invoice Report - Price tax on lines",
     "version": "12.0.1.0.0",
     "category": "Reporting",
-    "website": "https://gitlab.com/Tawasta/account-invoicing",
+    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
@@ -31,7 +31,5 @@
     "depends": [
         "account",
     ],
-    "data": [
-        "report/account_invoice_report.xml"
-    ],
+    "data": ["report/account_invoice_report.xml"],
 }

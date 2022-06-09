@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
 
     <record id="view_account_invoice_line_line_tree" model="ir.ui.view">
@@ -6,18 +6,18 @@
         <field name="model">account.invoice.line</field>
         <field name="arch" type="xml">
             <tree string="Invoice Lines" create="false" delete="false">
-                <field name="invoice_id"/>
+                <field name="invoice_id" />
                 <field name="product_id" />
-                <field name="name"/>
-                <field name="partner_id"/>
-                <field name="state"/>
-                <field name="date_invoice"/>
-                <field name="quantity"/>
-                <field name="uom_id" groups="uom.group_uom"/>
-                <field name="price_unit"/>
-                <field name="discount" groups="base.group_no_one"/>
-                <field name="price_subtotal_signed" widget="monetary"/>
-                <field name="currency_id" invisible="1"/>
+                <field name="name" />
+                <field name="partner_id" />
+                <field name="state" />
+                <field name="date_invoice" />
+                <field name="quantity" />
+                <field name="uom_id" groups="uom.group_uom" />
+                <field name="price_unit" />
+                <field name="discount" groups="base.group_no_one" />
+                <field name="price_subtotal_signed" widget="monetary" />
+                <field name="currency_id" invisible="1" />
             </tree>
         </field>
     </record>
@@ -27,9 +27,11 @@
         <field name="res_model">account.invoice.line</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,pivot,graph</field>
-        <field name="view_id" ref="view_account_invoice_line_line_tree"/>
+        <field name="view_id" ref="view_account_invoice_line_line_tree" />
         <field name="context">{'search_default_invoices':1}</field>
-        <field name="domain">[('invoice_type','in',('out_invoice', 'out_refund'))]</field>
+        <field
+            name="domain"
+        >[('invoice_type','in',('out_invoice', 'out_refund'))]</field>
     </record>
 
     <record id="account_invoice_line_vendor_action" model="ir.actions.act_window">
@@ -37,20 +39,24 @@
         <field name="res_model">account.invoice.line</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,pivot,graph</field>
-        <field name="view_id" ref="view_account_invoice_line_line_tree"/>
+        <field name="view_id" ref="view_account_invoice_line_line_tree" />
         <field name="context">{'search_default_invoices':1}</field>
         <field name="domain">[('invoice_type','in',('in_invoice', 'in_refund'))]</field>
     </record>
 
-    <menuitem id="menu_account_invoice_line_customer"
-              action="account_invoice_line_customer_action"
-              parent="account.menu_finance_receivables"
-              sequence="2" />
+    <menuitem
+        id="menu_account_invoice_line_customer"
+        action="account_invoice_line_customer_action"
+        parent="account.menu_finance_receivables"
+        sequence="2"
+    />
 
-    <menuitem id="menu_account_invoice_line_vendor"
-              action="account_invoice_line_vendor_action"
-              parent="account.menu_finance_payables"
-              sequence="2" />
+    <menuitem
+        id="menu_account_invoice_line_vendor"
+        action="account_invoice_line_vendor_action"
+        parent="account.menu_finance_payables"
+        sequence="2"
+    />
 
     <!--Sequence altered to fit 'Customer invoice lines' under 'Invoices'-->
     <record id="account.menu_action_invoice_out_refund" model="ir.ui.menu">

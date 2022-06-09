@@ -1,5 +1,4 @@
-from odoo import models, api
-from odoo.tools import float_round, float_repr
+from odoo import api, models
 
 
 class AccountBankStatementLine(models.Model):
@@ -21,7 +20,5 @@ class AccountBankStatementLine(models.Model):
             if invoice:
                 vals["partner_id"] = invoice.partner_id.id
                 vals["name"] = invoice.reference
-
-        return super(AccountBankStatementLine, self).create(vals)
 
         return super(AccountBankStatementLine, self).create(vals)

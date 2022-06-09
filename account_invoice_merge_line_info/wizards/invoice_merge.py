@@ -25,9 +25,7 @@ class InvoiceMerge(models.TransientModel):
         order_date = sale_line.order_id.date_order
 
         order_date_with_locale = format_date(
-            order_date,
-            format="short",
-            locale=sale_line.order_id.partner_id.lang
+            order_date, format="short", locale=sale_line.order_id.partner_id.lang
         )
 
         return order_date_with_locale

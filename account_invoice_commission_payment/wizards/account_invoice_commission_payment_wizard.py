@@ -1,6 +1,5 @@
-from odoo import api, models, fields, _
-from odoo.exceptions import UserError
-from odoo.exceptions import ValidationError
+from odoo import _, api, fields, models
+from odoo.exceptions import UserError, ValidationError
 
 
 class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
@@ -51,7 +50,8 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
             if invoice.refund_invoice_ids:
                 raise UserError(
                     _(
-                        "You can't make a commission payment for an invoice that has been refunded: {}"
+                        "You can't make a commission payment for an invoice "
+                        "that has been refunded: {}"
                     ).format(invoice.number)
                 )
 

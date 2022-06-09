@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="account_invoice_view_tree" model="ir.ui.view">
         <field name="name">account.invoice.margin.in.tree.view.tree</field>
@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="account.invoice_tree" />
         <field name="arch" type="xml">
             <field name="amount_total_signed" position="after">
-                <field name="margin"/>
+                <field name="margin" />
             </field>
         </field>
     </record>

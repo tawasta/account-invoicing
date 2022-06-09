@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import fields, models
 
 
 class AccountInvoiceLine(models.Model):
@@ -28,11 +28,15 @@ class AccountInvoiceLine(models.Model):
     )
 
     date_invoice = fields.Date(
-        string="Invoice date", related="invoice_id.date_invoice", store=True,
+        string="Invoice date",
+        related="invoice_id.date_invoice",
+        store=True,
     )
 
     user_id = fields.Many2one(
-        string="Responsible", related="invoice_id.user_id", store=True,
+        string="Responsible",
+        related="invoice_id.user_id",
+        store=True,
     )
 
     # The states are hard coded, but they could be fetched from account invoice

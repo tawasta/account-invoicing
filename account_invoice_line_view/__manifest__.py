@@ -23,7 +23,7 @@
     "summary": "Add a readonly invoice line view",
     "category": "Invoicing",
     "version": "12.0.1.1.0",
-    "website": "https://github.com/Tawasta/account-invoicing",
+    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

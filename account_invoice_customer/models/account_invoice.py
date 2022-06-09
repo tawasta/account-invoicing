@@ -9,6 +9,6 @@ class AccountInvoice(models.Model):
         comodel_name="res.partner",
         string="Customer",
         readonly=True,
-        states={'draft': [('readonly', False)]},
-        track_visibility='always'
+        states={"draft": [("readonly", False)]},
+        track_visibility="always",
     )

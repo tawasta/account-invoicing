@@ -1,7 +1,4 @@
-from odoo import api
-from odoo import fields
-from odoo import models
-from odoo import _
+from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
 
 
@@ -38,9 +35,7 @@ class StockPicking(models.Model):
     @api.multi
     def action_view_invoice(self):
         invoice = self.mapped("invoice_ids")
-        action = self.env.ref("account.action_invoice_tree1").read()[
-            0
-        ]
+        action = self.env.ref("account.action_invoice_tree1").read()[0]
 
         if len(invoice) == 0:
             form_view_name = "account.invoice_form"
@@ -52,18 +47,24 @@ class StockPicking(models.Model):
 
     @api.multi
     def button_validate(self):
-        invoices = self.env["account.invoice"].sudo().search([
-            ('stock_picking_ids', 'in', self.id)
-        ])
+        invoices = (
+            self.env["account.invoice"]
+            .sudo()
+            .search([("stock_picking_ids", "in", self.id)])
+        )
         status_list = []
         for inv in invoices:
-            if inv.state == 'paid':
+            if inv.state == "paid":
                 status_list.append(inv.state)
 
         if len(invoices) == len(status_list):
             return super(StockPicking, self).button_validate()
         else:
-            raise ValidationError(_('You cannot confirm the transfer because some of the invoices are still pending!'))
-        
+            raise ValidationError(
+                _(
+                    "You cannot confirm the transfer because some of the invoices "
+                    "are still pending!"
+                )
+            )
 
     # 8. Business methods
