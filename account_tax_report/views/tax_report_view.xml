@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Tax report form view -->
+    <record id="account_tax_report_view" model="ir.ui.view">
+        <field name="name">account.tax.report.form.view</field>
+        <field name="model">account_tax_report.tax.report</field>
+        <field name="arch" type="xml">
+            <form string="Account Tax Report">
+                <h1>
+                    <field name="name" class="oe_inline" readonly="1" />
+                </h1>
+
+                <group>
+                    <field name="company_id" />
+                    <field name="company_registry" />
+                    <!--<field name="period_id"/>-->
+                    <field name="period_start" />
+                    <field name="period_end" />
+                    <field name="account_ids" widget="many2many_tags" />
+                </group>
+
+                <field name="amount_total" />
+                <button
+                    name="action_create_tax_report_lines"
+                    string="Compute Report Lines"
+                    type="object"
+                    help="Create Tax Report Lines for selected company and period"
+                />
+
+                <button
+                    name="action_download_report"
+                    string="Download Report"
+                    type="object"
+                    help="Download tax report in csv format"
+                    class="oe_highlight"
+                    attrs="{'invisible':[('amount_total','=',0.0)]}"
+                />
+
+
+                <field name="line_ids">
+                    <tree string="Report Lines">
+                        <field name="country_code" />
+                        <field name="partner_id" />
+                        <field name="vat_code" />
+                        <field name="amount" />
+                        <field name="product_id" />
+                        <field name="product_type" />
+                    </tree>
+                </field>
+
+                <group class="oe_subtotal_footer oe_right">
+                    <field name="amount_total" />
+                    <field name="amount_partners" />
+                </group>
+
+            </form>
+        </field>
+    </record>
+
+    <!-- Tax report tree view -->
+    <record id="account_tax_report_tree_view" model="ir.ui.view">
+        <field name="name">account.tax.report.tree.view</field>
+        <field name="model">account_tax_report.tax.report</field>
+        <field name="arch" type="xml">
+            <tree string="Account Tax Report">
+                <field name="name" />
+                <field name="company_id" />
+                <!--<field name="period_id"/>-->
+            </tree>
+        </field>
+    </record>
+
+    <!-- Menu action -->
+    <record id="tax_report_tree_action" model="ir.actions.act_window">
+        <field name="name">Account Tax Reports</field>
+        <field name="res_model">account_tax_report.tax.report</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- Menu items -->
+    <menuitem
+        id="tax_report_base_menu"
+        name="Account Tax Reports"
+        parent="account.menu_finance_reports"
+        sequence="1"
+        action="tax_report_tree_action"
+    />
+
+    <menuitem
+        id="vat_report_menu"
+        name="VAT-summary report"
+        parent="account_tax_report.tax_report_base_menu"
+        action="tax_report_tree_action"
+        sequence="1"
+    />
+
+</odoo>
