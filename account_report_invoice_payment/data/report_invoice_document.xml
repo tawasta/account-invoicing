@@ -32,8 +32,7 @@
                     (with reference: ${object.invoice_origin})
                     % endif
                     amounting in
-                    <strong
-                    >${format_amount(object.amount_total, object.currency_id)}
+                    <strong>${format_amount(object.amount_total, object.currency_id)}
                     </strong>
                     from ${object.company_id.name}.
                     % if object.payment_state in ('paid', 'in_payment'):

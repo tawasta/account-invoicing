@@ -35,11 +35,7 @@
             </field>
 
             <filter name="due_date" position="after">
-                <filter
-                    name="payment_date"
-                    string="Payment date"
-                    date="payment_date"
-                />
+                <filter name="payment_date" string="Payment date" date="payment_date" />
             </filter>
         </field>
     </record>
