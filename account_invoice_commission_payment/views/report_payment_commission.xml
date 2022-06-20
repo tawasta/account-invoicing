@@ -12,14 +12,10 @@
             <t t-set="show_subtotal" t-value="False" />
 
             <div class="page">
-                <h3><strong>Payment commissions: <span
-                            t-field="o.name"
-                        /></strong></h3>
+                <h3><strong>Payment commissions: <span t-field="o.name" /></strong></h3>
                 <div class="row mt64">
                     <div class="col-6" t-if="o.date">
-                        <strong>Payment Date: </strong> <span
-                            t-field="o.date"
-                        />
+                        <strong>Payment Date: </strong> <span t-field="o.date" />
                     </div>
                 </div>
                 <div class="row">

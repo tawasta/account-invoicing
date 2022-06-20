@@ -14,10 +14,7 @@
                 />
             </xpath>
 
-            <xpath
-                expr="//button[@name='button_open_invoices']"
-                position="after"
-            >
+            <xpath expr="//button[@name='button_open_invoices']" position="after">
                 <button
                     class="oe_stat_button"
                     name="button_commission_invoices"
@@ -75,9 +72,7 @@
                         </tree>
                     </field>
                 </group>
-                <group
-                    attrs="{'invisible': [('commission_method', '=', False)]}"
-                >
+                <group attrs="{'invisible': [('commission_method', '=', False)]}">
                     <group>
                         <field name="commission_method" readonly="1" />
                     </group>

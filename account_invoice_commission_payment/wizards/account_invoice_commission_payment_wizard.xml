@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
 
-    <record
-        id="account_invoice_commission_payment_wizard_form"
-        model="ir.ui.view"
-    >
+    <record id="account_invoice_commission_payment_wizard_form" model="ir.ui.view">
         <field name="name">Create commission payments</field>
         <field name="model">account.invoice.commission.payment.wizard</field>
         <field name="arch" type="xml">
@@ -34,19 +31,11 @@
 
     <record id="action_create_payments" model="ir.actions.act_window">
         <field name="name">Create commission payments</field>
-        <field
-            name="res_model"
-        >account.invoice.commission.payment.wizard</field>
+        <field name="res_model">account.invoice.commission.payment.wizard</field>
         <field name="view_mode">tree,form</field>
-        <field
-            name="view_id"
-            ref="account_invoice_commission_payment_wizard_form"
-        />
+        <field name="view_id" ref="account_invoice_commission_payment_wizard_form" />
         <field name="target">new</field>
-        <field
-            name="groups_id"
-            eval="[(4, ref('account.group_account_invoice'))]"
-        />
+        <field name="groups_id" eval="[(4, ref('account.group_account_invoice'))]" />
         <field name="binding_model_id" ref="account.model_account_move" />
         <field name="binding_view_types">list</field>
     </record>
