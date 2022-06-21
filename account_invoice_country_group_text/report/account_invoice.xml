@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template
+        id="account_invoice_country_group_text_report"
+        inherit_id="account.report_invoice_document"
+    >
+        <xpath expr="//p[@name='payment_term']" position="after">
+            <t
+                t-foreach="o.partner_id.country_id.country_group_ids"
+                t-as="country_group"
+            >
+                <br />
+                <span t-field="country_group.account_invoice_text" />
+            </t>
+        </xpath>
+    </template>
+</odoo>
