@@ -17,6 +17,7 @@ addon | version | maintainers | summary
 [account_invoice_commission_payment](account_invoice_commission_payment/) | 14.0.1.6.1 |  | Allows Making commission payments from invoices
 [account_invoice_commission_payment_queue](account_invoice_commission_payment_queue/) | 14.0.1.0.1 |  | Create commission payments as queued jobs
 [account_invoice_commission_payment_variant_company](account_invoice_commission_payment_variant_company/) | 14.0.1.0.0 |  | Use product variant company as recipient in invoice commission payments
+[account_invoice_country_group_text](account_invoice_country_group_text/) | 14.0.1.0.0 |  | Get account invoice report text from country groups setting
 [account_invoice_disable_unique_sequence](account_invoice_disable_unique_sequence/) | 14.0.1.0.0 |  | Allows multiple invoices to exist with the same sequence number
 [account_invoice_notice_period](account_invoice_notice_period/) | 14.0.1.0.0 |  | Notice period field for invoices and partners
 [account_invoice_overdue_interest](account_invoice_overdue_interest/) | 14.0.1.0.0 |  | Overdue interest % field for invoices and partners
