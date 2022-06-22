@@ -80,7 +80,7 @@ addon | version | maintainers | summary
 [account_invoice_vendor_invoice_work_date](account_invoice_vendor_invoice_work_date/) | 12.0.1.0.0 |  | Add new field work_date to Account Invoice
 [account_invoice_vendor_invoice_work_description](account_invoice_vendor_invoice_work_description/) | 12.0.1.0.0 |  | Add new field work_description to Account Invoice
 [account_invoice_vendor_invoice_work_title](account_invoice_vendor_invoice_work_title/) | 12.0.1.0.0 |  | Add new field work_title to Account Invoice
-[account_invoicing_stock](account_invoicing_stock/) | 12.0.1.0.0 |  | Account invoicing stock
+[account_invoicing_stock](account_invoicing_stock/) | 12.0.1.0.1 |  | Account invoicing stock
 [account_tax_report](account_tax_report/) | 12.0.1.0.3 |  | Finnish VAT-summary report.
 
 
