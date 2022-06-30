@@ -13,14 +13,13 @@
                     class="oe_stat_button"
                     icon="fa-pencil-square-o"
                     attrs="{'invisible': [('invoice_count', '=', 0)]}"
-                >
-                    <field name="invoice_count" widget="statinfo" string="Invoices" />
+                ><field name="invoice_count" widget="statinfo" string="Invoices" />
                 </button>
             </xpath>
 
             <notebook position="inside">
-                <page string="Invoices" invisible="1">
-                    <field name="invoice_ids" context="{'default_invoice_id':id}" />
+                <page string="Invoices" groups="account.group_account_manager">
+                    <field name="invoice_ids" />
                 </page>
             </notebook>
 
