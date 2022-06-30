@@ -6,11 +6,16 @@
 Account invoicing stock
 =======================
 
-* When the first pre-invoice is created, order transfers are attached to the invoice. At the same time make transfers not urgent.
+* Adds link between invoices and their pickings
 
-* Added action button to Transfers view which you can see the number of invoices and view invoices.
+* When a down payment invoice is created from sale, pickings are set as priority 4
 
-* When the invoice is paid, check if all the invoices for the related transfer (s) have been paid and if so, then the status of the transfer is changed to normal. 
+* Adds an action button to Transfers, from which you can view the related invoices.
+
+* When the invoice is paid, check if all the invoices for the related transfer(s) have been paid.
+  If they are, then the status of the transfer is changed to normal (1).
+
+* If a picking has open down payments, it can't be validated
 
 Configuration
 =============
@@ -30,12 +35,13 @@ Credits
 Contributors
 ------------
 
+* Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
 * Valtteri Lattu <valtteri.lattu@tawasta.fi>
 
 Maintainer
 ----------
 
-.. image:: http://tawasta.fi/templates/tawastrap/images/logo.png
+.. image:: https://tawasta.fi/templates/tawastrap/images/logo.png
    :alt: Oy Tawasta OS Technologies Ltd.
    :target: http://tawasta.fi/
 

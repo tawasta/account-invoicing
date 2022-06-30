@@ -5,66 +5,47 @@ from odoo.exceptions import ValidationError
 class StockPicking(models.Model):
     _inherit = "stock.picking"
 
-    # 2. Fields declaration
-    invoice_ids = fields.One2many(
-        string="Invoices",
+    invoice_ids = fields.Many2many(
         comodel_name="account.invoice",
-        inverse_name="stock_picking_ids",
+        related="sale_id.invoice_ids",
     )
 
     invoice_count = fields.Integer(
-        compute="_compute_invoices",
-        string="# of invoices",
-        readonly=True,
+        related="sale_id.invoice_count",
     )
 
-    # 3. Default methods
-
-    # 4. Compute and search fields, in the same order that fields declaration
-    def _compute_invoices(self):
-        # Calculate the number of support activies so that the count can be
-        # shown in the action button
-        for invoice in self:
-            invoice.invoice_count = len(invoice.invoice_ids)
-
-    # 5. Constraints and onchanges
-
-    # 6. CRUD methods
-
-    # 7. Action methods
     @api.multi
     def action_view_invoice(self):
-        invoice = self.mapped("invoice_ids")
         action = self.env.ref("account.action_invoice_tree1").read()[0]
 
-        if len(invoice) == 0:
+        if len(self.invoice_ids) == 0:
             form_view_name = "account.invoice_form"
             action["views"] = [(self.env.ref(form_view_name).id, "form")]
         else:
-            action["domain"] = [("id", "in", invoice.ids)]
+            action["domain"] = [("id", "in", self.invoice_ids.ids)]
 
         return action
 
     @api.multi
     def button_validate(self):
-        invoices = (
-            self.env["account.invoice"]
-            .sudo()
-            .search([("stock_picking_ids", "in", self.id)])
-        )
-        status_list = []
-        for inv in invoices:
-            if inv.state == "paid":
-                status_list.append(inv.state)
-
-        if len(invoices) == len(status_list):
-            return super(StockPicking, self).button_validate()
-        else:
+        if self.has_open_invoices():
+            # Don't allow validating pickings if they have open invoices
             raise ValidationError(
                 _(
                     "You cannot confirm the transfer because some of the invoices "
                     "are still pending!"
                 )
             )
+        else:
+            return super().button_validate()
 
-    # 8. Business methods
+    def has_open_invoices(self):
+        self.ensure_one()
+        # Only check lines with policy "Invoice delivered"
+        so_lines_to_deliver = self.sudo().sale_id.order_line.filtered(
+            lambda r: r.product_id.invoice_policy == "delivery"
+        )
+        states = so_lines_to_deliver.mapped("order_id.invoice_ids.state")
+        is_open = "to invoice" in states or "draft" in states or "in payment" in states
+
+        return is_open

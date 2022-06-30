@@ -21,13 +21,13 @@
 {
     "name": "Account invoicing stock",
     "summary": "Account invoicing stock",
-    "version": "12.0.1.0.1",
-    "category": "Futural EDU",
+    "version": "12.0.1.1.1",
+    "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["stock", "account", "sale"],
+    "depends": ["account", "sale_stock"],
     "data": ["views/account_invoice.xml", "views/stock_picking.xml"],
 }

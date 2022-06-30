@@ -7,20 +7,10 @@ class SaleAdvancePaymentInv(models.TransientModel):
 
     @api.multi
     def _create_invoice(self, order, so_line, amount):
-        current_invoices = order.invoice_ids
-        is_first = True
-        invoice = super(SaleAdvancePaymentInv, self)._create_invoice(
+        if self.advance_payment_method in ("percentage", "fixed"):
+            # TODO: configurable priority
+            order.sudo().picking_ids.write({"priority": "4"})
+
+        return super()._create_invoice(
             order, so_line, amount
         )
-        if self.advance_payment_method in ("percentage", "fixed"):
-            for i in current_invoices:
-                if i.stock_picking_ids:
-                    is_first = False
-
-            if is_first:
-                for picking in order.picking_ids:
-                    picking.sudo().write({"priority": "4"})
-            for pick in order.picking_ids:
-                invoice.sudo().write({"stock_picking_ids": [(4, pick.id)]})
-
-        return invoice
