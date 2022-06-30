@@ -21,7 +21,7 @@
 {
     "name": "Account invoicing stock",
     "summary": "Account invoicing stock",
-    "version": "12.0.1.1.0",
+    "version": "12.0.1.1.1",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",

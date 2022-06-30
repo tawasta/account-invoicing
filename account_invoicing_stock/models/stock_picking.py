@@ -18,7 +18,7 @@ class StockPicking(models.Model):
     def action_view_invoice(self):
         action = self.env.ref("account.action_invoice_tree1").read()[0]
 
-        if len(self.invoice_ids) == 1:
+        if len(self.invoice_ids) == 0:
             form_view_name = "account.invoice_form"
             action["views"] = [(self.env.ref(form_view_name).id, "form")]
         else:
