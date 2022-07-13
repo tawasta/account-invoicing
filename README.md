@@ -29,6 +29,7 @@ addon | version | maintainers | summary
 [account_invoice_vendor_invoice_to_sale](account_invoice_vendor_invoice_to_sale/) | 14.0.1.0.0 |  | Adds a wizards for creating a SO from vendor invoice
 [account_payment_commission_send_email](account_payment_commission_send_email/) | 14.0.1.0.1 |  | Account payment commission send email
 [account_report_invoice_eori](account_report_invoice_eori/) | 14.0.1.0.0 |  | Adds customers EORI number to Invoice Report
+[account_report_invoice_hide_customer_code](account_report_invoice_hide_customer_code/) | 14.0.1.0.0 |  | Invoice Report - Hide customer code
 [account_report_invoice_payment](account_report_invoice_payment/) | 14.0.1.0.0 |  | Account Report Invoice payment
 [account_tax_report](account_tax_report/) | 14.0.1.0.0 |  | Finnish VAT-summary report.
 
