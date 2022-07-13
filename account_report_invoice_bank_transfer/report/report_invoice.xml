@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <template id="report_invoice_document" inherit_id="account.report_invoice_document">
+    <xpath expr="//p[@name='payment_communication']" position="replace">
+        <p t-if="o.move_type in ('out_invoice', 'in_refund') and o.payment_reference" name="payment_communication">
+            <div id="bank_transfer" class="row mt32 mb16">
+                <div class="col-auto col-4 mw-100 mb-2" name="payment_recipient">
+                    <strong>Payment recipient:</strong>
+                    <p class="m-0" t-field="o.company_id.name"/>
+                </div>
+
+                <div class="col-auto col-4 mw-100 mb-2" t-if="o.payment_reference" name="payment_reference">
+                    <strong>Payment reference:</strong>
+                    <p class="m-0" t-field="o.payment_reference"/>
+                </div>
+
+                <div class="col-auto col-4 mw-100 mb-2" t-if="o.partner_bank_id" name="partner_bank_id">
+                    <strong>IBAN/BIC:</strong>
+                    <p class="m-0" t-field="o.partner_bank_id"/>
+                    <p class="m-0" t-field="o.partner_bank_id.bank_bic"/>
+                </div>
+
+            </div>
+        </p>
+    </xpath>
+
+  </template>
+</odoo>
