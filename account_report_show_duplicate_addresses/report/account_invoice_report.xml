@@ -1,0 +1,13 @@
+<odoo>
+    <template
+        id="report_invoice_document_show_duplicate_addresses"
+        inherit_id="sale.report_invoice_document_inherit_sale"
+    >
+        <xpath
+            expr="//t[starts-with(@t-if, 'o.partner_shipping_id and')]"
+            position="attributes"
+        >
+            <attribute name="t-if">o.partner_shipping_id</attribute>
+        </xpath>
+    </template>
+</odoo>
