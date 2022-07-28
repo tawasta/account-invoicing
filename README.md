@@ -39,6 +39,7 @@ addon | version | maintainers | summary
 [account_report_invoice_payment](account_report_invoice_payment/) | 14.0.1.0.0 |  | Account Report Invoice payment
 [account_report_invoice_reformat](account_report_invoice_reformat/) | 14.0.1.0.0 |  | Reformat invoice print elements for cleaner look
 [account_report_show_duplicate_addresses](account_report_show_duplicate_addresses/) | 14.0.1.0.0 |  | Show delivery address even if it is same as invoicing address
+[account_report_title](account_report_title/) | 14.0.1.0.0 |  | Report titles for account invoices
 [account_tax_report](account_tax_report/) | 14.0.1.0.0 |  | Finnish VAT-summary report.
 
 [//]: # (end addons)

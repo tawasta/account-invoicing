@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template
+        id="report_account_invoice_document"
+        inherit_id="account.report_invoice_document"
+    >
+        <xpath expr="//t[@t-set='o']" position="before">
+            <t t-set="report_title">
+                <t t-if="o.move_type in ['out_invoice', 'in_invoice']">Invoice</t>
+                <t t-else="">Refund</t>
+                <span
+                    t-if="'payment_reference' in o.fields_get()"
+                    t-esc="o.payment_reference"
+                />
+            </t>
+        </xpath>
+    </template>
+</odoo>
