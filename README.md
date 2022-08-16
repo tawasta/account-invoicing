@@ -19,6 +19,7 @@ addon | version | maintainers | summary
 [account_invoice_commission_payment_variant_company](account_invoice_commission_payment_variant_company/) | 14.0.1.0.0 |  | Use product variant company as recipient in invoice commission payments
 [account_invoice_country_group_text](account_invoice_country_group_text/) | 14.0.1.0.0 |  | Get account invoice report text from country groups setting
 [account_invoice_disable_unique_sequence](account_invoice_disable_unique_sequence/) | 14.0.1.0.0 |  | Allows multiple invoices to exist with the same sequence number
+[account_invoice_email](account_invoice_email/) | 14.0.1.0.0 |  | Send invoice email to invoice email address instead of default email address
 [account_invoice_notice_period](account_invoice_notice_period/) | 14.0.1.0.0 |  | Notice period field for invoices and partners
 [account_invoice_overdue_interest](account_invoice_overdue_interest/) | 14.0.1.0.0 |  | Overdue interest % field for invoices and partners
 [account_invoice_partner_income_expense_account](account_invoice_partner_income_expense_account/) | 14.0.1.0.1 |  | Partner-specific income and expense accounts for invoice lines
@@ -28,6 +29,8 @@ addon | version | maintainers | summary
 [account_invoice_quick_post](account_invoice_quick_post/) | 14.0.1.0.0 |  | Post (confirm) invoices from line view
 [account_invoice_related_sale_order](account_invoice_related_sale_order/) | 14.0.1.0.0 |  | Related Sale Orders of Invoice
 [account_invoice_salesperson_email](account_invoice_salesperson_email/) | 14.0.1.0.0 |  | Account Invoice - Salesperson e-mail to note field
+[account_invoice_stock_picking](account_invoice_stock_picking/) | 14.0.1.0.0 |  | Add related stock pickings to invoice
+[account_invoice_stock_picking_downpayment](account_invoice_stock_picking_downpayment/) | 14.0.1.2.0 |  | Prevent validating pickings with open down payments
 [account_invoice_vendor_invoice_created](account_invoice_vendor_invoice_created/) | 14.0.1.0.0 |  | Show related vendor invoice on customer invoices
 [account_invoice_vendor_invoice_to_sale](account_invoice_vendor_invoice_to_sale/) | 14.0.1.0.0 |  | Adds a wizards for creating a SO from vendor invoice
 [account_payment_commission_send_email](account_payment_commission_send_email/) | 14.0.1.0.1 |  | Account payment commission send email
