@@ -27,6 +27,7 @@ addon | version | maintainers | summary
 [account_invoice_pivot_report_delivery_address_country](account_invoice_pivot_report_delivery_address_country/) | 14.0.1.0.0 |  | Group pivot report by delivery address country
 [account_invoice_quick_post](account_invoice_quick_post/) | 14.0.1.0.0 |  | Post (confirm) invoices from line view
 [account_invoice_related_sale_order](account_invoice_related_sale_order/) | 14.0.1.0.0 |  | Related Sale Orders of Invoice
+[account_invoice_report_title](account_invoice_report_title/) | 14.0.1.1.0 |  | Report Titles for account invoices
 [account_invoice_salesperson_email](account_invoice_salesperson_email/) | 14.0.1.0.0 |  | Account Invoice - Salesperson e-mail to note field
 [account_invoice_stock_picking](account_invoice_stock_picking/) | 14.0.1.0.0 |  | Add related stock pickings to invoice
 [account_invoice_stock_picking_downpayment](account_invoice_stock_picking_downpayment/) | 14.0.1.2.0 |  | Prevent validating pickings with open down payments
