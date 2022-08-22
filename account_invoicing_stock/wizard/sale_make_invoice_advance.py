@@ -1,4 +1,4 @@
-from odoo import api, models
+from odoo import models
 
 
 class SaleAdvancePaymentInv(models.TransientModel):
@@ -11,6 +11,4 @@ class SaleAdvancePaymentInv(models.TransientModel):
             # TODO: configurable priority
             order.sudo().picking_ids.write({"priority": "4"})
 
-        return super()._create_invoice(
-            order, so_line, amount
-        )
+        return super()._create_invoice(order, so_line, amount)

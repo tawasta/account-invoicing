@@ -1,2 +1,2 @@
 # generated from manifests external_dependencies
-py3-validate-email
+validate_email

@@ -29,6 +29,6 @@
     "application": False,
     "installable": True,
     "depends": ["account"],
-    "external_dependencies": {"python": ["py3-validate-email"]},
+    "external_dependencies": {"python": ["validate_email"]},
     "data": ["views/res_partner.xml"],
 }
