@@ -25,14 +25,16 @@ addon | version | maintainers | summary
 [account_invoice_partner_income_expense_account](account_invoice_partner_income_expense_account/) | 14.0.1.0.1 |  | Partner-specific income and expense accounts for invoice lines
 [account_invoice_partner_warning_text](account_invoice_partner_warning_text/) | 14.0.1.0.0 |  | Adds Partner warning text to invoice
 [account_invoice_payment_date](account_invoice_payment_date/) | 14.0.1.0.0 |  | Save the date when invoice was fully paid
-[account_invoice_pivot_report_delivery_address_country](account_invoice_pivot_report_delivery_address_country/) | 14.0.1.0.0 |  | Group pivot report by delivery address country
+[account_invoice_pivot_report_delivery_address_country](account_invoice_pivot_report_delivery_address_country/) | 14.0.1.0.1 |  | Group pivot report by delivery address country
 [account_invoice_quick_post](account_invoice_quick_post/) | 14.0.1.0.0 |  | Post (confirm) invoices from line view
 [account_invoice_related_sale_order](account_invoice_related_sale_order/) | 14.0.1.0.0 |  | Related Sale Orders of Invoice
+[account_invoice_report_title](account_invoice_report_title/) | 14.0.1.1.0 |  | Report Titles for account invoices
 [account_invoice_salesperson_email](account_invoice_salesperson_email/) | 14.0.1.0.0 |  | Account Invoice - Salesperson e-mail to note field
 [account_invoice_stock_picking](account_invoice_stock_picking/) | 14.0.1.0.0 |  | Add related stock pickings to invoice
 [account_invoice_stock_picking_downpayment](account_invoice_stock_picking_downpayment/) | 14.0.1.2.0 |  | Prevent validating pickings with open down payments
 [account_invoice_vendor_invoice_created](account_invoice_vendor_invoice_created/) | 14.0.1.0.0 |  | Show related vendor invoice on customer invoices
 [account_invoice_vendor_invoice_to_sale](account_invoice_vendor_invoice_to_sale/) | 14.0.1.0.0 |  | Adds a wizards for creating a SO from vendor invoice
+[account_invoicing_stock](account_invoicing_stock/) | 14.0.1.0.0 |  | Account invoicing stock
 [account_payment_commission_send_email](account_payment_commission_send_email/) | 14.0.1.0.1 |  | Account payment commission send email
 [account_report_invoice_bank_transfer](account_report_invoice_bank_transfer/) | 14.0.1.0.0 |  | Add a bank transfer section for invoices
 [account_report_invoice_delivery_date](account_report_invoice_delivery_date/) | 14.0.1.0.0 |  | Delivery date to invoice report template

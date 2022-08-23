@@ -19,16 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Account Invoice Email",
-    "summary": "Send invoice email to invoice email address instead of default email address",
-    "version": "14.0.1.0.0",
-    "category": "Account",
+    "name": "Account Invoice - Report Title",
+    "summary": "Report Titles for account invoices",
+    "version": "14.0.1.1.0",
+    "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["account"],
-    "external_dependencies": {"python": ["validate_email"]},
-    "data": ["views/res_partner.xml"],
+    "depends": ["account", "web_report_sfs"],
+    "data": ["report/account_invoice_report.xml"],
 }

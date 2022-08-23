@@ -21,13 +21,13 @@
 {
     "name": "Account Invoice Pivot Report - Delivery Address Country",
     "summary": "Group pivot report by delivery address country",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["account"],
+    "depends": ["account", "sale"],
     "data": [],
 }

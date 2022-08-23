@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,16 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Account Invoice Email",
-    "summary": "Send invoice email to invoice email address instead of default email address",
+    "name": "Account invoicing stock",
+    "summary": "Account invoicing stock",
     "version": "14.0.1.0.0",
-    "category": "Account",
+    "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["account"],
-    "external_dependencies": {"python": ["validate_email"]},
-    "data": ["views/res_partner.xml"],
+    "depends": ["account", "sale_stock"],
+    "data": ["views/account_move.xml", "views/stock_picking.xml"],
 }
