@@ -11,6 +11,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [account_fiscal_position_company_not_required](account_fiscal_position_company_not_required/) | 14.0.1.0.0 |  | Company will not be required on fiscal positions
+[account_fiscal_position_type](account_fiscal_position_type/) | 14.0.1.0.0 |  | Fiscal Position type
 [account_invoice_accounting_date](account_invoice_accounting_date/) | 14.0.1.0.0 |  | Allows setting a distinct invoice date and accounting date
 [account_invoice_auditlog_rules](account_invoice_auditlog_rules/) | 14.0.1.0.0 |  | Adds audit log rules for account.move and account.move.line
 [account_invoice_commission](account_invoice_commission/) | 14.0.1.0.3 |  | account_invoice_commission
