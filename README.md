@@ -21,6 +21,7 @@ addon | version | maintainers | summary
 [account_invoice_country_group_text](account_invoice_country_group_text/) | 14.0.1.0.0 |  | Get account invoice report text from country groups setting
 [account_invoice_disable_unique_sequence](account_invoice_disable_unique_sequence/) | 14.0.1.0.0 |  | Allows multiple invoices to exist with the same sequence number
 [account_invoice_email](account_invoice_email/) | 14.0.1.0.0 |  | Send invoice email to invoice email address instead of default email address
+[account_invoice_line_view](account_invoice_line_view/) | 14.0.1.0.0 |  | Add a readonly invoice line view
 [account_invoice_notice_period](account_invoice_notice_period/) | 14.0.1.0.0 |  | Notice period field for invoices and partners
 [account_invoice_overdue_interest](account_invoice_overdue_interest/) | 14.0.1.0.0 |  | Overdue interest % field for invoices and partners
 [account_invoice_partner_income_expense_account](account_invoice_partner_income_expense_account/) | 14.0.1.0.1 |  | Partner-specific income and expense accounts for invoice lines
