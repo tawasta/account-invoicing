@@ -11,6 +11,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [account_fiscal_position_company_not_required](account_fiscal_position_company_not_required/) | 14.0.1.0.0 |  | Company will not be required on fiscal positions
+[account_fiscal_position_type](account_fiscal_position_type/) | 14.0.1.0.0 |  | Fiscal Position type
 [account_invoice_accounting_date](account_invoice_accounting_date/) | 14.0.1.0.0 |  | Allows setting a distinct invoice date and accounting date
 [account_invoice_auditlog_rules](account_invoice_auditlog_rules/) | 14.0.1.0.0 |  | Adds audit log rules for account.move and account.move.line
 [account_invoice_commission](account_invoice_commission/) | 14.0.1.0.3 |  | account_invoice_commission
@@ -25,7 +26,7 @@ addon | version | maintainers | summary
 [account_invoice_partner_income_expense_account](account_invoice_partner_income_expense_account/) | 14.0.1.0.1 |  | Partner-specific income and expense accounts for invoice lines
 [account_invoice_partner_warning_text](account_invoice_partner_warning_text/) | 14.0.1.0.0 |  | Adds Partner warning text to invoice
 [account_invoice_payment_date](account_invoice_payment_date/) | 14.0.1.0.0 |  | Save the date when invoice was fully paid
-[account_invoice_pivot_report_delivery_address_country](account_invoice_pivot_report_delivery_address_country/) | 14.0.1.0.0 |  | Group pivot report by delivery address country
+[account_invoice_pivot_report_delivery_address_country](account_invoice_pivot_report_delivery_address_country/) | 14.0.1.0.1 |  | Group pivot report by delivery address country
 [account_invoice_quick_post](account_invoice_quick_post/) | 14.0.1.0.0 |  | Post (confirm) invoices from line view
 [account_invoice_related_sale_order](account_invoice_related_sale_order/) | 14.0.1.0.0 |  | Related Sale Orders of Invoice
 [account_invoice_report_title](account_invoice_report_title/) | 14.0.1.1.0 |  | Report Titles for account invoices
