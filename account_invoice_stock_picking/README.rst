@@ -11,7 +11,7 @@ Allows viewing related invoices from a picking.
 
 Configuration
 =============
-\-
+If you want the pickings to be shown on invoice print, go to Accounting settings and enable "Show pickings on invoice print"
 
 Usage
 =====
