@@ -3,7 +3,12 @@
 
     <template id="report_invoice_document" inherit_id="account.report_invoice_document">
             <xpath expr="//div[@name='reference']" position="after">
-                <div class="col-auto col-3 mw-100 mb-2" t-if="o.stock_picking_ids" name="pickings" groups="account_invoice_stock_picking.group_account_invoice_report_pickings">
+                <div
+                class="col-auto col-3 mw-100 mb-2"
+                t-if="o.stock_picking_ids"
+                name="pickings"
+                groups="account_invoice_stock_picking.group_account_invoice_report_pickings"
+            >
                     <strong>Pickings:</strong>
                     <p class="m-0">
                         <t t-foreach="o.stock_picking_ids" t-as="picking">

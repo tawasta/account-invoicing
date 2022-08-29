@@ -1,19 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
 
     <record id="res_config_settings_view_form" model="ir.ui.view">
         <field name="name">res.config.settings.view.form.invoice.pickings</field>
         <field name="model">res.config.settings</field>
-        <field name="priority" eval="5"/>
-        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="priority" eval="5" />
+        <field name="inherit_id" ref="account.res_config_settings_view_form" />
         <field name="arch" type="xml">
             <xpath expr="//div[@id='show_sale_receipts']" position="after">
-                <div class="col-12 col-lg-6 o_setting_box" id="account_invoice_report_pickings">
+                <div
+                    class="col-12 col-lg-6 o_setting_box"
+                    id="account_invoice_report_pickings"
+                >
                     <div class="o_setting_left_pane">
-                        <field name="group_account_invoice_report_pickings"/>
+                        <field name="group_account_invoice_report_pickings" />
                     </div>
                     <div class="o_setting_right_pane">
-                        <label for="group_account_invoice_report_pickings"/>
+                        <label for="group_account_invoice_report_pickings" />
                         <div class="text-muted">
                             Show pickings on invoice print
                         </div>
