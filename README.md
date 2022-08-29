@@ -42,6 +42,7 @@ addon | version | maintainers | summary
 [account_report_invoice_delivery_date](account_report_invoice_delivery_date/) | 14.0.1.0.0 |  | Delivery date to invoice report template
 [account_report_invoice_eori](account_report_invoice_eori/) | 14.0.1.0.0 |  | Adds customers EORI number to Invoice Report
 [account_report_invoice_hide_customer_code](account_report_invoice_hide_customer_code/) | 14.0.1.0.0 |  | Invoice Report - Hide customer code
+[account_report_invoice_hide_invoice_name](account_report_invoice_hide_invoice_name/) | 14.0.1.0.0 |  | Module summary
 [account_report_invoice_hide_origin](account_report_invoice_hide_origin/) | 14.0.1.0.0 |  | Account invoice report - Hide origin
 [account_report_invoice_payment](account_report_invoice_payment/) | 14.0.1.0.0 |  | Account Report Invoice payment
 [account_report_invoice_reformat](account_report_invoice_reformat/) | 14.0.1.0.0 |  | Reformat invoice print elements for cleaner look
