@@ -21,6 +21,7 @@ addon | version | maintainers | summary
 [account_invoice_country_group_text](account_invoice_country_group_text/) | 14.0.1.0.0 |  | Get account invoice report text from country groups setting
 [account_invoice_disable_unique_sequence](account_invoice_disable_unique_sequence/) | 14.0.1.0.0 |  | Allows multiple invoices to exist with the same sequence number
 [account_invoice_email](account_invoice_email/) | 14.0.1.0.0 |  | Send invoice email to invoice email address instead of default email address
+[account_invoice_line_view](account_invoice_line_view/) | 14.0.1.0.0 |  | Add a readonly invoice line view
 [account_invoice_notice_period](account_invoice_notice_period/) | 14.0.1.0.0 |  | Notice period field for invoices and partners
 [account_invoice_overdue_interest](account_invoice_overdue_interest/) | 14.0.1.0.0 |  | Overdue interest % field for invoices and partners
 [account_invoice_partner_income_expense_account](account_invoice_partner_income_expense_account/) | 14.0.1.0.1 |  | Partner-specific income and expense accounts for invoice lines
@@ -41,9 +42,11 @@ addon | version | maintainers | summary
 [account_report_invoice_delivery_date](account_report_invoice_delivery_date/) | 14.0.1.0.0 |  | Delivery date to invoice report template
 [account_report_invoice_eori](account_report_invoice_eori/) | 14.0.1.0.0 |  | Adds customers EORI number to Invoice Report
 [account_report_invoice_hide_customer_code](account_report_invoice_hide_customer_code/) | 14.0.1.0.0 |  | Invoice Report - Hide customer code
+[account_report_invoice_hide_invoice_name](account_report_invoice_hide_invoice_name/) | 14.0.1.0.0 |  | Account invoice report - Hide invoice name
 [account_report_invoice_hide_origin](account_report_invoice_hide_origin/) | 14.0.1.0.0 |  | Account invoice report - Hide origin
 [account_report_invoice_payment](account_report_invoice_payment/) | 14.0.1.0.0 |  | Account Report Invoice payment
 [account_report_invoice_reformat](account_report_invoice_reformat/) | 14.0.1.0.0 |  | Reformat invoice print elements for cleaner look
+[account_report_invoice_show_invoice_address](account_report_invoice_show_invoice_address/) | 14.0.1.0.0 |  | Account Invoice PDF report - Show Invoice address
 [account_report_show_duplicate_addresses](account_report_show_duplicate_addresses/) | 14.0.1.0.0 |  | Show delivery address even if it is same as invoicing address
 [account_report_title](account_report_title/) | 14.0.1.0.0 |  | Report titles for account invoices
 [account_tax_report](account_tax_report/) | 14.0.1.0.0 |  | Finnish VAT-summary report.
