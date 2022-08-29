@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "Module name",
-    "summary": "Module summary",
+    "name": "Account invoice report - Hide invoice name",
+    "summary": "Account invoice report - Hide invoice name",
     "version": "14.0.1.0.0",
     "category": "Accounting",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
