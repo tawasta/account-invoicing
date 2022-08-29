@@ -2,12 +2,12 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-==============
-{module_title}
-==============
+==========================================
+Account invoice report - Hide invoice name
+==========================================
 
-This module was written to extend the functionality of ... to support ...
-and allow you to ...
+Hide invoice name from invoice PDF print by cliking on "Hide invoice name"
+at the Invoice settings.
 
 Configuration
 =============
@@ -27,12 +27,7 @@ Credits
 Contributors
 ------------
 
-* Aleksi Savijoki <aleksi.savijoki@tawasta.fi>
-* Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
-* Joona Isoaho <joona.isoaho@tawasta.fi>
-* Miika Nissi <miika.nissi@tawasta.fi>
 * Timo Kekäläinen <timo.kekalainen@tawasta.fi>
-* Valtteri Lattu <valtteri.lattu@tawasta.fi>
 
 Maintainer
 ----------
