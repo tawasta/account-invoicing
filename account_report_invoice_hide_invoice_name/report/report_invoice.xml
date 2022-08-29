@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="report_invoice_document" inherit_id="account.report_invoice_document">
+        <h2 position="attributes">
+            <attribute name="t-if">not o.company_id.hide_invoice_name</attribute>
+        </h2>
+        <div id="informations" position="attributes">
+            <attribute
+                name="t-att-style"
+            >'padding-top: {}em;'.format(2 if o.company_id.hide_invoice_name else 0)</attribute>
+        </div>
+    </template>
+</odoo>
