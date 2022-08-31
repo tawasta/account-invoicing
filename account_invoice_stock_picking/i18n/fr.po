@@ -6,84 +6,84 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-31 09:39+0000\n"
-"PO-Revision-Date: 2022-08-31 12:42+0300\n"
+"POT-Creation-Date: 2022-08-31 09:43+0000\n"
+"PO-Revision-Date: 2022-08-31 12:50+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
-"Language: fi\n"
+"Language: fr\n"
 "X-Generator: Poedit 2.0.6\n"
 
 #. module: account_invoice_stock_picking
 #: model_terms:ir.ui.view,arch_db:account_invoice_stock_picking.report_invoice_document
 msgid "<strong>Packing list(s):</strong>"
-msgstr "<strong>Keräilyt:</strong>"
+msgstr "<strong>Bon de livraison:</strong>"
 
 #. module: account_invoice_stock_picking
 #: model:ir.model.fields,field_description:account_invoice_stock_picking.field_account_move__display_name
 #: model:ir.model.fields,field_description:account_invoice_stock_picking.field_res_config_settings__display_name
 #: model:ir.model.fields,field_description:account_invoice_stock_picking.field_stock_picking__display_name
 msgid "Display Name"
-msgstr "Näyttönimi"
+msgstr "Afficher le nom"
 
 #. module: account_invoice_stock_picking
 #: model:ir.model.fields,field_description:account_invoice_stock_picking.field_account_move__id
 #: model:ir.model.fields,field_description:account_invoice_stock_picking.field_res_config_settings__id
 #: model:ir.model.fields,field_description:account_invoice_stock_picking.field_stock_picking__id
 msgid "ID"
-msgstr "Tunniste (ID)"
+msgstr "ID"
 
 #. module: account_invoice_stock_picking
 #: model:ir.model.fields,field_description:account_invoice_stock_picking.field_stock_picking__invoice_count
 msgid "Invoice Count"
-msgstr "Laskujen määrä"
+msgstr "Compte de facture"
 
 #. module: account_invoice_stock_picking
 #: model:ir.model.fields,field_description:account_invoice_stock_picking.field_stock_picking__invoice_ids
 #: model_terms:ir.ui.view,arch_db:account_invoice_stock_picking.stock_picking_invoice_action_form
 msgid "Invoices"
-msgstr "Laskut"
+msgstr "Les factures"
 
 #. module: account_invoice_stock_picking
 #: model:ir.model,name:account_invoice_stock_picking.model_account_move
 msgid "Journal Entry"
-msgstr "Päiväkirjan kirjaus"
+msgstr "Pièce comptable"
 
 #. module: account_invoice_stock_picking
 #: model:ir.model.fields,field_description:account_invoice_stock_picking.field_account_move____last_update
 #: model:ir.model.fields,field_description:account_invoice_stock_picking.field_res_config_settings____last_update
 #: model:ir.model.fields,field_description:account_invoice_stock_picking.field_stock_picking____last_update
 msgid "Last Modified on"
-msgstr "Viimeksi muokattu"
+msgstr "Dernière modification le"
 
 #. module: account_invoice_stock_picking
 #: model_terms:ir.ui.view,arch_db:account_invoice_stock_picking.view_move_form
 msgid "Pickings"
-msgstr "Keräilyt"
+msgstr "Livraisons"
 
 #. module: account_invoice_stock_picking
 #: model:ir.model,name:account_invoice_stock_picking.model_res_config_settings
 msgid "Procurement purchase grouping settings"
-msgstr "Ostohankintojen ryhmittelyasetukset"
+msgstr "Procurement purchase grouping settings"
 
 #. module: account_invoice_stock_picking
 #: model:ir.model.fields,field_description:account_invoice_stock_picking.field_res_config_settings__group_account_invoice_report_pickings
 #: model:res.groups,name:account_invoice_stock_picking.group_account_invoice_report_pickings
 #: model_terms:ir.ui.view,arch_db:account_invoice_stock_picking.res_config_settings_view_form
 msgid "Show pickings on invoice print"
-msgstr "Näytä toimitukset laskun tulosteella"
+msgstr "Montrer des livraisons sur l'impression de la facture"
 
 #. module: account_invoice_stock_picking
 #: model:ir.model.fields,field_description:account_invoice_stock_picking.field_account_bank_statement_line__stock_picking_ids
 #: model:ir.model.fields,field_description:account_invoice_stock_picking.field_account_move__stock_picking_ids
 #: model:ir.model.fields,field_description:account_invoice_stock_picking.field_account_payment__stock_picking_ids
 msgid "Stock pickings"
-msgstr "Keräilyt"
+msgstr "Colisages"
 
 #. module: account_invoice_stock_picking
 #: model:ir.model,name:account_invoice_stock_picking.model_stock_picking
 msgid "Transfer"
-msgstr "Siirto"
+msgstr "Transfert"
