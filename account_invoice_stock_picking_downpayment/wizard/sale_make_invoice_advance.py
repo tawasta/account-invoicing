@@ -7,8 +7,10 @@ class SaleAdvancePaymentInv(models.TransientModel):
 
     def _create_invoice(self, order, so_line, amount):
         if self.advance_payment_method in ("percentage", "fixed"):
-            priority = self.env["ir.config_parameter"].get_param(
-                "stock.picking.waiting.payment.priority"
+            priority = (
+                self.env["ir.config_parameter"]
+                .sudo()
+                .get_param("stock.picking.waiting.payment.priority")
             )
             order.sudo().picking_ids.write({"priority": priority})
 
