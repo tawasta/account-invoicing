@@ -32,7 +32,7 @@ addon | version | maintainers | summary
 [account_invoice_related_sale_order](account_invoice_related_sale_order/) | 14.0.1.0.0 |  | Related Sale Orders of Invoice
 [account_invoice_report_title](account_invoice_report_title/) | 14.0.1.1.0 |  | Report Titles for account invoices
 [account_invoice_salesperson_email](account_invoice_salesperson_email/) | 14.0.1.0.0 |  | Account Invoice - Salesperson e-mail to note field
-[account_invoice_stock_picking](account_invoice_stock_picking/) | 14.0.1.0.0 |  | Add related stock pickings to invoice
+[account_invoice_stock_picking](account_invoice_stock_picking/) | 14.0.1.1.0 |  | Add related stock pickings to invoice
 [account_invoice_stock_picking_downpayment](account_invoice_stock_picking_downpayment/) | 14.0.1.2.0 |  | Prevent validating pickings with open down payments
 [account_invoice_vendor_invoice_created](account_invoice_vendor_invoice_created/) | 14.0.1.0.0 |  | Show related vendor invoice on customer invoices
 [account_invoice_vendor_invoice_to_sale](account_invoice_vendor_invoice_to_sale/) | 14.0.1.0.0 |  | Adds a wizards for creating a SO from vendor invoice

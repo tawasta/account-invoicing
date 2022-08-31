@@ -21,7 +21,7 @@
 {
     "name": "Account invoicing stock picking",
     "summary": "Add related stock pickings to invoice",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.1.0",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
@@ -29,5 +29,11 @@
     "application": False,
     "installable": True,
     "depends": ["account", "sale_stock"],
-    "data": ["views/account_move.xml", "views/stock_picking.xml"],
+    "data": [
+        "security/res_groups.xml",
+        "views/account_move.xml",
+        "views/report_invoice.xml",
+        "views/res_config_settings.xml",
+        "views/stock_picking.xml",
+    ],
 }
