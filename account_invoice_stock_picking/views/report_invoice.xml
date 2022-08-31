@@ -9,7 +9,7 @@
                 name="pickings"
                 groups="account_invoice_stock_picking.group_account_invoice_report_pickings"
             >
-                    <strong>Pickings:</strong>
+                    <strong>Packing list(s):</strong>
                     <p class="m-0">
                         <t t-foreach="o.stock_picking_ids" t-as="picking">
                             <!-- It is possible that a picking is cancelled later -->
