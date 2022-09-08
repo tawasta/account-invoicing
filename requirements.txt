@@ -1,2 +1,2 @@
 # generated from manifests external_dependencies
-validate_email
+email_validator

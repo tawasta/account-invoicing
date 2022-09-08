@@ -21,7 +21,7 @@
 {
     "name": "Account Invoice Email",
     "summary": "Send invoice email to invoice email address instead of default email address",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.1.0",
     "category": "Account",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
@@ -29,6 +29,6 @@
     "application": False,
     "installable": True,
     "depends": ["account"],
-    "external_dependencies": {"python": ["validate_email"]},
+    "external_dependencies": {"python": ["email_validator"]},
     "data": ["views/res_partner.xml"],
 }
