@@ -27,6 +27,15 @@ class AccountMoveLine(models.Model):
         store=True,
     )
 
+    product_tmpl_id = fields.Many2one(
+        string="Product Template",
+        comodel_name="product.template",
+        related="product_id.product_tmpl_id",
+        readonly=False,
+        store=True,
+        help="Technical: used in views",
+    )
+
     date_invoice = fields.Date(
         string="Invoice date",
         related="move_id.invoice_date",
