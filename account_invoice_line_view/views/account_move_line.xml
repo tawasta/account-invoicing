@@ -30,7 +30,7 @@
         <field name="context">{'search_default_invoices':1}</field>
         <field
             name="domain"
-        >[('invoice_type','in',('out_invoice', 'out_refund'))]</field>
+        >[('invoice_type','in',('out_invoice', 'out_refund')),('exclude_from_invoice_tab', '=', False)]</field>
     </record>
 
     <record id="account_invoice_line_vendor_action" model="ir.actions.act_window">
