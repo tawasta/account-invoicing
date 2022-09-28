@@ -21,7 +21,7 @@
 {
     "name": "Invoice Report - Delivery Date",
     "summary": "Delivery date to invoice report template",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
