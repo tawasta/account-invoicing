@@ -41,7 +41,7 @@ addon | version | maintainers | summary
 [account_invoicing_stock](account_invoicing_stock/) | 14.0.1.0.0 |  | Account invoicing stock
 [account_payment_commission_send_email](account_payment_commission_send_email/) | 14.0.1.0.1 |  | Account payment commission send email
 [account_report_invoice_bank_transfer](account_report_invoice_bank_transfer/) | 14.0.1.0.0 |  | Add a bank transfer section for invoices
-[account_report_invoice_delivery_date](account_report_invoice_delivery_date/) | 14.0.1.0.0 |  | Delivery date to invoice report template
+[account_report_invoice_delivery_date](account_report_invoice_delivery_date/) | 14.0.1.0.1 |  | Delivery date to invoice report template
 [account_report_invoice_eori](account_report_invoice_eori/) | 14.0.1.0.0 |  | Adds customers EORI number to Invoice Report
 [account_report_invoice_hide_customer_code](account_report_invoice_hide_customer_code/) | 14.0.1.0.0 |  | Invoice Report - Hide customer code
 [account_report_invoice_hide_invoice_name](account_report_invoice_hide_invoice_name/) | 14.0.1.0.0 |  | Account invoice report - Hide invoice name
