@@ -27,7 +27,7 @@
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
-    "installable": True,
+    "installable": False,
     "depends": ["account", "sale_stock"],
     "data": ["views/account_move.xml", "views/stock_picking.xml"],
 }
