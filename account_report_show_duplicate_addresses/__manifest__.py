@@ -21,7 +21,7 @@
 {
     "name": "Invoice Report - Show Duplicate Address",
     "summary": "Show delivery address even if it is same as invoicing address",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
