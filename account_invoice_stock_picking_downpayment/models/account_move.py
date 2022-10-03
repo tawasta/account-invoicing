@@ -10,8 +10,10 @@ class AccountMove(models.Model):
             for picking in record.stock_picking_ids:
                 if not picking.has_open_invoices():
                     # When all the invoices for a picking are paid, change the picking priority
-                    priority = self.env["ir.config_parameter"].get_param(
-                        "stock.picking.completed.payment.priority"
+                    priority = (
+                        self.env["ir.config_parameter"]
+                        .sudo()
+                        .get_param("stock.picking.completed.payment.priority")
                     )
                     picking.sudo().write({"priority": priority})
 
