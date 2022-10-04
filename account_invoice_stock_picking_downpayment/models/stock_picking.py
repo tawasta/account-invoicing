@@ -6,16 +6,17 @@ class StockPicking(models.Model):
     _inherit = "stock.picking"
 
     def button_validate(self):
-        if self.has_open_invoices():
-            # Don't allow validating pickings if they have open invoices
-            raise ValidationError(
-                _(
-                    "You cannot confirm the transfer because some of the invoices "
-                    "are still pending"
+        for record in self:
+            if record.has_open_invoices():
+                # Don't allow validating pickings if they have open invoices
+                raise ValidationError(
+                    _(
+                        "You cannot confirm the transfer because some of the invoices "
+                        "are still pending"
+                    )
                 )
-            )
-        else:
-            return super().button_validate()
+
+        return super().button_validate()
 
     def has_open_invoices(self):
         self.ensure_one()

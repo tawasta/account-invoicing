@@ -11,6 +11,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [account_account_region_type](account_account_region_type/) | 14.0.1.0.0 |  | Set region type for an account
+[account_financial_report_partner_ref](account_financial_report_partner_ref/) | 14.0.1.0.0 |  | A ref number of a partner is added to General Ledger report
 [account_fiscal_position_company_not_required](account_fiscal_position_company_not_required/) | 14.0.1.0.0 |  | Company will not be required on fiscal positions
 [account_fiscal_position_type](account_fiscal_position_type/) | 14.0.1.0.0 |  | Fiscal Position type
 [account_invoice_accounting_date](account_invoice_accounting_date/) | 14.0.1.0.0 |  | Allows setting a distinct invoice date and accounting date
@@ -36,13 +37,12 @@ addon | version | maintainers | summary
 [account_invoice_report_title](account_invoice_report_title/) | 14.0.1.1.0 |  | Report Titles for account invoices
 [account_invoice_salesperson_email](account_invoice_salesperson_email/) | 14.0.1.0.0 |  | Account Invoice - Salesperson e-mail to note field
 [account_invoice_stock_picking](account_invoice_stock_picking/) | 14.0.1.1.0 |  | Add related stock pickings to invoice
-[account_invoice_stock_picking_downpayment](account_invoice_stock_picking_downpayment/) | 14.0.1.2.0 |  | Prevent validating pickings with open down payments
+[account_invoice_stock_picking_downpayment](account_invoice_stock_picking_downpayment/) | 14.0.1.2.2 |  | Prevent validating pickings with open down payments
 [account_invoice_vendor_invoice_created](account_invoice_vendor_invoice_created/) | 14.0.1.0.0 |  | Show related vendor invoice on customer invoices
 [account_invoice_vendor_invoice_to_sale](account_invoice_vendor_invoice_to_sale/) | 14.0.1.0.0 |  | Adds a wizards for creating a SO from vendor invoice
-[account_invoicing_stock](account_invoicing_stock/) | 14.0.1.0.0 |  | Account invoicing stock
 [account_payment_commission_send_email](account_payment_commission_send_email/) | 14.0.1.0.1 |  | Account payment commission send email
-[account_report_invoice_bank_transfer](account_report_invoice_bank_transfer/) | 14.0.1.0.0 |  | Add a bank transfer section for invoices
-[account_report_invoice_delivery_date](account_report_invoice_delivery_date/) | 14.0.1.0.0 |  | Delivery date to invoice report template
+[account_report_invoice_bank_transfer](account_report_invoice_bank_transfer/) | 14.0.1.0.1 |  | Add a bank transfer section for invoices
+[account_report_invoice_delivery_date](account_report_invoice_delivery_date/) | 14.0.1.0.1 |  | Delivery date to invoice report template
 [account_report_invoice_eori](account_report_invoice_eori/) | 14.0.1.0.0 |  | Adds customers EORI number to Invoice Report
 [account_report_invoice_hide_customer_code](account_report_invoice_hide_customer_code/) | 14.0.1.0.0 |  | Invoice Report - Hide customer code
 [account_report_invoice_hide_invoice_name](account_report_invoice_hide_invoice_name/) | 14.0.1.0.0 |  | Account invoice report - Hide invoice name
@@ -52,8 +52,15 @@ addon | version | maintainers | summary
 [account_report_invoice_quantity_decimals](account_report_invoice_quantity_decimals/) | 14.0.1.0.0 |  | Modifications to invoice print decimal precision
 [account_report_invoice_reformat](account_report_invoice_reformat/) | 14.0.1.0.0 |  | Reformat invoice print elements for cleaner look
 [account_report_invoice_show_invoice_address](account_report_invoice_show_invoice_address/) | 14.0.1.0.0 |  | Account Invoice PDF report - Show Invoice address
-[account_report_show_duplicate_addresses](account_report_show_duplicate_addresses/) | 14.0.1.0.0 |  | Show delivery address even if it is same as invoicing address
+[account_report_show_duplicate_addresses](account_report_show_duplicate_addresses/) | 14.0.1.0.1 |  | Show delivery address even if it is same as invoicing address
 [account_report_title](account_report_title/) | 14.0.1.0.0 |  | Report titles for account invoices
 [account_tax_report](account_tax_report/) | 14.0.1.0.0 |  | Finnish VAT-summary report.
+
+
+Unported addons
+---------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[account_invoicing_stock](account_invoicing_stock/) | 14.0.1.0.0 (unported) |  | Account invoicing stock
 
 [//]: # (end addons)
