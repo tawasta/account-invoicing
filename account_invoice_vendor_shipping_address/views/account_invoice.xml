@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="account_invoice_form" model="ir.ui.view">
+        <field name="name">Vendor bill shipping address</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="sale.account_invoice_form" />
+        <field name="arch" type="xml">
+
+            <field name="partner_shipping_id" position="before">
+                <field
+                    name="partner_shipping_id"
+                    string="Supplier address"
+                    attrs="{'invisible': [('move_type', 'in', ('out_invoice', 'out_refund', 'out_receipt'))]}"
+                />
+            </field>
+
+        </field>
+    </record>
+</odoo>
