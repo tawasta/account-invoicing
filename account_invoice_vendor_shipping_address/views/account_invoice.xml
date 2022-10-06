@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="account.invoice_supplier_form" />
         <field name="arch" type="xml">
 
-            <field name="partner_id" position="before">
+            <field name="partner_id" position="after">
                 <field
                     name="partner_shipping_id"
                     string="Supplier address"
