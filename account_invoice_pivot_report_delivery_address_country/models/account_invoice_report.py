@@ -13,12 +13,12 @@ class AccountInvoiceReport(models.Model):
         # Adds Delivery address to from-clause
         return (
             super(AccountInvoiceReport, self)._from()
-            + """LEFT JOIN res_partner shipping_country ON
-            shipping_country.id = move.partner_shipping_id"""
+            + """LEFT JOIN res_partner shipping_am ON
+            shipping_am.id = move.partner_shipping_id"""
         )
 
     def _select(self):
         return (
             super(AccountInvoiceReport, self)._select()
-            + ", move.partner_shipping_id AS shipping_country_id"
+            + ", shipping_am.country_id AS shipping_country_id"
         )
