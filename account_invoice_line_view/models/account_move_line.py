@@ -64,16 +64,8 @@ class AccountMoveLine(models.Model):
         store=True,
     )
 
-    # Invoice types are hard coded here, but it's very unlikely that they would
-    # differ in any version or installation
+    # Hard coded types were removed 12.10.2022
     invoice_type = fields.Selection(
-        [
-            ("out_invoice", "Customer Invoice"),
-            ("in_invoice", "Vendor Bill"),
-            ("out_refund", "Customer Refund"),
-            ("in_refund", "Vendor Refund"),
-        ],
         string="Type",
         related="move_id.move_type",
-        store=True,
     )
