@@ -21,13 +21,13 @@
 {
     "name": "Related Sale Orders of Invoice",
     "summary": "Related Sale Orders of Invoice",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Invoicing",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["account"],
+    "depends": ["sale", "account"],
     "data": ["views/account_move.xml"],
 }
