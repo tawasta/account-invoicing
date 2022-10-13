@@ -33,7 +33,7 @@ addon | version | maintainers | summary
 [account_invoice_pivot_report_delivery_address_country](account_invoice_pivot_report_delivery_address_country/) | 14.0.1.0.2 |  | Group pivot report by delivery address country
 [account_invoice_pivot_report_product_template](account_invoice_pivot_report_product_template/) | 14.0.1.0.0 |  | Group pivot report by Product Template
 [account_invoice_quick_post](account_invoice_quick_post/) | 14.0.1.0.0 |  | Post (confirm) invoices from line view
-[account_invoice_related_sale_order](account_invoice_related_sale_order/) | 14.0.1.0.0 |  | Related Sale Orders of Invoice
+[account_invoice_related_sale_order](account_invoice_related_sale_order/) | 14.0.1.0.1 |  | Related Sale Orders of Invoice
 [account_invoice_report_reference_is_description](account_invoice_report_reference_is_description/) | 14.0.1.0.0 |  | Invoice print - replace Reference header with Description
 [account_invoice_report_title](account_invoice_report_title/) | 14.0.1.1.0 |  | Report Titles for account invoices
 [account_invoice_salesperson_email](account_invoice_salesperson_email/) | 14.0.1.0.0 |  | Account Invoice - Salesperson e-mail to note field
