@@ -21,10 +21,8 @@ class AccountMoveLine(models.Model):
     )
 
     product_categ_id = fields.Many2one(
-        string="Category",
         comodel_name="product.category",
         related="product_id.categ_id",
-        store=True,
     )
 
     product_tmpl_id = fields.Many2one(
