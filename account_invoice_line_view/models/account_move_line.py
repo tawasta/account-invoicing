@@ -1,11 +1,22 @@
-from odoo import fields, models
+from odoo import api, fields, models
 
 
 class AccountMoveLine(models.Model):
 
     _inherit = "account.move.line"
 
+    @api.depends("price_subtotal")
+    def _compute_average_price(self):
+        for line in self:
+            line.price_average = (
+                0 if not line.quantity else line.price_subtotal / line.quantity
+            )
+
     # Related/computed helper fields here
+    price_average = fields.Monetary(
+        string="Average price", compute="_compute_average_price"
+    )
+
     commercial_partner_id = fields.Many2one(
         string="Partner",
         comodel_name="res.partner",
