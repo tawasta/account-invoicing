@@ -1,11 +1,22 @@
-from odoo import fields, models
+from odoo import api, fields, models
 
 
 class AccountMoveLine(models.Model):
 
     _inherit = "account.move.line"
 
+    @api.depends("price_subtotal")
+    def _compute_average_price(self):
+        for line in self:
+            line.price_average = (
+                0 if not line.quantity else line.price_subtotal / line.quantity
+            )
+
     # Related/computed helper fields here
+    price_average = fields.Monetary(
+        string="Average price", compute="_compute_average_price"
+    )
+
     commercial_partner_id = fields.Many2one(
         string="Partner",
         comodel_name="res.partner",
@@ -21,10 +32,8 @@ class AccountMoveLine(models.Model):
     )
 
     product_categ_id = fields.Many2one(
-        string="Category",
         comodel_name="product.category",
         related="product_id.categ_id",
-        store=True,
     )
 
     product_tmpl_id = fields.Many2one(
@@ -64,16 +73,8 @@ class AccountMoveLine(models.Model):
         store=True,
     )
 
-    # Invoice types are hard coded here, but it's very unlikely that they would
-    # differ in any version or installation
+    # Hard coded types were removed 12.10.2022
     invoice_type = fields.Selection(
-        [
-            ("out_invoice", "Customer Invoice"),
-            ("in_invoice", "Vendor Bill"),
-            ("out_refund", "Customer Refund"),
-            ("in_refund", "Vendor Refund"),
-        ],
         string="Type",
         related="move_id.move_type",
-        store=True,
     )

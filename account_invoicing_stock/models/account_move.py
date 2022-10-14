@@ -30,5 +30,5 @@ class AccountMove(models.Model):
                         # When all the invoices for a picking are paid,
                         # set picking priority as 1
                         # TODO: configurable priority
-                        picking.sudo().write({"priority": "1"})
+                        picking.sudo().write({"priority": "0"})
         return res

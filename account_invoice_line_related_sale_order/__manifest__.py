@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2022 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,15 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Related Sale Orders of Invoice",
-    "summary": "Related Sale Orders of Invoice",
-    "version": "14.0.1.0.1",
-    "category": "Invoicing",
+    "name": "Related sale of an invoice line",
+    "summary": "Related sale of an invoice line",
+    "version": "14.0.1.0.0",
+    "category": "Account",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["sale", "account"],
-    "data": ["views/account_move.xml"],
+    "depends": ["account", "sale"],
+    "data": [],
 }

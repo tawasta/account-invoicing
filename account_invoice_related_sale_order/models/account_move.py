@@ -14,6 +14,11 @@ class AccountMove(models.Model):
         copy=False,
     )
 
+    sale_id = fields.Many2one(
+        "sale.order",
+        related="invoice_line_ids.sale_line_ids.order_id",
+    )
+
     @api.depends("invoice_line_ids")
     def _compute_related_sale_order(self):
         for move in self:

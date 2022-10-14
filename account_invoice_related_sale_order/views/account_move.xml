@@ -7,7 +7,22 @@
         <field name="arch" type="xml">
             <label for="invoice_payment_term_id" position="before">
                 <field name="sale_order_ids" invisible="1" />
+                <field name="sale_id" />
             </label>
+        </field>
+    </record>
+
+    <record id="view_invoice_tree" model="ir.ui.view">
+        <field name="name">account.invoice.tree.related.sale.order</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_invoice_tree" />
+        <field name="arch" type="xml">
+            <field name="company_id" position="before">
+                <field
+                    name="sale_id"
+                    invisible="context.get('default_move_type') not in ('out_invoice', 'out_refund','out_receipt')"
+                />
+            </field>
         </field>
     </record>
 </odoo>
