@@ -24,7 +24,10 @@ class StockPicking(models.Model):
         so_lines_to_deliver = self.sudo().sale_id.order_line.filtered(
             lambda r: r.product_id.invoice_policy == "delivery"
         )
-        states = so_lines_to_deliver.mapped("order_id.invoice_ids.payment_state")
+        invoices = so_lines_to_deliver.mapped("order_id.invoice_ids").filtered(
+            lambda i: i.state != "cancel"
+        )
+        states = invoices.mapped("payment_state")
         is_open = "not_paid" in states or "in_payment" in states or "partial" in states
 
         return is_open
