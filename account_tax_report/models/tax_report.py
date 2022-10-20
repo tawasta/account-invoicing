@@ -283,8 +283,9 @@ class AccountTaxReport(models.Model):
             .create(
                 {
                     "name": self.filename,
+                    "res_id": self.id,
+                    "res_model": self._name,
                     "datas": self.report_file,
-                    "datas_fname": self.filename,
                     "type": "binary",
                 }
             )
@@ -292,7 +293,9 @@ class AccountTaxReport(models.Model):
 
         return {
             "type": "ir.actions.act_url",
-            "url": "{}{}".format(attachment.local_url, "&download=true"),
+            "target": "new",
+            "url": "/web/content/%s?download=true" % (attachment.id),
+            "nodestroy": False,
         }
 
     @api.model
