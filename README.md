@@ -57,7 +57,7 @@ addon | version | maintainers | summary
 [account_report_invoice_show_invoice_address](account_report_invoice_show_invoice_address/) | 14.0.1.0.0 |  | Account Invoice PDF report - Show Invoice address
 [account_report_show_duplicate_addresses](account_report_show_duplicate_addresses/) | 14.0.1.0.1 |  | Show delivery address even if it is same as invoicing address
 [account_report_title](account_report_title/) | 14.0.1.0.1 |  | Report titles for account invoices
-[account_tax_report](account_tax_report/) | 14.0.1.0.0 |  | Finnish VAT-summary report.
+[account_tax_report](account_tax_report/) | 14.0.1.0.1 |  | Finnish VAT-summary report.
 
 
 Unported addons
