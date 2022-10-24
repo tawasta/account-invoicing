@@ -21,7 +21,7 @@
 {
     "name": "Adds partner's ref to General Ledger report",
     "summary": "A ref number of a partner is added to General Ledger report",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Accounting & Finance",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
