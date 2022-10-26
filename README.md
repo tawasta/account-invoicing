@@ -11,7 +11,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [account_account_region_type](account_account_region_type/) | 14.0.1.0.0 |  | Set region type for an account
-[account_financial_report_partner_ref](account_financial_report_partner_ref/) | 14.0.1.0.0 |  | A ref number of a partner is added to General Ledger report
+[account_financial_report_partner_ref](account_financial_report_partner_ref/) | 14.0.1.0.1 |  | A ref number of a partner is added to General Ledger report
 [account_fiscal_position_company_not_required](account_fiscal_position_company_not_required/) | 14.0.1.0.0 |  | Company will not be required on fiscal positions
 [account_fiscal_position_type](account_fiscal_position_type/) | 14.0.1.0.0 |  | Fiscal Position type
 [account_invoice_accounting_date](account_invoice_accounting_date/) | 14.0.1.0.0 |  | Allows setting a distinct invoice date and accounting date
@@ -57,7 +57,7 @@ addon | version | maintainers | summary
 [account_report_invoice_show_invoice_address](account_report_invoice_show_invoice_address/) | 14.0.1.0.0 |  | Account Invoice PDF report - Show Invoice address
 [account_report_show_duplicate_addresses](account_report_show_duplicate_addresses/) | 14.0.1.0.1 |  | Show delivery address even if it is same as invoicing address
 [account_report_title](account_report_title/) | 14.0.1.0.1 |  | Report titles for account invoices
-[account_tax_report](account_tax_report/) | 14.0.1.0.0 |  | Finnish VAT-summary report.
+[account_tax_report](account_tax_report/) | 14.0.1.0.1 |  | Finnish VAT-summary report.
 
 
 Unported addons

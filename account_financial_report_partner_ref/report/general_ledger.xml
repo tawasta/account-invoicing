@@ -9,7 +9,9 @@
                 t-set="ref_num"
                 t-value="request.env['res.partner'].search([('id', '=', line['partner_id'])])"
             />
-            (<t t-esc="ref_num.ref" />)
+            <t t-if="ref_num.ref">
+                (<t t-esc="ref_num.ref" />)
+            </t>
         </t>
     </template>
 </odoo>
