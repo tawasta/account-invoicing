@@ -21,7 +21,7 @@
 {
     "name": "Account Tax Report",
     "summary": "Finnish VAT-summary report.",
-    "version": "14.0.1.0.1",
+    "version": "14.0.1.0.2",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",

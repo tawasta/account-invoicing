@@ -10,6 +10,7 @@ _logger = logging.getLogger(__name__)
 
 class AccountTaxReport(models.Model):
     _name = "account_tax_report.tax.report"
+    _description = "Account Tax Report"
 
     def _get_default_company(self):
         return self.env.user.company_id.id
@@ -310,6 +311,7 @@ class AccountTaxReport(models.Model):
 
 class TaxReportLine(models.Model):
     _name = "account_tax_report.tax.report.line"
+    _description = "Account Tax Report Line"
 
     report_id = fields.Many2one("account_tax_report.tax.report")
     move_line_id = fields.Many2one("account.move.line")
@@ -323,6 +325,7 @@ class TaxReportLine(models.Model):
 
 class TaxReportInfoWindow(models.TransientModel):
     _name = "account_tax_report.info_window"
+    _description = "Account Tax Report Line - Info Window"
 
     report_id = fields.Many2one("account_tax_report.tax.report")
     filename = fields.Char()

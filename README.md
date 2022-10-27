@@ -41,7 +41,7 @@ addon | version | maintainers | summary
 [account_invoice_stock_picking](account_invoice_stock_picking/) | 14.0.1.1.0 |  | Add related stock pickings to invoice
 [account_invoice_stock_picking_downpayment](account_invoice_stock_picking_downpayment/) | 14.0.1.2.3 |  | Prevent validating pickings with open down payments
 [account_invoice_vendor_invoice_created](account_invoice_vendor_invoice_created/) | 14.0.1.0.0 |  | Show related vendor invoice on customer invoices
-[account_invoice_vendor_invoice_to_sale](account_invoice_vendor_invoice_to_sale/) | 14.0.1.0.0 |  | Adds a wizards for creating a SO from vendor invoice
+[account_invoice_vendor_invoice_to_sale](account_invoice_vendor_invoice_to_sale/) | 14.0.1.0.1 |  | Adds a wizards for creating a SO from vendor invoice
 [account_invoice_vendor_shipping_address](account_invoice_vendor_shipping_address/) | 14.0.1.0.0 |  | Allows defining a supplier address for vendor invoices
 [account_payment_commission_send_email](account_payment_commission_send_email/) | 14.0.1.0.1 |  | Account payment commission send email
 [account_report_invoice_bank_transfer](account_report_invoice_bank_transfer/) | 14.0.1.0.1 |  | Add a bank transfer section for invoices
@@ -57,7 +57,7 @@ addon | version | maintainers | summary
 [account_report_invoice_show_invoice_address](account_report_invoice_show_invoice_address/) | 14.0.1.0.0 |  | Account Invoice PDF report - Show Invoice address
 [account_report_show_duplicate_addresses](account_report_show_duplicate_addresses/) | 14.0.1.0.1 |  | Show delivery address even if it is same as invoicing address
 [account_report_title](account_report_title/) | 14.0.1.0.1 |  | Report titles for account invoices
-[account_tax_report](account_tax_report/) | 14.0.1.0.1 |  | Finnish VAT-summary report.
+[account_tax_report](account_tax_report/) | 14.0.1.0.2 |  | Finnish VAT-summary report.
 
 
 Unported addons
