@@ -25,6 +25,7 @@ addon | version | maintainers | summary
 [account_invoice_email](account_invoice_email/) | 14.0.1.1.0 |  | Send invoice email to invoice email address instead of default email address
 [account_invoice_line_related_sale_order](account_invoice_line_related_sale_order/) | 14.0.1.0.0 |  | Related sale of an invoice line
 [account_invoice_line_view](account_invoice_line_view/) | 14.0.1.0.5 |  | Add a readonly invoice line view
+[account_invoice_merge_attachment](account_invoice_merge_attachment/) | 14.0.1.1.0 |  | Consider attachment during invoice merge process
 [account_invoice_notice_period](account_invoice_notice_period/) | 14.0.1.0.0 |  | Notice period field for invoices and partners
 [account_invoice_overdue_interest](account_invoice_overdue_interest/) | 14.0.1.0.0 |  | Overdue interest % field for invoices and partners
 [account_invoice_partner_income_expense_account](account_invoice_partner_income_expense_account/) | 14.0.1.0.1 |  | Partner-specific income and expense accounts for invoice lines
@@ -39,7 +40,7 @@ addon | version | maintainers | summary
 [account_invoice_report_title](account_invoice_report_title/) | 14.0.1.1.0 |  | Report Titles for account invoices
 [account_invoice_salesperson_email](account_invoice_salesperson_email/) | 14.0.1.0.0 |  | Account Invoice - Salesperson e-mail to note field
 [account_invoice_stock_picking](account_invoice_stock_picking/) | 14.0.1.1.0 |  | Add related stock pickings to invoice
-[account_invoice_stock_picking_downpayment](account_invoice_stock_picking_downpayment/) | 14.0.1.2.3 |  | Prevent validating pickings with open down payments
+[account_invoice_stock_picking_downpayment](account_invoice_stock_picking_downpayment/) | 14.0.1.2.4 |  | Prevent validating pickings with open down payments
 [account_invoice_vendor_invoice_created](account_invoice_vendor_invoice_created/) | 14.0.1.0.0 |  | Show related vendor invoice on customer invoices
 [account_invoice_vendor_invoice_to_sale](account_invoice_vendor_invoice_to_sale/) | 14.0.1.0.1 |  | Adds a wizards for creating a SO from vendor invoice
 [account_invoice_vendor_shipping_address](account_invoice_vendor_shipping_address/) | 14.0.1.0.0 |  | Allows defining a supplier address for vendor invoices
