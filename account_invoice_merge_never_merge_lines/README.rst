@@ -6,7 +6,8 @@
 Account Invoice Merge - never merge lines
 =========================================
 
-Account Invoice Merge - never merge lines
+Never merge lines while merging invoices.
+This will also preserve a custom line description
 
 Configuration
 =============

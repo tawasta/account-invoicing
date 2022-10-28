@@ -9,5 +9,6 @@ class AccountMove(models.Model):
         res = super()._get_invoice_line_key_cols()
 
         res.append("id")
+        res.append("name")
 
         return res

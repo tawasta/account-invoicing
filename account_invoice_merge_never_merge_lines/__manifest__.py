@@ -20,8 +20,8 @@
 
 {
     "name": "Account Invoice Merge - never merge lines",
-    "summary": "Account Invoice Merge - never merge lines",
-    "version": "14.0.1.0.0",
+    "summary": "Never merge lines while merging invoices.",
+    "version": "14.0.1.1.0",
     "category": "Invoicing",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
