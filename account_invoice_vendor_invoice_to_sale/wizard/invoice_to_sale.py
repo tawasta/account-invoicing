@@ -5,6 +5,7 @@ from odoo.exceptions import UserError
 class InvoiceToSale(models.TransientModel):
 
     _name = "invoice.to.sale"
+    _description = "Invoice to Sale"
 
     auto_confirm = fields.Boolean(
         default=True,

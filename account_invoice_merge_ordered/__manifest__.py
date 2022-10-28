@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,20 +19,17 @@
 ##############################################################################
 
 {
-    "name": "Account Tax Report",
-    "summary": "Finnish VAT-summary report.",
-    "version": "14.0.1.0.2",
-    "category": "Reporting",
+    "name": "Account Invoice Merge - keep line order",
+    "summary": "Account Invoice Merge - keep line order",
+    "version": "14.0.1.0.1",
+    "category": "Invoicing",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["account", "l10n_fi_country_groups"],
-    "data": [
-        "views/tax_report_view.xml",
-        "views/account_view.xml",
-        "views/report_info_window.xml",
-        "security/ir.model.access.csv",
-    ],
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["account_invoice_merge"],
+    "data": [],
+    "demo": [],
 }
