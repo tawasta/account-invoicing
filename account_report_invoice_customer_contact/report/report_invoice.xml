@@ -2,8 +2,17 @@
 <odoo>
   <template id="report_invoice_document" inherit_id="account.report_invoice_document">
     <xpath expr="//t[@id='inv_tax_id_label']/.." position="after">
-        <t t-if="o.customer_contact_id"><br /><span t-field="o.customer_contact_id.name" id="customer-contact"/></t>
-        <t t-if="o.customer_contact_id.phone"><br/><i class="fa fa-fw fa-phone" /> <span t-if="o.customer_contact_id" t-field="o.customer_contact_id.phone" id="customer-contact-phone"/></t>
+        <t t-if="o.customer_contact_id"><br /><span
+                    t-field="o.customer_contact_id.name"
+                    id="customer-contact"
+                /></t>
+        <t t-if="o.customer_contact_id.phone"><br /><i
+                    class="fa fa-fw fa-phone"
+                /> <span
+                    t-if="o.customer_contact_id"
+                    t-field="o.customer_contact_id.phone"
+                    id="customer-contact-phone"
+                /></t>
     </xpath>
   </template>
 </odoo>
