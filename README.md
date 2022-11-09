@@ -12,6 +12,7 @@ addon | version | maintainers | summary
 --- | --- | --- | ---
 [account_account_region_type](account_account_region_type/) | 14.0.1.0.0 |  | Set region type for an account
 [account_financial_report_partner_ref](account_financial_report_partner_ref/) | 14.0.1.0.1 |  | A ref number of a partner is added to General Ledger report
+[account_financial_report_totals](account_financial_report_totals/) | 14.0.1.0.0 |  | Adds totals of each column to trial balance
 [account_fiscal_position_company_not_required](account_fiscal_position_company_not_required/) | 14.0.1.0.0 |  | Company will not be required on fiscal positions
 [account_fiscal_position_type](account_fiscal_position_type/) | 14.0.1.0.0 |  | Fiscal Position type
 [account_invoice_accounting_date](account_invoice_accounting_date/) | 14.0.1.0.0 |  | Allows setting a distinct invoice date and accounting date
