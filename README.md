@@ -12,12 +12,13 @@ addon | version | maintainers | summary
 --- | --- | --- | ---
 [account_account_region_type](account_account_region_type/) | 14.0.1.0.0 |  | Set region type for an account
 [account_financial_report_partner_ref](account_financial_report_partner_ref/) | 14.0.1.0.1 |  | A ref number of a partner is added to General Ledger report
+[account_financial_report_totals](account_financial_report_totals/) | 14.0.1.0.0 |  | Adds totals of each column to trial balance
 [account_fiscal_position_company_not_required](account_fiscal_position_company_not_required/) | 14.0.1.0.0 |  | Company will not be required on fiscal positions
 [account_fiscal_position_type](account_fiscal_position_type/) | 14.0.1.0.0 |  | Fiscal Position type
 [account_invoice_accounting_date](account_invoice_accounting_date/) | 14.0.1.0.0 |  | Allows setting a distinct invoice date and accounting date
 [account_invoice_auditlog_rules](account_invoice_auditlog_rules/) | 14.0.1.0.0 |  | Adds audit log rules for account.move and account.move.line
 [account_invoice_commission](account_invoice_commission/) | 14.0.1.0.3 |  | account_invoice_commission
-[account_invoice_commission_payment](account_invoice_commission_payment/) | 14.0.1.6.1 |  | Allows Making commission payments from invoices
+[account_invoice_commission_payment](account_invoice_commission_payment/) | 14.0.1.6.2 |  | Allows Making commission payments from invoices
 [account_invoice_commission_payment_queue](account_invoice_commission_payment_queue/) | 14.0.1.0.1 |  | Create commission payments as queued jobs
 [account_invoice_commission_payment_variant_company](account_invoice_commission_payment_variant_company/) | 14.0.1.0.0 |  | Use product variant company as recipient in invoice commission payments
 [account_invoice_country_group_text](account_invoice_country_group_text/) | 14.0.1.0.0 |  | Get account invoice report text from country groups setting
