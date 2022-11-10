@@ -63,15 +63,24 @@
                             <td><span t-field="line.date" /></td>
                             <td><span t-field="line.move_name" /></td>
                             <td><span t-field="line.name" /></td>
-                            <td t-if="show_margin" class="text-right"><span
+                            <td t-if="show_margin" class="text-right">
+                                <span
+                                    t-if="line.move_id.move_type == 'out_refund'"
+                                >-</span><span
                                     t-field="line.margin"
                                     t-options="{'widget': 'monetary', 'display_currency': line.currency_id}"
                                 /></td>
-                            <td t-if="show_payment" class="text-right"><span
+                            <td t-if="show_payment" class="text-right">
+                                <span
+                                    t-if="line.move_id.move_type == 'out_refund'"
+                                >-</span><span
                                     t-field="line.purchase_price"
                                     t-options="{'widget': 'monetary', 'display_currency': line.currency_id}"
                                 /></td>
-                            <td t-if="show_subtotal" class="text-right"><span
+                            <td t-if="show_subtotal" class="text-right">
+                                <span
+                                    t-if="line.move_id.move_type == 'out_refund'"
+                                >-</span><span
                                     t-field="line.price_subtotal"
                                     t-options="{'widget': 'monetary', 'display_currency': line.currency_id}"
                                 /></td>
