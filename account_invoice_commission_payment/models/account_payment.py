@@ -43,8 +43,16 @@ class AccountPayment(models.Model):
         for record in self:
             # Decide the cost for the payment
             if record.commission_method == "cost":
-                record.amount = sum(
-                    record.commission_move_line_ids.mapped("purchase_price_total")
+
+                invoices = record.commission_move_line_ids.filtered(
+                    lambda r: r.move_id.move_type == "out_invoice"
+                )
+                refunds = record.commission_move_line_ids.filtered(
+                    lambda r: r.move_id.move_type == "out_refund"
+                )
+
+                record.amount = sum(invoices.mapped("purchase_price_total")) - sum(
+                    refunds.mapped("purchase_price_total")
                 )
             else:
                 raise ValidationError(_("Commission method is not set."))

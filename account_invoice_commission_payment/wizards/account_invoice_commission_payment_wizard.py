@@ -60,7 +60,7 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
             )
 
         if invoice.amount_total_signed == 0 and not self.add_zero_sum_lines:
-            # Skip adding zero sum invoices to payments
+            # Skip adding zero-sum invoices to payments
             invoice.commission_paid = True
             invoice.invoice_line_ids.write({"commission_paid": True})
             return
