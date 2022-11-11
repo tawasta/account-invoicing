@@ -18,6 +18,8 @@ class AccountPayment(models.Model):
         default=False,
     )
 
+    negative_amount = fields.Monetary(currency_field="currency_id", readonly=True)
+
     def button_commission_invoices(self):
         action = {
             "name": _("Commission Invoice lines"),
@@ -51,9 +53,15 @@ class AccountPayment(models.Model):
                     lambda r: r.move_id.move_type == "out_refund"
                 )
 
-                record.amount = sum(invoices.mapped("purchase_price_total")) - sum(
+                amount = sum(invoices.mapped("purchase_price_total")) - sum(
                     refunds.mapped("purchase_price_total")
                 )
+
+                if amount < 0:
+                    record.negative_amount = amount
+                    amount = 0
+
+                record.amount = amount
             else:
                 raise ValidationError(_("Commission method is not set."))
 
