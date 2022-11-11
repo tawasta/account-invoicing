@@ -25,6 +25,21 @@
                 />
             </xpath>
 
+            <field name="date" position="before">
+                    <label
+                    for="negative_amount"
+                    class="text-danger"
+                    attrs="{'invisible': [('negative_amount', '=', False)]}"
+                />
+                    <div
+                    name="negative_amount_div"
+                    class="o_row text-danger"
+                    attrs="{'invisible': [('negative_amount', '=', False)]}"
+                >
+                        <field name="negative_amount" />
+                    </div>
+            </field>
+
             <xpath expr="//sheet/group[last()]" position="after">
                 <group
                     attrs="{'invisible': [('commission_method', '=', False)]}"
