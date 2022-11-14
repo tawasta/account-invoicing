@@ -24,7 +24,7 @@ class AccountPayment(models.Model):
         action = {
             "name": _("Commission Invoices"),
             "view_type": "form",
-            "view_mode": "tree",
+            "view_mode": "tree,form",
             "res_model": "account.move",
             "view_id": False,
             "type": "ir.actions.act_window",
