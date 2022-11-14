@@ -21,6 +21,14 @@
                     string="Commission invoices"
                     type="object"
                     attrs="{'invisible':[('commission_move_line_ids','=',False)]}"
+                    icon="fa-pencil-square-o"
+                />
+                <button
+                    class="oe_stat_button"
+                    name="button_commission_invoice_lines"
+                    string="Commission lines"
+                    type="object"
+                    attrs="{'invisible':[('commission_move_line_ids','=',False)]}"
                     icon="fa-bars"
                 />
             </xpath>
@@ -43,7 +51,7 @@
             <xpath expr="//sheet/group[last()]" position="after">
                 <group
                     attrs="{'invisible': [('commission_method', '=', False)]}"
-                    string="Commission invoices"
+                    string="Commission lines"
                 >
                     <field
                         name="commission_move_line_ids"
