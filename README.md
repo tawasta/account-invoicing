@@ -27,6 +27,7 @@ addon | version | maintainers | summary
 [account_invoice_line_related_sale_order](account_invoice_line_related_sale_order/) | 14.0.1.0.0 |  | Related sale of an invoice line
 [account_invoice_line_view](account_invoice_line_view/) | 14.0.1.0.5 |  | Add a readonly invoice line view
 [account_invoice_merge_attachment](account_invoice_merge_attachment/) | 14.0.1.1.0 |  | Consider attachment during invoice merge process
+[account_invoice_merge_different_users](account_invoice_merge_different_users/) | 14.0.1.0.0 |  | Allow merging invoices with different users
 [account_invoice_merge_never_merge_lines](account_invoice_merge_never_merge_lines/) | 14.0.1.1.0 |  | Never merge lines while merging invoices.
 [account_invoice_merge_ordered](account_invoice_merge_ordered/) | 14.0.1.0.1 |  | Account Invoice Merge - keep line order
 [account_invoice_notice_period](account_invoice_notice_period/) | 14.0.1.0.0 |  | Notice period field for invoices and partners
