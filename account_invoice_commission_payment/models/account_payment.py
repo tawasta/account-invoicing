@@ -22,6 +22,21 @@ class AccountPayment(models.Model):
 
     def button_commission_invoices(self):
         action = {
+            "name": _("Commission Invoices"),
+            "view_type": "form",
+            "view_mode": "tree",
+            "res_model": "account.move",
+            "view_id": False,
+            "type": "ir.actions.act_window",
+            "domain": [
+                ("id", "in", self.commission_move_line_ids.mapped("move_id").ids)
+            ],
+        }
+
+        return action
+
+    def button_commission_invoice_lines(self):
+        action = {
             "name": _("Commission Invoice lines"),
             "view_type": "form",
             "view_mode": "tree",
