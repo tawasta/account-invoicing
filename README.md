@@ -18,7 +18,7 @@ addon | version | maintainers | summary
 [account_invoice_accounting_date](account_invoice_accounting_date/) | 14.0.1.0.0 |  | Allows setting a distinct invoice date and accounting date
 [account_invoice_auditlog_rules](account_invoice_auditlog_rules/) | 14.0.1.0.0 |  | Adds audit log rules for account.move and account.move.line
 [account_invoice_commission](account_invoice_commission/) | 14.0.1.0.3 |  | account_invoice_commission
-[account_invoice_commission_payment](account_invoice_commission_payment/) | 14.0.1.6.4 |  | Allows Making commission payments from invoices
+[account_invoice_commission_payment](account_invoice_commission_payment/) | 14.0.1.6.5 |  | Allows Making commission payments from invoices
 [account_invoice_commission_payment_queue](account_invoice_commission_payment_queue/) | 14.0.1.0.1 |  | Create commission payments as queued jobs
 [account_invoice_commission_payment_variant_company](account_invoice_commission_payment_variant_company/) | 14.0.1.0.0 |  | Use product variant company as recipient in invoice commission payments
 [account_invoice_country_group_text](account_invoice_country_group_text/) | 14.0.1.0.0 |  | Get account invoice report text from country groups setting
