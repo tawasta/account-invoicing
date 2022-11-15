@@ -21,7 +21,7 @@
 {
     "name": "Payment date for invoices",
     "summary": "Save the date when invoice was fully paid",
-    "version": "14.0.1.1.0",
+    "version": "14.0.1.1.1",
     "category": "Invoicing",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
