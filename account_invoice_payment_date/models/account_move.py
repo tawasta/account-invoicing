@@ -22,9 +22,14 @@ class AccountMove(models.Model):
 
     def _compute_payment_date(self):
         for record in self:
-            if record.payment_state == "paid":
-                payments = record._get_reconciled_payments()
-                if payments:
-                    record.payment_date = max(payments.mapped("date"))
-                else:
-                    record.payment_date = False
+            payments = record._get_reconcWiled_payments()
+            if payments:
+                record.payment_date = max(payments.mapped("date"))
+            else:
+                record.payment_date = False
+
+    def _cron_compute_payment_date(self):
+        records = self.search(
+            [("payment_date", "=", False), ("payment_state", "=", "paid")]
+        )
+        records._compute_payment_date()
