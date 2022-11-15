@@ -22,7 +22,7 @@ class AccountMove(models.Model):
 
     def _compute_payment_date(self):
         for record in self:
-            payments = record._get_reconcWiled_payments()
+            payments = record._get_reconciled_payments()
             if payments:
                 record.payment_date = max(payments.mapped("date"))
             else:
