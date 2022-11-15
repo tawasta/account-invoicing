@@ -59,6 +59,14 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
                 )
             )
 
+        if invoice.move_type != "out_invoice":
+            raise UserError(
+                _(
+                    "You can only make payments from customer invoices. "
+                    "'{}' is not a customer invoice"
+                ).format(invoice.name)
+            )
+
         if invoice.amount_total_signed == 0 and not self.add_zero_sum_lines:
             # Skip adding zero-sum invoices to payments
             invoice.commission_paid = True
