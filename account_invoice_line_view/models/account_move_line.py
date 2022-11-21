@@ -24,7 +24,7 @@ class AccountMoveLine(models.Model):
         store=True,
     )
 
-    partner_id = fields.Many2one(
+    move_partner_id = fields.Many2one(
         string="Partner",
         comodel_name="res.partner",
         related="move_id.partner_id",
