@@ -25,7 +25,7 @@ addon | version | maintainers | summary
 [account_invoice_disable_unique_sequence](account_invoice_disable_unique_sequence/) | 14.0.1.0.0 |  | Allows multiple invoices to exist with the same sequence number
 [account_invoice_email](account_invoice_email/) | 14.0.1.1.0 |  | Send invoice email to invoice email address instead of default email address
 [account_invoice_line_related_sale_order](account_invoice_line_related_sale_order/) | 14.0.1.0.0 |  | Related sale of an invoice line
-[account_invoice_line_view](account_invoice_line_view/) | 14.0.1.0.5 |  | Add a readonly invoice line view
+[account_invoice_line_view](account_invoice_line_view/) | 14.0.1.0.6 |  | Add a readonly invoice line view
 [account_invoice_merge_attachment](account_invoice_merge_attachment/) | 14.0.1.1.0 |  | Consider attachment during invoice merge process
 [account_invoice_merge_different_users](account_invoice_merge_different_users/) | 14.0.1.0.0 |  | Allow merging invoices with different users
 [account_invoice_merge_never_merge_lines](account_invoice_merge_never_merge_lines/) | 14.0.1.1.0 |  | Never merge lines while merging invoices.

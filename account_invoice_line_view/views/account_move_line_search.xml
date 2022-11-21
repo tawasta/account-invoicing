@@ -30,7 +30,7 @@
                 />
                 <separator />
 
-                <field name="partner_id" operator="child_of" />
+                <field name="move_partner_id" operator="child_of" />
                 <field name="user_id" string="Salesperson" />
                 <field name="product_id" />
                 <field name="product_categ_id" />
