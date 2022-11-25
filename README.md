@@ -24,6 +24,7 @@ addon | version | maintainers | summary
 [account_invoice_country_group_text](account_invoice_country_group_text/) | 14.0.1.0.0 |  | Get account invoice report text from country groups setting
 [account_invoice_disable_unique_sequence](account_invoice_disable_unique_sequence/) | 14.0.1.0.1 |  | Allows multiple invoices to exist with the same sequence number
 [account_invoice_email](account_invoice_email/) | 14.0.1.1.0 |  | Send invoice email to invoice email address instead of default email address
+[account_invoice_invoice_transmit_method_required](account_invoice_invoice_transmit_method_required/) | 14.0.1.0.0 |  | Set invoice transmit method as required
 [account_invoice_line_related_sale_order](account_invoice_line_related_sale_order/) | 14.0.1.0.0 |  | Related sale of an invoice line
 [account_invoice_line_view](account_invoice_line_view/) | 14.0.1.0.6 |  | Add a readonly invoice line view
 [account_invoice_merge_attachment](account_invoice_merge_attachment/) | 14.0.1.1.0 |  | Consider attachment during invoice merge process
