@@ -21,7 +21,7 @@
 {
     "name": "Disable unique sequence check from invoices",
     "summary": "Allows multiple invoices to exist with the same sequence number",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Invoicing",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",

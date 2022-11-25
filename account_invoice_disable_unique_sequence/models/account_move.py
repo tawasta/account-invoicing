@@ -16,8 +16,8 @@ class AccountMove(models.Model):
             super()._check_unique_sequence_number()
         except ValidationError as e:
             _logger.warning(
-                _("Allowing an overlapping invoice sequence for invoice {}!").format(
-                    self.name
+                _("Allowing an overlapping invoice sequence for invoices {}!").format(
+                    self.ids
                 )
             )
             _logger.warning(e)
