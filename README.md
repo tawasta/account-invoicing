@@ -49,6 +49,7 @@ addon | version | maintainers | summary
 [account_invoice_vendor_invoice_created](account_invoice_vendor_invoice_created/) | 14.0.1.0.0 |  | Show related vendor invoice on customer invoices
 [account_invoice_vendor_invoice_to_sale](account_invoice_vendor_invoice_to_sale/) | 14.0.1.0.1 |  | Adds a wizards for creating a SO from vendor invoice
 [account_invoice_vendor_shipping_address](account_invoice_vendor_shipping_address/) | 14.0.1.0.0 |  | Allows defining a supplier address for vendor invoices
+[account_invoice_warranty_case](account_invoice_warranty_case/) | 14.0.1.0.0 |  | Creating an invoice from Sale order sets its warranty case as True
 [account_payment_commission_send_email](account_payment_commission_send_email/) | 14.0.1.0.1 |  | Account payment commission send email
 [account_report_invoice_bank_transfer](account_report_invoice_bank_transfer/) | 14.0.1.0.1 |  | Add a bank transfer section for invoices
 [account_report_invoice_business_code](account_report_invoice_business_code/) | 14.0.1.0.1 |  | Show business code in invoice PDF
