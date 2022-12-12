@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_partner_clause_tree" model="ir.ui.view">
+        <field name="name">partner.clause.tree</field>
+        <field name="model">partner.clause</field>
+        <field name="priority">10</field>
+        <field name="arch" type="xml">
+            <tree string="Clauses">
+                <field name="name" />
+                <field name="clause" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_partner_clause_form" model="ir.ui.view">
+        <field name="name">partner.clause.form</field>
+        <field name="model">partner.clause</field>
+        <field name="priority">10</field>
+        <field name="arch" type="xml">
+            <form string="Clause">
+                <sheet>
+                    <group name="partner_clause_group">
+                        <field name="name" />
+                        <field name="clause" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="partner_clause_action" model="ir.actions.act_window">
+        <field name="name">Partner Clauses</field>
+        <field name="res_model">partner.clause</field>
+        <field name="view_mode">form,tree</field>
+        <field name="view_id" ref="view_partner_clause_tree" />
+    </record>
+
+    <menuitem
+        id="menu_partner_clause"
+        parent="account.account_invoicing_menu"
+        sequence="30"
+        action="partner_clause_action"
+    />
+</odoo>
