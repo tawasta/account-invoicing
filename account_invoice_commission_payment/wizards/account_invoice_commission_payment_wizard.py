@@ -136,10 +136,7 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
                 limit=1,
             )
 
-            if payment:
-                # Just recompute the amount
-                payment.action_compute_commission_amount()
-            else:
+            if not payment:
                 # Create a new payment
                 payment_values = {
                     "payment_type": "outbound",
@@ -156,10 +153,11 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
                 payment = account_payment.with_context(active_ids=False).create(
                     payment_values
                 )
-                payment.action_compute_commission_amount()
 
             line.commission_payment_id = payment.id
             line.commission_paid = True
+
+            payment.action_compute_commission_amount()
 
         if False not in invoice.invoice_line_ids.mapped("commission_paid"):
             # All lines are has a commission payment (or are marked as paid)
