@@ -37,12 +37,12 @@
                     <label
                     for="negative_amount"
                     class="text-danger"
-                    attrs="{'invisible': [('negative_amount', '=', False)]}"
+                    attrs="{'invisible': [('negative_amount', '&gt;=', 0)]}"
                 />
                     <div
                     name="negative_amount_div"
                     class="o_row text-danger"
-                    attrs="{'invisible': [('negative_amount', '=', False)]}"
+                    attrs="{'invisible': [('negative_amount', '&gt;=', 0)]}"
                 >
                         <field name="negative_amount" />
                     </div>
@@ -59,13 +59,14 @@
                         options="{'no_create_edit': True}"
                     >
                         <tree string="Invoice lines" delete="false">
+                            <field name="partner_id" optional="show" />
                             <field name="date" />
                             <field name="move_name" optional="show" />
                             <field name="product_id" optional="show" />
                             <field name="name" optional="show" />
                             <field
                                 name="margin"
-                                string="Margin"
+                                string="Commission"
                                 sum="Total margin"
                                 optional="show"
                             />
