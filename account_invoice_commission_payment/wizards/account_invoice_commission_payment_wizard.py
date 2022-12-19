@@ -67,6 +67,13 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
                 ).format(invoice.name)
             )
 
+        if invoice.refund_invoice_ids:
+            raise UserError(
+                _("Invoice '{}' has been refunded and can't be commissioned").format(
+                    invoice.name
+                )
+            )
+
         if invoice.amount_total_signed == 0 and not self.add_zero_sum_lines:
             # Skip adding zero-sum invoices to payments
             invoice.commission_paid = True
