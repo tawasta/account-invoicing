@@ -8,7 +8,7 @@ class AccountMove(models.Model):
         res = super()._compute_amount()
         for record in self:
             for picking in record.stock_picking_ids:
-                if not picking.has_open_invoices():
+                if not picking.has_open_invoices() and record.move_type != "out_refund":
                     # When all the invoices for a picking are paid, change the picking priority
                     priority = (
                         self.env["ir.config_parameter"]

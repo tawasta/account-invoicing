@@ -21,7 +21,7 @@
 {
     "name": "Disallow validating pickings with open down payments",
     "summary": "Prevent validating pickings with open down payments",
-    "version": "14.0.1.2.4",
+    "version": "14.0.1.2.5",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
