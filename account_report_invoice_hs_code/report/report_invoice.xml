@@ -2,11 +2,11 @@
 <odoo>
     <template id="report_invoice_document" inherit_id="account.report_invoice_document">
         <xpath expr="//th[@name='th_description']" position="after">
-            <th name="th_country_of_origin">Origin</th>
+            <th name="th_hs_code">HS Code</th>
         </xpath>
         <xpath expr="//td[@name='account_invoice_line_name']" position="after">
-            <td name="td_country_of_origin">
-                <span t-field="line.product_id.origin_country_id.code" />
+            <td name="td_hs_code">
+                <span t-field="line.product_id.hs_code_id" />
             </td>
         </xpath>
     </template>
