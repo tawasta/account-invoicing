@@ -21,7 +21,7 @@
 {
     "name": "Account Invoice PDF report - Show Invoice address",
     "summary": "Account Invoice PDF report - Show Invoice address",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Accounting & Finance",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",

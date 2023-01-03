@@ -3,9 +3,10 @@
     <template
         id="report_invoice_document_inherit_sale"
         inherit_id="sale.report_invoice_document_inherit_sale"
+        priority="20"
     >
         <div t-field="o.partner_id" position="before">
-            <strong>Invoice address:</strong>
+            <strong name="o_invoice_address_text">Invoice address:</strong>
         </div>
     </template>
 </odoo>
