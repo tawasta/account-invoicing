@@ -34,7 +34,7 @@ addon | version | maintainers | summary
 [account_invoice_merge_ordered](account_invoice_merge_ordered/) | 14.0.1.0.1 |  | Account Invoice Merge - keep line order
 [account_invoice_notice_period](account_invoice_notice_period/) | 14.0.1.0.0 |  | Notice period field for invoices and partners
 [account_invoice_overdue_interest](account_invoice_overdue_interest/) | 14.0.1.0.0 |  | Overdue interest % field for invoices and partners
-[account_invoice_partner_clause_to_narration](account_invoice_partner_clause_to_narration/) | 14.0.1.0.0 |  | Adds a clause from partner to invoice narration field
+[account_invoice_partner_clause_to_narration](account_invoice_partner_clause_to_narration/) | 14.0.1.0.1 |  | Adds a clause from partner to invoice narration field
 [account_invoice_partner_income_expense_account](account_invoice_partner_income_expense_account/) | 14.0.1.0.1 |  | Partner-specific income and expense accounts for invoice lines
 [account_invoice_partner_warning_text](account_invoice_partner_warning_text/) | 14.0.1.0.0 |  | Adds Partner warning text to invoice
 [account_invoice_payment_date](account_invoice_payment_date/) | 14.0.1.1.1 |  | Save the date when invoice was fully paid

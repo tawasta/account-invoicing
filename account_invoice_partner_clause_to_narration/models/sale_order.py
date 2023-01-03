@@ -8,8 +8,13 @@ class SaleOrder(models.Model):
     def _prepare_invoice(self):
         self.ensure_one()
         invoice_vals = super(SaleOrder, self)._prepare_invoice()
+        partner = self.partner_id
 
-        if self.partner_id and self.partner_id.invoice_clause:
+        if (
+            partner
+            and partner.invoice_clause
+            and partner.invoice_clause.used_for == "invoice"
+        ):
 
             if invoice_vals.get("narration"):
                 invoice_vals["narration"] += "{}{}".format(

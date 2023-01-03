@@ -21,7 +21,7 @@
 {
     "name": "Partner clause to Narration field",
     "summary": "Adds a clause from partner to invoice narration field",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Account",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
@@ -30,11 +30,10 @@
     "installable": True,
     "depends": [
         "account",
+        "partner_clause",
         "sale",
     ],
     "data": [
-        "security/ir.model.access.csv",
         "views/res_partner.xml",
-        "views/partner_clause.xml",
     ],
 }
