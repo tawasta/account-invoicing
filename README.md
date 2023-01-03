@@ -55,6 +55,7 @@ addon | version | maintainers | summary
 [account_payment_commission_send_email](account_payment_commission_send_email/) | 14.0.1.0.1 |  | Account payment commission send email
 [account_report_invoice_bank_transfer](account_report_invoice_bank_transfer/) | 14.0.1.0.1 |  | Add a bank transfer section for invoices
 [account_report_invoice_business_code](account_report_invoice_business_code/) | 14.0.1.0.1 |  | Show business code in invoice PDF
+[account_report_invoice_country_of_origin](account_report_invoice_country_of_origin/) | 14.0.1.0.0 |  | QWeb report - Country of origin
 [account_report_invoice_customer_contact](account_report_invoice_customer_contact/) | 14.0.1.0.1 |  | Show customer contact in invoice PDF
 [account_report_invoice_delivery_date](account_report_invoice_delivery_date/) | 14.0.1.0.1 |  | Delivery date to invoice report template
 [account_report_invoice_eori](account_report_invoice_eori/) | 14.0.1.0.0 |  | Adds customers EORI number to Invoice Report
@@ -62,6 +63,7 @@ addon | version | maintainers | summary
 [account_report_invoice_hide_incoterm_under_note](account_report_invoice_hide_incoterm_under_note/) | 14.0.1.0.0 |  | Invoice print - hide Incoterm under note
 [account_report_invoice_hide_invoice_name](account_report_invoice_hide_invoice_name/) | 14.0.1.0.0 |  | Account invoice report - Hide invoice name
 [account_report_invoice_hide_origin](account_report_invoice_hide_origin/) | 14.0.1.0.0 |  | Account invoice report - Hide origin
+[account_report_invoice_hs_code](account_report_invoice_hs_code/) | 14.0.1.0.0 |  | QWeb report - HS code
 [account_report_invoice_item_count](account_report_invoice_item_count/) | 14.0.1.0.0 |  | QWeb report - Item count
 [account_report_invoice_payment](account_report_invoice_payment/) | 14.0.1.0.0 |  | Account Report Invoice payment
 [account_report_invoice_payment_term_text](account_report_invoice_payment_term_text/) | 14.0.1.0.0 |  | Show 'Payment terms:' text on Invoice pdf print
