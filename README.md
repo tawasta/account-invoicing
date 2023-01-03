@@ -62,6 +62,7 @@ addon | version | maintainers | summary
 [account_report_invoice_hide_incoterm_under_note](account_report_invoice_hide_incoterm_under_note/) | 14.0.1.0.0 |  | Invoice print - hide Incoterm under note
 [account_report_invoice_hide_invoice_name](account_report_invoice_hide_invoice_name/) | 14.0.1.0.0 |  | Account invoice report - Hide invoice name
 [account_report_invoice_hide_origin](account_report_invoice_hide_origin/) | 14.0.1.0.0 |  | Account invoice report - Hide origin
+[account_report_invoice_item_count](account_report_invoice_item_count/) | 14.0.1.0.0 |  | QWeb report - Item count
 [account_report_invoice_payment](account_report_invoice_payment/) | 14.0.1.0.0 |  | Account Report Invoice payment
 [account_report_invoice_payment_term_text](account_report_invoice_payment_term_text/) | 14.0.1.0.0 |  | Show 'Payment terms:' text on Invoice pdf print
 [account_report_invoice_quantity_decimals](account_report_invoice_quantity_decimals/) | 14.0.1.0.0 |  | Modifications to invoice print decimal precision
