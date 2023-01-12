@@ -22,12 +22,14 @@ addon | version | maintainers | summary
 [account_invoice_commission_payment_queue](account_invoice_commission_payment_queue/) | 14.0.1.0.1 |  | Create commission payments as queued jobs
 [account_invoice_commission_payment_variant_company](account_invoice_commission_payment_variant_company/) | 14.0.1.0.0 |  | Use product variant company as recipient in invoice commission payments
 [account_invoice_country_group_text](account_invoice_country_group_text/) | 14.0.1.0.0 |  | Get account invoice report text from country groups setting
+[account_invoice_default_parent](account_invoice_default_parent/) | 14.0.1.0.0 |  | Default parent for new shipping addresses
 [account_invoice_disable_sending](account_invoice_disable_sending/) | 14.0.1.0.0 |  | Don't show 'Send & Print' in invoices
 [account_invoice_disable_unique_sequence](account_invoice_disable_unique_sequence/) | 14.0.1.0.1 |  | Allows multiple invoices to exist with the same sequence number
 [account_invoice_email](account_invoice_email/) | 14.0.1.1.0 |  | Send invoice email to invoice email address instead of default email address
 [account_invoice_invoice_transmit_method_required](account_invoice_invoice_transmit_method_required/) | 14.0.1.0.0 |  | Set invoice transmit method as required
 [account_invoice_line_related_sale_order](account_invoice_line_related_sale_order/) | 14.0.1.0.0 |  | Related sale of an invoice line
 [account_invoice_line_view](account_invoice_line_view/) | 14.0.1.0.6 |  | Add a readonly invoice line view
+[account_invoice_mandatory_payment_term](account_invoice_mandatory_payment_term/) | 14.0.1.0.0 |  | Set invoice payment term as mandatory
 [account_invoice_merge_attachment](account_invoice_merge_attachment/) | 14.0.1.1.0 |  | Consider attachment during invoice merge process
 [account_invoice_merge_different_users](account_invoice_merge_different_users/) | 14.0.1.0.0 |  | Allow merging invoices with different users
 [account_invoice_merge_never_merge_lines](account_invoice_merge_never_merge_lines/) | 14.0.1.1.0 |  | Never merge lines while merging invoices.
