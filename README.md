@@ -29,6 +29,7 @@ addon | version | maintainers | summary
 [account_invoice_invoice_transmit_method_required](account_invoice_invoice_transmit_method_required/) | 14.0.1.0.0 |  | Set invoice transmit method as required
 [account_invoice_line_related_sale_order](account_invoice_line_related_sale_order/) | 14.0.1.0.0 |  | Related sale of an invoice line
 [account_invoice_line_view](account_invoice_line_view/) | 14.0.1.0.6 |  | Add a readonly invoice line view
+[account_invoice_mandatory_payment_term](account_invoice_mandatory_payment_term/) | 14.0.1.0.0 |  | Set invoice payment term as mandatory
 [account_invoice_merge_attachment](account_invoice_merge_attachment/) | 14.0.1.1.0 |  | Consider attachment during invoice merge process
 [account_invoice_merge_different_users](account_invoice_merge_different_users/) | 14.0.1.0.0 |  | Allow merging invoices with different users
 [account_invoice_merge_never_merge_lines](account_invoice_merge_never_merge_lines/) | 14.0.1.1.0 |  | Never merge lines while merging invoices.
