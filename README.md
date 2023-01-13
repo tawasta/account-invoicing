@@ -56,9 +56,9 @@ addon | version | maintainers | summary
 [account_invoice_warranty_case](account_invoice_warranty_case/) | 14.0.1.0.0 |  | Creating an invoice from Sale order sets its warranty case as True
 [account_payment_commission_send_email](account_payment_commission_send_email/) | 14.0.1.0.1 |  | Account payment commission send email
 [account_report_invoice_bank_transfer](account_report_invoice_bank_transfer/) | 14.0.1.0.1 |  | Add a bank transfer section for invoices
-[account_report_invoice_business_code](account_report_invoice_business_code/) | 14.0.1.0.1 |  | Show business code in invoice PDF
+[account_report_invoice_business_code](account_report_invoice_business_code/) | 14.0.1.0.2 |  | Show business code in invoice PDF
 [account_report_invoice_country_of_origin](account_report_invoice_country_of_origin/) | 14.0.1.0.0 |  | QWeb report - Country of origin
-[account_report_invoice_customer_contact](account_report_invoice_customer_contact/) | 14.0.1.0.1 |  | Show customer contact in invoice PDF
+[account_report_invoice_customer_contact](account_report_invoice_customer_contact/) | 14.0.1.0.2 |  | Show customer contact in invoice PDF
 [account_report_invoice_delivery_date](account_report_invoice_delivery_date/) | 14.0.1.0.1 |  | Delivery date to invoice report template
 [account_report_invoice_eori](account_report_invoice_eori/) | 14.0.1.0.0 |  | Adds customers EORI number to Invoice Report
 [account_report_invoice_hide_customer_code](account_report_invoice_hide_customer_code/) | 14.0.1.0.0 |  | Invoice Report - Hide customer code
@@ -71,6 +71,7 @@ addon | version | maintainers | summary
 [account_report_invoice_payment_term_text](account_report_invoice_payment_term_text/) | 14.0.1.0.0 |  | Show 'Payment terms:' text on Invoice pdf print
 [account_report_invoice_quantity_decimals](account_report_invoice_quantity_decimals/) | 14.0.1.0.0 |  | Modifications to invoice print decimal precision
 [account_report_invoice_reformat](account_report_invoice_reformat/) | 14.0.1.0.0 |  | Reformat invoice print elements for cleaner look
+[account_report_invoice_salesperson](account_report_invoice_salesperson/) | 14.0.1.0.0 |  | Show salesperson in invoice PDF
 [account_report_invoice_show_invoice_address](account_report_invoice_show_invoice_address/) | 14.0.1.0.1 |  | Account Invoice PDF report - Show Invoice address
 [account_report_show_duplicate_addresses](account_report_show_duplicate_addresses/) | 14.0.1.0.1 |  | Show delivery address even if it is same as invoicing address
 [account_report_title](account_report_title/) | 14.0.1.0.1 |  | Report titles for account invoices
