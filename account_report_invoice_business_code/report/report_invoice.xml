@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
   <template id="report_invoice_document" inherit_id="account.report_invoice_document">
-    <xpath expr="//span[@t-field='o.partner_id.vat']/.." position="after">
-        <div t-if="o.partner_id.business_code" class="mt16">
+    <xpath expr="//span[@t-field='o.partner_id.vat']/.." position="before">
+        <div
+                t-if="o.partner_id.business_code and not o.partner_id.vat"
+                name="business_code"
+            >
             <span t-field="o.partner_id.business_code" />
         </div>
     </xpath>
