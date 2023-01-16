@@ -4,9 +4,9 @@
         id="report_invoice_document_delivery_date"
         inherit_id="account.report_invoice_document"
     >
-        <xpath expr="//div[@name='reference']" position="after">
+        <xpath expr="//div[@id='informations']" position="inside">
             <div
-                class="col-auto mw-100 mb-2"
+                class="col-auto col-3 mw-100 mb-2"
                 t-if="o.date_delivered"
                 name="date_delivered"
             >
