@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="report_invoice_document_payment_term"
+        inherit_id="account.report_invoice_document"
+    >
+        <xpath expr="//p[@name='payment_term']" position="attributes">
+            <attribute name="t-if">1==0</attribute>
+        </xpath>
+        <xpath expr="//div[@id='informations']" position="inside">
+            <div
+                class="col-auto col-3 mw-100 mb-2"
+                t-if="o.invoice_payment_term_id"
+                name="payment_term"
+            >
+                <strong>Payment Terms:</strong>
+                <p class="m-0" t-field="o.invoice_payment_term_id.name" />
+            </div>
+        </xpath>
+    </template>
+</odoo>
