@@ -68,6 +68,7 @@ addon | version | maintainers | summary
 [account_report_invoice_hs_code](account_report_invoice_hs_code/) | 14.0.1.0.0 |  | QWeb report - HS code
 [account_report_invoice_item_count](account_report_invoice_item_count/) | 14.0.1.0.0 |  | QWeb report - Item count
 [account_report_invoice_payment](account_report_invoice_payment/) | 14.0.1.0.0 |  | Account Report Invoice payment
+[account_report_invoice_payment_term_header](account_report_invoice_payment_term_header/) | 14.0.1.0.0 |  | Show payment term in invoice header
 [account_report_invoice_payment_term_text](account_report_invoice_payment_term_text/) | 14.0.1.0.0 |  | Show 'Payment terms:' text on Invoice pdf print
 [account_report_invoice_quantity_decimals](account_report_invoice_quantity_decimals/) | 14.0.1.0.0 |  | Modifications to invoice print decimal precision
 [account_report_invoice_reformat](account_report_invoice_reformat/) | 14.0.1.0.0 |  | Reformat invoice print elements for cleaner look
