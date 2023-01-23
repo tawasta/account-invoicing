@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2022 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,15 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Invoice Report - Delivery Date",
-    "summary": "Delivery date to invoice report template",
-    "version": "14.0.1.0.2",
+    "name": "Account Report Invoice Customer",
+    "summary": "Show customer in invoice PDF",
+    "version": "14.0.1.0.0",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["account"],
-    "data": ["views/account_move_views.xml", "report/report_invoice.xml"],
+    "depends": ["account", "account_invoice_related_sale_order_customer"],
+    "data": ["report/report_invoice.xml"],
 }
