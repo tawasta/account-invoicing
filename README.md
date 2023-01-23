@@ -49,7 +49,7 @@ addon | version | maintainers | summary
 [account_invoice_report_title](account_invoice_report_title/) | 14.0.1.1.0 |  | Report Titles for account invoices
 [account_invoice_salesperson_email](account_invoice_salesperson_email/) | 14.0.1.0.1 |  | Account Invoice - Salesperson e-mail to note field
 [account_invoice_stock_picking](account_invoice_stock_picking/) | 14.0.1.1.0 |  | Add related stock pickings to invoice
-[account_invoice_stock_picking_downpayment](account_invoice_stock_picking_downpayment/) | 14.0.1.2.5 |  | Prevent validating pickings with open down payments
+[account_invoice_stock_picking_downpayment](account_invoice_stock_picking_downpayment/) | 14.0.1.2.6 |  | Prevent validating pickings with open down payments
 [account_invoice_vendor_invoice_created](account_invoice_vendor_invoice_created/) | 14.0.1.0.0 |  | Show related vendor invoice on customer invoices
 [account_invoice_vendor_invoice_to_sale](account_invoice_vendor_invoice_to_sale/) | 14.0.1.0.1 |  | Adds a wizards for creating a SO from vendor invoice
 [account_invoice_vendor_shipping_address](account_invoice_vendor_shipping_address/) | 14.0.1.0.0 |  | Allows defining a supplier address for vendor invoices
