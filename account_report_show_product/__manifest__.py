@@ -21,7 +21,7 @@
 {
     "name": "Invoice Report - Show product on lines",
     "summary": "Always show product on invoice print lines",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
