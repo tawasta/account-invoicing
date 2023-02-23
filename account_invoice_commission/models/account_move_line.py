@@ -5,7 +5,7 @@ class AccountMoveLine(models.Model):
     _inherit = "account.move.line"
 
     commission_paid = fields.Boolean(
-        string="Commission paid",
+        string="Commission processed",
         default=False,
         copy=False,
         readonly=True,

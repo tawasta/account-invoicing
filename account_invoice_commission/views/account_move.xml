@@ -38,12 +38,12 @@
                 <separator />
                 <filter
                     name="commission_paid"
-                    string="Commission paid"
+                    string="Commission processed"
                     domain="[('commission_paid','=',True)]"
                 />
                 <filter
                     name="commission_not_paid"
-                    string="Commission not paid"
+                    string="Commission not processed"
                     domain="[('commission_paid','=',False)]"
                 />
                 <separator />
