@@ -25,6 +25,7 @@ addon | version | maintainers | summary
 [account_invoice_default_parent](account_invoice_default_parent/) | 14.0.1.0.0 |  | Default parent for new shipping addresses
 [account_invoice_disable_sending](account_invoice_disable_sending/) | 14.0.1.0.0 |  | Don't show 'Send & Print' in invoices
 [account_invoice_disable_unique_sequence](account_invoice_disable_unique_sequence/) | 14.0.1.0.1 |  | Allows multiple invoices to exist with the same sequence number
+[account_invoice_due_date](account_invoice_due_date/) | 14.0.1.0.0 |  | Account invoice due date
 [account_invoice_email](account_invoice_email/) | 14.0.1.1.0 |  | Send invoice email to invoice email address instead of default email address
 [account_invoice_invoice_transmit_method_required](account_invoice_invoice_transmit_method_required/) | 14.0.1.0.0 |  | Set invoice transmit method as required
 [account_invoice_line_related_sale_order](account_invoice_line_related_sale_order/) | 14.0.1.0.0 |  | Related sale of an invoice line
@@ -40,6 +41,7 @@ addon | version | maintainers | summary
 [account_invoice_partner_income_expense_account](account_invoice_partner_income_expense_account/) | 14.0.1.0.1 |  | Partner-specific income and expense accounts for invoice lines
 [account_invoice_partner_warning_text](account_invoice_partner_warning_text/) | 14.0.1.0.0 |  | Adds Partner warning text to invoice
 [account_invoice_payment_date](account_invoice_payment_date/) | 14.0.1.1.1 |  | Save the date when invoice was fully paid
+[account_invoice_pivot_report_delivery_address](account_invoice_pivot_report_delivery_address/) | 14.0.1.0.0 |  | Group pivot report by delivery address
 [account_invoice_pivot_report_delivery_address_country](account_invoice_pivot_report_delivery_address_country/) | 14.0.1.0.2 |  | Group pivot report by delivery address country
 [account_invoice_pivot_report_product_template](account_invoice_pivot_report_product_template/) | 14.0.1.0.0 |  | Group pivot report by Product Template
 [account_invoice_quick_post](account_invoice_quick_post/) | 14.0.1.0.0 |  | Post (confirm) invoices from line view
