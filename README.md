@@ -25,6 +25,7 @@ addon | version | maintainers | summary
 [account_invoice_default_parent](account_invoice_default_parent/) | 14.0.1.0.0 |  | Default parent for new shipping addresses
 [account_invoice_disable_sending](account_invoice_disable_sending/) | 14.0.1.0.0 |  | Don't show 'Send & Print' in invoices
 [account_invoice_disable_unique_sequence](account_invoice_disable_unique_sequence/) | 14.0.1.0.1 |  | Allows multiple invoices to exist with the same sequence number
+[account_invoice_due_date](account_invoice_due_date/) | 14.0.1.0.0 |  | Account invoice due date
 [account_invoice_email](account_invoice_email/) | 14.0.1.1.0 |  | Send invoice email to invoice email address instead of default email address
 [account_invoice_invoice_transmit_method_required](account_invoice_invoice_transmit_method_required/) | 14.0.1.0.0 |  | Set invoice transmit method as required
 [account_invoice_line_related_sale_order](account_invoice_line_related_sale_order/) | 14.0.1.0.0 |  | Related sale of an invoice line
