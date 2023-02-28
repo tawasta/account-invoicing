@@ -5,12 +5,20 @@
         <field name="model">account.move</field>
         <field name="inherit_id" ref="account.view_move_form" />
         <field name="arch" type="xml">
-            <field name="narration" position="after">
-                <div class="o_td_label">
-                    <label for="description" />
+            <xpath
+                expr="//page[@id='invoice_tab']//field[@name='narration']"
+                position="after"
+            >
+                <div>
+                    <label for="description" string="Internal note" />
+                    <br />
+                    <field
+                        name="description"
+                        nolabel="1"
+                        class="oe_inline text-break"
+                    />
                 </div>
-                <field name="description" />
-            </field>
+            </xpath>
         </field>
     </record>
 </odoo>
