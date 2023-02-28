@@ -23,6 +23,7 @@ addon | version | maintainers | summary
 [account_invoice_commission_payment_variant_company](account_invoice_commission_payment_variant_company/) | 14.0.1.0.0 |  | Use product variant company as recipient in invoice commission payments
 [account_invoice_country_group_text](account_invoice_country_group_text/) | 14.0.1.0.0 |  | Get account invoice report text from country groups setting
 [account_invoice_default_parent](account_invoice_default_parent/) | 14.0.1.0.0 |  | Default parent for new shipping addresses
+[account_invoice_description](account_invoice_description/) | 14.0.1.0.0 |  | Invoice internal note, that is not shown to partners
 [account_invoice_disable_sending](account_invoice_disable_sending/) | 14.0.1.0.0 |  | Don't show 'Send & Print' in invoices
 [account_invoice_disable_unique_sequence](account_invoice_disable_unique_sequence/) | 14.0.1.0.1 |  | Allows multiple invoices to exist with the same sequence number
 [account_invoice_due_date](account_invoice_due_date/) | 14.0.1.0.0 |  | Account invoice due date
@@ -36,6 +37,7 @@ addon | version | maintainers | summary
 [account_invoice_merge_never_merge_lines](account_invoice_merge_never_merge_lines/) | 14.0.1.1.0 |  | Never merge lines while merging invoices.
 [account_invoice_merge_ordered](account_invoice_merge_ordered/) | 14.0.1.0.1 |  | Account Invoice Merge - keep line order
 [account_invoice_notice_period](account_invoice_notice_period/) | 14.0.1.0.0 |  | Notice period field for invoices and partners
+[account_invoice_origin_to_description](account_invoice_origin_to_description/) | 14.0.1.0.0 |  | When confirming invoice, copy origin to the description
 [account_invoice_overdue_interest](account_invoice_overdue_interest/) | 14.0.1.0.0 |  | Overdue interest % field for invoices and partners
 [account_invoice_partner_clause_to_narration](account_invoice_partner_clause_to_narration/) | 14.0.1.0.2 |  | Adds a clause from partner to invoice narration field
 [account_invoice_partner_income_expense_account](account_invoice_partner_income_expense_account/) | 14.0.1.0.1 |  | Partner-specific income and expense accounts for invoice lines
