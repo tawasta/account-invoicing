@@ -22,6 +22,7 @@ addon | version | maintainers | summary
 [account_invoice_commission_payment_queue](account_invoice_commission_payment_queue/) | 14.0.1.0.1 |  | Create commission payments as queued jobs
 [account_invoice_commission_payment_variant_company](account_invoice_commission_payment_variant_company/) | 14.0.1.0.0 |  | Use product variant company as recipient in invoice commission payments
 [account_invoice_country_group_text](account_invoice_country_group_text/) | 14.0.1.0.0 |  | Get account invoice report text from country groups setting
+[account_invoice_credit_note_header_text_and_date_delivered](account_invoice_credit_note_header_text_and_date_delivered/) | 14.0.1.0.0 |  | Copy Header and Date Delivered fields to a created Credit Note
 [account_invoice_default_parent](account_invoice_default_parent/) | 14.0.1.0.0 |  | Default parent for new shipping addresses
 [account_invoice_description](account_invoice_description/) | 14.0.1.0.0 |  | Invoice internal note, that is not shown to partners
 [account_invoice_disable_sending](account_invoice_disable_sending/) | 14.0.1.0.0 |  | Don't show 'Send & Print' in invoices
