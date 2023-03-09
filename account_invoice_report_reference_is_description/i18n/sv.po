@@ -19,4 +19,4 @@ msgstr ""
 #. module: account_invoice_report_reference_is_description
 #: model_terms:ir.ui.view,arch_db:account_invoice_report_reference_is_description.report_invoice_document
 msgid "<strong name=\"ref_description\">Description:</strong>"
-msgstr "<strong name=\"ref_description\">Beskrivning:</strong>"
+msgstr "<strong name=\"ref_description\">Referens:</strong>"
