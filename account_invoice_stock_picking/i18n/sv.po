@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0-20221116\n"
+"Project-Id-Version: Odoo Server 14.0-20230224\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-03 10:05+0000\n"
-"PO-Revision-Date: 2023-02-03 13:19+0200\n"
+"POT-Creation-Date: 2023-03-09 12:41+0000\n"
+"PO-Revision-Date: 2023-03-09 14:41+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv\n"
@@ -20,7 +20,7 @@ msgstr ""
 #. module: account_invoice_stock_picking
 #: model_terms:ir.ui.view,arch_db:account_invoice_stock_picking.report_invoice_document
 msgid "<strong>Packing list(s):</strong>"
-msgstr "<strong>Packlista:</strong>"
+msgstr "<strong>Följesedel:</strong>"
 
 #. module: account_invoice_stock_picking
 #: model:ir.model.fields,field_description:account_invoice_stock_picking.field_account_move__display_name
@@ -34,7 +34,7 @@ msgstr "Visningsnamn"
 #: model:ir.model.fields,field_description:account_invoice_stock_picking.field_res_config_settings__id
 #: model:ir.model.fields,field_description:account_invoice_stock_picking.field_stock_picking__id
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #. module: account_invoice_stock_picking
 #: model:ir.model.fields,field_description:account_invoice_stock_picking.field_stock_picking__invoice_count
@@ -67,14 +67,14 @@ msgstr "Plock"
 #. module: account_invoice_stock_picking
 #: model:ir.model,name:account_invoice_stock_picking.model_res_config_settings
 msgid "Procurement purchase grouping settings"
-msgstr "Procurement purchase grouping settings"
+msgstr ""
 
 #. module: account_invoice_stock_picking
 #: model:ir.model.fields,field_description:account_invoice_stock_picking.field_res_config_settings__group_account_invoice_report_pickings
 #: model:res.groups,name:account_invoice_stock_picking.group_account_invoice_report_pickings
 #: model_terms:ir.ui.view,arch_db:account_invoice_stock_picking.res_config_settings_view_form
 msgid "Show pickings on invoice print"
-msgstr "Show pickings on invoice print"
+msgstr ""
 
 #. module: account_invoice_stock_picking
 #: model:ir.model.fields,field_description:account_invoice_stock_picking.field_account_bank_statement_line__stock_picking_ids
@@ -83,7 +83,7 @@ msgstr "Show pickings on invoice print"
 #: model:ir.model.fields,field_description:account_invoice_stock_picking.field_procountor_account_move__stock_picking_ids
 #: model:ir.model.fields,field_description:account_invoice_stock_picking.field_procountor_account_payment__stock_picking_ids
 msgid "Stock pickings"
-msgstr "Stock pickings"
+msgstr ""
 
 #. module: account_invoice_stock_picking
 #: model:ir.model,name:account_invoice_stock_picking.model_stock_picking

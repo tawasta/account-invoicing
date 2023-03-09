@@ -1,0 +1,117 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_invoice_notice_period
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20230224\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-09 13:26+0000\n"
+"PO-Revision-Date: 2023-03-09 15:27+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: account_invoice_notice_period
+#: model_terms:ir.ui.view,arch_db:account_invoice_notice_period.report_invoice_document
+msgid "<strong>Notice period:</strong>"
+msgstr "<strong>Uppsägningstid:</strong>"
+
+#. module: account_invoice_notice_period
+#: model:ir.model,name:account_invoice_notice_period.model_res_company
+msgid "Companies"
+msgstr "Bolag"
+
+#. module: account_invoice_notice_period
+#: model:ir.model,name:account_invoice_notice_period.model_res_partner
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: account_invoice_notice_period
+#: model:ir.model.fields,help:account_invoice_notice_period.field_account_bank_statement_line__notice_period
+#: model:ir.model.fields,help:account_invoice_notice_period.field_account_move__notice_period
+#: model:ir.model.fields,help:account_invoice_notice_period.field_account_payment__notice_period
+#: model:ir.model.fields,help:account_invoice_notice_period.field_procountor_account_move__notice_period
+#: model:ir.model.fields,help:account_invoice_notice_period.field_procountor_account_payment__notice_period
+#: model:ir.model.fields,help:account_invoice_notice_period.field_procountor_res_partner__notice_period
+#: model:ir.model.fields,help:account_invoice_notice_period.field_res_company__notice_period
+#: model:ir.model.fields,help:account_invoice_notice_period.field_res_config_settings__notice_period
+#: model:ir.model.fields,help:account_invoice_notice_period.field_res_partner__notice_period
+#: model:ir.model.fields,help:account_invoice_notice_period.field_res_users__notice_period
+msgid "Default notice period (days) for new customers and invoices"
+msgstr ""
+
+#. module: account_invoice_notice_period
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_account_move__display_name
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_res_company__display_name
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_res_partner__display_name
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_sale_advance_payment_inv__display_name
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Visningsnamn"
+
+#. module: account_invoice_notice_period
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_account_move__id
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_res_company__id
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_res_config_settings__id
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_res_partner__id
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_sale_advance_payment_inv__id
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_sale_order__id
+msgid "ID"
+msgstr ""
+
+#. module: account_invoice_notice_period
+#: model:ir.model,name:account_invoice_notice_period.model_account_move
+msgid "Journal Entry"
+msgstr "Verifikat"
+
+#. module: account_invoice_notice_period
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_account_move____last_update
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_res_company____last_update
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_res_partner____last_update
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_sale_advance_payment_inv____last_update
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_sale_order____last_update
+msgid "Last Modified on"
+msgstr "Senast redigerad"
+
+#. module: account_invoice_notice_period
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_account_bank_statement_line__notice_period
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_account_move__notice_period
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_account_payment__notice_period
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_procountor_account_move__notice_period
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_procountor_account_payment__notice_period
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_procountor_res_partner__notice_period
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_res_company__notice_period
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_res_config_settings__notice_period
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_res_partner__notice_period
+#: model:ir.model.fields,field_description:account_invoice_notice_period.field_res_users__notice_period
+#: model_terms:ir.ui.view,arch_db:account_invoice_notice_period.view_account_config_settings
+msgid "Notice period (days)"
+msgstr ""
+
+#. module: account_invoice_notice_period
+#: model:ir.model,name:account_invoice_notice_period.model_res_config_settings
+msgid "Procurement purchase grouping settings"
+msgstr ""
+
+#. module: account_invoice_notice_period
+#: model:ir.model,name:account_invoice_notice_period.model_sale_advance_payment_inv
+msgid "Sales Advance Payment Invoice"
+msgstr "Försäljning, avancerad fakturabetalning"
+
+#. module: account_invoice_notice_period
+#: model:ir.model,name:account_invoice_notice_period.model_sale_order
+msgid "Sales Order"
+msgstr "Kundorder"
+
+#. module: account_invoice_notice_period
+#: model_terms:ir.ui.view,arch_db:account_invoice_notice_period.report_invoice_document
+msgid "days"
+msgstr ""
