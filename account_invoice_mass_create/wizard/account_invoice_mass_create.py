@@ -23,8 +23,8 @@
 # 2. Known third party imports:
 
 # 3. Odoo imports (openerp):
-from odoo import api, fields, models
-
+from odoo import api, fields, models, _
+from odoo.exceptions import ValidationError
 from odoo.addons import decimal_precision as dp
 
 # 4. Imports from Odoo modules:
@@ -119,6 +119,17 @@ class AccountInvoiceMassCreate(models.TransientModel):
         }
 
         for partner in partners:
+            if (
+                partner.invoice_warn == "block"
+                or partner.commercial_partner_id.invoice_warn == "block"
+            ):
+                warn = (
+                    partner.invoice_warn_msg
+                    or partner.commercial_partner_id.invoice_warn_msg
+                )
+                raise ValidationError(
+                    _("Can't create invoice for {}: {}".format(partner.name, warn))
+                )            
             invoice_values["partner_id"] = partner.id
             invoice_values["account_id"] = partner.property_account_receivable_id.id
             invoice_values[
