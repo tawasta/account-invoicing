@@ -7,7 +7,12 @@ class StockPicking(models.Model):
 
     def button_validate(self):
         for record in self:
-            if record.has_open_invoices():
+            # Bypass returns
+            is_return = any(
+                m.origin_returned_move_id for m in record.move_ids_without_package
+            )
+
+            if record.has_open_invoices() and not is_return:
                 # Don't allow validating pickings if they have open invoices
                 raise ValidationError(
                     _(
