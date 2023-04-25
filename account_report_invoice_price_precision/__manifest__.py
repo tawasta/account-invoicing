@@ -21,7 +21,7 @@
 {
     "name": "Invoice pdf - price precision",
     "summary": "Invoice pdf - price precision",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Account",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
