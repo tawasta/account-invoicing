@@ -21,7 +21,7 @@
 {
     "name": "Account Invoice - Filter by Customs decision",
     "summary": "Account Invoice - Filter by Customs decision",
-    "version": "14.0.1.0.1",
+    "version": "14.0.1.0.2",
     "category": "Account",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",

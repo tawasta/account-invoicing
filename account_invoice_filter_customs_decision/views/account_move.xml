@@ -6,8 +6,8 @@
         <field name="inherit_id" ref="account.view_move_form" />
         <field name="arch" type="xml">
             <field name="show_name_warning" position="after">
-                <field name="many_attachments" invisible="0" />
-                <field name="many_attachments_false" invisible="0" />
+                <field name="many_attachments" invisible="1" />
+                <field name="many_attachments_false" invisible="1" />
             </field>
         </field>
     </record>
