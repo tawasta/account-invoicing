@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-============================================
-Hide outstanding debits from vendor invoices
-============================================
+=====================================
+Hide outstanding debits from invoices
+=====================================
 
-Don't show outstanding debit -info in vendor invoices
+Don't show outstanding debit -info in invoices
 
 Configuration
 =============
