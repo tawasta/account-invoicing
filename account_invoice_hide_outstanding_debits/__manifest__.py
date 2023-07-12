@@ -19,9 +19,9 @@
 ##############################################################################
 
 {
-    "name": "Hide outstanding debits from vendor invoices",
-    "summary": "Don't show outstanding debit -info in vendor invoices",
-    "version": "14.0.1.0.1",
+    "name": "Hide outstanding debits from invoices",
+    "summary": "Don't show outstanding debit -info in invoices",
+    "version": "14.0.1.1.0",
     "category": "Invoicing",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
