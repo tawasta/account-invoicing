@@ -6,11 +6,7 @@
         <field name="inherit_id" ref="account.view_invoice_tree" />
         <field name="arch" type="xml">
             <field name="invoice_date_due" position="after">
-                <field
-                    name="invoice_due_date"
-                    optional="show"
-                    attrs="{'invisible': [['payment_state', 'in', ('paid', 'in_payment', 'reversed')]]}"
-                />
+                <field name="invoice_due_date" optional="show" />
             </field>
         </field>
     </record>
