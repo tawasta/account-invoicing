@@ -20,18 +20,18 @@
                         <td><span>Materials:</span>
                             <t t-if="len(line.product_id.material) > 1">
                                 <t t-foreach="line.product_id.material" t-as="m">
-                                    <span t-field="m.name"/>,
+                                    <span t-field="m.name" />,
                                 </t>
                             </t>
                             <t t-else="">
                                 <t t-foreach="line.product_id.material" t-as="m">
-                                    <span t-field="m.name"/>
+                                    <span t-field="m.name" />
                                 </t>
                             </t>
                         </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td />
+                        <td />
+                        <td />
                     </tr>
                 </t>
             <!-- </t> -->
