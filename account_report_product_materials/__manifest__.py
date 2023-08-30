@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2023 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,17 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Invoice pdf - price precision",
-    "summary": "Invoice pdf - price precision",
-    "version": "14.0.1.0.2",
-    "category": "Account",
+    "name": "Invoice product materials",
+    "summary": "Invoice product materials",
+    "version": "14.0.1.0.0",
+    "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "account",
-    ],
-    "data": ["report/report_invoice.xml"],
+    "depends": ["account", "product_materials"],
+    "data": ["report/invoice_report.xml"],
 }
