@@ -50,7 +50,7 @@
             position="replace"
         >
             <t
-                t-esc="'%.2f'% float(amount_by_group[3]).replace(o.currency_id.symbol, '').replace('.',',')"
+                t-esc="'%.2f'% float(amount_by_group[3].replace(o.currency_id.symbol, '').replace(',','.').replace(u'\xa0', ''))"
             />
             <t t-esc="o.currency_id.symbol" />
         </xpath>
@@ -70,7 +70,7 @@
             position="replace"
         >
             <t
-                t-esc="'%.2f'% float(amount_by_group[3].replace(o.currency_id.symbol, '')).replace('.',',')"
+                t-esc="'%.2f'% float(amount_by_group[3].replace(o.currency_id.symbol, '').replace(',','.').replace(u'\xa0', ''))"
             />
             <t t-esc="o.currency_id.symbol" />
         </xpath>
