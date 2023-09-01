@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020- Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,20 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Account Invoice - Report text by country group",
-    "summary": "Get account invoice report text from country groups setting",
-    "version": "14.0.2.0.0",
-    "category": "Sales",
+    "name": "Ignore products from invoice margin calculation",
+    "summary": "Ignore products when calculating invoice margins",
+    "category": "Invoicing",
+    "version": "14.0.1.0.0",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["account", "l10n_fi_country_groups"],
-    "data": [
-        "views/country_group.xml",
-        "views/res_config_settings.xml",
-        "report/account_invoice.xml",
-        "views/menu.xml",
-    ],
+    "depends": ["account_invoice_margin", "product_margin_ignore"],
+    "data": [],
 }
