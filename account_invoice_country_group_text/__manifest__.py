@@ -21,7 +21,7 @@
 {
     "name": "Account Invoice - Report text by country group",
     "summary": "Get account invoice report text from country groups setting",
-    "version": "14.0.1.0.0",
+    "version": "14.0.2.0.0",
     "category": "Sales",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
@@ -29,5 +29,10 @@
     "application": False,
     "installable": True,
     "depends": ["account", "l10n_fi_country_groups"],
-    "data": ["views/country_group.xml", "report/account_invoice.xml", "views/menu.xml"],
+    "data": [
+        "views/country_group.xml",
+        "views/res_config_settings.xml",
+        "report/account_invoice.xml",
+        "views/menu.xml",
+    ],
 }
