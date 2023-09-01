@@ -8,6 +8,7 @@ Acccount Invoice - Country Group Text
 
 * Adds a new field to country groups to store the text
 * Adds the text to account order reports
+* Go to Invoice settings to set text as visible to a company
 
 Configuration
 =============
@@ -16,7 +17,7 @@ Configuration
 Usage
 =====
 * Install
-* Add text to specific country groups from 
+* Add text to specific country groups from
 
 Known issues / Roadmap
 ======================
@@ -29,6 +30,7 @@ Contributors
 ------------
 * Joona Isoaho <joona.isoaho@tawasta.fi>
 * Miika Nissi <miika.nissi@tawasta.fi>
+* Timo Kekäläinen <timo.kekalainen@tawasta.fi>
 
 Maintainer
 ----------
