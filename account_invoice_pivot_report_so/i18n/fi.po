@@ -1,47 +1,43 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* account_invoice_pivot_report_product_template
+# 	* account_invoice_pivot_report_so
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0-20220915\n"
+"Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-04 14:28+0000\n"
-"PO-Revision-Date: 2022-10-04 14:28+0000\n"
+"POT-Creation-Date: 2023-09-07 11:31+0000\n"
+"PO-Revision-Date: 2023-09-07 14:33+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
 
-#. module: account_invoice_pivot_report_product_template
-#: model:ir.filters,name:account_invoice_pivot_report_product_template.filter_invoice_product_template
-msgid "By Product Template"
-msgstr "Tuotemalli"
-
-#. module: account_invoice_pivot_report_product_template
-#: model:ir.model.fields,field_description:account_invoice_pivot_report_product_template.field_account_invoice_report__display_name
+#. module: account_invoice_pivot_report_so
+#: model:ir.model.fields,field_description:account_invoice_pivot_report_so.field_account_invoice_report__display_name
 msgid "Display Name"
 msgstr "Näyttönimi"
 
-#. module: account_invoice_pivot_report_product_template
-#: model:ir.model.fields,field_description:account_invoice_pivot_report_product_template.field_account_invoice_report__id
+#. module: account_invoice_pivot_report_so
+#: model:ir.model.fields,field_description:account_invoice_pivot_report_so.field_account_invoice_report__id
 msgid "ID"
 msgstr "Tunniste (ID)"
 
-#. module: account_invoice_pivot_report_product_template
-#: model:ir.model,name:account_invoice_pivot_report_product_template.model_account_invoice_report
+#. module: account_invoice_pivot_report_so
+#: model:ir.model,name:account_invoice_pivot_report_so.model_account_invoice_report
 msgid "Invoices Statistics"
 msgstr "Laskutilastot"
 
-#. module: account_invoice_pivot_report_product_template
-#: model:ir.model.fields,field_description:account_invoice_pivot_report_product_template.field_account_invoice_report____last_update
+#. module: account_invoice_pivot_report_so
+#: model:ir.model.fields,field_description:account_invoice_pivot_report_so.field_account_invoice_report____last_update
 msgid "Last Modified on"
 msgstr "Viimeksi muokattu"
 
-#. module: account_invoice_pivot_report_product_template
-#: model:ir.model.fields,field_description:account_invoice_pivot_report_product_template.field_account_invoice_report__product_template_id
-#: model_terms:ir.ui.view,arch_db:account_invoice_pivot_report_product_template.view_account_invoice_report_search_product_template
-msgid "Product Template"
-msgstr "Tuotemalli"
+#. module: account_invoice_pivot_report_so
+#: model:ir.model.fields,field_description:account_invoice_pivot_report_so.field_account_invoice_report__sale_id
+msgid "SO-number"
+msgstr "Myyntitilauksen numero"
