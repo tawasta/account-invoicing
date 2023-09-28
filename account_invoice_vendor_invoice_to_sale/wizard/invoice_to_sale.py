@@ -1,6 +1,7 @@
+import logging
+
 from odoo import _, fields, models
 from odoo.exceptions import UserError
-import logging
 
 
 class InvoiceToSale(models.TransientModel):
@@ -162,14 +163,13 @@ class InvoiceToSale(models.TransientModel):
                 limit=1,
             )
 
-            logging.info("==MENEE TANNE JOSSA ETSITAAN ORDER=====");
-            logging.info(sale_order);
-
+            logging.info("==MENEE TANNE JOSSA ETSITAAN ORDER=====")
+            logging.info(sale_order)
 
         if self.merge_order and sale_order:
             # Merge lines to an existing order
             sale_order.order_line = order_lines
-            logging.info("====KAY TAALLA======");
+            logging.info("====KAY TAALLA======")
         else:
             # Create a new order
             values = dict(
@@ -183,12 +183,12 @@ class InvoiceToSale(models.TransientModel):
             sale_order = SaleOrder.create(
                 values,
             )
-            logging.info("====MENEE TANNE 1======");
-            logging.info(sale_order);
+            logging.info("====MENEE TANNE 1======")
+            logging.info(sale_order)
 
         # Auto-confirm order
         if self.auto_confirm and sale_order.state in ["draft", "sent"]:
-            logging.info("====MENEE TANNE======");
+            logging.info("====MENEE TANNE======")
             sale_order.action_confirm()
 
         return {
