@@ -125,7 +125,7 @@ class InvoiceToSale(models.TransientModel):
                 for line in invoice.invoice_line_ids:
                     if self.analytic_account and not account_analytic_id:
                         # Use first line analytic id as order analytic id
-                        account_analytic_id = line.account_analytic_id.id
+                        account_analytic_id = line.analytic_account_id.id
 
                     # Untaxed Amount will be the invoice subtotal
                     price_unit = invoice.amount_untaxed
