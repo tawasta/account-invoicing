@@ -184,7 +184,7 @@ class InvoiceToSale(models.TransientModel):
             sale_order = SaleOrder.create(
                 values,
             )
-            logging.info("===LUODAAN SALE ORDER=====");
+            logging.info("====MENEE TANNE 1======");
             logging.info(sale_order);
 
         # Auto-confirm order
