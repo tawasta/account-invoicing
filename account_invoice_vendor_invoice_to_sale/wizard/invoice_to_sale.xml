@@ -6,13 +6,13 @@
         <field name="arch" type="xml">
             <form id="invoice_to_sale">
                 <group>
-                    <field name="auto_confirm" />
-                    <field name="merge_order" />
+                    <field name="auto_confirm" widget="boolean_toggle" />
+                    <field name="merge_order" widget="boolean_toggle" />
                     <field
                         name="merge_order_id"
                         attrs="{'invisible': [('merge_order', '=', False)]}"
                     />
-                    <field name="analytic_account" />
+                    <field name="analytic_account" widget="boolean_toggle" />
                     <field
                         name="partner_id"
                         attrs="{'invisible': [('merge_order_id', '!=', False)]}"
