@@ -161,6 +161,8 @@ class InvoiceToSale(models.TransientModel):
                 ],
                 limit=1,
             )
+            if not sale_order:
+
             logging.info("==MENEE TANNE JOSSA ETSITAAN ORDER=====");
             logging.info(sale_order);
 
@@ -182,6 +184,8 @@ class InvoiceToSale(models.TransientModel):
             sale_order = SaleOrder.create(
                 values,
             )
+            logging.info("===LUODAAN SALE ORDER=====");
+            logging.info(sale_order);
 
         # Auto-confirm order
         if self.auto_confirm and sale_order.state in ["draft", "sent"]:
