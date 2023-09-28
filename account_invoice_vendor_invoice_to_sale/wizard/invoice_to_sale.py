@@ -161,7 +161,6 @@ class InvoiceToSale(models.TransientModel):
                 ],
                 limit=1,
             )
-            if not sale_order:
 
             logging.info("==MENEE TANNE JOSSA ETSITAAN ORDER=====");
             logging.info(sale_order);
