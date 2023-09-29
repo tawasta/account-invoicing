@@ -83,11 +83,11 @@ class InvoiceToSale(models.TransientModel):
                 for line in invoice.invoice_line_ids:
                     if self.analytic_account and not account_analytic_id:
                         # Use first line analytic id as order analytic id
-                        account_analytic_id = line.account_analytic_id.id
+                        account_analytic_id = line.analytic_account_id.id
 
                     # Check is invoice line's tax Included In Price
 
-                    if len(line.invoice_line_tax_ids) > 1:
+                    if len(line.tax_ids) > 1:
                         raise UserError(
                             _(
                                 "Too many taxes per line! The "
@@ -96,7 +96,7 @@ class InvoiceToSale(models.TransientModel):
                             )
                         )
 
-                    if line.invoice_line_tax_ids.price_include:
+                    if line.tax_ids.price_include:
                         price = line.price_subtotal
                     else:
                         price = line.price_unit
@@ -110,7 +110,7 @@ class InvoiceToSale(models.TransientModel):
                                 price_unit=price,
                                 name=line.name,
                                 product_uom_qty=line.quantity,
-                                product_uom=line.uom_id.id,
+                                product_uom=line.product_uom_id.id,
                                 analytic_tag_ids=line.analytic_tag_ids,
                             ),
                         )
