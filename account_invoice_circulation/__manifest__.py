@@ -21,7 +21,7 @@
 {
     "name": "Invoice circulation",
     "summary": "Adds invoice circulation for vendor invoices",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Invoicing",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
