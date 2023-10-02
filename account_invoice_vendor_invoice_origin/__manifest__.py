@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2023 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,20 +19,17 @@
 ##############################################################################
 
 {
-    "name": "Create Sale order from vendor invoice",
-    "summary": "Adds a wizards for creating a SO from vendor invoice",
-    "version": "14.0.1.0.3",
-    "category": "Accounting",
+    "name": "Show Invoice origin on Vendor Bills",
+    "summary": "Show Invoice origin on Vendor Bills",
+    "version": "14.0.1.0.0",
+    "category": "Accounting & Finance",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["account", "sale"],
+    "depends": ["account"],
     "data": [
-        "security/ir.model.access.csv",
-        "wizard/invoice_to_sale.xml",
-        "views/account_invoice_form.xml",
-        "views/sale_order.xml",
+        "views/account_move.xml",
     ],
 }
