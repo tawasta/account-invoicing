@@ -22,7 +22,7 @@
     "name": "Account invoice line view",
     "summary": "Add a readonly invoice line view",
     "category": "Invoicing",
-    "version": "14.0.1.0.6",
+    "version": "14.0.1.0.7",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
@@ -31,6 +31,8 @@
     "depends": ["account", "sale"],
     "data": [
         "views/account_move_line.xml",
-        "views/account_move_line_search.xml",
+        # Search view causes an error, but it has not been
+        # completely removed just in case.
+        # "views/account_move_line_search.xml",
     ],
 }
