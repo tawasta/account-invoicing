@@ -7,7 +7,7 @@ class SaleOrder(models.Model):
 
     origin_invoice_id = fields.Many2one(
         string="Origin invoice",
-        comodel_name="account.invoice",
+        comodel_name="account.move",
         copy=False,
         readonly=False,
     )
