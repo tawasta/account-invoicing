@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2019 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,20 +19,17 @@
 ##############################################################################
 
 {
-    "name": "Account invoice line view",
-    "summary": "Add a readonly invoice line view",
+    "name": "Disable due date auto update on vendor invoices",
+    "summary": "Disable due date auto update on vendor invoices",
+    "version": "14.0.1.0.0",
     "category": "Invoicing",
-    "version": "14.0.1.0.7",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["account", "sale"],
-    "data": [
-        "views/account_move_line.xml",
-        # Search view causes an error, but it has not been
-        # completely removed just in case.
-        # "views/account_move_line_search.xml",
-    ],
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["account"],
+    "data": [],
+    "demo": [],
 }
