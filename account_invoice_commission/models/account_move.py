@@ -1,4 +1,4 @@
-from odoo import api, fields, models
+from odoo import _, api, fields, models
 
 
 class AccountMove(models.Model):
@@ -17,6 +17,15 @@ class AccountMove(models.Model):
         for record in self:
             record.commission_paid = True
             record.invoice_line_ids.write({"commission_paid": True})
+
+            record.message_post(body=_("Commission set as paid"))
+
+    def action_set_commission_unpaid(self):
+        for record in self:
+            record.commission_paid = False
+            record.invoice_line_ids.write({"commission_paid": False})
+
+            record.message_post(body=_("Commission set as unpaid"))
 
     @api.depends("invoice_line_ids.commission_paid")
     def _compute_commission_paid(self):
