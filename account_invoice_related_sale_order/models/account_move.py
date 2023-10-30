@@ -17,6 +17,7 @@ class AccountMove(models.Model):
     sale_id = fields.Many2one(
         "sale.order",
         related="invoice_line_ids.sale_line_ids.order_id",
+        string="Order Reference",
     )
 
     @api.depends("invoice_line_ids")
