@@ -40,7 +40,7 @@
                 />
                 <field
                     name="account_invoice_circulation_id"
-                    groups="account.group_account_manager"
+                    groups="account.group_account_manager,account_invoice_circulation.group_invoice_approver"
                     attrs="{'invisible': [('move_type', '!=', 'in_invoice')]}"
                 />
             </xpath>
