@@ -101,20 +101,16 @@ class InvoiceToSale(models.TransientModel):
                     else:
                         price = line.price_unit
 
-                    order_lines.append(
-                        (
-                            0,
-                            0,
-                            dict(
-                                product_id=line.product_id.id,
-                                price_unit=price,
-                                name=line.name,
-                                product_uom_qty=line.quantity,
-                                product_uom=line.product_uom_id.id,
-                                analytic_tag_ids=line.analytic_tag_ids,
-                            ),
-                        )
+                    line_values = dict(
+                        product_id=line.product_id.id or self.product_id.id,
+                        price_unit=price,
+                        name=line.name,
+                        product_uom_qty=line.quantity,
+                        product_uom=line.product_uom_id.id or self.product_id.uom_id.id,
+                        analytic_tag_ids=line.analytic_tag_ids,
                     )
+
+                    order_lines.append((0, 0, line_values))
 
             elif self.order_lines == "merge":
                 # Merge invoice lines to one sale order line
@@ -165,6 +161,10 @@ class InvoiceToSale(models.TransientModel):
             # Merge lines to an existing order
             sale_order.order_line = order_lines
         else:
+            fp = self.env["account.fiscal.position"].with_company(
+                self.env.user.company_id
+            )
+
             # Create a new order
             values = dict(
                 origin_invoice_id=invoice_id,
@@ -172,6 +172,7 @@ class InvoiceToSale(models.TransientModel):
                 user_id=self.user_id.id,
                 order_line=order_lines,
                 analytic_account_id=account_analytic_id,
+                fiscal_position_id=fp.get_fiscal_position(self.partner_id.id).id,
             )
 
             sale_order = SaleOrder.create(

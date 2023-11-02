@@ -5,14 +5,16 @@
         <field name="model">invoice.to.sale</field>
         <field name="arch" type="xml">
             <form id="invoice_to_sale">
-                <group>
+                <group string="Options">
                     <field name="auto_confirm" widget="boolean_toggle" />
                     <field name="merge_order" widget="boolean_toggle" />
                     <field
                         name="merge_order_id"
-                        attrs="{'invisible': [('merge_order', '=', False)]}"
+                        attrs="{'invisible': [('merge_order', '=', False)], 'required': [('merge_order', '=', True)]}"
                     />
                     <field name="analytic_account" widget="boolean_toggle" />
+                </group>
+                <group string="Sale order">
                     <field
                         name="partner_id"
                         attrs="{'invisible': [('merge_order_id', '!=', False)]}"
@@ -24,8 +26,18 @@
                     <field name="order_lines" />
                     <field
                         name="product_id"
-                        attrs="{'invisible': [('order_lines', '!=', 'merge')], 'required': [('order_lines', '=', 'merge')]}"
+                        attrs="{'invisible': [('order_lines', 'not in', ['merge', 'copy'])], 'required': [('order_lines', '=', 'merge')]}"
                     />
+                    <label
+                        for="product_id"
+                        attrs="{'invisible': [('order_lines', '!=', 'copy')]}"
+                        string=""
+                    />
+                    <div
+                        class="alert alert-info oe_edit_only"
+                        role="alert"
+                        attrs="{'invisible': [('order_lines', '!=', 'copy')]}"
+                    >Select a product to use for lines without a product</div>
                 </group>
 
                 <footer>
