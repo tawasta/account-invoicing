@@ -37,6 +37,7 @@
                 <field
                     name="invoice_approved"
                     attrs="{'invisible': [('account_invoice_circulation_id', '=', False)]}"
+                    force_save="1"
                 />
                 <field
                     name="account_invoice_circulation_id"
