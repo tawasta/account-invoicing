@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="account_date_lock_group" model="res.groups">
+        <field name="name">Allow locking account dates</field>
+        <field name="category_id" ref="base.module_category_usability" />
+    </record>
+</odoo>
