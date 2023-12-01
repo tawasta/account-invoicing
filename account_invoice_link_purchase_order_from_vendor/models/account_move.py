@@ -6,7 +6,10 @@ class AccountMove(models.Model):
     _inherit = "account.move"
 
     purchase_orders = fields.Many2many(
-        string="Purchase orders",
-        comodel_name="purchase.order",
+        "purchase.order",
+        "bill_ids_purchase_orders_rel",
+        "bill_id",
+        "purchase_order",
+        "Purchase orders",
         copy=False,
     )
