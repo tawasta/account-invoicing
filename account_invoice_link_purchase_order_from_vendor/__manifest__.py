@@ -21,7 +21,7 @@
 {
     "name": "Link Purchase order to Vendor bill",
     "summary": "Link Purchase order to Vendor bill",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Accounting & Finance",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
