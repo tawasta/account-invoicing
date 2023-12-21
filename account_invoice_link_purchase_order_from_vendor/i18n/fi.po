@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-25 13:20+0000\n"
-"PO-Revision-Date: 2023-09-25 16:21+0300\n"
+"POT-Creation-Date: 2023-12-01 15:32+0000\n"
+"PO-Revision-Date: 2023-12-01 17:33+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -19,11 +19,13 @@ msgstr ""
 
 #. module: account_invoice_link_purchase_order_from_vendor
 #: model:ir.model.fields,field_description:account_invoice_link_purchase_order_from_vendor.field_account_move__display_name
+#: model:ir.model.fields,field_description:account_invoice_link_purchase_order_from_vendor.field_purchase_order__display_name
 msgid "Display Name"
 msgstr "Näyttönimi"
 
 #. module: account_invoice_link_purchase_order_from_vendor
 #: model:ir.model.fields,field_description:account_invoice_link_purchase_order_from_vendor.field_account_move__id
+#: model:ir.model.fields,field_description:account_invoice_link_purchase_order_from_vendor.field_purchase_order__id
 msgid "ID"
 msgstr "Tunniste (ID)"
 
@@ -34,8 +36,19 @@ msgstr "Päiväkirjan kirjaus"
 
 #. module: account_invoice_link_purchase_order_from_vendor
 #: model:ir.model.fields,field_description:account_invoice_link_purchase_order_from_vendor.field_account_move____last_update
+#: model:ir.model.fields,field_description:account_invoice_link_purchase_order_from_vendor.field_purchase_order____last_update
 msgid "Last Modified on"
 msgstr "Viimeksi muokattu"
+
+#. module: account_invoice_link_purchase_order_from_vendor
+#: model:ir.model.fields,field_description:account_invoice_link_purchase_order_from_vendor.field_purchase_order__bill_ids
+msgid "Linked bills"
+msgstr "Liitetyt toimittajan laskut"
+
+#. module: account_invoice_link_purchase_order_from_vendor
+#: model:ir.model,name:account_invoice_link_purchase_order_from_vendor.model_purchase_order
+msgid "Purchase Order"
+msgstr "Ostotilaus"
 
 #. module: account_invoice_link_purchase_order_from_vendor
 #: model_terms:ir.ui.view,arch_db:account_invoice_link_purchase_order_from_vendor.view_move_form
