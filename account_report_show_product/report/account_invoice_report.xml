@@ -1,9 +1,0 @@
-<odoo>
-    <template id="report_invoice_document" inherit_id="account.report_invoice_document">
-        <xpath expr="//span[@t-field='line.name']" position="before">
-            <t t-if="line.product_id.display_name != line.name">
-                <strong t-field="line.product_id" /><br />
-            </t>
-        </xpath>
-    </template>
-</odoo>

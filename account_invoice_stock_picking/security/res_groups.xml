@@ -1,6 +1,0 @@
-<odoo>
-    <record id="group_account_invoice_report_pickings" model="res.groups">
-        <field name="name">Show pickings on invoice print</field>
-        <field name="category_id" ref="base.module_category_hidden" />
-    </record>
-</odoo>
