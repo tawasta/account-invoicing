@@ -10,7 +10,8 @@ Custom accounting account for down payments
 
 Configuration
 =============
-\-
+1. Go to product and set "Receivable Account"
+2. Create an invoice advance from a sale order
 
 Usage
 =====

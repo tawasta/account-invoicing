@@ -50,7 +50,7 @@
                     <br />
                     Alternatively, you can also pay the bill directly via this <a
                         href="${object.link}"
-                        style="color:#875A7B;text-decoration:none;"
+                        style="text-decoration: none; display: inline-block; background-color: #875A7B; color: #fff !important; padding: 2px 10px; border-radius: 5px;"
                     >link</a>.
                     % endif
                     % endif
