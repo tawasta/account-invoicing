@@ -29,7 +29,10 @@
     "application": False,
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
-    "depends": ["account_invoice_commission_payment", "product_variant_company"],
+    "depends": [
+        "account_invoice_commission_payment",
+        "product_variant_variant_company",
+    ],
     "data": [],
     "demo": [],
 }
