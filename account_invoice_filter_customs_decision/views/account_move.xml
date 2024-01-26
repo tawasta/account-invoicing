@@ -22,12 +22,12 @@
                 <filter
                     string="No Customs Decisions file"
                     name="many_attachments"
-                    domain="[('many_attachments_false', '=', True)]"
+                    domain="[('many_attachments_false', '=', True), ('create_date', '&gt;=', '2023-01-01')]"
                 />
                 <filter
                     string="Customs Decisions file exists"
                     name="many_attachments"
-                    domain="[('many_attachments', '=', True)]"
+                    domain="[('many_attachments', '=', True), ('create_date', '&gt;=', '2023-01-01')]"
                 />
                 <separator />
             </filter>
