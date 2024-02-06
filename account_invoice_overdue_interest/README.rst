@@ -37,6 +37,7 @@ Contributors
 ------------
 * Timo Talvitie <timo.talvitie@tawasta.fi>
 * Oskars Zālītis <oskars.zalitis@avoin.systems>
+* Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
 
 Maintainer
 ----------

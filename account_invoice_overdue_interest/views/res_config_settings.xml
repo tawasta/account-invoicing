@@ -11,7 +11,7 @@
             <xpath expr="//setting[@id='account_batch_payment']" position="before">
                 <setting
                     id="overdue_interest"
-                    help="Default overdue interest % for new customers and invoices"
+                    help="Default overdue interest % for invoices"
                 >
                     <field name="overdue_interest" />
                 </setting>
