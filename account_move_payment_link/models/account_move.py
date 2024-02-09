@@ -1,5 +1,5 @@
 from odoo import api, fields, models
-
+import logging
 
 class AccountMove(models.Model):
     _inherit = "account.move"
@@ -10,6 +10,8 @@ class AccountMove(models.Model):
     def _compute_payment_link(self):
         payment_link_wizard = self.env["payment.link.wizard"]
         for rec in self:
+            logging.info("======REC ARVO====");
+            logging.info(rec);
             temp_wizard = payment_link_wizard.create(
                 {
                     "res_model": "sale.order",
