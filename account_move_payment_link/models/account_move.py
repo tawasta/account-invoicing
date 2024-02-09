@@ -14,7 +14,7 @@ class AccountMove(models.Model):
             logging.info(rec);
             temp_wizard = payment_link_wizard.create(
                 {
-                    "res_model": "sale.order",
+                    "res_model": "account.move",
                     "res_id": rec.id,
                     "amount": rec.amount_total,
                     "partner_id": rec.partner_id.id,
