@@ -1,5 +1,7 @@
-from odoo import api, fields, models
 import logging
+
+from odoo import api, fields, models
+
 
 class AccountMove(models.Model):
     _inherit = "account.move"
