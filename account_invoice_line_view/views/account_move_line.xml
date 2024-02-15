@@ -6,20 +6,36 @@
         <field name="model">account.move.line</field>
         <field name="arch" type="xml">
             <tree string="Invoice Lines" create="false" delete="false">
-                <field name="move_id" />
-                <field name="product_id" />
-                <field name="name" />
-                <field name="move_partner_id" />
-                <field name="state" />
-                <field name="date_invoice" />
-                <field name="quantity" />
-                <field name="product_uom_id" groups="uom.group_uom" />
-                <field name="price_unit" invisible="1" />
-                <field name="price_subtotal" />
-                <field name="price_average" />
-                <field name="discount" groups="base.group_no_one" />
-                <!-- There used to be price_subtotal_signed field here in 12 version -->
-                <field name="currency_id" invisible="1" />
+                <field name="move_id" optional="show" />
+                <field name="product_id" optional="show" />
+                <field name="name" optional="show" />
+                <field
+                    name="account_id"
+                    groups="account.group_account_readonly"
+                    optional="hide"
+                />
+                <field
+                    name="analytic_account_id"
+                    groups="account.group_analytic_accounting"
+                    optional="hide"
+                />
+                <field
+                    name="analytic_tag_ids"
+                    groups="account.group_analytic_tags"
+                    optional="hide"
+                />
+                <field name="move_partner_id" optional="show" />
+                <field name="state" optional="show" />
+                <field name="date_invoice" optional="show" />
+                <field name="quantity" optional="show" />
+                <field name="product_uom_id" groups="uom.group_uom" optional="show" />
+                <field name="price_unit" optional="show" />
+                <field name="tax_ids" optional="show" />
+                <field name="price_subtotal" optional="show" />
+                <field name="price_total" optional="show" />
+                <field name="price_average" optional="hide" />
+                <field name="discount" optional="hide" />
+                <field name="currency_id" optional="hide" />
             </tree>
         </field>
     </record>
