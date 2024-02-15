@@ -6,7 +6,7 @@
 Fiscal Position type
 ====================
 
-Fiscal Position type
+Add a type for fiscal positions (domestic, EU, non-EU)
 
 Configuration
 =============

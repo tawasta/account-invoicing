@@ -5,7 +5,8 @@
 =====================================
 Account payment commission send email
 =====================================
-Send account payment as email
+
+Allows sending a payment summary by email
 
 
 Installation

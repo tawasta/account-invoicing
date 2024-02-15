@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-====================================
-Account invoice report - Hide origin
-====================================
+=========================
+Invoice PDF - Hide origin
+=========================
 
-Hides origin from invoice print
+Hides origin from invoice PDF print
 
 Configuration
 =============

@@ -6,7 +6,7 @@
 Account invoice line view
 =========================
 
-Add a readonly invoice line view
+Add a readonly list view where all invoice lines are listed
 
 Configuration
 =============

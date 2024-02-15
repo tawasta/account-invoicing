@@ -20,7 +20,7 @@
 
 {
     "name": "Account payment commission send email",
-    "summary": "Account payment commission send email",
+    "summary": "Allows sending a payment summary by email",
     "version": "14.0.1.0.1",
     "category": "Accounting & Finance",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",

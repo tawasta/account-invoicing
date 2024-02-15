@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "Invoice - Report Title",
-    "summary": "Report titles for account invoices",
+    "name": "Invoice PDF title by invoice type",
+    "summary": "Change invoice PDF title to 'refund' for refunds",
     "version": "14.0.1.0.1",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",

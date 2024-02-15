@@ -20,7 +20,7 @@
 
 {
     "name": "Account invoice due date",
-    "summary": "Account invoice due date",
+    "summary": "Add a due date for invoices",
     "version": "14.0.1.0.1",
     "category": "Invoicing",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",

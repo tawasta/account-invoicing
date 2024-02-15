@@ -6,7 +6,7 @@
 Account invoice due date
 ========================
 
-\-
+Add a due date for invoices
 
 Configuration
 =============

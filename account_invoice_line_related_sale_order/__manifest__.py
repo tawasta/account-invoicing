@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "Related sale of an invoice line",
-    "summary": "Related sale of an invoice line",
+    "name": "Related sale order of an invoice line",
+    "summary": "Allow linking a Sale Order to invoice lines",
     "version": "14.0.1.0.0",
     "category": "Account",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",

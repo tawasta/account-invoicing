@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-==============================
-Account Report Invoice payment
-==============================
+=============================
+Invoice PDF term to 'receipt'
+=============================
 
-* Changes the term invoice to a receipt from the report as well as a message post
+Changes the term 'invoice' to 'receipt' for PDF print and email template
 
 Configuration
 =============

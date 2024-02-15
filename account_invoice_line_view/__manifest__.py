@@ -20,7 +20,7 @@
 
 {
     "name": "Account invoice line view",
-    "summary": "Add a readonly invoice line view",
+    "summary": "Add a readonly list view where all invoice lines are listed",
     "category": "Invoicing",
     "version": "14.0.1.0.7",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",

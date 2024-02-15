@@ -6,7 +6,7 @@
 Related Sale Orders of Invoice
 ==============================
 
-Computes invoice's related sale orders.
+Show Sale Orders from which the invoice originated from
 
 Configuration
 =============

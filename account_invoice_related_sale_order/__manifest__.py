@@ -20,7 +20,7 @@
 
 {
     "name": "Related Sale Orders of Invoice",
-    "summary": "Related Sale Orders of Invoice",
+    "summary": "Show Sale Orders from which the invoice originated from",
     "version": "14.0.1.0.2",
     "category": "Invoicing",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",

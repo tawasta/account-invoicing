@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-========================================
-Invoice print - hide Incoterm under note
-========================================
+===========================
+Invoice PDF - hide Incoterm
+===========================
 
-Invoice print - hide Incoterm under note
+Invoice PDF - Hide incoterm located under the note
 
 Configuration
 =============

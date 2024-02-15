@@ -20,7 +20,7 @@
 
 {
     "name": "Account invoice commission",
-    "summary": "account_invoice_commission",
+    "summary": "Add a 'commission paid' field for invoices and invoice lines",
     "version": "14.0.1.0.3",
     "category": "Invoicing",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",

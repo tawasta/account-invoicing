@@ -20,7 +20,7 @@
 
 {
     "name": "Fiscal Position type",
-    "summary": "Fiscal Position type",
+    "summary": "Add a type for fiscal positions (domestic, EU, non-EU)",
     "version": "14.0.1.0.0",
     "category": "Accounting",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",

@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "QWeb report - Item count",
-    "summary": "QWeb report - Item count",
+    "name": "Invoice PDF - Item count",
+    "summary": "Add item count to invoice PDF print",
     "version": "14.0.1.0.0",
     "category": "Account",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",

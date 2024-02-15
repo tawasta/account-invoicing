@@ -20,7 +20,7 @@
 
 {
     "name": "Account Financial Reporting - fixes the amount_currency error",
-    "summary": "Fix for the amount_currency error",
+    "summary": "Fix for the amount_currency error for financial reports",
     "version": "14.0.1.0.0",
     "category": "Accounting & Finance",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
