@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-===========================================
-Account invoice report - Hide customer code
-===========================================
+================================
+Invoice PDF - Hide customer code
+================================
 
-Hides customer code from invoice report
+Hide customer code from invoice PDF
 
 Configuration
 =============

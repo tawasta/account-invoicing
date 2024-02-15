@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "Invoice print - hide Incoterm under note",
-    "summary": "Invoice print - hide Incoterm under note",
+    "name": "Invoice PDF - hide Incoterm",
+    "summary": "Invoice PDF - Hide incoterm located under the note",
     "version": "14.0.1.0.0",
     "category": "Account",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",

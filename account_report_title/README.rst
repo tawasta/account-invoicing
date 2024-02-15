@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-======================
-Invoice - Report Title
-======================
+=================================
+Invoice PDF title by invoice type
+=================================
 
-* Report titles for account invoices
+Change invoice PDF title to 'refund' for refunds
 
 Configuration
 =============

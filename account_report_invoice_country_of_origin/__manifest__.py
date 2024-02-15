@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "QWeb report - Country of origin",
-    "summary": "QWeb report - Country of origin",
+    "name": "Invoice PDF - Country of origin",
+    "summary": "Show Country of origin on invoice PDF print",
     "version": "14.0.1.0.0",
     "category": "Account",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",

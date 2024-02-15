@@ -6,7 +6,7 @@
 Account Financial Reporting - fixes the amount_currency error
 =============================================================
 
-Fix for the amount_currency error
+Fix for the amount_currency error for financial reports
 
 Configuration
 =============

@@ -3,10 +3,10 @@
    :alt: License: AGPL-3
 
 ===============================
-QWeb report - Country of origin
+Invoice PDF - Country of origin
 ===============================
 
-QWeb report - Country of origin
+Show Country of origin on invoice PDF print
 
 Configuration
 =============

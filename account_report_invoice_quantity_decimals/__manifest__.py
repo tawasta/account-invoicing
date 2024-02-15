@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "Invoice Report Quantity Decimals",
-    "summary": "Modifications to invoice print decimal precision",
+    "name": "Invoice PDF Quantity Decimals",
+    "summary": "Change the number of decimals shown on invoice PDF product quantities",
     "version": "14.0.1.0.0",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",

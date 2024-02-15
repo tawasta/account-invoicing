@@ -6,7 +6,7 @@
 Account invoice commission
 ==========================
 
-* This module add a commission field to the Invoice
+Add a 'commission paid' field for invoices and invoice lines
 
 Configuration
 =============

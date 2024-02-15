@@ -3,10 +3,10 @@
    :alt: License: AGPL-3
 
 ========================
-QWeb report - Item count
+Invoice PDF - Item count
 ========================
 
-QWeb report - Item count
+Add item count to invoice PDF print
 
 Configuration
 =============

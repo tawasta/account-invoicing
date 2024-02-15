@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-===============================
-Related sale of an invoice line
-===============================
+=====================================
+Related sale order of an invoice line
+=====================================
 
-Related sale of an invoice line
+Allow linking a Sale Order to invoice lines
 
 Configuration
 =============

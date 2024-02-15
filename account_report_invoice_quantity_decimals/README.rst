@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-================================================
-Quantity Decimals Precision on invoice pdf print
-================================================
+=============================
+Invoice PDF Quantity Decimals
+=============================
 
-* Change the number of decimals shown on invoice report product quantities
+Change the number of decimals shown on invoice report product quantities
 
 Configuration
 =============

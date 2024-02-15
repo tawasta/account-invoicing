@@ -17,8 +17,8 @@
 #
 ##############################################################################
 {
-    "name": "Account invoice report - Hide origin",
-    "category": "Hide origin from invoice print",
+    "name": "Invoice PDF - Hide origin",
+    "category": "Hides origin from invoice PDF print",
     "version": "14.0.1.0.0",
     "installable": True,
     "author": "Tawasta",

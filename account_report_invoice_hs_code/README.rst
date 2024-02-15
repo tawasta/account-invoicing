@@ -3,10 +3,10 @@
    :alt: License: AGPL-3
 
 =====================
-QWeb report - HS code
+Invoice PDF - HS code
 =====================
 
-QWeb report - HS code
+Add HS code for Invoice PDF print
 
 Configuration
 =============

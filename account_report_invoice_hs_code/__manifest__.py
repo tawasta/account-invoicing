@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "QWeb report - HS code",
-    "summary": "QWeb report - HS code",
+    "name": "Invoice PDF - HS code",
+    "summary": "Add HS code for Invoice PDF print",
     "version": "14.0.1.0.0",
     "category": "Account",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",

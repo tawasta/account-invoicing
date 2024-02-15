@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "Account Report Invoice payment",
-    "summary": "Account Report Invoice payment",
+    "name": "Invoice PDF term to 'receipt'",
+    "summary": "Changes the term 'invoice' to 'receipt' for PDF print and email template",
     "version": "14.0.1.0.0",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",

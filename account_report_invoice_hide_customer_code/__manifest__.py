@@ -17,8 +17,8 @@
 #
 ##############################################################################
 {
-    "name": "Invoice Report - Hide customer code",
-    "category": "Hide customer code from invoice report",
+    "name": "Invoice PDF - Hide customer code",
+    "category": "Hide customer code from invoice PDF",
     "version": "14.0.1.0.0",
     "installable": True,
     "author": "Tawasta",
