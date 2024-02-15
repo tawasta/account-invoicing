@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2019 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2024 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,17 +19,16 @@
 ##############################################################################
 
 {
-    "name": "Account invoice line view",
-    "summary": "Add a readonly list view where all invoice lines are listed",
+    "name": "Payment: link to invoice origin",
+    "summary": "Add link from payment to invoice, if possible",
     "category": "Invoicing",
-    "version": "14.0.1.1.0",
+    "version": "14.0.1.0.0",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["account", "sale"],
-    "data": [
-        "views/account_move_line.xml",
-    ],
+    "depends": ["account"],
+    "data": ["views/account_payment.xml"],
+    "post_init_hook": "post_init_hook",
 }
