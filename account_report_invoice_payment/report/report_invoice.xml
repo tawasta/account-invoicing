@@ -10,7 +10,7 @@
             position="replace"
         >
             <span
-                t-if="o.move_type == 'out_invoice' and o.state == 'posted'"
+                t-if="o.move_type == 'out_invoice' and o.state == 'posted' and o.payment_state == 'paid'"
             >Receipt</span>
         </xpath>
         <xpath expr="//p[@name='payment_communication']" position="replace" />
