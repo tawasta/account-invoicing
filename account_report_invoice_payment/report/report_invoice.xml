@@ -9,7 +9,9 @@
             expr='//span[@t-if="o.move_type == &apos;out_invoice&apos; and o.state == &apos;posted&apos;"]'
             position="replace"
         >
-            <span t-if="o.move_type == 'out_invoice' and o.state == 'posted' and o.payment_state == 'paid'">Receipt</span>
+            <span
+                t-if="o.move_type == 'out_invoice' and o.state == 'posted' and o.payment_state == 'paid'"
+            >Receipt</span>
             <span t-else="">Invoice</span>
 
         </xpath>
