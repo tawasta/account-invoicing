@@ -1,32 +1,37 @@
-import logging
-
-from odoo import api, fields, models
+from odoo import fields, models
 
 
 class AccountMove(models.Model):
+
     _inherit = "account.move"
 
-    link = fields.Char(string="Payment Link", compute="_compute_payment_link")
+    payment_link = fields.Char(
+        string="Payment Link",
+        copy=False,
+        help="Payment link to be sent to the customer.",
+    )
 
-    @api.depends("amount_total", "partner_id")
-    def _compute_payment_link(self):
+    def action_invoice_sent(self):
+        """
+        Trigger the creation of the payment link when user clicks Send & Print
+        for the invoice, so it is ready to be used in the e-mail template.
+        """
+        self.ensure_one()
+
         payment_link_wizard = self.env["payment.link.wizard"]
-        for rec in self:
-            # Tarkista onko rec.id todellinen tietueen ID (ei NewId-objekti)
-            if isinstance(rec.id, int):
-                logging.info("======REC ARVO====")
-                logging.info(rec)
-                temp_wizard = payment_link_wizard.create(
-                    {
-                        "res_model": "account.move",
-                        "res_id": rec.id,
-                        "amount": rec.amount_total,
-                        "partner_id": rec.partner_id.id,
-                        "currency_id": rec.currency_id.id,
-                        "description": rec.payment_reference,
-                    }
-                )
-                temp_wizard._compute_values()
-                rec.link = temp_wizard.link
-            else:
-                rec.link = False
+
+        temp_wizard = payment_link_wizard.create(
+            {
+                "res_model": "account.move",
+                "res_id": self.id,
+                "amount": self.amount_total,
+                "partner_id": self.partner_id.id,
+                "currency_id": self.currency_id.id,
+                "description": self.payment_reference,
+            }
+        )
+
+        temp_wizard._compute_values()
+        self.payment_link = temp_wizard.link
+
+        return super().action_invoice_sent()
