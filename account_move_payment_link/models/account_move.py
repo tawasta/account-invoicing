@@ -1,4 +1,8 @@
+import logging
+
 from odoo import fields, models
+
+_logger = logging.getLogger(__name__)
 
 
 class AccountMove(models.Model):
@@ -11,27 +15,27 @@ class AccountMove(models.Model):
         help="Payment link to be sent to the customer.",
     )
 
-    def action_invoice_sent(self):
-        """
-        Trigger the creation of the payment link when user clicks Send & Print
-        for the invoice, so it is ready to be used in the e-mail template.
-        """
-        self.ensure_one()
+    def _post(self, soft=True):
+        res = super()._post(soft=soft)
 
         payment_link_wizard = self.env["payment.link.wizard"]
 
-        temp_wizard = payment_link_wizard.create(
-            {
-                "res_model": "account.move",
-                "res_id": self.id,
-                "amount": self.amount_total,
-                "partner_id": self.partner_id.id,
-                "currency_id": self.currency_id.id,
-                "description": self.payment_reference,
-            }
-        )
+        for record in self:
 
-        temp_wizard._compute_values()
-        self.payment_link = temp_wizard.link
+            _logger.debug("Creating payment link for invoice ID %s", record.id)
 
-        return super().action_invoice_sent()
+            temp_wizard = payment_link_wizard.create(
+                {
+                    "res_model": "account.move",
+                    "res_id": record.id,
+                    "amount": record.amount_total,
+                    "partner_id": record.partner_id.id,
+                    "currency_id": record.currency_id.id,
+                    "description": record.payment_reference,
+                }
+            )
+
+            temp_wizard._compute_values()
+            record.payment_link = temp_wizard.link
+
+        return res
