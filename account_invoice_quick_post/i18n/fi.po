@@ -1,13 +1,13 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* account_invoice_list_post
+# 	* account_invoice_quick_post
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0-20211220\n"
+"Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-11 11:14+0000\n"
-"PO-Revision-Date: 2022-01-11 11:14+0000\n"
+"POT-Creation-Date: 2024-03-07 07:26+0000\n"
+"PO-Revision-Date: 2024-03-07 07:26+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,27 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#. module: account_invoice_list_post
-#: model_terms:ir.ui.view,arch_db:account_invoice_list_post.view_invoice_tree
+#. module: account_invoice_quick_post
+#: model_terms:ir.ui.view,arch_db:account_invoice_quick_post.view_invoice_tree
 msgid "Confirm invoices"
-msgstr "Vahvista laskut"
+msgstr "Vahvista laskuja"
+
+#. module: account_invoice_quick_post
+#: model:ir.model.fields,field_description:account_invoice_quick_post.field_account_move__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: account_invoice_quick_post
+#: model:ir.model.fields,field_description:account_invoice_quick_post.field_account_move__id
+msgid "ID"
+msgstr "Tunniste (ID)"
+
+#. module: account_invoice_quick_post
+#: model:ir.model,name:account_invoice_quick_post.model_account_move
+msgid "Journal Entry"
+msgstr "Päiväkirjan kirjaus"
+
+#. module: account_invoice_quick_post
+#: model:ir.model.fields,field_description:account_invoice_quick_post.field_account_move____last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
