@@ -8,7 +8,7 @@
 
             <button name="action_register_payment" position="after">
                 <button
-                    name="action_post"
+                    name="action_mass_post"
                     type="object"
                     string="Confirm invoices"
                     groups="account.group_account_invoice"
