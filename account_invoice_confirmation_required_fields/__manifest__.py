@@ -22,7 +22,7 @@
     "name": "Invoice Confirmation: Check Required Fields",
     "summary": "Add option to set fields that must be filled in, before an invoice "
     "is allowed to be confirmed",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.1.0",
     "category": "Invoicing",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",

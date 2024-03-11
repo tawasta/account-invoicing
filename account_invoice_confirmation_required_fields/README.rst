@@ -6,7 +6,7 @@
 Invoice Confirmation: Check Required Fields
 ===========================================
 
-* Prevents invoice confirmation if certain fields are not filled in.
+* Prevents customer invoice confirmation if certain fields are not filled in.
 * Required fields are configurable in accounting options
 * Currently supports checking of 
   * email of the partner
@@ -19,12 +19,13 @@ Configuration
 
 Usage
 =====
-* After configuration, attempt to confirm an invoice with some empty
-  required fields, and you will get an error message.
+* After configuration, attempt to confirm a customer invoice with some
+  empty required fields, and you will get an error message.
 
 Known issues / Roadmap
 ======================
 * Add more configurable fields to the module as needed
+* Consider adding support for also other types of invoices
 
 Credits
 =======

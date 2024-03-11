@@ -17,6 +17,10 @@ class AccountMove(models.Model):
 
         for record in self:
 
+            # Only apply check to customer invoices
+            if not record.move_type == "out_invoice":
+                continue
+
             # Check for partner address data
             if ir_config_model.sudo().get_param(
                 "account_move_confirmation.partner_address_required"
