@@ -1,5 +1,4 @@
-from odoo import _, models, api, fields
-from odoo.exceptions import UserError
+from odoo import api, fields, models
 
 
 class CreditControlLine(models.Model):
