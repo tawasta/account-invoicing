@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- create an alternative to the standard "web.address_layout": the columns are flipped
+    so that address is on the left-->
+    <template id="address_layout_c5_friendly">
+        <t t-if="address">
+            <div
+                class="address row"
+                t-att-style="'padding-top: {}px!important'.format(company.account_report_invoice_c5_vertical_offset or 0)"
+            >
+                <div name="address" class="col-6">
+                    <t t-raw="address" />
+                </div>
+                <t t-if="information_block">
+                    <div name="information_block" class="col-5 offset-1">
+                        <t t-raw="information_block" />
+                    </div>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <!-- In invoice request the use of the new address layout -->
+    <template id="report_invoice_document" inherit_id="account.report_invoice_document">
+        <xpath expr="//t[@t-set='o']" position="before">
+            <t t-set="use_c5_friendly_positioning">True</t>
+        </xpath>
+    </template>
+
+    <!-- add conditional calls for all external layouts (standard, clean, boxed, background),
+    checking if c5-friendly version was requested-->
+
+    <template id="external_layout_standard" inherit_id="web.external_layout_standard">
+        <xpath expr="//t[@t-call='web.address_layout']" position="replace">
+            <t t-if="use_c5_friendly_positioning">
+                <t
+                    t-call="account_report_invoice_c5_letter_friendly_positioning.address_layout_c5_friendly"
+                />
+            </t>
+            <t t-else="">
+                <t t-call="web.address_layout" />
+            </t>
+        </xpath>
+    </template>
+
+    <template id="external_layout_clean" inherit_id="web.external_layout_clean">
+        <xpath expr="//t[@t-call='web.address_layout']" position="replace">
+            <t t-if="use_c5_friendly_positioning">
+                <t
+                    t-call="account_report_invoice_c5_letter_friendly_positioning.address_layout_c5_friendly"
+                />
+            </t>
+            <t t-else="">
+                <t t-call="web.address_layout" />
+            </t>
+        </xpath>
+    </template>
+
+    <template id="external_layout_boxed" inherit_id="web.external_layout_boxed">
+        <xpath expr="//t[@t-call='web.address_layout']" position="replace">
+            <t t-if="use_c5_friendly_positioning">
+                <t
+                    t-call="account_report_invoice_c5_letter_friendly_positioning.address_layout_c5_friendly"
+                />
+            </t>
+            <t t-else="">
+                <t t-call="web.address_layout" />
+            </t>
+        </xpath>
+    </template>
+
+    <template
+        id="external_layout_background"
+        inherit_id="web.external_layout_background"
+    >
+        <xpath expr="//t[@t-call='web.address_layout']" position="replace">
+            <t t-if="use_c5_friendly_positioning">
+                <t
+                    t-call="account_report_invoice_c5_letter_friendly_positioning.address_layout_c5_friendly"
+                />
+            </t>
+            <t t-else="">
+                <t t-call="web.address_layout" />
+            </t>
+        </xpath>
+    </template>
+</odoo>

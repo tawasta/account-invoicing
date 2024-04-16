@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="credit_control_line_search" model="ir.ui.view">
+        <field name="name">credit.control.line.search</field>
+        <field name="model">credit.control.line</field>
+        <field eval="100" name="priority" />
+        <field
+            name="inherit_id"
+            ref="account_credit_control.credit_control_line_search"
+        />
+        <field name="arch" type="xml">
+            <field name="partner_user_id" position="after">
+                <field name="sales_agent" />
+            </field>
+
+            <filter name="group_by_partner_user" position="after">
+                <separator />
+                <filter
+                    name="group_by_sales_agent"
+                    string="Sales contact"
+                    context="{'group_by':'sales_agent'}"
+                />
+            </filter>
+
+        </field>
+    </record>
+</odoo>
