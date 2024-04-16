@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field
+            name="name"
+        >res.config.base.view.form.account.report.invoice.c5.letter.friendly.positioning</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//field[@name='external_report_layout_id']/../../../.."
+                position="after"
+            >
+                <div
+                    class="col-12 col-lg-6 o_setting_box"
+                    id="account_report_invoice_c5_vertical_offset"
+                >
+                    <div class="o_setting_right_pane">
+                        <label for="account_report_invoice_c5_vertical_offset" />
+                        <div class="text-muted">
+                            Adjust as needed to get the print's address to align with the C5 letter's window.
+                        </div>
+                        <field name="account_report_invoice_c5_vertical_offset" />
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
