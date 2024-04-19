@@ -27,7 +27,7 @@
                         name="partner_bank_id"
                     >
                     <strong>IBAN/BIC:</strong>
-                    <p class="m-0" t-field="o.partner_bank_id" />
+                    <p class="m-0" t-field="o.partner_bank_id.acc_number" />
                     <p class="m-0" t-field="o.partner_bank_id.bank_bic" />
                 </div>
 

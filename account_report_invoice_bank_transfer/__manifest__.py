@@ -21,7 +21,7 @@
 {
     "name": "Account Report Invoice Bank Transfer",
     "summary": "Add a bank transfer section for invoices",
-    "version": "14.0.1.0.1",
+    "version": "14.0.1.0.2",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
