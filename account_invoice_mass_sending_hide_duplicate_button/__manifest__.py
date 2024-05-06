@@ -20,8 +20,8 @@
 
 {
     "name": "Account Invoice Mass Sending: Hide duplicate button",
-    "summary": "Hide core's mass sending button when OCA module is installed",
-    "version": "14.0.1.0.0",
+    "summary": "Hide duplicate sending button when OCA's mass sending module is installed",
+    "version": "14.0.1.1.0",
     "category": "Invoicing",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",

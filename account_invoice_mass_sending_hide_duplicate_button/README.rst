@@ -9,9 +9,14 @@ Account Invoice Mass Sending: Hide duplicate button
 * OCA's account_invoice_mass_sending adds a new button to the invoice Send and Print
   wizard, that triggers the submission using jobs. However, the module still leaves 
   the core's submission button in place. 
-* This module hides the core button, so only the job-based sending is available.
-  The OCA button text is renamed to "Send (via Job Queue)" to better fit both single
-  and batch invoice sending.
+* This module 
+
+  * hides the core button when multiple invoices have been selected, i.e. only job-based sending is available.
+    This avoids accidentally sending multiple invoices without jobs, which could lead into custom content e.g. payment
+    links disappearing from the e-mails.
+  * hides the OCA button when a single invoice has been selected, i.e. only standard non-job-based sending is available. 
+    This avoids the e-mail contents reverting back to the email template defaults when the user has written a custom message.
+ 
 
 Configuration
 =============
@@ -21,7 +26,7 @@ Usage
 =====
 * Go to either a) invoice list, select some invoices and click Action --> Print & Send, or 
   b) invoice form view, and click Print & Send. 
-* Only a single sending button labeled "Send (via Job Queue)" is visible.
+* Only a single sending button is visible in the wizard that opens
 
 Known issues / Roadmap
 ======================
