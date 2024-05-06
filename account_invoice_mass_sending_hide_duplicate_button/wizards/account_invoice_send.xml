@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
+
     <record id="account_invoice_send_wizard_core_form_inherit" model="ir.ui.view">
         <field name="model">account.invoice.send</field>
         <field name="inherit_id" ref="account.account_invoice_send_wizard_form" />
         <field name="arch" type="xml">
-            <!-- hide core's Send button -->
+
+            <!-- Hide core Send button if multiple invoices have been selected  -->
             <xpath expr="//button[hasclass('send')]" position="attributes">
-                <attribute name="attrs">{ "invisible": 1 }</attribute>
+                <attribute
+                    name="attrs"
+                >{'invisible': ['|', '|', ('is_print', '=', True), ('is_email', '=', False), ('composition_mode', '=', 'mass_mail')]}</attribute>
             </xpath>
+
+            <!-- Hide core Send and Print button if multiple invoices have been selected  -->
+            <xpath expr="//button[hasclass('send_and_print')]" position="attributes">
+                <attribute
+                    name="attrs"
+                >{'invisible': ['|', '|', ('is_email', '=', False), ('is_print', '=', False), ('composition_mode', '=', 'mass_mail')]}</attribute>
+            </xpath>
+
         </field>
     </record>
 
@@ -18,9 +30,14 @@
             ref="account_invoice_mass_sending.account_invoice_send_wizard_form"
         />
         <field name="arch" type="xml">
-            <!-- rename OCA's 'Email mass sending (Job Queue)' button -->
+
+            <!-- Hide OCA mass sending button if multiple invoices have NOT been selected  -->
             <xpath expr="//button[@name='enqueue_invoices']" position="attributes">
                 <attribute name="string">Send (via Job Queue)</attribute>
+                <attribute
+                    name="attrs"
+                >{'invisible': ['|','|',('is_email', '=', False),('template_id', '=', False), ('composition_mode', '!=', 'mass_mail')]}</attribute>
+
             </xpath>
         </field>
     </record>
