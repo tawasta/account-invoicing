@@ -9,7 +9,7 @@
                 style="height: 6rem;"
             >
                 <img
-                    t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;height=%s&amp;width=%s' %('Code128', o.barcode or '', 800, 150)"
+                    t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' %('Code128', o.barcode or '', 800, 80)"
                     style="width:100%;height:4rem"
                 />
                 <span t-field="o.barcode" />
