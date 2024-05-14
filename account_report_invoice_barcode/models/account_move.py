@@ -26,7 +26,7 @@ class AccountMove(models.Model):
     def _compute_barcode(self):
         version = 4
         for record in self:
-            if not self._validate_barcode():
+            if not record._validate_barcode():
                 record.barcode = False
                 continue
 
