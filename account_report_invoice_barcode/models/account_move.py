@@ -26,7 +26,7 @@ class AccountMove(models.Model):
     def _compute_barcode(self):
         version = 4
         for record in self:
-            if not record._validate_barcode():
+            if not record.validate_barcode():
                 record.barcode = False
                 continue
 
@@ -44,7 +44,7 @@ class AccountMove(models.Model):
 
             record.barcode = barcode
 
-    def _validate_barcode(self):
+    def validate_barcode(self):
         self.ensure_one()
         if not self.partner_bank_id:
             _logger.warning(_("No bank account for invoice {}".format(self.name)))
@@ -52,7 +52,7 @@ class AccountMove(models.Model):
         if self.amount_total > 999999.99:
             _logger.warning(_("Too large amount for invoice {}".format(self.name)))
             return False
-        if len(self.payment_reference) > 20:
+        if self.payment_reference and len(self.payment_reference) > 20:
             _logger.warning(
                 _("Too long payment reference for invoice {}".format(self.name))
             )
