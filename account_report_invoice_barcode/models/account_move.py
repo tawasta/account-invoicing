@@ -33,7 +33,7 @@ class AccountMove(models.Model):
             iban = record.partner_bank_id.sanitized_acc_number[2:].zfill(16)
             eur, ct = divmod(record.amount_total, 1)
             eur = str(int(eur)).zfill(6)
-            ct = int(round(ct, 2) * 100)
+            ct = str(int(round(ct, 2) * 100)).zfill(2)
             extra = "000"
             ref = record.payment_reference.zfill(20)
             due_date = fields.Date.from_string(record.invoice_date_due).strftime(
