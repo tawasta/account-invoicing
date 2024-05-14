@@ -52,6 +52,11 @@ class AccountMove(models.Model):
         if self.amount_total > 999999.99:
             _logger.warning(_("Too large amount for invoice {}".format(self.name)))
             return False
+        if not self.payment_reference:
+            _logger.warning(
+                _("Payment reference is missing for invoice {}".format(self.name))
+            )
+            return False
         if self.payment_reference and len(self.payment_reference) > 20:
             _logger.warning(
                 _("Too long payment reference for invoice {}".format(self.name))
