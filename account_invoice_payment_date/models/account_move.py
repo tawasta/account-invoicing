@@ -12,21 +12,40 @@ class AccountMove(models.Model):
         store=True,
     )
 
-    def _get_invoice_in_payment_state(self):
-        res = super()._get_invoice_in_payment_state()
-
-        if res == "paid":
+    def write(self, vals):
+        res = super().write(vals)
+        if "payment_state" in vals and vals["payment_state"] == "paid":
             self._compute_payment_date()
 
         return res
 
     def _compute_payment_date(self):
         for record in self:
-            payments = record._get_reconciled_payments()
-            if payments:
-                record.payment_date = max(payments.mapped("date"))
-            else:
+            if record.payment_state != "paid":
                 record.payment_date = False
+                continue
+
+            reconciled_payments = record._get_reconciled_payments()
+
+            if reconciled_payments:
+                # Invoice has related payments
+                if all(payment.is_matched for payment in reconciled_payments):
+                    record.payment_date = max(reconciled_payments.mapped("date"))
+                else:
+                    record.payment_date = False
+            else:
+                # Invoice has no related payments,
+                # but has been marked as paid with an accounting entry
+                payment_date = False
+                for (
+                    _partial,
+                    _amount,
+                    counterpart_line,
+                ) in record._get_reconciled_invoices_partials():
+                    if not payment_date or counterpart_line.date > payment_date:
+                        payment_date = counterpart_line.date
+
+                record.payment_date = payment_date
 
     def _cron_compute_payment_date(self):
         records = self.search(
