@@ -8,6 +8,7 @@
             ref="account_invoice_commission_payment_queue.model_account_invoice_commission_payment_wizard"
         />
         <field name="method">create_commission_payment</field>
+        <field name="channel_id" ref="channel_commission_payment" />
         <field name="retry_pattern" eval="{1: 480, 2: 720, 3: 1440}" />
     </record>
 
