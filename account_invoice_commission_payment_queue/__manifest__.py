@@ -21,7 +21,7 @@
 {
     "name": "Account Invoice - Commission payments in queue",
     "summary": "Create commission payments as queued jobs",
-    "version": "14.0.1.0.1",
+    "version": "14.0.1.1.0",
     "category": "Invoicing",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
@@ -31,6 +31,7 @@
     "external_dependencies": {"python": [], "bin": []},
     "depends": ["account_invoice_commission_payment", "queue_job_batch"],
     "data": [
+        "data/job_channel.xml",
         "data/job_function.xml",
         "wizards/account_invoice_commission_payment_wizard.xml",
     ],
