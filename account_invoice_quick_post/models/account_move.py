@@ -7,5 +7,5 @@ class AccountMove(models.Model):
 
     def action_mass_post(self):
         # Post multiple invoices at once
-        for record in self.filtered(lambda r: r.state == "draft"):
-            record.action_post()
+        records = self.filtered(lambda r: r.state == "draft")
+        records.action_post()
