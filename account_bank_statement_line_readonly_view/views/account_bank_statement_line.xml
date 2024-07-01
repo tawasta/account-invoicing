@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+        <record id="view_bank_statement_line_form_readonly" model="ir.ui.view">
+            <field name="name">bank.statement.line.form.inherit</field>
+            <field name="model">account.bank.statement.line</field>
+            <field name="inherit_id" ref="account.view_bank_statement_line_form" />
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+
+                <xpath expr="//form" position="attributes">
+                    <attribute name="edit">0</attribute>
+                    <attribute name="delete">0</attribute>
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="view_bank_statement_line_tree_readonly" model="ir.ui.view">
+            <field name="name">account.bank.statement.line.tree.inherit</field>
+            <field name="model">account.bank.statement.line</field>
+            <field name="inherit_id" ref="account.view_bank_statement_line_tree" />
+            <field name="priority" eval="101" />
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="delete">0</attribute>
+                </xpath>
+
+                <button name="button_undo_reconciliation" position="replace" />
+
+                <!-- Show the "is reconciled" field but prevent doing reconciliation from this view -->
+                <field name="is_reconciled" position="replace" />
+                <field name="account_number" position="before">
+                    <field name="is_reconciled" optional="show" />
+                </field>
+
+            </field>
+        </record>
+
+        <record id="action_bank_statement_line_readonly" model="ir.actions.act_window">
+            <field name="name">Bank Statement Lines</field>
+            <field name="res_model">account.bank.statement.line</field>
+            <field name="view_mode">tree,form</field>
+            <field
+            name="view_ids"
+            eval="[(5, 0, 0),
+                        (0, 0, {'view_mode': 'tree', 'view_id': ref('view_bank_statement_line_tree_readonly')}),
+                        (0, 0, {'view_mode': 'form', 'view_id': ref('view_bank_statement_line_form_readonly')})]"
+        />
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field
+            name="search_view_id"
+            ref="account.view_bank_statement_line_search"
+        />
+            <field name="help" type="html">
+              <p class="o_view_nocontent_empty_folder">
+                A bank statement line is a financial transaction on a bank account
+              </p><p>
+                Odoo allows you to reconcile a statement line directly with
+                the related sale or purchase invoice(s).
+              </p>
+            </field>
+        </record>
+
+    <menuitem
+        id="menu_accounting_bank_statement_line_readonly"
+        action="action_bank_statement_line_readonly"
+        parent="account_menu.menu_accounting_bank_and_cash"
+        sequence="15"
+    />
+
+</odoo>
