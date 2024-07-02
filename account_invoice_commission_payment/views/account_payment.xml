@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_account_payment_form" model="ir.ui.view">
+        <field name="name">account.payment.form.commission</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='unmark_as_sent']" position="after">
+                <button
+                    name="action_compute_commission_amount"
+                    string="Recompute commission"
+                    type="object"
+                    invisible="state != 'draft' or not commission_method"
+                />
+            </xpath>
+
+            <xpath expr="//button[@name='button_open_invoices']" position="after">
+                <button
+                    class="oe_stat_button"
+                    name="button_commission_invoices"
+                    string="Commission invoices"
+                    type="object"
+                    invisible="not commission_move_line_ids"
+                    icon="fa-pencil-square-o"
+                />
+                <button
+                    class="oe_stat_button"
+                    name="button_commission_invoice_lines"
+                    string="Commission lines"
+                    type="object"
+                    invisible="not commission_move_line_ids"
+                    icon="fa-bars"
+                />
+            </xpath>
+
+            <field name="date" position="before">
+                    <label
+                    for="negative_amount"
+                    class="text-danger"
+                    invisible="negative_amount &gt;= 0"
+                />
+                    <div
+                    name="negative_amount_div"
+                    class="o_row text-danger"
+                    invisible="negative_amount &gt;= 0"
+                >
+                        <field name="negative_amount" />
+                    </div>
+            </field>
+
+            <xpath expr="//sheet/group[last()]" position="after">
+                <group invisible="not commission_method" string="Commission lines">
+                    <field
+                        name="commission_move_line_ids"
+                        nolabel="1"
+                        options="{'no_create_edit': True}"
+                    >
+                        <tree string="Invoice lines" delete="false">
+                            <field name="partner_id" optional="show" />
+                            <field name="date" />
+                            <field name="move_name" optional="show" />
+                            <field name="product_id" optional="show" />
+                            <field name="name" optional="show" />
+                            <field
+                                name="margin"
+                                string="Commission"
+                                sum="Total margin"
+                                optional="show"
+                            />
+                            <field
+                                name="purchase_price"
+                                string="Payment"
+                                sum="Total payment"
+                                optional="show"
+                            />
+                            <field
+                                name="price_subtotal"
+                                string="Tax Excluded"
+                                sum="Total"
+                                optional="show"
+                            />
+                            <field name="currency_id" column_invisible="True" />
+                            <field name="company_currency_id" column_invisible="True" />
+                            <button
+                                name="action_unlink_commission"
+                                type="object"
+                                icon="fa-trash text-danger"
+                                optional="show"
+                                class="oe_edit_only"
+                            />
+                            <field name="parent_state" optional="show" />
+                            <field name="commission_paid" optional="show" />
+                        </tree>
+                    </field>
+                </group>
+                <group invisible="not commission_method">
+                    <group>
+                        <field name="commission_method" readonly="1" />
+                    </group>
+                    <group>
+
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
