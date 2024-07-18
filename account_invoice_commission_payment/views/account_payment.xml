@@ -48,12 +48,26 @@
                     </div>
             </field>
 
-            <xpath expr="//sheet/group[last()]" position="after">
-                <group invisible="not commission_method" string="Commission lines">
+            <xpath expr="//group[@name='group2']" position="after">
+                <group invisible="not commission_method" colspan="4">
+                    <group>
+                        <field name="commission_method" readonly="1" />
+                    </group>
+                    <group>
+
+                    </group>
+                </group>
+                <group
+                    invisible="not commission_method"
+                    string="Commission lines"
+                    name="commission_lines"
+                    colspan="4"
+                >
                     <field
                         name="commission_move_line_ids"
                         nolabel="1"
                         options="{'no_create_edit': True}"
+                        colspan="2"
                     >
                         <tree string="Invoice lines" delete="false">
                             <field name="partner_id" optional="show" />
@@ -92,14 +106,6 @@
                             <field name="commission_paid" optional="show" />
                         </tree>
                     </field>
-                </group>
-                <group invisible="not commission_method">
-                    <group>
-                        <field name="commission_method" readonly="1" />
-                    </group>
-                    <group>
-
-                    </group>
                 </group>
             </xpath>
         </field>
