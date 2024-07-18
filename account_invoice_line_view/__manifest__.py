@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2019 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,29 +19,17 @@
 ##############################################################################
 
 {
-    "name": "Account Invoice Commission - Create commission payments from invoices",
-    "summary": "Allows Making commission payments from invoices",
-    "version": "17.0.1.0.0",
+    "name": "Account invoice line view",
+    "summary": "Add a readonly list view where all invoice lines are listed",
     "category": "Invoicing",
+    "version": "17.0.1.0.0",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "external_dependencies": {"python": [], "bin": []},
-    "depends": [
-        "account",
-        "account_invoice_commission",
-        "account_invoice_margin",
-        "account_invoice_refund_link",
-    ],
+    "depends": ["account", "sale"],
     "data": [
-        "security/ir.model.access.csv",
         "views/account_move_line.xml",
-        "views/account_payment.xml",
-        "views/config_settings.xml",
-        "views/report_payment_commission.xml",
-        "wizards/account_invoice_commission_payment_wizard.xml",
     ],
-    "demo": [],
 }

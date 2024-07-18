@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "Account Invoice Commission - Create commission payments from invoices",
-    "summary": "Allows Making commission payments from invoices",
+    "name": "Internal description for Invoices",
+    "summary": "Invoice internal note, that is not shown to partners",
     "version": "17.0.1.0.0",
     "category": "Invoicing",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
@@ -29,19 +29,9 @@
     "application": False,
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
-    "depends": [
-        "account",
-        "account_invoice_commission",
-        "account_invoice_margin",
-        "account_invoice_refund_link",
-    ],
+    "depends": ["account"],
     "data": [
-        "security/ir.model.access.csv",
-        "views/account_move_line.xml",
-        "views/account_payment.xml",
-        "views/config_settings.xml",
-        "views/report_payment_commission.xml",
-        "wizards/account_invoice_commission_payment_wizard.xml",
+        "views/account_move.xml",
     ],
     "demo": [],
 }
