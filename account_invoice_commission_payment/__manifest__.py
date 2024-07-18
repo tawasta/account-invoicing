@@ -29,7 +29,12 @@
     "application": False,
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
-    "depends": ["account", "account_invoice_commission", "account_invoice_margin"],
+    "depends": [
+        "account",
+        "account_invoice_commission",
+        "account_invoice_margin",
+        "account_invoice_refund_link",
+    ],
     "data": [
         "security/ir.model.access.csv",
         "views/account_move_line.xml",
