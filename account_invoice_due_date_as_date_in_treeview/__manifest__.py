@@ -21,7 +21,7 @@
 {
     "name": "Account Invoice: Due Date as a Date in Treeview",
     "summary": "Adds a date field, to supplement the core's 'X days remaining' field",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Invoicing",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",

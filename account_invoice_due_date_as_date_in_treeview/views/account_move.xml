@@ -5,8 +5,16 @@
         <field name="model">account.move</field>
         <field name="inherit_id" ref="account.view_invoice_tree" />
         <field name="arch" type="xml">
+            <field name="invoice_date_due" position="attributes">
+                <attribute name="string">Due in</attribute>
+            </field>
             <field name="invoice_date_due" position="after">
-                <field name="invoice_due_date" optional="show" />
+                <field
+                    name="invoice_due_date"
+                    string="Due date"
+                    optional="show"
+                    invisible="payment_state in ('paid', 'in_payment', 'reversed') or state == 'cancel'"
+                />
             </field>
         </field>
     </record>
