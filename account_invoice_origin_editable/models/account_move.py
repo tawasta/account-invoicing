@@ -5,4 +5,4 @@ class AccountMove(models.Model):
 
     _inherit = "account.move"
 
-    invoice_origin = fields.Char(readonly=False)
+    invoice_origin = fields.Char(readonly=False, tracking=True)
