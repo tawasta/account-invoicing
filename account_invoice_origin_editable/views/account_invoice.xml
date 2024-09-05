@@ -5,9 +5,15 @@
         <field name="model">account.move</field>
         <field name="inherit_id" ref="account.view_move_form" />
         <field name="arch" type="xml">
-            <field name="invoice_origin" position="attributes">
-                <attribute name="invisible">0</attribute>
-            </field>
+
+            <!-- Move field from customer invoice specific group to top where
+            it is applicable also for vendor bills, and remove the invisible=1 attribute -->
+            <xpath
+                expr="//group[@id='header_right_group']//div[@class='o_td_label']"
+                position="before"
+            >
+                <field name="invoice_origin" force_save="1" />
+            </xpath>
         </field>
     </record>
 </odoo>
