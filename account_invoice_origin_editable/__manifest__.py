@@ -20,8 +20,8 @@
 
 {
     "name": "Invoice origin manually editable",
-    "summary": "Allow manually editing invoice origin",
-    "version": "14.0.1.0.0",
+    "summary": "Allow manually editing invoice origin, and track any changes to it",
+    "version": "14.0.1.0.1",
     "category": "Accounting & Finance",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
@@ -29,5 +29,5 @@
     "application": False,
     "installable": True,
     "depends": ["account"],
-    "data": [],
+    "data": ["views/account_invoice.xml"],
 }
