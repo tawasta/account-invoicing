@@ -7,6 +7,9 @@ Show Invoice origin on Vendor Bills
 ===================================
 
 * Show Invoice origin on Vendor Bills
+* Note: if you have account_invoice_origin_editable installed, 
+  this module is not needed. It covers both customer and supplier
+  invoices.
 
 Configuration
 =============
@@ -27,6 +30,7 @@ Contributors
 ------------
 
 * Timo Kekäläinen <timo.kekalainen@tawasta.fi>
+* Timo Talvitie <timo.talvitie@tawasta.fi>
 
 Maintainer
 ----------
