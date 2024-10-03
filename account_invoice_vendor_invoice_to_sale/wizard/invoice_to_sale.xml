@@ -17,11 +17,11 @@
                 <group string="Sale order">
                     <field
                         name="partner_id"
-                        attrs="{'invisible': [('merge_order_id', '!=', False)]}"
+                        attrs="{'invisible': [('merge_order_id', '!=', False)], 'required': [('merge_order', '=', False)]}"
                     />
                     <field
                         name="user_id"
-                        attrs="{'invisible': [('merge_order_id', '!=', False)]}"
+                        attrs="{'invisible': [('merge_order_id', '!=', False)], 'required': [('merge_order', '=', False)]}"
                     />
                     <field name="order_lines" />
                     <field
