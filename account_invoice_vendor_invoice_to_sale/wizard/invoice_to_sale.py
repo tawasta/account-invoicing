@@ -29,13 +29,11 @@ class InvoiceToSale(models.TransientModel):
     partner_id = fields.Many2one(
         comodel_name="res.partner",
         string="Customer",
-        required=True,
     )
 
     user_id = fields.Many2one(
         comodel_name="res.users",
         string="Responsible",
-        required=True,
     )
 
     analytic_account = fields.Boolean(
