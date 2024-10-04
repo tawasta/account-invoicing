@@ -138,6 +138,7 @@ class InvoiceToSale(models.TransientModel):
                     product_uom_qty=1,
                     product_uom=self.product_id.uom_id.id,
                     analytic_tag_ids=[(6, 0, analytic_tag_ids)],
+                    linked_account_move_id=invoice_id,
                 )
 
                 order_lines.append((0, 0, merged_line))

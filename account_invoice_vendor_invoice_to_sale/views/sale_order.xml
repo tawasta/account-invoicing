@@ -13,6 +13,19 @@
                 />
             </field>
 
+            <xpath
+                expr="//field[@name='order_line']//tree//field[@name='company_id']"
+                position="after"
+            >
+                <field name="linked_account_move_id" optional="hide" />
+            </xpath>
+
+            <xpath
+                expr="//field[@name='order_line']//form//field[@name='invoice_status']"
+                position="after"
+            >
+                <field name="linked_account_move_id" />
+            </xpath>
         </field>
     </record>
 </odoo>
