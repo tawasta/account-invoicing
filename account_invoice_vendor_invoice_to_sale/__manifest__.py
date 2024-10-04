@@ -21,7 +21,7 @@
 {
     "name": "Create Sale order from vendor invoice",
     "summary": "Adds a wizards for creating a SO from vendor invoice",
-    "version": "14.0.1.2.0",
+    "version": "14.0.2.2.0",
     "category": "Accounting",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",

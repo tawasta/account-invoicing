@@ -25,6 +25,14 @@
                 >
                     <field name="sale_order_ids" />
                 </page>
+                <page
+                    name="sale_order_lines"
+                    string="Sale order lines"
+                    groups="sales_team.group_sale_salesman"
+                    attrs="{'invisible': [('linked_sale_line_ids', '=', [])]}"
+                >
+                    <field name="linked_sale_line_ids" />
+                </page>
             </notebook>
 
         </field>
