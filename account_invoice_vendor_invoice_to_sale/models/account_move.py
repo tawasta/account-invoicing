@@ -5,6 +5,13 @@ class AccountMove(models.Model):
 
     _inherit = "account.move"
 
+    linked_sale_line_ids = fields.One2many(
+        string="Related sale lines",
+        comodel_name="sale.order.line",
+        inverse_name="linked_account_move_id",
+        copy=False,
+    )
+
     sale_order_ids = fields.One2many(
         string="Related sales",
         comodel_name="sale.order",
