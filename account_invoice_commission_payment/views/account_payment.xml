@@ -82,7 +82,7 @@
                                 optional="show"
                             />
                             <field
-                                name="purchase_price"
+                                name="purchase_price_total"
                                 string="Payment"
                                 sum="Total payment"
                                 optional="show"
