@@ -21,7 +21,7 @@
 {
     "name": "Mass Post invoices by looping over them",
     "summary": "Small change to mass posting to loop through invoices",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.1.0",
     "category": "Accounting & Finance",
     "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
     "author": "Tawasta",
