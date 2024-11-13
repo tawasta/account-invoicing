@@ -19,12 +19,13 @@ class AccountMove(models.Model):
         res = super()._post(soft=soft)
 
         payment_link_wizard = self.env["payment.link.wizard"]
+        ctx = {"active_model": "account.move"}
 
         for record in self:
 
             _logger.debug("Creating payment link for invoice ID %s", record.id)
 
-            temp_wizard = payment_link_wizard.create(
+            temp_wizard = payment_link_wizard.with_context(ctx).create(
                 {
                     "res_model": "account.move",
                     "res_id": record.id,
