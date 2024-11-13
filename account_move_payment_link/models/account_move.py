@@ -21,7 +21,7 @@ class AccountMove(models.Model):
         payment_link_wizard = self.env["payment.link.wizard"]
         ctx = {"active_model": "account.move"}
 
-        for record in self:
+        for record in self.filtered(lambda r: r.is_sale_document()):
 
             _logger.debug("Creating payment link for invoice ID %s", record.id)
 
