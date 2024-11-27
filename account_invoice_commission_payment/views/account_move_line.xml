@@ -6,7 +6,7 @@
         <field name="priority" eval="99" />
         <field name="arch" type="xml">
 
-            <tree string="Invoice lines" delete="false">
+            <tree delete="false">
                 <field name="partner_id" optional="show" />
                 <field name="date" optional="show" />
                 <field name="move_name" optional="show" />
