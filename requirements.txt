@@ -1,3 +1,2 @@
 # generated from manifests external_dependencies
 email_validator
-wrapt==1.14.0

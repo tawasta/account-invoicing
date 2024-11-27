@@ -21,8 +21,8 @@
 {
     "name": "Account Report Invoice Reformat",
     "summary": "Reformat invoice print elements for cleaner look",
-    "version": "17.0.1.0.0",
     "category": "Reporting",
+    "version": "17.0.1.0.0",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Futural",
     "license": "AGPL-3",
