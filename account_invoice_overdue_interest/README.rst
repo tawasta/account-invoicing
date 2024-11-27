@@ -35,15 +35,15 @@ Credits
 
 Contributors
 ------------
-* Timo Talvitie <timo.talvitie@tawasta.fi>
+* Timo Talvitie <timo.talvitie@futural.fi>
 * Oskars Zālītis <oskars.zalitis@avoin.systems>
-* Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
+* Jarmo Kortetjärvi <jarmo.kortetjarvi@futural.fi>
 
 Maintainer
 ----------
 
-.. image:: https://tawasta.fi/templates/tawastrap/images/logo.png
-   :alt: Oy Tawasta OS Technologies Ltd.
-   :target: https://tawasta.fi/
+.. image:: https://futural.fi/templates/tawastrap/images/logo.png
+   :alt: Futural Oy
+   :target: https://futural.fi/
 
-This module is maintained by Oy Tawasta OS Technologies Ltd.
+This module is maintained by Futural Oy
