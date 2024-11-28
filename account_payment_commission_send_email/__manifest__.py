@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Jarmo Kortetjärvi
-#    Copyright 2015 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2015 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -23,8 +23,8 @@
     "summary": "Allows sending a payment summary by email",
     "version": "17.0.1.0.1",
     "category": "Accounting & Finance",
-    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
-    "author": "Tawasta",
+    "website": "https://github.com/tawasta/account-invoicing",
+    "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
