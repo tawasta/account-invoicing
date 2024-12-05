@@ -69,7 +69,7 @@
                         options="{'no_create_edit': True}"
                         colspan="2"
                     >
-                        <tree string="Invoice lines" delete="false">
+                        <tree delete="false">
                             <field name="partner_id" optional="show" />
                             <field name="date" />
                             <field name="move_name" optional="show" />
