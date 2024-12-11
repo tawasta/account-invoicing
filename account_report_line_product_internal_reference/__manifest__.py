@@ -19,19 +19,19 @@
 ##############################################################################
 
 {
-    'name': 'Invoice PDF - Internal reference',
-    'summary': 'Add Internal reference for Invoice PDF print',
-    'version': '17.0.1.0.0',
-    'category': 'Account',
-    'website': 'https://tawasta.fi',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        'account',
+    "name": "Invoice PDF - Internal reference",
+    "summary": "Add Internal reference for Invoice PDF print",
+    "version": "17.0.1.0.0",
+    "category": "Account",
+    "website": "https://github.com/tawasta/account-invoicing",
+    "author": "Futural",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": [
+        "account",
     ],
-    'data': [
-        'report/report_invoice.xml',
+    "data": [
+        "report/report_invoice.xml",
     ],
 }

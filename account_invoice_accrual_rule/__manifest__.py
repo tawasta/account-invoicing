@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2022 Futural Oy (https://futural.fi)
+#    Copyright 2024 Oy Tawasta OS Technologies Ltd. (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,15 +19,30 @@
 ##############################################################################
 
 {
-    "name": "Account Report Invoice Reformat",
-    "summary": "Reformat invoice print elements for cleaner look",
+    "name": "Invoice accrual rules",
+    "summary": "Add accrual rules to invoices",
     "version": "17.0.1.0.0",
-    "category": "Reporting",
+    "category": "Sales",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["account"],
-    "data": ["report/report_invoice.xml"],
+    "auto_install": True,
+    "external_dependencies": {
+        "python": [],
+        "bin": [],
+    },
+    "depends": [
+        "account",
+        "product",
+    ],
+    "data": [
+        "security/model_access.xml",
+        "views/account_move.xml",
+        "views/accrual_rule.xml",
+        "views/product_template.xml",
+    ],
+    "assets": {},
+    "demo": [],
 }
