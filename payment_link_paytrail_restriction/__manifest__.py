@@ -26,7 +26,7 @@
     "author": "Futural",
     "license": "AGPL-3",
     "website": "https://github.com/tawasta/account-invoicing",
-    "depends": ["account", "payment", "payment_paytrail"],
+    "depends": ["account", "payment", "payment_paytrail_nets"],
     "data": [
     ],
 }
