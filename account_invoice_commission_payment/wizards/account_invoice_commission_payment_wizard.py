@@ -67,8 +67,7 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
         if invoice.amount_total_signed == 0 and not self.add_zero_sum_lines:
             # Skip adding zero-sum invoices to payments
             invoice.commission_paid = True
-            for invoice_line in invoice.invoice_line_ids:
-                invoice_line.commission_paid = True
+            invoice.invoice_line_ids.write({"commission_paid": True})
             return
 
         journal = self.env["account.journal"].search(
@@ -97,10 +96,6 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
                 self.env.cr.execute(select_query)
 
             payment.action_compute_commission_amount()
-
-        if False not in invoice.invoice_line_ids.mapped("commission_paid"):
-            # All lines are has a commission payment (or are marked as paid)
-            invoice.commission_paid = True
 
         invoice._compute_commission_paid()
 
