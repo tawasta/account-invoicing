@@ -46,8 +46,12 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
         self.create_commission_payments(invoice_ids)
 
     def create_commission_payments(self, invoice_ids):
+        account_payments = self.env["account.payment"]
+
         for invoice in invoice_ids:
-            self.create_commission_payment(invoice)
+            account_payments |= self.create_commission_payment(invoice)
+
+        account_payments.action_compute_commission_amount()
 
     def create_commission_payment(self, invoice):
         time1 = time.process_time()
@@ -85,6 +89,8 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
         partner_lines = self.gather_partner_lines(invoice)
         payments = self.generate_payment_data(partner_lines, journal, invoice)
 
+        payment_records = self.env["account.payment"]
+
         for payment in payments:
             for line in partner_lines[payment.partner_id]:
                 select_query = """
@@ -95,12 +101,14 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
                 )
                 self.env.cr.execute(select_query)
 
-            payment.action_compute_commission_amount()
+            payment_records |= payment
 
         invoice._compute_commission_paid()
 
         time2 = time.process_time()
         _logger.info("Processed time to create comission payments: {}".format(time2 - time1))
+
+        return payment_records
 
     def gather_partner_lines(self, invoice):
         partner_lines = {}
