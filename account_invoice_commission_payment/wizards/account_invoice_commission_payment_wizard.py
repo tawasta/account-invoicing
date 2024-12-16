@@ -1,4 +1,5 @@
 import logging
+import time
 
 from odoo import _, fields, models
 from odoo.exceptions import UserError, ValidationError
@@ -45,34 +46,27 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
         self.create_commission_payments(invoice_ids)
 
     def create_commission_payments(self, invoice_ids):
+        account_payments = self.env["account.payment"]
+
         for invoice in invoice_ids:
-            self.create_commission_payment(invoice)
+            account_payments |= self.create_commission_payment(invoice)
+
+        account_payments.action_compute_commission_amount()
 
     def create_commission_payment(self, invoice):
+        time1 = time.process_time()
+
         account_payment = self.env["account.payment"]
         payment_method = self.env.ref("account.account_payment_method_manual_out")
 
         if invoice.payment_state != "paid":
-            raise UserError(
-                _("You can't make payment from invoice that is not paid: '{}'").format(
-                    invoice.name
-                )
-            )
+            raise UserError(_("You can't make payment from an invoice that is not paid: '{}'").format(invoice.name))
 
         if invoice.move_type != "out_invoice":
-            raise UserError(
-                _(
-                    "You can only make payments from customer invoices. "
-                    "'{}' is not a customer invoice"
-                ).format(invoice.name)
-            )
+            raise UserError(_("You can only make payments from customer invoices. '{}' is not a customer invoice").format(invoice.name))
 
         if invoice.refund_invoice_ids:
-            raise UserError(
-                _("Invoice '{}' has been refunded and can't be commissioned").format(
-                    invoice.name
-                )
-            )
+            raise UserError(_("Invoice '{}' has been refunded and can't be commissioned").format(invoice.name))
 
         if invoice.amount_total_signed == 0 and not self.add_zero_sum_lines:
             # Skip adding zero-sum invoices to payments
@@ -90,11 +84,36 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
         )
 
         if not journal:
-            raise ValidationError(
-                _("Could not find a payment journal for for '{}'").format(invoice.name)
-            )
+            raise ValidationError(_("Could not find a payment journal for '{}'").format(invoice.name))
 
-        for line in invoice.invoice_line_ids:
+        partner_lines = self.gather_partner_lines(invoice)
+        payments = self.generate_payment_data(partner_lines, journal, invoice)
+
+        payment_records = self.env["account.payment"]
+
+        for payment in payments:
+            for line in partner_lines[payment.partner_id]:
+                select_query = """
+                    UPDATE account_move_line SET commission_payment_id = {}, commission_paid = 't' WHERE id = {}
+                """.format(
+                    payment.id,
+                    line.id,
+                )
+                self.env.cr.execute(select_query)
+
+            payment_records |= payment
+
+        invoice._compute_commission_paid()
+
+        time2 = time.process_time()
+        _logger.info("Processed time to create comission payments: {}".format(time2 - time1))
+
+        return payment_records
+
+    def gather_partner_lines(self, invoice):
+        partner_lines = {}
+
+        for line in sorted(invoice.invoice_line_ids, key=lambda l: l.id):
             if line.price_total == 0 and not self.add_zero_sum_lines:
                 _logger.info("Skipping a zero sum line")
                 line.commission_paid = True
@@ -108,7 +127,6 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
                 continue
 
             partner_id = self.get_commission_partner(line)
-
             if not partner_id:
                 _logger.warning(
                     _("Partner could not be determined for '{}'").format(line.name)
@@ -117,6 +135,18 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
                 line.commission_paid = True
                 continue
 
+            if partner_id not in partner_lines:
+                partner_lines[partner_id] = []
+
+            partner_lines[partner_id].append(line)
+
+        return partner_lines
+
+    def generate_payment_data(self, partner_lines, journal, invoice):
+        account_payment = self.env["account.payment"]
+        payment_method = self.env.ref("account.account_payment_method_manual_out")
+
+        for partner_id, lines in partner_lines.items():
             partner_bank_id = partner_id.bank_ids and partner_id.bank_ids[0]
 
             if not partner_bank_id:
@@ -134,7 +164,7 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
                     ("partner_id", "=", partner_id.id),
                     ("payment_type", "=", "outbound"),
                     ("partner_type", "=", "supplier"),
-                    ("currency_id", "=", line.currency_id.id),
+                    ("currency_id", "=", invoice.currency_id.id),
                     ("journal_id", "=", journal.id),
                     ("partner_bank_id", "=", partner_bank_id.id),
                     ("date", "=", payment_date),
@@ -149,7 +179,7 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
                     "payment_type": "outbound",
                     "partner_type": "supplier",
                     "partner_id": partner_id.id,
-                    "currency_id": line.currency_id.id,
+                    "currency_id": invoice.currency_id.id,
                     "journal_id": journal.id,
                     "payment_method_id": payment_method.id,
                     "partner_bank_id": partner_bank_id.id,
@@ -157,18 +187,9 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
                     "ref": self.communication,
                     "commission_method": self.commission_method,
                 }
-                payment = account_payment.with_context(active_ids=False).create(
-                    payment_values
-                )
+                payment = account_payment.with_context(active_ids=False).create(payment_values)
 
-            line.commission_payment_id = payment.id
-            line.commission_paid = True
-
-            payment.action_compute_commission_amount()
-
-        if False not in invoice.invoice_line_ids.mapped("commission_paid"):
-            # All lines are has a commission payment (or are marked as paid)
-            invoice.commission_paid = True
+            yield payment
 
     def get_commission_partner(self, invoice_line):
         partner_id = False
