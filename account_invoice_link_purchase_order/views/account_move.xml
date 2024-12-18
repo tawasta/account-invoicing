@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_move_form" model="ir.ui.view">
+        <field name="name">account.move.form.purchase.orders</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+
+            <!-- Hide auto-complete fields -->
+            <xpath expr="//label[@for='purchase_vendor_bill_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <field name="purchase_vendor_bill_id" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <label name="invoice_vendor_bill_id_label" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </label>
+            <field name="invoice_vendor_bill_id" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+
+            <field name="purchase_vendor_bill_id" position="after">
+                <field name="purchase_order_ids" widget="many2many_tags" />
+            </field>
+
+            <xpath
+                expr="//field[@name='invoice_line_ids']//field[@name='purchase_line_id']"
+                position="after"
+            >
+                <field
+                    name="purchase_line_qty_received"
+                    string="Received"
+                    optional="hide"
+                />
+                <field
+                    name="purchase_line_qty_invoiced"
+                    string="Invoiced"
+                    optional="hide"
+                />
+            </xpath>
+
+            <xpath
+                expr="//field[@name='invoice_line_ids']//field[@name='purchase_line_id']"
+                position="attributes"
+            >
+                <attribute
+                    name="column_invisible"
+                >parent.move_type != 'in_invoice'</attribute>
+                <attribute name="options">{'no_quick_create':True}</attribute>
+                <attribute name="string">Order line</attribute>
+                <attribute name="optional">hide</attribute>
+                <attribute
+                    name="domain"
+                >[('order_id', 'in', parent.purchase_order_ids)]</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
