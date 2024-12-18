@@ -56,17 +56,29 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
     def create_commission_payment(self, invoice):
         time1 = time.process_time()
 
-        account_payment = self.env["account.payment"]
-        payment_method = self.env.ref("account.account_payment_method_manual_out")
+        self.env["account.payment"]
+        self.env.ref("account.account_payment_method_manual_out")
 
         if invoice.payment_state != "paid":
-            raise UserError(_("You can't make payment from an invoice that is not paid: '{}'").format(invoice.name))
+            raise UserError(
+                _(
+                    "You can't make payment from an invoice that is not paid: '{}'"
+                ).format(invoice.name)
+            )
 
         if invoice.move_type != "out_invoice":
-            raise UserError(_("You can only make payments from customer invoices. '{}' is not a customer invoice").format(invoice.name))
+            raise UserError(
+                _(
+                    "You can only make payments from customer invoices. '{}' is not a customer invoice"
+                ).format(invoice.name)
+            )
 
         if invoice.refund_invoice_ids:
-            raise UserError(_("Invoice '{}' has been refunded and can't be commissioned").format(invoice.name))
+            raise UserError(
+                _("Invoice '{}' has been refunded and can't be commissioned").format(
+                    invoice.name
+                )
+            )
 
         if invoice.amount_total_signed == 0 and not self.add_zero_sum_lines:
             # Skip adding zero-sum invoices to payments
@@ -84,7 +96,9 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
         )
 
         if not journal:
-            raise ValidationError(_("Could not find a payment journal for '{}'").format(invoice.name))
+            raise ValidationError(
+                _("Could not find a payment journal for '{}'").format(invoice.name)
+            )
 
         partner_lines = self.gather_partner_lines(invoice)
         payments = self.generate_payment_data(partner_lines, journal, invoice)
@@ -106,7 +120,9 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
         invoice._compute_commission_paid()
 
         time2 = time.process_time()
-        _logger.info("Processed time to create comission payments: {}".format(time2 - time1))
+        _logger.info(
+            "Processed time to create comission payments: {}".format(time2 - time1)
+        )
 
         return payment_records
 
@@ -187,7 +203,9 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
                     "ref": self.communication,
                     "commission_method": self.commission_method,
                 }
-                payment = account_payment.with_context(active_ids=False).create(payment_values)
+                payment = account_payment.with_context(active_ids=False).create(
+                    payment_values
+                )
 
             yield payment
 
