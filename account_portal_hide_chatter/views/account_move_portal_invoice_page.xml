@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template
+        id="portal_invoice_page"
+        inherit_id="account.portal_invoice_page"
+        name="Hide 'Communication' Section from invoice"
+        customize_show="True"
+        active="True"
+        priority="101"
+    >
+        <xpath expr="//div[@id='invoice_communication']" position="replace" />
+    </template>
+
+</odoo>

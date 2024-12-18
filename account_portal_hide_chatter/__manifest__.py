@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2022 Futural Oy (https://futural.fi)
+#    Copyright 2024 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,15 +19,17 @@
 ##############################################################################
 
 {
-    "name": "Account Report Invoice Reformat",
-    "summary": "Reformat invoice print elements for cleaner look",
-    "category": "Reporting",
+    "name": "Account invoice hide chatter",
+    "summary": "Hide chatter from portal invoices",
+    "category": "Invoicing",
     "version": "17.0.1.0.0",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["account"],
-    "data": ["report/report_invoice.xml"],
+    "depends": ["account", "sale"],
+    "data": [
+        "views/account_move_portal_invoice_page.xml",
+    ],
 }
