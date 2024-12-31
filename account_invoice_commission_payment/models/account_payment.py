@@ -3,7 +3,6 @@ from odoo.exceptions import ValidationError
 
 
 class AccountPayment(models.Model):
-
     _inherit = "account.payment"
 
     commission_move_line_ids = fields.One2many(
@@ -60,7 +59,6 @@ class AccountPayment(models.Model):
         for record in self:
             # Decide the cost for the payment
             if record.commission_method == "cost":
-
                 invoices = record.commission_move_line_ids.filtered(
                     lambda r: r.move_id.move_type == "out_invoice"
                 )
