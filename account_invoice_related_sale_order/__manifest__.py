@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2023 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,15 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Account Report Salesperson",
-    "summary": "Show salesperson in invoice PDF",
+    "name": "Related Sale Orders of Invoice",
+    "summary": "Show Sale Orders from which the invoice originated from",
     "version": "17.0.1.0.0",
-    "category": "Reporting",
+    "category": "Invoicing",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["account"],
-    "data": ["report/report_invoice.xml"],
+    "depends": ["sale", "account"],
+    "data": ["views/account_move.xml"],
 }

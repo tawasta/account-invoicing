@@ -56,9 +56,6 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
     def create_commission_payment(self, invoice):
         time1 = time.process_time()
 
-        self.env["account.payment"]
-        self.env.ref("account.account_payment_method_manual_out")
-
         if invoice.payment_state != "paid":
             raise UserError(
                 _(
@@ -129,7 +126,7 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
     def gather_partner_lines(self, invoice):
         partner_lines = {}
 
-        for line in sorted(invoice.invoice_line_ids, key=lambda l: l.id):
+        for line in sorted(invoice.invoice_line_ids, key=lambda mline: mline.id):
             if line.price_total == 0 and not self.add_zero_sum_lines:
                 _logger.info("Skipping a zero sum line")
                 line.commission_paid = True
