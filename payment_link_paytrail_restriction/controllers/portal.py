@@ -13,7 +13,7 @@ class PaytrailPaymentPortal(PaymentPortal):
         partner_id=None,
         company_id=None,
         access_token=None,
-        **kwargs
+        **kwargs,
     ):
         response = super(PaytrailPaymentPortal, self).payment_pay(
             reference=reference,
@@ -22,7 +22,7 @@ class PaytrailPaymentPortal(PaymentPortal):
             partner_id=partner_id,
             company_id=company_id,
             access_token=access_token,
-            **kwargs
+            **kwargs,
         )
 
         payment_methods_sudo = response.qcontext.get(

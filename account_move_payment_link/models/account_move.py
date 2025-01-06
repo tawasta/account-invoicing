@@ -6,7 +6,6 @@ _logger = logging.getLogger(__name__)
 
 
 class AccountMove(models.Model):
-
     _inherit = "account.move"
 
     payment_link = fields.Char(
@@ -22,7 +21,6 @@ class AccountMove(models.Model):
         ctx = {"active_model": "account.move"}
 
         for record in self.filtered(lambda r: r.is_sale_document()):
-
             _logger.debug("Creating payment link for invoice ID %s", record.id)
 
             temp_wizard = payment_link_wizard.with_context(ctx).create(
