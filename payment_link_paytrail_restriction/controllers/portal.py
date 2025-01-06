@@ -1,7 +1,6 @@
 from odoo import http
-from odoo.http import request
+
 from odoo.addons.payment.controllers.portal import PaymentPortal
-import logging
 
 
 class PaytrailPaymentPortal(PaymentPortal):
