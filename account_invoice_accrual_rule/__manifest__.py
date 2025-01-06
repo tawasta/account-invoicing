@@ -21,7 +21,7 @@
 {
     "name": "Invoice accrual rules",
     "summary": "Add accrual rules to invoices",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Sales",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Futural",

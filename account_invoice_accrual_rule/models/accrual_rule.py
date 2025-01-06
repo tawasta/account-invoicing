@@ -29,12 +29,12 @@ class AccrualRule(models.Model):
 
     def get_accrual_end_month(self, start_date):
         self.ensure_one()
-        res = (start_date + relativedelta(months=self.period_length)).month
+        res = (start_date + relativedelta(months=self.period_length - 1)).month
 
         return res
 
     def get_accrual_end_year(self, start_date):
         self.ensure_one()
-        res = (start_date + relativedelta(months=self.period_length)).year
+        res = (start_date + relativedelta(months=self.period_length - 1)).year
 
         return res
