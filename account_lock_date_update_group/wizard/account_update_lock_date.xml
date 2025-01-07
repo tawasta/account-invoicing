@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record
+        id="account_lock_date_update.account_update_lock_date_menu"
+        model="ir.ui.menu"
+    >
+        <field
+            name="groups_id"
+            eval="[(4, ref('account_lock_date_update_group.account_date_lock_group'))]"
+        />
+    </record>
+</odoo>
