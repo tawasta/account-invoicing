@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2024 Oy Tawasta OS Technologies Ltd. (https://futural.fi)
+#    Copyright 2024 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,30 +19,17 @@
 ##############################################################################
 
 {
-    "name": "Invoice accrual rules",
-    "summary": "Add accrual rules to invoices",
-    "version": "17.0.1.0.1",
-    "category": "Sales",
+    "name": "Account invoice link purchase order",
+    "summary": "Link purchase orders to existing invoices",
+    "category": "Invoicing",
+    "version": "17.0.1.0.0",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "auto_install": True,
-    "external_dependencies": {
-        "python": [],
-        "bin": [],
-    },
-    "depends": [
-        "account",
-        "product",
-    ],
+    "depends": ["account", "purchase"],
     "data": [
-        "security/model_access.xml",
         "views/account_move.xml",
-        "views/accrual_rule.xml",
-        "views/product_template.xml",
     ],
-    "assets": {},
-    "demo": [],
 }
