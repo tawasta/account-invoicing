@@ -5,7 +5,7 @@
         inherit_id="account.report_invoice_document"
         priority="100"
     >
-    <xpath expr="//p[@name='payment_communication']" position="replace">
+    <xpath expr="//p[@name='payment_communication']/../.." position="after">
         <p
                 t-if="o.move_type in ('out_invoice', 'in_refund') and o.payment_reference"
                 name="payment_communication"
@@ -42,6 +42,8 @@
             </div>
         </p>
     </xpath>
+
+    <xpath expr="//p[@name='payment_communication']" position="replace" />
 
   </template>
 </odoo>
