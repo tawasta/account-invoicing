@@ -1,6 +1,6 @@
 ##############################################################################
 #
-#    Copyright 2022 Oy Tawasta OS Technologies Ltd.
+#    Copyright 2022 Futural Oy
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -21,7 +21,7 @@
     "category": "Hides origin from invoice PDF print",
     "version": "17.0.1.0.0",
     "installable": True,
-    "author": "Tawasta",
+    "author": "Futural",
     "license": "AGPL-3",
     "website": "https://github.com/tawasta/account-invoicing",
     "depends": [
