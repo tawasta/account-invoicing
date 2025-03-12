@@ -28,6 +28,7 @@ addon | version | maintainers | summary
 [account_invoice_description](account_invoice_description/) | 17.0.1.0.0 |  | Invoice internal note, that is not shown to partners
 [account_invoice_due_date](account_invoice_due_date/) | 17.0.1.0.0 |  | Account invoice due date
 [account_invoice_due_date_as_date_in_treeview](account_invoice_due_date_as_date_in_treeview/) | 17.0.1.0.1 |  | Adds a date field, to supplement the core's 'X days remaining' field
+[account_invoice_email](account_invoice_email/) | 17.0.1.0.0 |  | Send invoice email to invoice email address instead of default email address
 [account_invoice_invoice_transmit_method_not_commercial](account_invoice_invoice_transmit_method_not_commercial/) | 17.0.1.0.0 |  | Set invoice transmit method as not commercial field
 [account_invoice_line_view](account_invoice_line_view/) | 17.0.1.0.0 |  | Add a readonly list view where all invoice lines are listed
 [account_invoice_link_purchase_order](account_invoice_link_purchase_order/) | 17.0.1.0.0 |  | Link purchase orders to existing invoices
