@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Futural Oy
-#    Copyright 2018 Futural Oy (https://futural.fi)
+#    Author: Oy Tawasta OS Technologies Ltd.
+#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,15 +19,16 @@
 ##############################################################################
 
 {
-    "name": "Account Invoice Mandatory Payment Term",
-    "summary": "Set invoice payment term as mandatory",
+    "name": "Account Invoice Email",
+    "summary": "Send invoice email to invoice email address instead of default email address",
     "version": "17.0.1.0.0",
-    "category": "Invoicing",
+    "category": "Account",
     "website": "https://github.com/tawasta/account-invoicing",
-    "author": "Futural",
+    "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
     "depends": ["account"],
-    "data": ["views/account_invoice.xml"],
+    "external_dependencies": {"python": ["email_validator"]},
+    "data": ["views/res_partner.xml"],
 }
