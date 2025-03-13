@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class AccountAccount(models.Model):
-
     _inherit = "account.account"
 
     region_type = fields.Selection(
