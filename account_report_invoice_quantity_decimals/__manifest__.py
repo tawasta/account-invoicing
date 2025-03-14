@@ -23,7 +23,7 @@
     "summary": "Change the number of decimals shown on invoice PDF product quantities",
     "version": "17.0.1.0.0",
     "category": "Reporting",
-    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
+    "website": "https://github.com/tawasta/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
