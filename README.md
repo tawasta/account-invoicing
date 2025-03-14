@@ -48,6 +48,7 @@ addon | version | maintainers | summary
 [account_portal_hide_chatter](account_portal_hide_chatter/) | 17.0.1.0.0 |  | Hide chatter from portal invoices
 [account_report_invoice_bank_transfer](account_report_invoice_bank_transfer/) | 17.0.1.0.1 |  | Add a bank transfer section for invoices
 [account_report_invoice_hide_customer_code](account_report_invoice_hide_customer_code/) | 17.0.1.0.0 |  | Invoice PDF - Hide customer code
+[account_report_invoice_hide_incoterm_under_note](account_report_invoice_hide_incoterm_under_note/) | 17.0.1.0.0 |  | Invoice PDF - Hide incoterm located under the note
 [account_report_invoice_hide_origin](account_report_invoice_hide_origin/) | 17.0.1.0.0 |  | Invoice PDF - Hide origin
 [account_report_invoice_payment](account_report_invoice_payment/) | 17.0.1.0.0 |  | Changes the term 'invoice' to 'receipt' for PDF print and email template
 [account_report_invoice_reformat](account_report_invoice_reformat/) | 17.0.1.0.0 |  | Reformat invoice print elements for cleaner look
