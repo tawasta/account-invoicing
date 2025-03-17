@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class AccountInvoiceReport(models.Model):
-
     _inherit = "account.invoice.report"
 
     shipping_country_id = fields.Many2one(
