@@ -9,7 +9,4 @@ class AccountInvoiceReport(models.Model):
     )
 
     def _select(self):
-        return (
-            super()._select()
-            + ", product.product_tmpl_id as product_template_id"
-        )
+        return super()._select() + ", product.product_tmpl_id as product_template_id"
