@@ -17,6 +17,9 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
+[account_account_region_type](account_account_region_type/) | 17.0.1.0.0 |  | Set region type for an account
+[account_fiscal_position_company_not_required](account_fiscal_position_company_not_required/) | 17.0.1.0.0 |  | Company will not be required on fiscal positions
+[account_fiscal_position_type](account_fiscal_position_type/) | 17.0.1.0.0 |  | Add a type for fiscal positions (domestic, EU, non-EU)
 [account_invoice_accrual_rule](account_invoice_accrual_rule/) | 17.0.1.0.1 |  | Add accrual rules to invoices
 [account_invoice_auditlog_rules](account_invoice_auditlog_rules/) | 17.0.1.0.1 |  | Adds audit log rules for account.move and account.move.line
 [account_invoice_commission](account_invoice_commission/) | 17.0.1.0.0 |  | Add a 'commission paid' field for invoices and invoice lines
@@ -30,11 +33,15 @@ addon | version | maintainers | summary
 [account_invoice_due_date_as_date_in_treeview](account_invoice_due_date_as_date_in_treeview/) | 17.0.1.0.1 |  | Adds a date field, to supplement the core's 'X days remaining' field
 [account_invoice_email](account_invoice_email/) | 17.0.1.0.0 |  | Send invoice email to invoice email address instead of default email address
 [account_invoice_invoice_transmit_method_not_commercial](account_invoice_invoice_transmit_method_not_commercial/) | 17.0.1.0.0 |  | Set invoice transmit method as not commercial field
+[account_invoice_line_related_sale_order](account_invoice_line_related_sale_order/) | 17.0.1.0.0 |  | Allow linking a Sale Order to invoice lines
 [account_invoice_line_view](account_invoice_line_view/) | 17.0.1.0.0 |  | Add a readonly list view where all invoice lines are listed
 [account_invoice_link_purchase_order](account_invoice_link_purchase_order/) | 17.0.1.0.0 |  | Link purchase orders to existing invoices
 [account_invoice_mandatory_payment_term](account_invoice_mandatory_payment_term/) | 17.0.1.0.0 |  | Set invoice payment term as mandatory
 [account_invoice_merge_never_merge_lines](account_invoice_merge_never_merge_lines/) | 17.0.1.0.0 |  | Never merge lines while merging invoices.
 [account_invoice_overdue_interest](account_invoice_overdue_interest/) | 17.0.1.0.0 |  | Overdue interest % field for invoices and partners
+[account_invoice_pivot_report_delivery_address](account_invoice_pivot_report_delivery_address/) | 17.0.1.0.0 |  | Group pivot report by delivery address
+[account_invoice_pivot_report_delivery_address_country](account_invoice_pivot_report_delivery_address_country/) | 17.0.1.0.0 |  | Group pivot report by delivery address country
+[account_invoice_pivot_report_product_template](account_invoice_pivot_report_product_template/) | 17.0.1.0.0 |  | Group pivot report by Product Template
 [account_invoice_related_sale_order](account_invoice_related_sale_order/) | 17.0.1.0.0 |  | Show Sale Orders from which the invoice originated from
 [account_invoice_related_sale_order_customer](account_invoice_related_sale_order_customer/) | 17.0.1.0.0 |  | Related Customer of Invoice sale order
 [account_lock_date_update_group](account_lock_date_update_group/) | 17.0.1.0.0 |  | This module adds a group for locking account move dates
@@ -44,8 +51,10 @@ addon | version | maintainers | summary
 [account_portal_hide_chatter](account_portal_hide_chatter/) | 17.0.1.0.0 |  | Hide chatter from portal invoices
 [account_report_invoice_bank_transfer](account_report_invoice_bank_transfer/) | 17.0.1.0.1 |  | Add a bank transfer section for invoices
 [account_report_invoice_hide_customer_code](account_report_invoice_hide_customer_code/) | 17.0.1.0.0 |  | Invoice PDF - Hide customer code
+[account_report_invoice_hide_incoterm_under_note](account_report_invoice_hide_incoterm_under_note/) | 17.0.1.0.0 |  | Invoice PDF - Hide incoterm located under the note
 [account_report_invoice_hide_origin](account_report_invoice_hide_origin/) | 17.0.1.0.0 |  | Invoice PDF - Hide origin
 [account_report_invoice_payment](account_report_invoice_payment/) | 17.0.1.0.0 |  | Changes the term 'invoice' to 'receipt' for PDF print and email template
+[account_report_invoice_quantity_decimals](account_report_invoice_quantity_decimals/) | 17.0.1.0.0 |  | Change the number of decimals shown on invoice PDF product quantities
 [account_report_invoice_reformat](account_report_invoice_reformat/) | 17.0.1.0.0 |  | Reformat invoice print elements for cleaner look
 [account_report_invoice_salesperson](account_report_invoice_salesperson/) | 17.0.1.0.0 |  | Show salesperson in invoice PDF
 [account_report_line_product_internal_reference](account_report_line_product_internal_reference/) | 17.0.1.0.0 |  | Add Internal reference for Invoice PDF print
