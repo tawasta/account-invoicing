@@ -40,6 +40,7 @@ addon | version | maintainers | summary
 [account_invoice_merge_never_merge_lines](account_invoice_merge_never_merge_lines/) | 17.0.1.0.0 |  | Never merge lines while merging invoices.
 [account_invoice_overdue_interest](account_invoice_overdue_interest/) | 17.0.1.0.0 |  | Overdue interest % field for invoices and partners
 [account_invoice_pivot_report_delivery_address](account_invoice_pivot_report_delivery_address/) | 17.0.1.0.0 |  | Group pivot report by delivery address
+[account_invoice_pivot_report_delivery_address_country](account_invoice_pivot_report_delivery_address_country/) | 17.0.1.0.0 |  | Group pivot report by delivery address country
 [account_invoice_pivot_report_product_template](account_invoice_pivot_report_product_template/) | 17.0.1.0.0 |  | Group pivot report by Product Template
 [account_invoice_related_sale_order](account_invoice_related_sale_order/) | 17.0.1.0.0 |  | Show Sale Orders from which the invoice originated from
 [account_invoice_related_sale_order_customer](account_invoice_related_sale_order_customer/) | 17.0.1.0.0 |  | Related Customer of Invoice sale order
