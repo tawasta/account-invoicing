@@ -2,30 +2,31 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-============================
-Account invoice hide chatter
-============================
+=====================================
+Disable invoice narration auto-reload
+=====================================
 
-Hide chatter from portal invoices
+Don't reload narration when changing partner on invoices
 
 Configuration
 =============
-\-
+
+-
 
 Usage
 =====
-\-
+
+-
 
 Known issues / Roadmap
 ======================
-\-
+-
 
 Credits
 =======
 
 Contributors
 ------------
-
 * Jarmo Kortetjärvi <jarmo.kortetjarvi@futural.fi>
 
 Maintainer
