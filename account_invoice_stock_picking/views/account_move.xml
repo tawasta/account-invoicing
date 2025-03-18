@@ -14,7 +14,8 @@
                     icon="fa-truck"
                     type="object"
                     invisible="not stock_picking_ids"
-                    string="Pickings">
+                    string="Pickings"
+                >
                 </button>
             </div>
 
