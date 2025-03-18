@@ -5,7 +5,10 @@
             <attribute name="t-if">1 == 0</attribute>
         </xpath>
 
-        <xpath expr="//div[@name='reference']//span[@t-field='o.ref']" position="before">
+        <xpath
+            expr="//div[@name='reference']//span[@t-field='o.ref']"
+            position="before"
+        >
             <strong name="ref_description">Description:</strong>
         </xpath>
     </template>
