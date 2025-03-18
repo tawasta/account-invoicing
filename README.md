@@ -44,6 +44,7 @@ addon | version | maintainers | summary
 [account_invoice_pivot_report_product_template](account_invoice_pivot_report_product_template/) | 17.0.1.0.0 |  | Group pivot report by Product Template
 [account_invoice_related_sale_order](account_invoice_related_sale_order/) | 17.0.1.0.0 |  | Show Sale Orders from which the invoice originated from
 [account_invoice_related_sale_order_customer](account_invoice_related_sale_order_customer/) | 17.0.1.0.0 |  | Related Customer of Invoice sale order
+[account_invoice_stock_picking](account_invoice_stock_picking/) | 17.0.1.1.0 |  | Add related stock pickings to invoice
 [account_lock_date_update_group](account_lock_date_update_group/) | 17.0.1.0.0 |  | This module adds a group for locking account move dates
 [account_move_payment_link](account_move_payment_link/) | 17.0.1.0.1 |  | Autogenerates a payment link that can embedded into an email template
 [account_payment_commission_send_email](account_payment_commission_send_email/) | 17.0.1.0.1 |  | Allows sending a payment summary by email
