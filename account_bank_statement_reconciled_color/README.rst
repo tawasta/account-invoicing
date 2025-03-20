@@ -2,30 +2,17 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-============================
-Account invoice hide chatter
-============================
+===============================
+Bank statement reconciled color
+===============================
 
-Hide chatter from portal invoices
-
-Configuration
-=============
-\-
-
-Usage
-=====
-\-
-
-Known issues / Roadmap
-======================
-\-
+Show unreconciled bank statements in different color
 
 Credits
 =======
 
 Contributors
 ------------
-
 * Jarmo Kortetjärvi <jarmo.kortetjarvi@futural.fi>
 
 Maintainer

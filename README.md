@@ -18,6 +18,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [account_account_region_type](account_account_region_type/) | 17.0.1.0.0 |  | Set region type for an account
+[account_bank_statement_reconciled_color](account_bank_statement_reconciled_color/) | 17.0.1.0.0 |  | Show unreconciled bank statements in different color
 [account_fiscal_position_company_not_required](account_fiscal_position_company_not_required/) | 17.0.1.0.0 |  | Company will not be required on fiscal positions
 [account_fiscal_position_type](account_fiscal_position_type/) | 17.0.1.0.0 |  | Add a type for fiscal positions (domestic, EU, non-EU)
 [account_invoice_accrual_rule](account_invoice_accrual_rule/) | 17.0.1.0.1 |  | Add accrual rules to invoices
@@ -26,9 +27,11 @@ addon | version | maintainers | summary
 [account_invoice_commission_manual](account_invoice_commission_manual/) | 17.0.1.0.0 |  | Manually set invoices as commissioned
 [account_invoice_commission_payment](account_invoice_commission_payment/) | 17.0.1.1.1 |  | Allows Making commission payments from invoices
 [account_invoice_commission_payment_variant_company](account_invoice_commission_payment_variant_company/) | 17.0.1.0.0 |  | Use product variant company as recipient in invoice commission payments
+[account_invoice_country_group_text](account_invoice_country_group_text/) | 17.0.1.0.0 |  | Get account invoice report text from country groups setting
 [account_invoice_credit_note_header_text_and_date_delivered](account_invoice_credit_note_header_text_and_date_delivered/) | 17.0.1.0.0 |  | Copy Header and Date Delivered fields to a created Credit Note
 [account_invoice_default_parent](account_invoice_default_parent/) | 17.0.1.0.0 |  | Default parent for new shipping addresses
 [account_invoice_description](account_invoice_description/) | 17.0.1.0.0 |  | Invoice internal note, that is not shown to partners
+[account_invoice_disable_auto_narration](account_invoice_disable_auto_narration/) | 17.0.1.0.0 |  | Don't reload narration when changing partner on invoices
 [account_invoice_due_date](account_invoice_due_date/) | 17.0.1.0.0 |  | Account invoice due date
 [account_invoice_due_date_as_date_in_treeview](account_invoice_due_date_as_date_in_treeview/) | 17.0.1.0.1 |  | Adds a date field, to supplement the core's 'X days remaining' field
 [account_invoice_email](account_invoice_email/) | 17.0.1.0.0 |  | Send invoice email to invoice email address instead of default email address
