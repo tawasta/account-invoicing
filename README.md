@@ -27,6 +27,7 @@ addon | version | maintainers | summary
 [account_invoice_commission_manual](account_invoice_commission_manual/) | 17.0.1.0.0 |  | Manually set invoices as commissioned
 [account_invoice_commission_payment](account_invoice_commission_payment/) | 17.0.1.1.1 |  | Allows Making commission payments from invoices
 [account_invoice_commission_payment_variant_company](account_invoice_commission_payment_variant_company/) | 17.0.1.0.0 |  | Use product variant company as recipient in invoice commission payments
+[account_invoice_country_group_text](account_invoice_country_group_text/) | 17.0.1.0.0 |  | Get account invoice report text from country groups setting
 [account_invoice_credit_note_header_text_and_date_delivered](account_invoice_credit_note_header_text_and_date_delivered/) | 17.0.1.0.0 |  | Copy Header and Date Delivered fields to a created Credit Note
 [account_invoice_default_parent](account_invoice_default_parent/) | 17.0.1.0.0 |  | Default parent for new shipping addresses
 [account_invoice_description](account_invoice_description/) | 17.0.1.0.0 |  | Invoice internal note, that is not shown to partners
