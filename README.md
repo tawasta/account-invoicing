@@ -41,6 +41,7 @@ addon | version | maintainers | summary
 [account_invoice_line_view](account_invoice_line_view/) | 17.0.1.0.0 |  | Add a readonly list view where all invoice lines are listed
 [account_invoice_link_purchase_order](account_invoice_link_purchase_order/) | 17.0.1.0.0 |  | Link purchase orders to existing invoices
 [account_invoice_mandatory_payment_term](account_invoice_mandatory_payment_term/) | 17.0.1.0.0 |  | Set invoice payment term as mandatory
+[account_invoice_merge_different_users](account_invoice_merge_different_users/) | 17.0.1.0.0 |  | Allow merging invoices with different users
 [account_invoice_merge_never_merge_lines](account_invoice_merge_never_merge_lines/) | 17.0.1.0.0 |  | Never merge lines while merging invoices.
 [account_invoice_overdue_interest](account_invoice_overdue_interest/) | 17.0.1.0.0 |  | Overdue interest % field for invoices and partners
 [account_invoice_pivot_report_delivery_address](account_invoice_pivot_report_delivery_address/) | 17.0.1.0.0 |  | Group pivot report by delivery address
