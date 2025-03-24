@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2022 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,21 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Account invoicing stock picking",
-    "summary": "Add related stock pickings to invoice",
-    "version": "17.0.1.1.1",
+    "name": "Disallow validating pickings with open down payments",
+    "summary": "Prevent validating pickings with open down payments",
+    "version": "17.0.1.0.0",
     "category": "Stock",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["account", "sale_stock"],
-    "data": [
-        "security/res_groups.xml",
-        "views/account_move.xml",
-        "views/report_invoice.xml",
-        "views/res_config_settings.xml",
-        "views/stock_picking.xml",
-    ],
+    "depends": ["account", "account_invoice_stock_picking", "sale_stock"],
+    "data": ["views/res_config_settings.xml"],
 }

@@ -2,17 +2,16 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-===============================
-Account invoicing stock picking
-===============================
+====================================================
+Disallow validating pickings with open down payments
+====================================================
 
-Add related stock pickings to invoice.
-Allows viewing related invoices from a picking.
+Prevent validating pickings with open down payments.
+Also change picking priority automatically when down payment is paid.
 
 Configuration
 =============
-If you want the pickings to be shown on invoice print, go to Accounting settings and
-enable "Show pickings on invoice print".
+\-
 
 Usage
 =====
@@ -37,6 +36,6 @@ Maintainer
 
 .. image:: https://tawasta.fi/templates/tawastrap/images/logo.png
    :alt: Oy Tawasta OS Technologies Ltd.
-   :target: http://tawasta.fi/
+   :target: https://tawasta.fi/
 
 This module is maintained by Oy Tawasta OS Technologies Ltd.
