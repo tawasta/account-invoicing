@@ -11,7 +11,8 @@ Allows viewing related invoices from a picking.
 
 Configuration
 =============
-If you want the pickings to be shown on invoice print, go to Accounting settings and enable "Show pickings on invoice print"
+If you want the pickings to be shown on invoice print, go to Accounting settings and
+enable "Show pickings on invoice print".
 
 Usage
 =====
@@ -29,6 +30,7 @@ Contributors
 
 * Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
 * Valtteri Lattu <valtteri.lattu@tawasta.fi>
+* Timo Kekäläinen <timo.kekalainen@tawasta.fi>
 
 Maintainer
 ----------
