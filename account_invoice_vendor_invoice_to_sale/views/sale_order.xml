@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_order_form" model="ir.ui.view">
+        <field name="name">sale.order.form.vendor.invoice</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+
+            <field name="payment_term_id" position="before">
+                <field
+                    name="origin_invoice_id"
+                    options="{'no_create': True, 'no_create_edit':True}"
+                />
+            </field>
+
+            <xpath
+                expr="//field[@name='order_line']//tree//field[@name='company_id']"
+                position="after"
+            >
+                <field name="linked_account_move_id" optional="hide" />
+            </xpath>
+
+            <xpath
+                expr="//field[@name='order_line']//form//field[@name='invoice_status']"
+                position="after"
+            >
+                <field name="linked_account_move_id" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
