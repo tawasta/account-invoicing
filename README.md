@@ -20,6 +20,7 @@ addon | version | maintainers | summary
 [account_account_region_type](account_account_region_type/) | 17.0.1.0.0 |  | Set region type for an account
 [account_bank_statement_reconciled_color](account_bank_statement_reconciled_color/) | 17.0.1.0.0 |  | Show unreconciled bank statements in different color
 [account_credit_control_sales_contact](account_credit_control_sales_contact/) | 17.0.1.0.0 |  | Account credit control sales contact
+[account_financial_report_totals](account_financial_report_totals/) | 17.0.1.0.0 |  | Adds totals of each column to trial balance
 [account_fiscal_position_company_not_required](account_fiscal_position_company_not_required/) | 17.0.1.0.0 |  | Company will not be required on fiscal positions
 [account_fiscal_position_type](account_fiscal_position_type/) | 17.0.1.0.0 |  | Add a type for fiscal positions (domestic, EU, non-EU)
 [account_invoice_accrual_rule](account_invoice_accrual_rule/) | 17.0.1.0.1 |  | Add accrual rules to invoices
@@ -54,6 +55,7 @@ addon | version | maintainers | summary
 [account_invoice_report_reference_is_description](account_invoice_report_reference_is_description/) | 17.0.1.0.0 |  | Invoice print - replace Reference header with Description
 [account_invoice_stock_picking](account_invoice_stock_picking/) | 17.0.1.1.1 |  | Add related stock pickings to invoice
 [account_invoice_stock_picking_downpayment](account_invoice_stock_picking_downpayment/) | 17.0.1.0.0 |  | Prevent validating pickings with open down payments
+[account_invoice_vendor_invoice_to_sale](account_invoice_vendor_invoice_to_sale/) | 17.0.1.0.0 |  | Adds a wizards for creating a SO from vendor invoice
 [account_lock_date_update_group](account_lock_date_update_group/) | 17.0.1.0.0 |  | This module adds a group for locking account move dates
 [account_move_payment_link](account_move_payment_link/) | 17.0.1.0.1 |  | Autogenerates a payment link that can embedded into an email template
 [account_payment_commission_send_email](account_payment_commission_send_email/) | 17.0.1.0.1 |  | Allows sending a payment summary by email
