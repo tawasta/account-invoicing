@@ -20,6 +20,7 @@ addon | version | maintainers | summary
 [account_account_region_type](account_account_region_type/) | 17.0.1.0.0 |  | Set region type for an account
 [account_bank_statement_reconciled_color](account_bank_statement_reconciled_color/) | 17.0.1.0.0 |  | Show unreconciled bank statements in different color
 [account_credit_control_sales_contact](account_credit_control_sales_contact/) | 17.0.1.0.0 |  | Account credit control sales contact
+[account_financial_report_partner_ref](account_financial_report_partner_ref/) | 17.0.1.0.0 |  | A ref number of a partner is added to General Ledger report
 [account_financial_report_totals](account_financial_report_totals/) | 17.0.1.0.0 |  | Adds totals of each column to trial balance
 [account_fiscal_position_company_not_required](account_fiscal_position_company_not_required/) | 17.0.1.0.0 |  | Company will not be required on fiscal positions
 [account_fiscal_position_type](account_fiscal_position_type/) | 17.0.1.0.0 |  | Add a type for fiscal positions (domestic, EU, non-EU)
