@@ -2,7 +2,6 @@ from odoo import api, fields, models
 
 
 class CreditControlLine(models.Model):
-
     _inherit = "credit.control.line"
 
     sales_agent = fields.Many2one(
