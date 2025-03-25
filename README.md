@@ -32,6 +32,7 @@ addon | version | maintainers | summary
 [account_invoice_default_parent](account_invoice_default_parent/) | 17.0.1.0.0 |  | Default parent for new shipping addresses
 [account_invoice_description](account_invoice_description/) | 17.0.1.0.0 |  | Invoice internal note, that is not shown to partners
 [account_invoice_disable_auto_narration](account_invoice_disable_auto_narration/) | 17.0.1.0.0 |  | Don't reload narration when changing partner on invoices
+[account_invoice_down_payment_account](account_invoice_down_payment_account/) | 17.0.1.0.0 |  | Custom accounting account for down payments
 [account_invoice_due_date](account_invoice_due_date/) | 17.0.1.0.0 |  | Account invoice due date
 [account_invoice_due_date_as_date_in_treeview](account_invoice_due_date_as_date_in_treeview/) | 17.0.1.0.1 |  | Adds a date field, to supplement the core's 'X days remaining' field
 [account_invoice_email](account_invoice_email/) | 17.0.1.0.0 |  | Send invoice email to invoice email address instead of default email address
@@ -41,6 +42,7 @@ addon | version | maintainers | summary
 [account_invoice_line_view](account_invoice_line_view/) | 17.0.1.0.0 |  | Add a readonly list view where all invoice lines are listed
 [account_invoice_link_purchase_order](account_invoice_link_purchase_order/) | 17.0.1.0.0 |  | Link purchase orders to existing invoices
 [account_invoice_mandatory_payment_term](account_invoice_mandatory_payment_term/) | 17.0.1.0.0 |  | Set invoice payment term as mandatory
+[account_invoice_merge_different_users](account_invoice_merge_different_users/) | 17.0.1.0.0 |  | Allow merging invoices with different users
 [account_invoice_merge_never_merge_lines](account_invoice_merge_never_merge_lines/) | 17.0.1.0.0 |  | Never merge lines while merging invoices.
 [account_invoice_overdue_interest](account_invoice_overdue_interest/) | 17.0.1.0.0 |  | Overdue interest % field for invoices and partners
 [account_invoice_pivot_report_delivery_address](account_invoice_pivot_report_delivery_address/) | 17.0.1.0.0 |  | Group pivot report by delivery address
@@ -48,6 +50,9 @@ addon | version | maintainers | summary
 [account_invoice_pivot_report_product_template](account_invoice_pivot_report_product_template/) | 17.0.1.0.0 |  | Group pivot report by Product Template
 [account_invoice_related_sale_order](account_invoice_related_sale_order/) | 17.0.1.0.0 |  | Show Sale Orders from which the invoice originated from
 [account_invoice_related_sale_order_customer](account_invoice_related_sale_order_customer/) | 17.0.1.0.0 |  | Related Customer of Invoice sale order
+[account_invoice_report_reference_is_description](account_invoice_report_reference_is_description/) | 17.0.1.0.0 |  | Invoice print - replace Reference header with Description
+[account_invoice_stock_picking](account_invoice_stock_picking/) | 17.0.1.1.1 |  | Add related stock pickings to invoice
+[account_invoice_stock_picking_downpayment](account_invoice_stock_picking_downpayment/) | 17.0.1.0.0 |  | Prevent validating pickings with open down payments
 [account_lock_date_update_group](account_lock_date_update_group/) | 17.0.1.0.0 |  | This module adds a group for locking account move dates
 [account_move_payment_link](account_move_payment_link/) | 17.0.1.0.1 |  | Autogenerates a payment link that can embedded into an email template
 [account_payment_commission_send_email](account_payment_commission_send_email/) | 17.0.1.0.1 |  | Allows sending a payment summary by email
