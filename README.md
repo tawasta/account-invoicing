@@ -71,6 +71,7 @@ addon | version | maintainers | summary
 [account_report_invoice_reformat](account_report_invoice_reformat/) | 17.0.1.0.0 |  | Reformat invoice print elements for cleaner look
 [account_report_invoice_salesperson](account_report_invoice_salesperson/) | 17.0.1.0.0 |  | Show salesperson in invoice PDF
 [account_report_line_product_internal_reference](account_report_line_product_internal_reference/) | 17.0.1.0.0 |  | Add Internal reference for Invoice PDF print
+[account_tax_report](account_tax_report/) | 17.0.1.0.0 |  | Finnish VAT-summary report.
 [payment_link_paytrail_restriction](payment_link_paytrail_restriction/) | 17.0.1.0.1 |  | Payment link paytrail restriction
 
 [//]: # (end addons)
