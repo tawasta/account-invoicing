@@ -1,0 +1,68 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_invoice_stock_picking
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250131\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-24 12:55+0000\n"
+"PO-Revision-Date: 2025-03-24 14:56+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: account_invoice_stock_picking
+#: model_terms:ir.ui.view,arch_db:account_invoice_stock_picking.report_invoice_document
+msgid "<strong>Packing list(s):</strong>"
+msgstr "<strong>Keräilyt:</strong>"
+
+#. module: account_invoice_stock_picking
+#: model:ir.model.fields,field_description:account_invoice_stock_picking.field_stock_picking__invoice_count
+msgid "Invoice Count"
+msgstr "Laskujen määrä"
+
+#. module: account_invoice_stock_picking
+#: model:ir.model.fields,field_description:account_invoice_stock_picking.field_stock_picking__invoice_ids
+#: model_terms:ir.ui.view,arch_db:account_invoice_stock_picking.stock_picking_invoice_action_form
+msgid "Invoices"
+msgstr "Laskut"
+
+#. module: account_invoice_stock_picking
+#: model:ir.model,name:account_invoice_stock_picking.model_account_move
+msgid "Journal Entry"
+msgstr "Päiväkirjan kirjaus"
+
+#. module: account_invoice_stock_picking
+#: model_terms:ir.ui.view,arch_db:account_invoice_stock_picking.view_move_form
+msgid "Pickings"
+msgstr "Keräilyt"
+
+#. module: account_invoice_stock_picking
+#: model:ir.model,name:account_invoice_stock_picking.model_res_config_settings
+msgid "Procurement purchase grouping settings"
+msgstr "Ostohankintojen ryhmittelyasetukset"
+
+#. module: account_invoice_stock_picking
+#: model:ir.model.fields,field_description:account_invoice_stock_picking.field_res_config_settings__group_account_invoice_report_pickings
+#: model:res.groups,name:account_invoice_stock_picking.group_account_invoice_report_pickings
+#: model_terms:ir.ui.view,arch_db:account_invoice_stock_picking.res_config_settings_view_form
+msgid "Show pickings on invoice print"
+msgstr "Näytä toimitukset laskun tulosteella"
+
+#. module: account_invoice_stock_picking
+#: model:ir.model.fields,field_description:account_invoice_stock_picking.field_account_bank_statement_line__stock_picking_ids
+#: model:ir.model.fields,field_description:account_invoice_stock_picking.field_account_move__stock_picking_ids
+#: model:ir.model.fields,field_description:account_invoice_stock_picking.field_account_payment__stock_picking_ids
+msgid "Stock pickings"
+msgstr "Keräilyt"
+
+#. module: account_invoice_stock_picking
+#: model:ir.model,name:account_invoice_stock_picking.model_stock_picking
+msgid "Transfer"
+msgstr "Siirto"

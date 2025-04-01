@@ -1,0 +1,29 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_credit_control_sales_contact
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250131\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-25 08:00+0000\n"
+"PO-Revision-Date: 2025-03-25 10:01+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi_FI\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: account_credit_control_sales_contact
+#: model:ir.model,name:account_credit_control_sales_contact.model_credit_control_line
+msgid "A credit control line"
+msgstr ""
+
+#. module: account_credit_control_sales_contact
+#: model:ir.model.fields,field_description:account_credit_control_sales_contact.field_credit_control_line__sales_agent
+#: model_terms:ir.ui.view,arch_db:account_credit_control_sales_contact.credit_control_line_search
+msgid "Sales contact"
+msgstr ""
