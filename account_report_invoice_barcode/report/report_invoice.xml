@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="report_invoice_document" inherit_id="account.report_invoice_document">
+        <xpath expr="//p[@name='payment_communication']" position="after">
+            <div id="barcode" t-if="o.barcode" class="row mt16" style="height: 6rem;">
+                <img
+                    t-att-src="'/report/barcode?barcode_type=%s&amp;value=%s&amp;width=%s&amp;height=%s' %('Code128', o.barcode or '', 800, 80)"
+                    class="col-12"
+                />
+                <span
+                    t-field="o.barcode"
+                    class="col-12 text-center"
+                    style="padding-left: 20%;"
+                />
+            </div>
+        </xpath>
+
+    </template>
+</odoo>
