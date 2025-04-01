@@ -49,8 +49,10 @@ addon | version | maintainers | summary
 [account_invoice_mass_post_with_loop](account_invoice_mass_post_with_loop/) | 17.0.1.0.0 |  | Small change to mass posting to loop through invoices
 [account_invoice_merge_different_users](account_invoice_merge_different_users/) | 17.0.1.0.0 |  | Allow merging invoices with different users
 [account_invoice_merge_never_merge_lines](account_invoice_merge_never_merge_lines/) | 17.0.1.0.0 |  | Never merge lines while merging invoices.
+[account_invoice_notice_period](account_invoice_notice_period/) | 17.0.1.0.0 |  | Notice period field for invoices and partners
 [account_invoice_overdue_interest](account_invoice_overdue_interest/) | 17.0.1.0.0 |  | Overdue interest % field for invoices and partners
 [account_invoice_partner_income_expense_account](account_invoice_partner_income_expense_account/) | 17.0.1.0.0 |  | Account Invoice: Partner-specific income and expense accounts
+[account_invoice_partner_warning_text](account_invoice_partner_warning_text/) | 17.0.1.0.0 |  | Adds Partner warning text to invoice
 [account_invoice_pivot_report_delivery_address](account_invoice_pivot_report_delivery_address/) | 17.0.1.0.0 |  | Group pivot report by delivery address
 [account_invoice_pivot_report_delivery_address_country](account_invoice_pivot_report_delivery_address_country/) | 17.0.1.0.0 |  | Group pivot report by delivery address country
 [account_invoice_pivot_report_product_template](account_invoice_pivot_report_product_template/) | 17.0.1.0.0 |  | Group pivot report by Product Template
