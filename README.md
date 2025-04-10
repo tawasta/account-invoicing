@@ -43,6 +43,7 @@ addon | version | maintainers | summary
 [account_invoice_invoice_origin_no_copy](account_invoice_invoice_origin_no_copy/) | 17.0.1.0.0 |  | Clear the Source Document field when duplicating an invoice
 [account_invoice_invoice_transmit_method_not_commercial](account_invoice_invoice_transmit_method_not_commercial/) | 17.0.1.0.0 |  | Set invoice transmit method as not commercial field
 [account_invoice_line_related_sale_order](account_invoice_line_related_sale_order/) | 17.0.1.0.0 |  | Allow linking a Sale Order to invoice lines
+[account_invoice_line_type_fixer](account_invoice_line_type_fixer/) | 17.0.1.0.0 |  | Fix types for account move lines
 [account_invoice_line_view](account_invoice_line_view/) | 17.0.1.0.0 |  | Add a readonly list view where all invoice lines are listed
 [account_invoice_link_purchase_order](account_invoice_link_purchase_order/) | 17.0.1.0.0 |  | Link purchase orders to existing invoices
 [account_invoice_mandatory_payment_term](account_invoice_mandatory_payment_term/) | 17.0.1.0.0 |  | Set invoice payment term as mandatory
