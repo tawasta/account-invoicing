@@ -21,7 +21,7 @@
 {
     "name": "Fiscal Position type",
     "summary": "Add a type for fiscal positions (domestic, EU, non-EU)",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Accounting",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Tawasta",

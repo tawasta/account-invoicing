@@ -21,7 +21,7 @@
 {
     "name": "Account Invoice Pivot Report - Delivery Address",
     "summary": "Group pivot report by delivery address",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Reporting",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Tawasta",
