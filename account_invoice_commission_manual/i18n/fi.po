@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0-20230629\n"
+"Project-Id-Version: Odoo Server 17.0-20250131\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-11 09:40+0000\n"
-"PO-Revision-Date: 2023-10-11 12:41+0300\n"
+"POT-Creation-Date: 2025-04-14 08:13+0000\n"
+"PO-Revision-Date: 2025-04-14 11:14+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4\n"
+"X-Generator: Poedit 3.6\n"
 
 #. module: account_invoice_commission_manual
 #: model:ir.actions.server,name:account_invoice_commission_manual.action_set_commission_paid
