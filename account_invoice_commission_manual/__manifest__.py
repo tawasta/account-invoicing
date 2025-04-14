@@ -21,7 +21,7 @@
 {
     "name": "Account Invoice - Mark invoices as commissioned manually",
     "summary": "Manually set invoices as commissioned",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Invoicing",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Futural",

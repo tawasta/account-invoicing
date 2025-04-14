@@ -21,7 +21,7 @@
 {
     "name": "Account Report Salesperson",
     "summary": "Show salesperson in invoice PDF",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Reporting",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Futural",

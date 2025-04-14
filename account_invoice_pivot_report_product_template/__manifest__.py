@@ -21,7 +21,7 @@
 {
     "name": "Account Invoice Pivot Report - Product Template",
     "summary": "Group pivot report by Product Template",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Reporting",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Tawasta",
