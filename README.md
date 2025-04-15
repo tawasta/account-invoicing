@@ -73,7 +73,7 @@ addon | version | maintainers | summary
 [account_report_invoice_hide_incoterm_under_note](account_report_invoice_hide_incoterm_under_note/) | 17.0.1.0.0 |  | Invoice PDF - Hide incoterm located under the note
 [account_report_invoice_hide_origin](account_report_invoice_hide_origin/) | 17.0.1.0.0 |  | Invoice PDF - Hide origin
 [account_report_invoice_payment](account_report_invoice_payment/) | 17.0.1.0.0 |  | Changes the term 'invoice' to 'receipt' for PDF print and email template
-[account_report_invoice_quantity_decimals](account_report_invoice_quantity_decimals/) | 17.0.1.0.1 |  | Change the number of decimals shown on invoice PDF product quantities
+[account_report_invoice_quantity_decimals](account_report_invoice_quantity_decimals/) | 17.0.1.0.2 |  | Change the number of decimals shown on invoice PDF product quantities
 [account_report_invoice_reformat](account_report_invoice_reformat/) | 17.0.1.0.0 |  | Reformat invoice print elements for cleaner look
 [account_report_invoice_salesperson](account_report_invoice_salesperson/) | 17.0.1.0.1 |  | Show salesperson in invoice PDF
 [account_report_line_product_internal_reference](account_report_line_product_internal_reference/) | 17.0.1.0.0 |  | Add Internal reference for Invoice PDF print

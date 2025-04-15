@@ -8,21 +8,12 @@
         <field name="inherit_id" ref="account.res_config_settings_view_form" />
         <field name="arch" type="xml">
             <block id="invoicing_settings" position="inside">
-                <div
-                    class="col-12 col-lg-6 o_setting_box"
+                <setting
                     id="invoice_report_decimal_precision"
+                    help="Set Decimal Precision on invoice pdf print's product quantities"
                 >
-                    <div class="o_setting_right_pane">
-                        <label for="invoice_report_decimal_precision" />
-                        <div class="text-muted">
-                            Set Decimal Precision on invoice pdf print's product quantities
-                        </div>
-                        <field
-                            name="invoice_report_decimal_precision"
-                            options="{'no_create': True}"
-                        />
-                    </div>
-                </div>
+                    <field name="invoice_report_decimal_precision" />
+                </setting>
             </block>
         </field>
     </record>
