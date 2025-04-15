@@ -21,7 +21,7 @@
 {
     "name": "Invoice PDF Quantity Decimals",
     "summary": "Change the number of decimals shown on invoice PDF product quantities",
-    "version": "17.0.1.0.1",
+    "version": "17.0.1.0.2",
     "category": "Reporting",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Tawasta",
