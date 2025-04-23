@@ -21,7 +21,7 @@
 {
     "name": "Invoice print - replace Reference header with Description",
     "summary": "Invoice print - replace Reference header with Description",
-    "version": "17.0.1.0.1",
+    "version": "17.0.1.1.1",
     "category": "Reporting",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Tawasta",

@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <template id="report_invoice_document" inherit_id="account.report_invoice_document">
-        <xpath expr="//div[@name='reference']//strong" position="attributes">
+        <xpath expr="//div[@name='reference']" position="attributes">
             <attribute name="t-if">1 == 0</attribute>
         </xpath>
 
-        <xpath
-            expr="//div[@name='reference']//span[@t-field='o.ref']"
-            position="before"
-        >
-            <strong name="ref_description">Description:</strong>
+        <xpath expr="//div[@name='reference']" position="after">
+            <div
+                class="col-auto mw-100 mb-2"
+                t-if="o.overdue_interest"
+                name="ref_description"
+            >
+                <strong name="ref_description">Description:</strong><br />
+                <span class="m-0" t-field="o.ref">INV/2023/00001</span>
+            </div>
         </xpath>
     </template>
 </odoo>
