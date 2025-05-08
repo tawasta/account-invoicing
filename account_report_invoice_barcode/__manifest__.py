@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2025 Futural Oy (https://futural.fi)
+#    Copyright 2024 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,20 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Bank statement reconciled color",
-    "summary": "Show unreconciled bank statements in different color",
-    "version": "17.0.1.0.1",
-    "category": "Invoicing",
+    "name": "Account Report Barcode",
+    "summary": "Show barcode in invoice PDF",
+    "version": "17.0.1.0.0",
+    "category": "Reporting",
     "website": "https://github.com/tawasta/account-invoicing",
-    "author": "Futural",
+    "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "auto-install": True,
-    "external_dependencies": {"python": [], "bin": []},
-    "depends": ["account_statement_base"],
-    "data": [
-        "views/account_bank_statement.xml",
-    ],
-    "demo": [],
+    "depends": ["account"],
+    "data": ["report/report_invoice.xml"],
 }
