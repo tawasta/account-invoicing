@@ -21,7 +21,7 @@
 {
     "name": "Account region type",
     "summary": "Set region type for an account",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Account Charts",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Tawasta",

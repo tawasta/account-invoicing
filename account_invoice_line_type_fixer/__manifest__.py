@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2023 Futural Oy (https://futural.fi)
+#    Copyright 2025 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,15 +19,18 @@
 ##############################################################################
 
 {
-    "name": "Account Report Salesperson",
-    "summary": "Show salesperson in invoice PDF",
-    "version": "17.0.1.0.1",
-    "category": "Reporting",
+    "name": "Fix types for account move lines",
+    "summary": "Fix types for account move lines",
+    "version": "17.0.1.0.0",
+    "category": "Accounting",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["account"],
-    "data": ["report/report_invoice.xml"],
+    "depends": [
+        "account",
+    ],
+    "data": ["data/ir_actions_server.xml"],
+    "demo": [],
 }
