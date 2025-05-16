@@ -21,7 +21,7 @@
 {
     "name": "Disallow validating pickings with open down payments",
     "summary": "Prevent validating pickings with open down payments",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.1.0",
     "category": "Stock",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Tawasta",

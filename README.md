@@ -61,7 +61,7 @@ addon | version | maintainers | summary
 [account_invoice_related_sale_order_customer](account_invoice_related_sale_order_customer/) | 17.0.1.0.1 |  | Related Customer of Invoice sale order
 [account_invoice_report_reference_is_description](account_invoice_report_reference_is_description/) | 17.0.1.1.1 |  | Invoice print - replace Reference header with Description
 [account_invoice_stock_picking](account_invoice_stock_picking/) | 17.0.1.1.1 |  | Add related stock pickings to invoice
-[account_invoice_stock_picking_downpayment](account_invoice_stock_picking_downpayment/) | 17.0.1.0.0 |  | Prevent validating pickings with open down payments
+[account_invoice_stock_picking_downpayment](account_invoice_stock_picking_downpayment/) | 17.0.1.1.0 |  | Prevent validating pickings with open down payments
 [account_invoice_vendor_invoice_to_sale](account_invoice_vendor_invoice_to_sale/) | 17.0.1.0.0 |  | Adds a wizards for creating a SO from vendor invoice
 [account_lock_date_update_group](account_lock_date_update_group/) | 17.0.1.0.0 |  | This module adds a group for locking account move dates
 [account_move_payment_link](account_move_payment_link/) | 17.0.1.0.2 |  | Autogenerates a payment link that can embedded into an email template
