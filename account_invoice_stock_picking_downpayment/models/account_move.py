@@ -2,16 +2,17 @@ from odoo import _, models
 
 
 class AccountMove(models.Model):
-    _inherit = "account.move"
+    _name = "account.move"
+    _inherit = ["account.move", "mail.thread"]
 
-    def _compute_amount(self):
+    def _compute_payment_state(self):
         """
         Check if there is a need for updating picking priorities.
         We are using _compute_amount instead of _get_invoice_in_payment_state
         as the latter doesn't yet save the new state, so the has_open_invoices()-method
         on pickings would give an incorrect result
         """
-        res = super()._compute_amount()
+        res = super()._compute_payment_state()
 
         priority = (
             self.env["ir.config_parameter"]
