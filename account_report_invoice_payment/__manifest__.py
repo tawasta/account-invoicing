@@ -20,7 +20,7 @@
 
 {
     "name": "Invoice PDF term to 'receipt'",
-    "summary": "Changes the term 'invoice' to 'receipt' for PDF print and email template",
+    "summary": "Changes 'invoice' to 'receipt' for PDF print and email template",
     "version": "17.0.1.0.0",
     "category": "Reporting",
     "website": "https://github.com/tawasta/account-invoicing",

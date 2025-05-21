@@ -15,7 +15,7 @@ class PaytrailPaymentPortal(PaymentPortal):
         access_token=None,
         **kwargs,
     ):
-        response = super(PaytrailPaymentPortal, self).payment_pay(
+        response = super().payment_pay(
             reference=reference,
             amount=amount,
             currency_id=currency_id,
