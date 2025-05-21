@@ -31,7 +31,7 @@ addon | version | maintainers | summary
 [account_invoice_commission](account_invoice_commission/) | 17.0.1.0.0 |  | Add a 'commission paid' field for invoices and invoice lines
 [account_invoice_commission_manual](account_invoice_commission_manual/) | 17.0.1.0.1 |  | Manually set invoices as commissioned
 [account_invoice_commission_payment](account_invoice_commission_payment/) | 17.0.1.1.1 |  | Allows Making commission payments from invoices
-[account_invoice_commission_payment_variant_company](account_invoice_commission_payment_variant_company/) | 17.0.1.0.1 |  | Use product variant company as recipient in invoice commission payments
+[account_invoice_commission_payment_variant_company](account_invoice_commission_payment_variant_company/) | 17.0.1.0.1 |  | Use product variant company as invoice commission recipient
 [account_invoice_country_group_text](account_invoice_country_group_text/) | 17.0.1.0.0 |  | Get account invoice report text from country groups setting
 [account_invoice_credit_note_header_text_and_date_delivered](account_invoice_credit_note_header_text_and_date_delivered/) | 17.0.1.0.0 |  | Copy Header and Date Delivered fields to a created Credit Note
 [account_invoice_default_parent](account_invoice_default_parent/) | 17.0.1.0.0 |  | Default parent for new shipping addresses
@@ -40,13 +40,13 @@ addon | version | maintainers | summary
 [account_invoice_down_payment_account](account_invoice_down_payment_account/) | 17.0.1.0.1 |  | Custom accounting account for down payments
 [account_invoice_due_date](account_invoice_due_date/) | 17.0.1.0.0 |  | Account invoice due date
 [account_invoice_due_date_as_date_in_treeview](account_invoice_due_date_as_date_in_treeview/) | 17.0.1.0.1 |  | Adds a date field, to supplement the core's 'X days remaining' field
-[account_invoice_email](account_invoice_email/) | 17.0.1.0.0 |  | Send invoice email to invoice email address instead of default email address
+[account_invoice_email](account_invoice_email/) | 17.0.1.0.0 |  | Send invoice email to invoice email address instead of default email
 [account_invoice_invoice_origin_no_copy](account_invoice_invoice_origin_no_copy/) | 17.0.1.0.0 |  | Clear the Source Document field when duplicating an invoice
 [account_invoice_invoice_transmit_method_not_commercial](account_invoice_invoice_transmit_method_not_commercial/) | 17.0.1.0.0 |  | Set invoice transmit method as not commercial field
 [account_invoice_line_related_sale_order](account_invoice_line_related_sale_order/) | 17.0.1.0.0 |  | Allow linking a Sale Order to invoice lines
 [account_invoice_line_type_fixer](account_invoice_line_type_fixer/) | 17.0.1.0.0 |  | Fix types for account move lines
 [account_invoice_line_view](account_invoice_line_view/) | 17.0.1.0.0 |  | Add a readonly list view where all invoice lines are listed
-[account_invoice_link_purchase_order](account_invoice_link_purchase_order/) | 17.0.1.0.0 |  | Link purchase orders to existing invoices
+[account_invoice_link_purchase_order](account_invoice_link_purchase_order/) | 17.0.1.1.0 |  | Link purchase orders to existing invoices
 [account_invoice_mandatory_payment_term](account_invoice_mandatory_payment_term/) | 17.0.1.0.0 |  | Set invoice payment term as mandatory
 [account_invoice_mass_post_with_loop](account_invoice_mass_post_with_loop/) | 17.0.1.0.0 |  | Small change to mass posting to loop through invoices
 [account_invoice_merge_different_users](account_invoice_merge_different_users/) | 17.0.1.0.0 |  | Allow merging invoices with different users
@@ -74,7 +74,7 @@ addon | version | maintainers | summary
 [account_report_invoice_hide_customer_code](account_report_invoice_hide_customer_code/) | 17.0.1.0.0 |  | Invoice PDF - Hide customer code
 [account_report_invoice_hide_incoterm_under_note](account_report_invoice_hide_incoterm_under_note/) | 17.0.1.0.0 |  | Invoice PDF - Hide incoterm located under the note
 [account_report_invoice_hide_origin](account_report_invoice_hide_origin/) | 17.0.1.0.0 |  | Invoice PDF - Hide origin
-[account_report_invoice_payment](account_report_invoice_payment/) | 17.0.1.0.0 |  | Changes the term 'invoice' to 'receipt' for PDF print and email template
+[account_report_invoice_payment](account_report_invoice_payment/) | 17.0.1.0.0 |  | Changes 'invoice' to 'receipt' for PDF print and email template
 [account_report_invoice_quantity_decimals](account_report_invoice_quantity_decimals/) | 17.0.1.0.2 |  | Change the number of decimals shown on invoice PDF product quantities
 [account_report_invoice_reformat](account_report_invoice_reformat/) | 17.0.1.0.0 |  | Reformat invoice print elements for cleaner look
 [account_report_invoice_salesperson](account_report_invoice_salesperson/) | 17.0.1.0.1 |  | Show salesperson in invoice PDF

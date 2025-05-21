@@ -46,28 +46,22 @@ class AccountMove(models.Model):
     def validate_barcode(self):
         self.ensure_one()
         if not self.partner_bank_id:
-            _logger.warning(_("No bank account for invoice {}".format(self.name)))
+            _logger.warning(_(f"No bank account for invoice {self.name}"))
             return False
         if self.amount_total > 999999.99:
-            _logger.warning(_("Too large amount for invoice {}".format(self.name)))
+            _logger.warning(_(f"Too large amount for invoice {self.name}"))
             return False
         if not self.payment_reference:
-            _logger.warning(
-                _("Payment reference is missing for invoice {}".format(self.name))
-            )
+            _logger.warning(_(f"Payment reference is missing for invoice {self.name}"))
             return False
         if self.payment_reference and len(self.payment_reference) > 20:
-            _logger.warning(
-                _("Too long payment reference for invoice {}".format(self.name))
-            )
+            _logger.warning(_(f"Too long payment reference for invoice {self.name}"))
             return False
         if not self.invoice_date_due:
-            _logger.warning(_("No due date for invoice {}".format(self.name)))
+            _logger.warning(_(f"No due date for invoice {self.name}"))
             return False
         if self.currency_id.name != "EUR":
-            _logger.warning(
-                _("Not using EUR as currency for invoice {}".format(self.name))
-            )
+            _logger.warning(_(f"Not using EUR as currency for invoice {self.name}"))
             return False
 
         return True

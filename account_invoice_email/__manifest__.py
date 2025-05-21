@@ -20,7 +20,7 @@
 
 {
     "name": "Account Invoice Email",
-    "summary": "Send invoice email to invoice email address instead of default email address",
+    "summary": "Send invoice email to invoice email address instead of default email",
     "version": "17.0.1.0.0",
     "category": "Account",
     "website": "https://github.com/tawasta/account-invoicing",

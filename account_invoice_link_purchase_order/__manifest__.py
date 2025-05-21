@@ -22,7 +22,7 @@
     "name": "Account invoice link purchase order",
     "summary": "Link purchase orders to existing invoices",
     "category": "Invoicing",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.1.0",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Futural",
     "license": "AGPL-3",
@@ -30,6 +30,8 @@
     "installable": True,
     "depends": ["account", "purchase"],
     "data": [
+        "security/ir_model_access.xml",
+        "wizards/three_way_matching_wizard.xml",
         "views/account_move.xml",
     ],
 }

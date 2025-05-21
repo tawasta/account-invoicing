@@ -7,7 +7,8 @@ class ResPartner(models.Model):
     overdue_interest = fields.Float(
         string="Overdue interest %",
         digits=(4, 2),
-        help="Use this overdue interest for invoices. Leave at zero to use company default.",
+        help="Use this overdue interest for invoices. "
+        "Leave at zero to use company default.",
     )
 
     @api.model
@@ -17,5 +18,5 @@ class ResPartner(models.Model):
         partners that aren't `commercial entities` themselves, and will be
         delegated to the parent `commercial entity`. The list is meant to be
         extended by inheriting classes."""
-        commercial_fields = super(ResPartner, self)._commercial_fields()
+        commercial_fields = super()._commercial_fields()
         return commercial_fields + ["overdue_interest"]

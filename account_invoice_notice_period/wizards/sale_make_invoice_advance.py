@@ -9,7 +9,9 @@ class SaleAdvancePaymentInv(models.TransientModel):
         invoices = super()._create_invoices(sale_orders)
 
         for invoice in invoices:
-            order = sale_orders.filtered(lambda so: so.id == invoice.invoice_origin)
+            order = sale_orders.filtered(
+                lambda so, invoice=invoice: so.id == invoice.invoice_origin
+            )
             if order:
                 invoice.notice_period = (
                     order.partner_id.notice_period or order.company_id.notice_period
