@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="three_way_matching_wizard" model="ir.ui.view">
+        <field name="name">Match purchase orders to invoice</field>
+        <field name="model">three.way.matching.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Create payment">
+
+                <group>
+                    <field name="invoice_id" />
+                    <field name="purchase_order_id" />
+                </group>
+
+                <group invisible="not invoice_id or not purchase_order_id">
+                    <field
+                        name="wizard_line_ids"
+                        nolabel="1"
+                        colspan="2"
+                        create="false"
+                    >
+                        <tree editable="true">
+                            <field
+                                name="invoice_line_id"
+                                domain="[('move_id', '=', parent.invoice_id), ('display_type', 'in', ('product', 'line_section', 'line_note'))]"
+                                optional="show"
+                            />
+                            <field
+                                name="purchase_order_line_id"
+                                domain="[('order_id', '=', parent.purchase_order_id)]"
+                                optional="show"
+                            />
+                            <field
+                                name="purchase_line_qty"
+                                decoration-danger="invoice_line_qty != purchase_line_qty"
+                                decoration-success="invoice_line_qty == purchase_line_qty"
+                                optional="show"
+                            />
+                            <field
+                                name="invoice_line_qty"
+                                decoration-danger="invoice_line_qty != purchase_line_qty"
+                                decoration-success="invoice_line_qty == purchase_line_qty"
+                                optional="show"
+                            />
+                            <field
+                                name="purchase_line_subtotal"
+                                decoration-danger="invoice_line_subtotal != purchase_line_subtotal"
+                                decoration-success="invoice_line_subtotal == purchase_line_subtotal"
+                                optional="show"
+                            />
+                            <field
+                                name="invoice_line_subtotal"
+                                decoration-danger="invoice_line_subtotal != purchase_line_subtotal"
+                                decoration-success="invoice_line_subtotal == purchase_line_subtotal"
+                                optional="show"
+                            />
+                        </tree>
+                    </field>
+                </group>
+
+                <footer>
+                    <button
+                        string="Confirm"
+                        type="object"
+                        class="oe_highlight"
+                        name="action_confirm"
+                    />
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_three_way_matching_wizard" model="ir.actions.act_window">
+        <field name="name">Purchase order matching</field>
+        <field name="res_model">three.way.matching.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="groups_id" eval="[(4, ref('account.group_account_invoice'))]" />
+        <field name="context">{}</field>
+    </record>
+
+</odoo>
