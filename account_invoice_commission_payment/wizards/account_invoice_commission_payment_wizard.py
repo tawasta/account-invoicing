@@ -66,7 +66,8 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
         if invoice.move_type != "out_invoice":
             raise UserError(
                 _(
-                    "You can only make payments from customer invoices. '{}' is not a customer invoice"
+                    "You can only make payments from customer invoices. "
+                    "'{}' is not a customer invoice"
                 ).format(invoice.name)
             )
 
@@ -104,12 +105,11 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
 
         for payment in payments:
             for line in partner_lines[payment.partner_id]:
-                select_query = """
-                    UPDATE account_move_line SET commission_payment_id = {}, commission_paid = 't' WHERE id = {}
-                """.format(
-                    payment.id,
-                    line.id,
-                )
+                select_query = f"""
+                    UPDATE account_move_line
+                    SET commission_payment_id = {payment.id}, commission_paid = 't'
+                    WHERE id = {line.id}
+                """
                 self.env.cr.execute(select_query)
 
             payment_records |= payment
@@ -117,9 +117,7 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
         invoice._compute_commission_paid()
 
         time2 = time.process_time()
-        _logger.info(
-            "Processed time to create comission payments: {}".format(time2 - time1)
-        )
+        _logger.info(f"Processed time to create comission payments: {time2 - time1}")
 
         return payment_records
 
@@ -159,6 +157,7 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
         account_payment = self.env["account.payment"]
         payment_method = self.env.ref("account.account_payment_method_manual_out")
 
+        # flake8: noqa: B007
         for partner_id, lines in partner_lines.items():
             partner_bank_id = partner_id.bank_ids and partner_id.bank_ids[0]
 
