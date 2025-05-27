@@ -25,7 +25,7 @@ class AccountMove(models.Model):
                 # Nothing to do
                 continue
 
-            record.message_post(
+            record._origin.message_post(
                 body=_("Changing priority for pickings: {}").format(
                     pickings.mapped("name")
                 )
@@ -38,7 +38,7 @@ class AccountMove(models.Model):
             for picking in pickings:
                 if not picking.has_open_invoices() and record.move_type != "out_refund":
                     # When all the invoices for a picking are paid, change the picking priority
-                    picking.message_post(body=priority_msg)
+                    picking._origin.message_post(body=priority_msg)
                     picking.sudo().write({"priority": priority})
 
         return res
