@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="account_move_line_search_reconcile_view" model="ir.ui.view">
+        <field name="name">account.move.line.search.reconcile.move</field>
+        <field name="model">account.move.line</field>
+        <field
+            name="inherit_id"
+            ref="account_reconcile_oca.account_move_line_search_reconcile_view"
+        />
+        <field name="arch" type="xml">
+            <field name="name" position="attributes">
+                <attribute
+                    name="filter_domain"
+                >['|','|','|','|','|','|','|','|',('name', 'ilike', self), ('ref', 'ilike', self), ('account_id', 'ilike', self), ('partner_id', 'ilike', self),('amount_residual', 'ilike', self),('amount_residual_currency', 'ilike', self),('move_id.name', 'ilike', self),('move_id.ref', 'ilike', self),('move_id.payment_reference', 'ilike', self)]</attribute>
+            </field>
+        </field>
+    </record>
+</odoo>

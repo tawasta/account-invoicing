@@ -68,6 +68,7 @@ addon | version | maintainers | summary
 [account_payment_commission_send_email](account_payment_commission_send_email/) | 17.0.1.0.2 |  | Allows sending a payment summary by email
 [account_payment_term_disallow_delete](account_payment_term_disallow_delete/) | 17.0.1.0.0 |  | Don't allow deleting payment terms, if they are in use
 [account_portal_hide_chatter](account_portal_hide_chatter/) | 17.0.1.0.0 |  | Hide chatter from portal invoices
+[account_reconcile_search_move](account_reconcile_search_move/) | 17.0.1.0.0 |  | Add move name and reference to reconcile default search terms
 [account_report_invoice_bank_transfer](account_report_invoice_bank_transfer/) | 17.0.1.0.1 |  | Add a bank transfer section for invoices
 [account_report_invoice_barcode](account_report_invoice_barcode/) | 17.0.1.0.0 |  | Show barcode in invoice PDF
 [account_report_invoice_hide_customer_code](account_report_invoice_hide_customer_code/) | 17.0.1.0.0 |  | Invoice PDF - Hide customer code
