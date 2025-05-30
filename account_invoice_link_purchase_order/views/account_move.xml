@@ -40,6 +40,18 @@
                 />
             </xpath>
 
+            <xpath expr="//field[@name='invoice_line_ids']" position="before">
+                <button
+                    name="%(action_three_way_matching_wizard)d"
+                    string="Purchase order matching"
+                    type="action"
+                    invisible="move_type != 'in_invoice'"
+                    class="btn-secondary"
+                    groups="account.group_account_invoice"
+                    context="{'default_invoice_id': active_id}"
+                />
+            </xpath>
+
             <xpath
                 expr="//field[@name='invoice_line_ids']//field[@name='purchase_line_id']"
                 position="attributes"

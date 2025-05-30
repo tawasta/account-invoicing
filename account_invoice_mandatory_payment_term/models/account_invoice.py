@@ -16,7 +16,7 @@ class AccountMove(models.Model):
         else:
             to_post = self
         self._check_invoice_payment_term(to_post)
-        return super(AccountMove, self)._post(soft)
+        return super()._post(soft)
 
     # 8. Business methods
     def _check_invoice_payment_term(self, to_post):

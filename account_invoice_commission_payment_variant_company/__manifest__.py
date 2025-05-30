@@ -20,7 +20,7 @@
 
 {
     "name": "Account Invoice - Commission payment variant company",
-    "summary": "Use product variant company as recipient in invoice commission payments",
+    "summary": "Use product variant company as invoice commission recipient",
     "version": "17.0.1.0.1",
     "category": "Invoicing",
     "website": "https://github.com/tawasta/account-invoicing",

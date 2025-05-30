@@ -31,13 +31,12 @@ class AccountMove(models.Model):
                 )
             )
             priority_msg = _(
-                "Priority changed when invoice {} was marked as paid".format(
-                    record.name
-                )
+                f"Priority changed when invoice {record.name} was marked as paid"
             )
             for picking in pickings:
                 if not picking.has_open_invoices() and record.move_type != "out_refund":
-                    # When all the invoices for a picking are paid, change the picking priority
+                    # When all the invoices for a picking are paid,
+                    # change the picking priority
                     picking._origin.message_post(body=priority_msg)
                     picking.sudo().write({"priority": priority})
 

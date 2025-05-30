@@ -1,7 +1,7 @@
 from odoo import _
-from odoo.addons.account.models.exceptions import TaxClosingNonPostedDependingMovesError
 from odoo.exceptions import UserError
 
+from odoo.addons.account.models.exceptions import TaxClosingNonPostedDependingMovesError
 from odoo.addons.account.wizard.account_validate_account_move import (
     ValidateAccountMove as ValidateAccountMoveOriginal,
 )
