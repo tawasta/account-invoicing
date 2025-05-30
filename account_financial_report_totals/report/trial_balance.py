@@ -52,7 +52,7 @@ class TrialBalanceReport(models.AbstractModel):
 
     # 7. Action methods
     def _get_report_values(self, docids, data):
-        res = super(TrialBalanceReport, self)._get_report_values(docids, data)
+        res = super()._get_report_values(docids, data)
         show_partner_details = data["show_partner_details"]
         foreign_currency = data["foreign_currency"]
         if (

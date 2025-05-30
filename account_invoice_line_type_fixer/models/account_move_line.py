@@ -1,5 +1,6 @@
-from odoo import models
 import logging
+
+from odoo import models
 
 _logger = logging.getLogger(__name__)
 
@@ -25,26 +26,26 @@ class AccountMoveLine(models.Model):
         while (from_year + dif - 1) < to_year:
             years.append(
                 [
-                    ("create_date", ">", "{}-01-01 00:00:00".format(to_year - dif)),
-                    ("create_date", "<", "{}-06-01 00:00:00".format(to_year - dif)),
+                    ("create_date", ">", f"{to_year - dif}-01-01 00:00:00"),
+                    ("create_date", "<", f"{to_year - dif}-06-01 00:00:00"),
                 ]
             )
 
             years.append(
                 [
-                    ("create_date", ">", "{}-06-01 00:00:00".format(to_year - dif)),
-                    ("create_date", "<", "{}-01-01 00:00:00".format(to_year + 1 - dif)),
+                    ("create_date", ">", f"{to_year - dif}-06-01 00:00:00"),
+                    ("create_date", "<", f"{to_year + 1 - dif}-01-01 00:00:00"),
                 ]
             )
 
             dif += 1
 
         for year in years:
-            job_desc = "Fixing account move line type in year {}".format(year)
+            job_desc = f"Fixing account move line type in year {year}"
             self.with_delay(description=job_desc)._account_move_line_type_fix(
                 year_domain=year, account=account_id
             )
-            _logger.info("Done fixing account move line for year {}".format(year))
+            _logger.info(f"Done fixing account move line for year {year}")
 
     def _account_move_line_type_fix(self, year_domain, account):
         search_domain = [
@@ -61,9 +62,7 @@ class AccountMoveLine(models.Model):
         i = 0
         count = len(lines)
         _logger.info(
-            "{} account move lines with potentially incorrect display type found".format(
-                count
-            )
+            f"{count} account move lines with potentially incorrect display type found"
         )
 
         for line in lines:
@@ -78,7 +77,8 @@ class AccountMoveLine(models.Model):
             account_set = line.account_id
             tax_set = line.tax_line_id
 
-            # Get the display type the same way as _compute_display_type(), but without referring to cache
+            # Get the display type the same way as _compute_display_type(),
+            # but without referring to cache
             display_type = (
                 (
                     "tax"
@@ -96,7 +96,8 @@ class AccountMoveLine(models.Model):
             if line.display_type != display_type:
                 # If the display type doesn't match, overwrite it
                 _logger.info(
-                    f"Changing account move line {line.id} type from '{line.display_type}' to '{display_type}'"
+                    f"Changing account move line {line.id} type "
+                    f"from '{line.display_type}' to '{display_type}'"
                 )
                 try:
                     line.write({"display_type": display_type})

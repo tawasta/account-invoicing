@@ -118,7 +118,7 @@ class AccountTaxReport(models.Model):
                 company_name = record.company_id.name
                 period_start = record.period_start
                 period_end = record.period_end
-                name = "{} {} - {}".format(company_name, period_start, period_end)
+                name = f"{company_name} {period_start} - {period_end}"
 
             record.name = name
 
@@ -204,22 +204,18 @@ class AccountTaxReport(models.Model):
             header["052"] = self.period_start.month
             header["053"] = self.period_start.year
             header["001"] = self.amount_partners
-            header_str = "\n".join(
-                ["{}:{}".format(key, value) for key, value in header.items()]
-            )
+            header_str = "\n".join([f"{key}:{value}" for key, value in header.items()])
             line_str = ""
             for _code, line in line_values.items():
                 line_str += "%s\n" % "\n".join(
-                    ["{}:{}".format(key, value) for key, value in line.items()]
+                    [f"{key}:{value}" for key, value in line.items()]
                 )
 
             footer = OrderedDict()
             footer["048"] = "Futural ERP"
             footer["014"] = (self.company_registry or "") + "_V8"
             footer["999"] = "1"
-            footer_str = "\n".join(
-                ["{}:{}".format(key, value) for key, value in footer.items()]
-            )
+            footer_str = "\n".join([f"{key}:{value}" for key, value in footer.items()])
 
             report_str = header_str + "\n" + line_str + footer_str
 
@@ -305,11 +301,11 @@ class AccountTaxReport(models.Model):
     @api.model
     def create(self, vals):
         vals["name"] = self.name
-        return super(AccountTaxReport, self).create(vals)
+        return super().create(vals)
 
     def write(self, vals):
         vals["name"] = self.name
-        return super(AccountTaxReport, self).write(vals)
+        return super().write(vals)
 
 
 class TaxReportLine(models.Model):
@@ -344,7 +340,8 @@ class TaxReportInfoWindow(models.TransientModel):
         return {
             "type": "ir.actions.act_url",
             "url": "/web/binary/download_document?model=account_tax_report\
-            .tax.report&field=report_file&id=%s&filename=%s"
-            % (self.report_id.id, self.filename),
+            .tax.report&field=report_file&id={}&filename={}".format(
+                self.report_id.id, self.filename
+            ),
             "target": "self",
         }

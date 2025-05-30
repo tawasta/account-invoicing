@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Author: Futural Oy
+#    Copyright 2025 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,16 +19,20 @@
 ##############################################################################
 
 {
-    "name": "Account Invoice Email",
-    "summary": "Send invoice email to invoice email address instead of default email",
+    "name": "Bank reconcile: search by move information",
+    "summary": "Add move name and reference to reconcile default search terms",
     "version": "17.0.1.0.0",
-    "category": "Account",
+    "category": "Invoicing",
     "website": "https://github.com/tawasta/account-invoicing",
-    "author": "Tawasta",
+    "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["account"],
-    "external_dependencies": {"python": ["email_validator"]},
-    "data": ["views/res_partner.xml"],
+    "auto-install": True,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["account_reconcile_oca"],
+    "data": [
+        "views/account_move_line.xml",
+    ],
+    "demo": [],
 }

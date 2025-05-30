@@ -17,7 +17,7 @@ class AccountPaymentTerm(models.Model):
                         (
                             "value_reference",
                             "=",
-                            "account.payment.term,{}".format(record.id),
+                            f"account.payment.term,{record.id}",
                         ),
                     ]
                 )
