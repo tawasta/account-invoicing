@@ -27,7 +27,7 @@
                             />
                             <field
                                 name="purchase_order_line_id"
-                                domain="[('order_id', '=', parent.purchase_order_id)]"
+                                domain="[('order_id', '=', parent.purchase_order_id), ('invoice_lines', '=', False)]"
                                 optional="show"
                             />
                             <field
