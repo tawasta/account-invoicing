@@ -64,7 +64,7 @@
                 <attribute name="optional">hide</attribute>
                 <attribute
                     name="domain"
-                >[('order_id', 'in', parent.purchase_order_ids)]</attribute>
+                >[('order_id', 'in', parent.purchase_order_ids), ('invoice_lines', '=', False)]</attribute>
             </xpath>
         </field>
     </record>
