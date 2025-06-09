@@ -35,7 +35,7 @@ Maintainer
 ----------
 
 .. image:: http://tawasta.fi/templates/tawastrap/images/logo.png
-   :alt: Oy Tawasta OS Technologies Ltd.
+   :alt: Futural Oy
    :target: http://tawasta.fi/
 
-This module is maintained by Oy Tawasta OS Technologies Ltd.
+This module is maintained by Futural Oy
