@@ -18,6 +18,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [account_account_region_type](account_account_region_type/) | 17.0.1.0.1 |  | Set region type for an account
+[account_bank_statement_manual](account_bank_statement_manual/) | 17.0.1.0.0 |  | Allows inputting bank statement information manually
 [account_bank_statement_reconciled_color](account_bank_statement_reconciled_color/) | 17.0.1.0.1 |  | Show unreconciled bank statements in different color
 [account_credit_control_sales_contact](account_credit_control_sales_contact/) | 17.0.1.0.0 |  | Account credit control sales contact
 [account_financial_report_amount_currency_error_fix](account_financial_report_amount_currency_error_fix/) | 17.0.1.0.0 |  | Fix for the amount_currency error for financial reports
@@ -46,7 +47,7 @@ addon | version | maintainers | summary
 [account_invoice_line_related_sale_order](account_invoice_line_related_sale_order/) | 17.0.1.0.0 |  | Allow linking a Sale Order to invoice lines
 [account_invoice_line_type_fixer](account_invoice_line_type_fixer/) | 17.0.1.0.0 |  | Fix types for account move lines
 [account_invoice_line_view](account_invoice_line_view/) | 17.0.1.0.0 |  | Add a readonly list view where all invoice lines are listed
-[account_invoice_link_purchase_order](account_invoice_link_purchase_order/) | 17.0.1.1.0 |  | Link purchase orders to existing invoices
+[account_invoice_link_purchase_order](account_invoice_link_purchase_order/) | 17.0.1.1.1 |  | Link purchase orders to existing invoices
 [account_invoice_mandatory_payment_term](account_invoice_mandatory_payment_term/) | 17.0.1.0.0 |  | Set invoice payment term as mandatory
 [account_invoice_mass_post_with_loop](account_invoice_mass_post_with_loop/) | 17.0.1.0.0 |  | Small change to mass posting to loop through invoices
 [account_invoice_merge_different_users](account_invoice_merge_different_users/) | 17.0.1.0.0 |  | Allow merging invoices with different users
@@ -63,6 +64,7 @@ addon | version | maintainers | summary
 [account_invoice_report_reference_is_description](account_invoice_report_reference_is_description/) | 17.0.1.1.1 |  | Invoice print - replace Reference header with Description
 [account_invoice_stock_picking](account_invoice_stock_picking/) | 17.0.1.1.1 |  | Add related stock pickings to invoice
 [account_invoice_stock_picking_downpayment](account_invoice_stock_picking_downpayment/) | 17.0.1.1.1 |  | Prevent validating pickings with open down payments
+[account_invoice_vendor_invoice_purchase_representative](account_invoice_vendor_invoice_purchase_representative/) | 17.0.1.0.0 |  | Purchase Representative of Vendor Bill
 [account_invoice_vendor_invoice_to_sale](account_invoice_vendor_invoice_to_sale/) | 17.0.1.0.0 |  | Adds a wizards for creating a SO from vendor invoice
 [account_lock_date_update_group](account_lock_date_update_group/) | 17.0.1.0.0 |  | This module adds a group for locking account move dates
 [account_move_payment_link](account_move_payment_link/) | 17.0.1.0.2 |  | Autogenerates a payment link that can embedded into an email template
