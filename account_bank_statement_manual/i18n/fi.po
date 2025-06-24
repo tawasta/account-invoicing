@@ -1,0 +1,28 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_bank_statement_reconciled_color
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250131\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-14 08:17+0000\n"
+"PO-Revision-Date: 2025-04-14 11:18+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.6\n"
+
+#. module: account_bank_statement_reconciled_color
+#: model:ir.model,name:account_bank_statement_reconciled_color.model_account_bank_statement
+msgid "Bank Statement"
+msgstr "Pankin tiliote"
+
+#. module: account_bank_statement_reconciled_color
+#: model:ir.model.fields,field_description:account_bank_statement_reconciled_color.field_account_bank_statement__is_reconciled
+msgid "Is Reconciled"
+msgstr "On täsmäytetty"

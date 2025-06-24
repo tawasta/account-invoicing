@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="account_bank_statement_line_tree" model="ir.ui.view">
+        <field name="name">account.bank.statement.line.manual tree</field>
+        <field name="model">account.bank.statement.line</field>
+        <field
+            name="inherit_id"
+            ref="account_statement_base.account_bank_statement_line_tree"
+        />
+        <field name="arch" type="xml">
+            <field name="sequence" position="attributes">
+                <attribute name="optional">hide</attribute>
+            </field>
+
+        </field>
+    </record>
+</odoo>
