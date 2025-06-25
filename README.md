@@ -47,7 +47,7 @@ addon | version | maintainers | summary
 [account_invoice_line_related_sale_order](account_invoice_line_related_sale_order/) | 17.0.1.0.0 |  | Allow linking a Sale Order to invoice lines
 [account_invoice_line_type_fixer](account_invoice_line_type_fixer/) | 17.0.1.0.0 |  | Fix types for account move lines
 [account_invoice_line_view](account_invoice_line_view/) | 17.0.1.0.0 |  | Add a readonly list view where all invoice lines are listed
-[account_invoice_link_purchase_order](account_invoice_link_purchase_order/) | 17.0.1.1.1 |  | Link purchase orders to existing invoices
+[account_invoice_link_purchase_order](account_invoice_link_purchase_order/) | 17.0.1.2.0 |  | Link purchase orders to existing invoices
 [account_invoice_mandatory_payment_term](account_invoice_mandatory_payment_term/) | 17.0.1.0.0 |  | Set invoice payment term as mandatory
 [account_invoice_mass_post_with_loop](account_invoice_mass_post_with_loop/) | 17.0.1.0.0 |  | Small change to mass posting to loop through invoices
 [account_invoice_merge_different_users](account_invoice_merge_different_users/) | 17.0.1.0.0 |  | Allow merging invoices with different users

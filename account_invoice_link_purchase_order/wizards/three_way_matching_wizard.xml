@@ -24,35 +24,73 @@
                                 name="invoice_line_id"
                                 domain="[('move_id', '=', parent.invoice_id), ('display_type', 'in', ('product', 'line_section', 'line_note'))]"
                                 optional="show"
+                                readonly="1"
+                                force_save="1"
                             />
                             <field
                                 name="purchase_order_line_id"
                                 domain="[('order_id', '=', parent.purchase_order_id), ('invoice_lines', '=', False)]"
                                 optional="show"
                             />
+
                             <field
                                 name="purchase_line_qty"
                                 decoration-danger="invoice_line_qty != purchase_line_qty"
                                 decoration-success="invoice_line_qty == purchase_line_qty"
-                                optional="show"
+                                optional="hide"
                             />
                             <field
                                 name="invoice_line_qty"
                                 decoration-danger="invoice_line_qty != purchase_line_qty"
                                 decoration-success="invoice_line_qty == purchase_line_qty"
+                                optional="hide"
+                            />
+                            <field
+                                name="purchase_line_qty_to_invoice"
+                                decoration-danger="purchase_line_qty_to_invoice != quantity"
+                                decoration-success="purchase_line_qty_to_invoice == quantity"
                                 optional="show"
                             />
+                            <field
+                                name="quantity"
+                                decoration-danger="purchase_line_qty_to_invoice != quantity"
+                                decoration-success="purchase_line_qty_to_invoice == quantity"
+                                optional="show"
+                            />
+
+                            <field
+                                name="invoice_line_price_unit"
+                                decoration-danger="invoice_line_price_unit != price_unit"
+                                decoration-success="invoice_line_price_unit == price_unit"
+                                optional="show"
+                            />
+
+                            <field
+                                name="purchase_order_line_price_unit"
+                                decoration-danger="purchase_order_line_price_unit != price_unit"
+                                decoration-success="purchase_order_line_price_unit == price_unit"
+                                optional="hide"
+                            />
+                            <field
+                                name="price_unit"
+                                decoration-danger="invoice_line_price_unit != price_unit"
+                                decoration-success="invoice_line_price_unit == price_unit"
+                                optional="show"
+                            />
+
+                            <field name="company_id" column_invisible="1" />
+                            <field name="account_id" />
                             <field
                                 name="purchase_line_subtotal"
                                 decoration-danger="invoice_line_subtotal != purchase_line_subtotal"
                                 decoration-success="invoice_line_subtotal == purchase_line_subtotal"
-                                optional="show"
+                                optional="hide"
                             />
                             <field
                                 name="invoice_line_subtotal"
                                 decoration-danger="invoice_line_subtotal != purchase_line_subtotal"
                                 decoration-success="invoice_line_subtotal == purchase_line_subtotal"
-                                optional="show"
+                                optional="hide"
                             />
                         </tree>
                     </field>
