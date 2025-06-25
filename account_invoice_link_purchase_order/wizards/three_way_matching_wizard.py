@@ -10,8 +10,10 @@ class ThreeWayMatchingWizard(models.TransientModel):
     _name = "three.way.matching.wizard"
     _description = "Match purchase orders to invoice"
 
-    invoice_id = fields.Many2one("account.move", string="Vendor Bill")
-    purchase_order_id = fields.Many2one("purchase.order", string="Purchase Order")
+    invoice_id = fields.Many2one("account.move", string="Vendor Bill", required=True)
+    purchase_order_id = fields.Many2one(
+        "purchase.order", string="Purchase Order", required=True
+    )
     wizard_line_ids = fields.One2many(
         comodel_name="three.way.matching.wizard.line", inverse_name="wizard_id"
     )
@@ -36,14 +38,22 @@ class ThreeWayMatchingWizard(models.TransientModel):
             line_ids.append((0, 0, line_vals))
 
         self.wizard_line_ids = [(5, 0, 0)] + line_ids
+        self.wizard_line_ids._onchange_purchase_order_line_id()
 
     def action_confirm(self):
         self.ensure_one()
 
-        for line in self.wizard_line_ids:
-            if line.purchase_order_line_id:
-                line.invoice_line_id.purchase_line_id = line.purchase_order_line_id
+        for wizard_line in self.wizard_line_ids:
+            invoice_line = wizard_line.invoice_line_id
+            if wizard_line.purchase_order_line_id:
+                vals = {
+                    "purchase_line_id": wizard_line.purchase_order_line_id.id,
+                    "account_id": wizard_line.account_id.id,
+                    "price_unit": wizard_line.price_unit,
+                    "quantity": wizard_line.quantity,
+                }
+                invoice_line.write(vals)
 
-            line.invoice_line_id._onchange_purchase_line_id()
+            invoice_line._onchange_purchase_line_id()
 
         return {"type": "ir.actions.act_window_close"}
