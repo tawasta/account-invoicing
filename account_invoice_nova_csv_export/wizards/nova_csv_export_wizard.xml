@@ -1,0 +1,22 @@
+<odoo>
+    <record id="view_nova_csv_export_wizard_form" model="ir.ui.view">
+        <field name="name">nova.csv.export.wizard.form</field>
+        <field name="model">nova.csv.export.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Export Invoices to CSV">
+                    <p class="text-muted">
+                        The selected invoices will exported into a Nova-compatible CSV file.
+                    </p>
+                <footer>
+                    <button
+                        name="export_nova_csv"
+                        type="object"
+                        string="Export"
+                        class="btn-primary"
+                    />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
