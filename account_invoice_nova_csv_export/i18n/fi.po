@@ -1,0 +1,127 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_invoice_nova_csv_export
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250428\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-26 10:59+0000\n"
+"PO-Revision-Date: 2025-06-26 10:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_invoice_nova_csv_export
+#: model:ir.model.fields,field_description:account_invoice_nova_csv_export.field_nova_csv_export_wizard__file_data
+msgid "CSV File"
+msgstr "CSV-tiedosto"
+
+#. module: account_invoice_nova_csv_export
+#: model_terms:ir.ui.view,arch_db:account_invoice_nova_csv_export.view_nova_csv_export_wizard_form
+msgid "Cancel"
+msgstr "Peruuta"
+
+#. module: account_invoice_nova_csv_export
+#: model:ir.model.fields,field_description:account_invoice_nova_csv_export.field_nova_csv_export_wizard__create_uid
+msgid "Created by"
+msgstr "Luonut"
+
+#. module: account_invoice_nova_csv_export
+#: model:ir.model.fields,field_description:account_invoice_nova_csv_export.field_nova_csv_export_wizard__create_date
+msgid "Created on"
+msgstr "Luotu"
+
+#. module: account_invoice_nova_csv_export
+#. odoo-python
+#: code:addons/account_invoice_nova_csv_export/wizards/nova_csv_export_wizard.py:0
+#: code:addons/account_invoice_nova_csv_export/wizards/nova_csv_export_wizard.py:0
+#, python-format
+msgid "DRAFT"
+msgstr "LUONNOSLASKU"
+
+#. module: account_invoice_nova_csv_export
+#: model:ir.model.fields,field_description:account_invoice_nova_csv_export.field_nova_csv_export_wizard__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: account_invoice_nova_csv_export
+#: model_terms:ir.ui.view,arch_db:account_invoice_nova_csv_export.view_nova_csv_export_wizard_form
+msgid "Export"
+msgstr "Vie"
+
+#. module: account_invoice_nova_csv_export
+#: model:ir.actions.act_window,name:account_invoice_nova_csv_export.action_nova_csv_export_wizard
+msgid "Export CSV (Nova)"
+msgstr "CSV-vienti (Nova)"
+
+#. module: account_invoice_nova_csv_export
+#: model_terms:ir.ui.view,arch_db:account_invoice_nova_csv_export.view_nova_csv_export_wizard_form
+msgid "Export Invoices to CSV"
+msgstr "Vie laskut CSV-tiedostoon"
+
+#. module: account_invoice_nova_csv_export
+#: model:ir.model.fields,field_description:account_invoice_nova_csv_export.field_nova_csv_export_wizard__file_name
+msgid "Filename"
+msgstr "Tiedostonimi"
+
+#. module: account_invoice_nova_csv_export
+#: model:ir.model.fields,field_description:account_invoice_nova_csv_export.field_nova_csv_export_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: account_invoice_nova_csv_export
+#: model:ir.model,name:account_invoice_nova_csv_export.model_account_move
+msgid "Journal Entry"
+msgstr "Päiväkirjan kirjaus"
+
+#. module: account_invoice_nova_csv_export
+#: model:ir.model.fields,field_description:account_invoice_nova_csv_export.field_account_bank_statement_line__last_nova_csv_export
+#: model:ir.model.fields,field_description:account_invoice_nova_csv_export.field_account_move__last_nova_csv_export
+#: model:ir.model.fields,field_description:account_invoice_nova_csv_export.field_account_payment__last_nova_csv_export
+msgid "Last Nova CSV Export Date"
+msgstr "Viimeisin Nova CSV-vienti tehty"
+
+#. module: account_invoice_nova_csv_export
+#: model:ir.model.fields,field_description:account_invoice_nova_csv_export.field_nova_csv_export_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: account_invoice_nova_csv_export
+#: model:ir.model.fields,field_description:account_invoice_nova_csv_export.field_nova_csv_export_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: account_invoice_nova_csv_export
+#: model:ir.model,name:account_invoice_nova_csv_export.model_nova_csv_export_wizard
+msgid "Nova CSV Export Wizard"
+msgstr "Nova CSV-vientityökalu"
+
+#. module: account_invoice_nova_csv_export
+#. odoo-python
+#: code:addons/account_invoice_nova_csv_export/wizards/nova_csv_export_wizard.py:0
+#, python-format
+msgid "Only customer invoices can be exported."
+msgstr "Vain asiakaslaskuja voidaan viedä"
+
+#. module: account_invoice_nova_csv_export
+#. odoo-python
+#: code:addons/account_invoice_nova_csv_export/wizards/nova_csv_export_wizard.py:0
+#, python-format
+msgid "Please fix the following issues before exporting: <br/>"
+msgstr "Ole hyvä ja korjaa seuraavat ennen vientiä"
+
+#. module: account_invoice_nova_csv_export
+#: model_terms:ir.ui.view,arch_db:account_invoice_nova_csv_export.view_nova_csv_export_wizard_form
+msgid "The selected invoices will exported into a Nova-compatible CSV file."
+msgstr "Valitut laskut viedään Nova-yhteensopivaan CSV-tiedostoon."
+
+#. module: account_invoice_nova_csv_export
+#: model:ir.model.fields,help:account_invoice_nova_csv_export.field_account_bank_statement_line__last_nova_csv_export
+#: model:ir.model.fields,help:account_invoice_nova_csv_export.field_account_move__last_nova_csv_export
+#: model:ir.model.fields,help:account_invoice_nova_csv_export.field_account_payment__last_nova_csv_export
+msgid "When this invoice was last exported into a CSV file."
+msgstr "Milloin tämä lasku viimeksi on viety CSV-tiedostoon."
