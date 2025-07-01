@@ -22,7 +22,7 @@
     "name": "Account invoice link purchase order",
     "summary": "Link purchase orders to existing invoices",
     "category": "Invoicing",
-    "version": "17.0.1.1.1",
+    "version": "17.0.1.2.0",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Futural",
     "license": "AGPL-3",
