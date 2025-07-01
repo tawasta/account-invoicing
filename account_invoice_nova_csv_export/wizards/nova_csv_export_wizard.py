@@ -49,7 +49,9 @@ class NovaCSVExportWizard(models.TransientModel):
             # Log the timestamp to the invoice
             invoice.last_nova_csv_export = fields.Datetime.now()
 
-        csv_data = base64.b64encode(output.getvalue().encode("utf-8"))
+        csv_charset = self._get_csv_charset()
+
+        csv_data = base64.b64encode(output.getvalue().encode(csv_charset))
         output.close()
 
         filename = (
@@ -64,6 +66,11 @@ class NovaCSVExportWizard(models.TransientModel):
             "url": f"/web/content/?model={self._name}&id={self.id}&field=file_data&download=true&filename={filename}",  # noqa: E501
             "target": "self",
         }
+
+    def _get_csv_charset(self):
+        # TODO verify what the receiving end expects. It's not UTF8.
+        # Potentially cp1252 or iso-8859-1?
+        return "cp1252"
 
     def _pre_validate_data(self, invoices):
         # Run some preliminary checks before exporting
@@ -104,7 +111,7 @@ class NovaCSVExportWizard(models.TransientModel):
                 "",
                 "",
                 "",
-                "po. 25,5%",
+                "",
             ],
             [
                 "TYYPPI0",
@@ -227,7 +234,7 @@ class NovaCSVExportWizard(models.TransientModel):
             invoice.name if invoice.name != "/" else _("DRAFT"),  # B
             "",  # C
             line.product_id.default_code or "",  # D
-            line.name or "",  # E
+            line.product_id and line.product_id.name or "",  # E
             str(line.quantity or ""),  # F
             line.product_uom_id and line.product_uom_id.name.upper() or "",  # G
             str(line.price_unit or ""),  # H
