@@ -28,7 +28,5 @@
     "application": False,
     "installable": True,
     "depends": ["account_invoice_merge"],
-    "data": [
-        "wizard/invoice_merge.xml"
-    ],
+    "data": ["wizard/invoice_merge.xml"],
 }
