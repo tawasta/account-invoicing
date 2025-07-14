@@ -23,7 +23,7 @@
     "summary": "Post (confirm) invoices from line view",
     "version": "14.0.1.2.0",
     "category": "Invoicing",
-    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
+    "website": "https://github.com/tawasta/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
