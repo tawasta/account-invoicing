@@ -23,7 +23,7 @@
     "summary": "Small change to mass posting to loop through invoices",
     "version": "14.0.1.1.0",
     "category": "Accounting & Finance",
-    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
+    "website": "https://github.com/tawasta/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

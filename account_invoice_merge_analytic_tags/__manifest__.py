@@ -23,7 +23,7 @@
     "summary": "Preserve analytic tags when merging invoices",
     "version": "14.0.1.0.0",
     "category": "Invoicing",
-    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
+    "website": "https://github.com/tawasta/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

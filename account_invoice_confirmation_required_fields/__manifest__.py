@@ -24,7 +24,7 @@
     "is allowed to be confirmed",
     "version": "14.0.1.1.0",
     "category": "Invoicing",
-    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
+    "website": "https://github.com/tawasta/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
