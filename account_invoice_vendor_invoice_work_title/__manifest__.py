@@ -22,7 +22,7 @@
     "summary": "Add new field work_title to Account Invoice",
     "version": "14.0.1.0.1",
     "category": "Invoice Management",
-    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
+    "website": "https://github.com/tawasta/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

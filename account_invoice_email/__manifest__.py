@@ -23,7 +23,7 @@
     "summary": "Send invoice email to invoice email address instead of default email address",
     "version": "14.0.1.1.0",
     "category": "Account",
-    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
+    "website": "https://github.com/tawasta/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

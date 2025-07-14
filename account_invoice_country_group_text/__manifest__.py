@@ -23,7 +23,7 @@
     "summary": "Get account invoice report text from country groups setting",
     "version": "14.0.2.0.0",
     "category": "Sales",
-    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
+    "website": "https://github.com/tawasta/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

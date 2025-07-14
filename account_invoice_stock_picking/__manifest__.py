@@ -23,7 +23,7 @@
     "summary": "Add related stock pickings to invoice",
     "version": "14.0.1.1.0",
     "category": "Stock",
-    "website": "https://gitlab.com/tawasta/odoo/account-invoicing",
+    "website": "https://github.com/tawasta/account-invoicing",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
