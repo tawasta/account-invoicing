@@ -1,0 +1,26 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* invoice_merge_keep_ref
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20240711\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-08 11:22+0000\n"
+"PO-Revision-Date: 2025-07-08 11:22+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: invoice_merge_keep_ref
+#: model:ir.model.fields,field_description:invoice_merge_keep_ref.field_invoice_merge__keep_original_refs
+msgid "Keep customer references"
+msgstr "Säilytä asiakasviite"
+
+#. module: invoice_merge_keep_ref
+#: model:ir.model,name:invoice_merge_keep_ref.model_invoice_merge
+msgid "Merge Partner Invoice"
+msgstr "Yhdistä kumppanin lasku"
