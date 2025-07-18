@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="edit_invoice_delivery_date" model="res.groups">
+        <field name="name">Edit invoice Delivery date</field>
+        <field name="category_id" ref="base.module_category_usability" />
+    </record>
+</odoo>
