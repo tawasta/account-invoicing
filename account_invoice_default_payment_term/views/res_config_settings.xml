@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_account_config_settings" model="ir.ui.view">
+        <field
+            name="name"
+        >res.config.settings.view.form.invoice.default.payment.term</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <block id="invoicing_settings" position="inside">
+                <setting
+                    id="settings_default_invoice_payment_term"
+                    help="Set the default payment term for invoices in case if a partner has no payment term"
+                >
+                    <field name="invoice_payment_term" />
+                </setting>
+            </block>
+        </field>
+    </record>
+</odoo>
