@@ -36,6 +36,7 @@ addon | version | maintainers | summary
 [account_invoice_country_group_text](account_invoice_country_group_text/) | 17.0.1.0.0 |  | Get account invoice report text from country groups setting
 [account_invoice_credit_note_header_text_and_date_delivered](account_invoice_credit_note_header_text_and_date_delivered/) | 17.0.1.0.0 |  | Copy Header and Date Delivered fields to a created Credit Note
 [account_invoice_default_parent](account_invoice_default_parent/) | 17.0.1.0.0 |  | Default parent for new shipping addresses
+[account_invoice_default_payment_term](account_invoice_default_payment_term/) | 17.0.1.0.0 |  | Set a default payment term for invoices if a partner does not have one
 [account_invoice_delivery_date_group](account_invoice_delivery_date_group/) | 17.0.1.0.0 |  | Some users can be added to a group to edit Delivery date
 [account_invoice_description](account_invoice_description/) | 17.0.1.0.0 |  | Invoice internal note, that is not shown to partners
 [account_invoice_disable_auto_narration](account_invoice_disable_auto_narration/) | 17.0.1.0.0 |  | Don't reload narration when changing partner on invoices
