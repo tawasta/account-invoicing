@@ -31,7 +31,7 @@ addon | version | maintainers | summary
 [account_invoice_auditlog_rules](account_invoice_auditlog_rules/) | 17.0.1.0.1 |  | Adds audit log rules for account.move and account.move.line
 [account_invoice_commission](account_invoice_commission/) | 17.0.1.0.0 |  | Add a 'commission paid' field for invoices and invoice lines
 [account_invoice_commission_manual](account_invoice_commission_manual/) | 17.0.1.0.1 |  | Manually set invoices as commissioned
-[account_invoice_commission_payment](account_invoice_commission_payment/) | 17.0.1.1.1 |  | Allows Making commission payments from invoices
+[account_invoice_commission_payment](account_invoice_commission_payment/) | 17.0.1.2.1 |  | Allows Making commission payments from invoices
 [account_invoice_commission_payment_variant_company](account_invoice_commission_payment_variant_company/) | 17.0.1.0.1 |  | Use product variant company as invoice commission recipient
 [account_invoice_country_group_text](account_invoice_country_group_text/) | 17.0.1.0.0 |  | Get account invoice report text from country groups setting
 [account_invoice_credit_note_header_text_and_date_delivered](account_invoice_credit_note_header_text_and_date_delivered/) | 17.0.1.0.0 |  | Copy Header and Date Delivered fields to a created Credit Note
