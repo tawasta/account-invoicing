@@ -111,6 +111,7 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
                     WHERE id = {line.id}
                 """
                 self.env.cr.execute(select_query)
+                self.env.cr.commit()
 
             payment_records |= payment
 
