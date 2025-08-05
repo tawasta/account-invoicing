@@ -53,6 +53,7 @@ addon | version | maintainers | summary
 [account_invoice_mandatory_payment_term](account_invoice_mandatory_payment_term/) | 17.0.1.0.0 |  | Set invoice payment term as mandatory
 [account_invoice_mass_post_with_loop](account_invoice_mass_post_with_loop/) | 17.0.1.0.0 |  | Small change to mass posting to loop through invoices
 [account_invoice_merge_different_users](account_invoice_merge_different_users/) | 17.0.1.0.0 |  | Allow merging invoices with different users
+[account_invoice_merge_keep_ref](account_invoice_merge_keep_ref/) | 17.0.1.0.0 |  | Customer references are added to a merged invoice from invoices
 [account_invoice_merge_never_merge_lines](account_invoice_merge_never_merge_lines/) | 17.0.1.0.0 |  | Never merge lines while merging invoices.
 [account_invoice_notice_period](account_invoice_notice_period/) | 17.0.1.0.1 |  | Notice period field for invoices and partners
 [account_invoice_nova_csv_export](account_invoice_nova_csv_export/) | 17.0.1.0.0 |  | Create a .csv file of customer invoices, for importing to Nova
