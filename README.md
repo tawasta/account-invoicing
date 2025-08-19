@@ -44,6 +44,7 @@ addon | version | maintainers | summary
 [account_invoice_due_date](account_invoice_due_date/) | 17.0.1.0.0 |  | Account invoice due date
 [account_invoice_due_date_as_date_in_treeview](account_invoice_due_date_as_date_in_treeview/) | 17.0.1.0.1 |  | Adds a date field, to supplement the core's 'X days remaining' field
 [account_invoice_email](account_invoice_email/) | 17.0.1.0.0 |  | Send invoice email to invoice email address instead of default email
+[account_invoice_inter_company_use_post](account_invoice_inter_company_use_post/) | 17.0.1.0.0 |  | Enable to create Intercompany invoices in invoice tree view
 [account_invoice_invoice_origin_no_copy](account_invoice_invoice_origin_no_copy/) | 17.0.1.0.0 |  | Clear the Source Document field when duplicating an invoice
 [account_invoice_invoice_transmit_method_not_commercial](account_invoice_invoice_transmit_method_not_commercial/) | 17.0.1.0.0 |  | Set invoice transmit method as not commercial field
 [account_invoice_line_related_sale_order](account_invoice_line_related_sale_order/) | 17.0.1.0.0 |  | Allow linking a Sale Order to invoice lines
