@@ -37,7 +37,7 @@ addon | version | maintainers | summary
 [account_invoice_credit_note_header_text_and_date_delivered](account_invoice_credit_note_header_text_and_date_delivered/) | 17.0.1.0.0 |  | Copy Header and Date Delivered fields to a created Credit Note
 [account_invoice_default_parent](account_invoice_default_parent/) | 17.0.1.0.0 |  | Default parent for new shipping addresses
 [account_invoice_default_payment_term](account_invoice_default_payment_term/) | 17.0.1.0.0 |  | Set a default payment term for invoices if a partner does not have one
-[account_invoice_delivery_date_group](account_invoice_delivery_date_group/) | 17.0.1.0.0 |  | Some users can be added to a group to edit Delivery date
+[account_invoice_delivery_date_group](account_invoice_delivery_date_group/) | 17.0.1.1.0 |  | Some users can be added to a group to edit Delivery date
 [account_invoice_delivery_date_tracking](account_invoice_delivery_date_tracking/) | 17.0.1.0.0 |  | Track Delivery Date changes on invoices
 [account_invoice_description](account_invoice_description/) | 17.0.1.0.0 |  | Invoice internal note, that is not shown to partners
 [account_invoice_disable_auto_narration](account_invoice_disable_auto_narration/) | 17.0.1.0.0 |  | Don't reload narration when changing partner on invoices
@@ -73,7 +73,7 @@ addon | version | maintainers | summary
 [account_invoice_vendor_invoice_purchase_representative](account_invoice_vendor_invoice_purchase_representative/) | 17.0.1.0.0 |  | Purchase Representative of Vendor Bill
 [account_invoice_vendor_invoice_to_sale](account_invoice_vendor_invoice_to_sale/) | 17.0.1.0.0 |  | Adds a wizards for creating a SO from vendor invoice
 [account_lock_date_update_group](account_lock_date_update_group/) | 17.0.1.0.0 |  | This module adds a group for locking account move dates
-[account_move_payment_link](account_move_payment_link/) | 17.0.1.0.2 |  | Autogenerates a payment link that can embedded into an email template
+[account_move_payment_link](account_move_payment_link/) | 17.0.1.0.3 |  | Autogenerates a payment link that can embedded into an email template
 [account_payment_commission_send_email](account_payment_commission_send_email/) | 17.0.1.0.2 |  | Allows sending a payment summary by email
 [account_payment_term_disallow_delete](account_payment_term_disallow_delete/) | 17.0.1.0.0 |  | Don't allow deleting payment terms, if they are in use
 [account_portal_hide_chatter](account_portal_hide_chatter/) | 17.0.1.0.0 |  | Hide chatter from portal invoices
