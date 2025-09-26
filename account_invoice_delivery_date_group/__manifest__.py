@@ -21,7 +21,7 @@
 {
     "name": "Enable to edit Delivery date -field of invoices for some users",
     "summary": "Some users can be added to a group to edit Delivery date",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.1.0",
     "category": "Account",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Futural",
