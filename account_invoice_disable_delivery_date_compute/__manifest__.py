@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2021 Futural Oy (https://futural.fi)
+#    Copyright 2025 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,16 +19,17 @@
 ##############################################################################
 
 {
-    "name": "Audit Log Rules - Account Invoicing",
-    "summary": "Adds audit log rules for account.move and account.move.line",
+    "name": "Disable automatic computation of Delivery Date in invoices",
+    "summary": "Disable the computation of Delivery Date of invoices",
+    "version": "17.0.1.0.0",
+    "category": "Account",
+    "website": "https://github.com/tawasta/account-invoicing",
     "author": "Futural",
     "license": "AGPL-3",
-    "website": "https://github.com/tawasta/account-invoicing",
-    "category": "Logging",
     "application": False,
     "installable": True,
-    "version": "17.0.1.1.0",
-    "depends": ["account", "auditlog"],
-    "data": ["data/rules.xml"],
-    "demo": [],
+    "depends": [
+        "sale_stock",
+    ],
+    "data": [],
 }

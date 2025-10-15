@@ -28,7 +28,7 @@ addon | version | maintainers | summary
 [account_fiscal_position_type](account_fiscal_position_type/) | 17.0.1.0.1 |  | Add a type for fiscal positions (domestic, EU, non-EU)
 [account_full_reconcile_name_field](account_full_reconcile_name_field/) | 17.0.1.0.0 |  | Adds name -field to account_full_reconcile table
 [account_invoice_accrual_rule](account_invoice_accrual_rule/) | 17.0.1.0.1 |  | Add accrual rules to invoices
-[account_invoice_auditlog_rules](account_invoice_auditlog_rules/) | 17.0.1.0.1 |  | Adds audit log rules for account.move and account.move.line
+[account_invoice_auditlog_rules](account_invoice_auditlog_rules/) | 17.0.1.1.0 |  | Adds audit log rules for account.move and account.move.line
 [account_invoice_commission](account_invoice_commission/) | 17.0.1.0.0 |  | Add a 'commission paid' field for invoices and invoice lines
 [account_invoice_commission_manual](account_invoice_commission_manual/) | 17.0.1.0.1 |  | Manually set invoices as commissioned
 [account_invoice_commission_payment](account_invoice_commission_payment/) | 17.0.1.2.1 |  | Allows Making commission payments from invoices
@@ -41,6 +41,7 @@ addon | version | maintainers | summary
 [account_invoice_delivery_date_tracking](account_invoice_delivery_date_tracking/) | 17.0.1.0.0 |  | Track Delivery Date changes on invoices
 [account_invoice_description](account_invoice_description/) | 17.0.1.0.0 |  | Invoice internal note, that is not shown to partners
 [account_invoice_disable_auto_narration](account_invoice_disable_auto_narration/) | 17.0.1.0.0 |  | Don't reload narration when changing partner on invoices
+[account_invoice_disable_delivery_date_compute](account_invoice_disable_delivery_date_compute/) | 17.0.1.0.0 |  | Disable the computation of Delivery Date of invoices
 [account_invoice_down_payment_account](account_invoice_down_payment_account/) | 17.0.1.0.1 |  | Custom accounting account for down payments
 [account_invoice_due_date](account_invoice_due_date/) | 17.0.1.0.0 |  | Account invoice due date
 [account_invoice_due_date_as_date_in_treeview](account_invoice_due_date_as_date_in_treeview/) | 17.0.1.0.1 |  | Adds a date field, to supplement the core's 'X days remaining' field
