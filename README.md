@@ -79,16 +79,6 @@ addon | version | maintainers | summary
 [account_payment_term_disallow_delete](account_payment_term_disallow_delete/) | 17.0.1.0.0 |  | Don't allow deleting payment terms, if they are in use
 [account_portal_hide_chatter](account_portal_hide_chatter/) | 17.0.1.0.0 |  | Hide chatter from portal invoices
 [account_reconcile_search_move](account_reconcile_search_move/) | 17.0.1.0.0 |  | Add move name and reference to reconcile default search terms
-[account_report_invoice_bank_transfer](account_report_invoice_bank_transfer/) | 17.0.1.0.1 |  | Add a bank transfer section for invoices
-[account_report_invoice_barcode](account_report_invoice_barcode/) | 17.0.1.0.0 |  | Show barcode in invoice PDF
-[account_report_invoice_hide_customer_code](account_report_invoice_hide_customer_code/) | 17.0.1.0.0 |  | Invoice PDF - Hide customer code
-[account_report_invoice_hide_incoterm_under_note](account_report_invoice_hide_incoterm_under_note/) | 17.0.1.0.0 |  | Invoice PDF - Hide incoterm located under the note
-[account_report_invoice_hide_origin](account_report_invoice_hide_origin/) | 17.0.1.0.0 |  | Invoice PDF - Hide origin
-[account_report_invoice_payment](account_report_invoice_payment/) | 17.0.1.0.0 |  | Changes 'invoice' to 'receipt' for PDF print and email template
-[account_report_invoice_quantity_decimals](account_report_invoice_quantity_decimals/) | 17.0.1.0.2 |  | Change the number of decimals shown on invoice PDF product quantities
-[account_report_invoice_reformat](account_report_invoice_reformat/) | 17.0.1.0.0 |  | Reformat invoice print elements for cleaner look
-[account_report_invoice_salesperson](account_report_invoice_salesperson/) | 17.0.1.0.1 |  | Show salesperson in invoice PDF
-[account_report_line_product_internal_reference](account_report_line_product_internal_reference/) | 17.0.1.0.0 |  | Add Internal reference for Invoice PDF print
 [account_tax_report](account_tax_report/) | 17.0.1.0.0 |  | Finnish VAT-summary report.
 [invoice_merge_keep_ref](invoice_merge_keep_ref/) | 17.0.1.0.0 |  | Adds an option to preserve the 'ref' field when merging invoices
 [payment_link_paytrail_restriction](payment_link_paytrail_restriction/) | 17.0.1.0.1 |  | Payment link paytrail restriction
