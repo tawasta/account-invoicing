@@ -74,6 +74,7 @@ addon | version | maintainers | summary
 [account_invoice_vendor_invoice_purchase_representative](account_invoice_vendor_invoice_purchase_representative/) | 17.0.1.0.0 |  | Purchase Representative of Vendor Bill
 [account_invoice_vendor_invoice_to_sale](account_invoice_vendor_invoice_to_sale/) | 17.0.1.0.0 |  | Adds a wizards for creating a SO from vendor invoice
 [account_lock_date_update_group](account_lock_date_update_group/) | 17.0.1.0.0 |  | This module adds a group for locking account move dates
+[account_move_line_delete_multiple](account_move_line_delete_multiple/) | 17.0.1.0.0 |  | Vendor Bills: Delete lines with checkboxes
 [account_move_payment_link](account_move_payment_link/) | 17.0.1.0.3 |  | Autogenerates a payment link that can embedded into an email template
 [account_move_uppercase_first_order](account_move_uppercase_first_order/) | 17.0.1.0.0 |  | Account move: Uppercase-first alphabetical order
 [account_payment_commission_send_email](account_payment_commission_send_email/) | 17.0.1.0.2 |  | Allows sending a payment summary by email
