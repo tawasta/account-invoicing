@@ -19,16 +19,16 @@
 ##############################################################################
 
 {
-    "name": "Purchase Orders: Uppercase-first alphabetical order",
-    "summary": "Purchase Orders: Uppercase-first alphabetical order",
+    "name": "Account move: Uppercase-first alphabetical order",
+    "summary": "Account move: Uppercase-first alphabetical order",
     "version": "17.0.1.0.0",
     "category": "Purchase",
-    "website": "https://github.com/tawasta/purchase",
+    "website": "https://github.com/tawasta/account-invoicing",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
     "depends": [
-        "purchase",
+        "account",
     ],
 }

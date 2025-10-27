@@ -2,9 +2,9 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-===================================================
-Purchase Orders: Uppercase-first alphabetical order
-===================================================
+================================================
+Account move: Uppercase-first alphabetical order
+================================================
 
 Configuration
 =============
