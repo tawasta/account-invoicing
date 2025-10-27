@@ -20,7 +20,8 @@
 
 {
     "name": "Account Reverse Carry Ref & User",
-    "summary": "Carry over customer reference and salesperson on modified invoice reversals",
+    "summary": """
+    Carry over customer reference and salesperson on modified invoice reversals""",
     "version": "17.0.1.0.0",
     "category": "Invoicing",
     "author": "Futural",
