@@ -14,7 +14,7 @@
                     string="Select"
                     optional="show"
                     force_save="1"
-                    readonly="parent.state != 'draft'"
+                    invisible="parent.state != 'draft'"
                 />
       </xpath>
 
