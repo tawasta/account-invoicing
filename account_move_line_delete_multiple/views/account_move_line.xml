@@ -15,6 +15,7 @@
                     optional="show"
                     force_save="1"
                     invisible="parent.state != 'draft'"
+                    column_invisible="True"
                 />
       </xpath>
 
