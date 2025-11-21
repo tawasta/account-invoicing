@@ -6,7 +6,7 @@ class AccountMove(models.Model):
 
     @api.depends("partner_id")
     def _compute_invoice_payment_term_id(self):
-        super()._compute_invoice_payment_term_id()
+        res = super()._compute_invoice_payment_term_id()
 
         for move in self:
             default_payment_term = move.company_id.invoice_payment_term
@@ -17,3 +17,5 @@ class AccountMove(models.Model):
                 and move.partner_id
             ):
                 move.invoice_payment_term_id = default_payment_term
+
+        return res

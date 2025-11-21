@@ -14,16 +14,22 @@ class AccountMoveSend(models.TransientModel):
             partner = invoice.partner_id
             if not partner.invoice_email:
                 raise ValidationError(
-                    _("Partner '{}' has no invoice email address").format(partner.name)
+                    _("Partner '%(partner)s' has no invoice email address")
+                    % {"partner": partner.name}
                 )
 
             try:
                 validate_email(partner.invoice_email)
             except EmailNotValidError as err:
                 raise ValidationError(
-                    _("Partner '{}' invoice email address '{}' is not valid").format(
-                        partner.name, partner.invoice_email
+                    _(
+                        "Partner '%(partner)s' invoice email address "
+                        "'%(email)s' is not valid"
                     )
+                    % {
+                        "partner": partner.name,
+                        "email": partner.invoice_email,
+                    }
                 ) from err
 
         return super().action_send_and_print(

@@ -9,7 +9,6 @@ class AccountMove(models.Model):
     _inherit = "account.move"
 
     payment_link = fields.Char(
-        string="Payment Link",
         copy=False,
         help="Payment link to be sent to the customer.",
     )
@@ -30,9 +29,10 @@ class AccountMove(models.Model):
         _logger.debug("Creating payment link for invoice ID %s", self.id)
 
         payment_link_wizard = self.env["payment.link.wizard"]
-        ctx = {"active_model": "account.move"}
 
-        temp_wizard = payment_link_wizard.with_context(ctx).create(
+        temp_wizard = payment_link_wizard.with_context(
+            active_model="account.move"
+        ).create(
             {
                 "res_model": "account.move",
                 "res_id": self.id,
