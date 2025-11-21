@@ -5,7 +5,6 @@ class AccountBankStatement(models.Model):
     _inherit = "account.bank.statement"
 
     is_reconciled = fields.Boolean(
-        string="Is Reconciled",
         compute="_compute_is_reconciled",
     )
 
