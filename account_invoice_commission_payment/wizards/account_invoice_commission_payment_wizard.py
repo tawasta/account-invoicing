@@ -11,23 +11,18 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
     _name = "account.invoice.commission.payment.wizard"
     _description = "Create commission payments from invoices"
 
-    payment_date = fields.Date(
-        string="Payment date", required="True", default=fields.Date.today()
-    )
+    payment_date = fields.Date(required="True", default=fields.Date.today())
     commission_method = fields.Selection(
         [("cost", "Cost price")],
-        string="Commission method",
         default="cost",
         required=True,
     )
     commission_partner = fields.Selection(
         [("product_owner", "Product owner")],
-        string="Commission partner",
         default="product_owner",
         required=True,
     )
     communication = fields.Char(
-        string="Communication",
         default=lambda self: self._default_communication(),
     )
     add_zero_sum_lines = fields.Boolean(
@@ -105,13 +100,19 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
 
         for payment in payments:
             for line in partner_lines[payment.partner_id]:
-                select_query = f"""
+                select_query = (
+                    """
                     UPDATE account_move_line
-                    SET commission_payment_id = {payment.id}, commission_paid = 't'
-                    WHERE id = {line.id}
-                """
+                    SET commission_payment_id = %s,
+                        commission_paid = TRUE
+                    WHERE id = %s
+                """,
+                    (payment.id, line.id),
+                )
+
                 self.env.cr.execute(select_query)
-                self.env.cr.commit()
+                # TODO: could we do without committing the transaction here?
+                self.env.cr.commit()  # pylint: disable=invalid-commit
 
             payment_records |= payment
 
