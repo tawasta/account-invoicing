@@ -2,9 +2,9 @@ import base64
 import csv
 import io
 import logging
-from datetime import datetime, timedelta
+from datetime import timedelta
 
-from odoo import _, api, fields, models
+from odoo import _, fields, models
 from odoo.exceptions import ValidationError
 
 _logger = logging.getLogger(__name__)

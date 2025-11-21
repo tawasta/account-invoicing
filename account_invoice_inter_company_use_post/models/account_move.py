@@ -1,4 +1,3 @@
-import ast
 import inspect
 
 from odoo import models
