@@ -100,18 +100,24 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
 
         for payment in payments:
             for line in partner_lines[payment.partner_id]:
-                select_query = (
-                    """
+                select_query = """
                     UPDATE account_move_line
-                    SET commission_payment_id = %s,
+                    SET commission_payment_id = %(payment)s,
                         commission_paid = TRUE
-                    WHERE id = %s
-                """,
-                    (payment.id, line.id),
+                    WHERE id = %(line)s
+                """
+
+                self.env.cr.execute(
+                    select_query,
+                    {
+                        "payment": payment.id,
+                        "line": line.id,
+                    },
                 )
 
-                self.env.cr.execute(select_query)
                 # TODO: could we do without committing the transaction here?
+                # TimoK: At the moment this does not work properly without commit
+                # and this was added later because of it.
                 self.env.cr.commit()  # pylint: disable=invalid-commit
 
             payment_records |= payment

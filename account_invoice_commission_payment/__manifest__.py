@@ -21,7 +21,7 @@
 {
     "name": "Account Invoice Commission - Create commission payments from invoices",
     "summary": "Allows Making commission payments from invoices",
-    "version": "17.0.1.2.1",
+    "version": "17.0.1.2.2",
     "category": "Invoicing",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Futural",
