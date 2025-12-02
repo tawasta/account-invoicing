@@ -1,7 +1,6 @@
 import logging
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError, ValidationError
+from odoo import api, fields, models
 
 _logger = logging.getLogger(__name__)
 
