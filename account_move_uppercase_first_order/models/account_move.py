@@ -7,7 +7,6 @@ class AccountMove(models.Model):
 
     # Tähän tallennettu flagi: True, jos nimi alkaa isolla kirjaimella.
     name_starts_upper = fields.Boolean(
-        string="Name Starts Upper",
         compute="_compute_name_starts_upper",
         store=True,
         index=True,
