@@ -30,18 +30,23 @@ class AccountMove(models.Model):
 
         payment_link_wizard = self.env["payment.link.wizard"]
 
-        temp_wizard = payment_link_wizard.with_context(
-            active_model="account.move"
-        ).create(
-            {
-                "res_model": "account.move",
-                "res_id": self.id,
-                "amount": self.amount_total,
-                "partner_id": self.partner_id.id,
-                "currency_id": self.currency_id.id,
-            }
-        )
+        wizard_vals = {
+            "res_model": "account.move",
+            "res_id": self.id,
+            "amount": self.amount_total,
+            "partner_id": self.partner_id.id,
+            "currency_id": self.currency_id.id,
+        }
 
-        temp_wizard._compute_link()
-        self.payment_link = temp_wizard.link
+        try:
+            temp_wizard = payment_link_wizard.with_context(
+                active_model="account.move"
+            ).create(wizard_vals)
+            self.payment_link = temp_wizard.link
+        except Exception as e:
+            _logger.error(
+                "Failed to create payment link for invoice ID %s: %s", self.id, str(e)
+            )
+            return False
+
         return True
