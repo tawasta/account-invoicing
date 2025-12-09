@@ -21,7 +21,7 @@
 {
     "name": "Invoice pdf - price precision",
     "summary": "Invoice pdf - price precision",
-    "version": "14.0.1.0.2",
+    "version": "14.0.1.0.3",
     "category": "Account",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Tawasta",
