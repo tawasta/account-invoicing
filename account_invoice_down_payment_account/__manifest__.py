@@ -21,7 +21,7 @@
 {
     "name": "Invoice down payment account",
     "summary": "Custom accounting account for down payments",
-    "version": "17.0.1.0.1",
+    "version": "17.0.1.0.2",
     "category": "Accounting & Finance",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Futural",
