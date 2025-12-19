@@ -13,7 +13,7 @@ class SaleAdvancePaymentInv(models.TransientModel):
             new_account = product._get_product_accounts().get("receivable")
 
             # If partner-spesific
-            if new_account:
+            if new_account and self.has_down_payments:
                 for line in invoice.line_ids:
                     if new_account and line.account_id.account_type in (
                         "asset_receivable",
