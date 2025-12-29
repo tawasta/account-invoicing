@@ -55,6 +55,7 @@ addon | version | maintainers | summary
 [account_invoice_link_purchase_order](account_invoice_link_purchase_order/) | 17.0.1.2.0 |  | Link purchase orders to existing invoices
 [account_invoice_mandatory_payment_term](account_invoice_mandatory_payment_term/) | 17.0.1.0.0 |  | Set invoice payment term as mandatory
 [account_invoice_mass_post_with_loop](account_invoice_mass_post_with_loop/) | 17.0.1.0.0 |  | Small change to mass posting to loop through invoices
+[account_invoice_merge_current_date_as_default](account_invoice_merge_current_date_as_default/) | 17.0.1.0.0 |  | Suggest current date as the date of the merged invoice
 [account_invoice_merge_different_users](account_invoice_merge_different_users/) | 17.0.1.0.0 |  | Allow merging invoices with different users
 [account_invoice_merge_keep_ref](account_invoice_merge_keep_ref/) | 17.0.1.0.0 |  | Customer references are added to a merged invoice from invoices
 [account_invoice_merge_never_merge_lines](account_invoice_merge_never_merge_lines/) | 17.0.1.0.0 |  | Never merge lines while merging invoices.
