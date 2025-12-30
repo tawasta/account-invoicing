@@ -6,16 +6,14 @@
     <field name="inherit_id" ref="account.view_move_form" />
     <field name="arch" type="xml">
       <xpath
-                expr="//page[@id='invoice_tab']//field[@name='invoice_line_ids']/tree"
-                position="inside"
+                expr="//field[@name='invoice_line_ids']/tree//field[@name='price_total']"
+                position="after"
             >
         <field
                     name="mark_for_delete"
-                    string="Select"
                     optional="show"
                     force_save="1"
                     invisible="parent.state != 'draft'"
-                    column_invisible="True"
                 />
       </xpath>
 
