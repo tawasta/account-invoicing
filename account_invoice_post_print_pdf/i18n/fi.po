@@ -1,0 +1,66 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_invoice_post_print_pdf
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250131\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-15 08:55+0000\n"
+"PO-Revision-Date: 2026-01-15 10:59+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.8\n"
+
+#. module: account_invoice_post_print_pdf
+#. odoo-python
+#: code:addons/account_invoice_post_print_pdf/models/ir_actions_report.py:0
+#, python-format
+msgid "Automatic invoice print is not possible for non-invoices."
+msgstr "Automaattinen laskun tulostaminen ei ole mahdollista niille, jotka eivät ole laskuja."
+
+#. module: account_invoice_post_print_pdf
+#. odoo-javascript
+#: code:addons/account_invoice_post_print_pdf/static/src/client_actions/multi_print.js:0
+#, python-format
+msgid "HTML reports cannot be auto-printed, skipping report: %s"
+msgstr ""
+
+#. module: account_invoice_post_print_pdf
+#. odoo-javascript
+#: code:addons/account_invoice_post_print_pdf/static/src/client_actions/multi_print.js:0
+#, python-format
+msgid "Incorrect type of action submitted as a report, skipping action"
+msgstr ""
+
+#. module: account_invoice_post_print_pdf
+#: model:ir.model,name:account_invoice_post_print_pdf.model_account_move
+msgid "Journal Entry"
+msgstr "Päiväkirjan kirjaus"
+
+#. module: account_invoice_post_print_pdf
+#: model:ir.model.fields,field_description:account_invoice_post_print_pdf.field_ir_actions_report__automatic_invoice_print
+msgid "Print report on Post"
+msgstr "Tulosta tuloste laskua vahvistettaessa"
+
+#. module: account_invoice_post_print_pdf
+#: model:ir.model,name:account_invoice_post_print_pdf.model_ir_actions_report
+msgid "Report Action"
+msgstr "Raporttin"
+
+#. module: account_invoice_post_print_pdf
+#. odoo-javascript
+#: code:addons/account_invoice_post_print_pdf/static/src/client_actions/multi_print.js:0
+#, python-format
+msgid "Report Printing Error"
+msgstr "Tulostusvirhe"
+
+#. module: account_invoice_post_print_pdf
+#: model:ir.model.fields,field_description:account_invoice_post_print_pdf.field_ir_actions_report__show_automatic_invoice_print
+msgid "Show Automatic Invoice Print"
+msgstr ""

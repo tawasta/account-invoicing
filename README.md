@@ -67,6 +67,7 @@ addon | version | maintainers | summary
 [account_invoice_pivot_report_delivery_address](account_invoice_pivot_report_delivery_address/) | 17.0.1.0.1 |  | Group pivot report by delivery address
 [account_invoice_pivot_report_delivery_address_country](account_invoice_pivot_report_delivery_address_country/) | 17.0.1.0.1 |  | Group pivot report by delivery address country
 [account_invoice_pivot_report_product_template](account_invoice_pivot_report_product_template/) | 17.0.1.0.1 |  | Group pivot report by Product Template
+[account_invoice_post_print_pdf](account_invoice_post_print_pdf/) | 17.0.1.0.0 |  | Print PDF file after posting an invoice
 [account_invoice_related_sale_order](account_invoice_related_sale_order/) | 17.0.1.0.0 |  | Show Sale Orders from which the invoice originated from
 [account_invoice_related_sale_order_customer](account_invoice_related_sale_order_customer/) | 17.0.1.0.1 |  | Related Customer of Invoice sale order
 [account_invoice_report_reference_is_description](account_invoice_report_reference_is_description/) | 17.0.1.1.1 |  | Invoice print - replace Reference header with Description
