@@ -1,9 +1,5 @@
-from odoo import _, models
+from odoo import models
 from odoo.exceptions import ValidationError
-
-import logging
-
-_logger = logging.getLogger(__name__)
 
 
 class AccountPaymentTerm(models.Model):
@@ -13,14 +9,12 @@ class AccountPaymentTerm(models.Model):
         for record in self:
             # Check partner sale payment terms
             partner_payment_terms = self.env["res.partner"].search(
-                [
-                    ("property_payment_term_id", "=", record.id)
-                 ]
+                [("property_payment_term_id", "=", record.id)]
             )
 
             if partner_payment_terms:
                 raise ValidationError(
-                    _(
+                    self.env_(
                         "Payment term is in use for partners. "
                         "Please archive it instead of deleting."
                     )
@@ -28,14 +22,12 @@ class AccountPaymentTerm(models.Model):
 
             # Check partner purchase payment terms
             partner_payment_terms = self.env["res.partner"].search(
-                [
-                    ("property_supplier_payment_term_id", "=", record.id)
-                 ]
+                [("property_supplier_payment_term_id", "=", record.id)]
             )
 
             if partner_payment_terms:
                 raise ValidationError(
-                    _(
+                    self.env_(
                         "Payment term is in use for partners. "
                         "Please archive it instead of deleting."
                     )
@@ -48,7 +40,7 @@ class AccountPaymentTerm(models.Model):
 
             if sale_payment_terms:
                 raise ValidationError(
-                    _(
+                    self.env_(
                         "Payment term is in use for Sale Orders. "
                         "Please archive it instead of deleting."
                     )
@@ -61,7 +53,7 @@ class AccountPaymentTerm(models.Model):
 
             if purchase_payment_terms:
                 raise ValidationError(
-                    _(
+                    self.env_(
                         "Payment term is in use for Purchase Orders. "
                         "Please archive it instead of deleting."
                     )
@@ -74,7 +66,7 @@ class AccountPaymentTerm(models.Model):
 
             if invoice_payment_terms:
                 raise ValidationError(
-                    _(
+                    self.env_(
                         "Payment term is in use for invoices. "
                         "Please archive it instead of deleting."
                     )
