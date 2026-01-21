@@ -19,14 +19,14 @@ class AccountMoveLine(models.Model):
             else:
                 record.accrual_rule_id = False
 
-    @api.model
-    def create(self, vals):
-        res = super().create(vals)
-        if (
-            "accrual_rule_id" not in vals
-            and res.product_id
-            and res.product_id.product_tmpl_id.accrual_rule_id
-        ):
-            res.accrual_rule_id = res.product_id.product_tmpl_id.accrual_rule_id
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            product = self.env["product.product"].browse(vals.get("product_id"))
+            accrual_rule = product.product_tmpl_id.accrual_rule_id
+            if not vals.get("accrual_rule_id") and product and accrual_rule:
+                vals["accrual_rule_id"] = accrual_rule.id
+
+        res = super().create(vals_list)
 
         return res
