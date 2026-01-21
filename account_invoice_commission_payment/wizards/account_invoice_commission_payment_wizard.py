@@ -36,7 +36,7 @@ class AccountInvoiceCommissionPaymentWizard(models.TransientModel):
         return self.env.user.company_id.commission_communication
 
     def action_create_commission_payments(self):
-        invoice_ids = self.env["account.move"].browse(self._context.get("active_ids"))
+        invoice_ids = self.env["account.move"].browse(self.env.context.get("active_ids"))
 
         self.create_commission_payments(invoice_ids)
 

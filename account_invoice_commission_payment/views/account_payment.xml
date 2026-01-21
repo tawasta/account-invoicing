@@ -67,7 +67,7 @@
             options="{'no_create_edit': True}"
             colspan="2"
           >
-            <tree delete="false">
+            <list delete="false">
               <field name="partner_id" optional="show" />
               <field name="date" />
               <field name="move_name" optional="show" />
@@ -102,7 +102,7 @@
               />
               <field name="parent_state" optional="show" />
               <field name="commission_paid" optional="show" />
-            </tree>
+            </list>
           </field>
         </group>
       </xpath>

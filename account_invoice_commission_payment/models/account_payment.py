@@ -23,7 +23,7 @@ class AccountPayment(models.Model):
         action = {
             "name": _("Commission Invoices"),
             "view_type": "form",
-            "view_mode": "tree,form",
+            "view_mode": "list,form",
             "res_model": "account.move",
             "view_id": False,
             "type": "ir.actions.act_window",
@@ -38,7 +38,7 @@ class AccountPayment(models.Model):
         action = {
             "name": _("Commission Invoice lines"),
             "view_type": "form",
-            "view_mode": "tree",
+            "view_mode": "list",
             "res_model": "account.move.line",
             "view_id": False,
             "type": "ir.actions.act_window",
