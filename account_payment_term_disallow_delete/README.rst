@@ -34,6 +34,7 @@ Contributors
 * Jarmo Kortetjärvi <jarmo.kortetjarvi@futural.fi>
 * Miika Nissi <miika.nissi@futural.fi>
 * Timo Talvitie <timo.talvitie@futural.fi>
+* Joona Isoaho <joona.isoaho@futural.fi>
 
 Maintainer
 ----------
