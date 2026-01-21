@@ -21,14 +21,14 @@
 {
     "name": "Invoice accrual rules",
     "summary": "Add accrual rules to invoices",
-    "version": "17.0.1.0.1",
+    "version": "17.0.1.1.0",
     "category": "Sales",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "auto_install": True,
+    "auto_install": False,
     "external_dependencies": {
         "python": [],
         "bin": [],
