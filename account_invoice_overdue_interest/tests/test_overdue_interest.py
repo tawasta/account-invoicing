@@ -1,8 +1,6 @@
-from odoo.tests import tagged
 from odoo.tests.common import TransactionCase
 
 
-@tagged('post_install', '-at_install')
 class TestOverdueInterest(TransactionCase):
     # Test overdue interest
 
