@@ -8,7 +8,7 @@ class TestOverdueInterest(TransactionCase):
         super().setUp()
 
         # Set default overdue interest
-        #self.env["res.company"].search([]).write({"overdue_interest": 11.5})
+        self.env["res.company"].search([]).write({"overdue_interest": 11.5})
 
         self.ResPartner = self.env["res.partner"]
 
@@ -17,14 +17,14 @@ class TestOverdueInterest(TransactionCase):
             dict(name="Yritys Oy", overdue_interest="10.0")
         )
 
-        #self.partner2 = self.ResPartner.create(dict(name="Firma Oy"))
+        self.partner2 = self.ResPartner.create(dict(name="Firma Oy"))
 
     def test_overdue_interest(self):
         inv = self.env["account.move"].create({"partner_id": self.partner1.id})
         # This should use the partner-spesific overdue interest
         self.assertEqual(inv.overdue_interest, 10.0)
 
-    #def test_default_overdue_interest(self):
-        #inv = self.env["account.move"].create({"partner_id": self.partner2.id})
+    def test_default_overdue_interest(self):
+        inv = self.env["account.move"].create({"partner_id": self.partner2.id})
         # This should use the default overdue interest from company
-        #self.assertEqual(inv.overdue_interest, 11.5)
+        self.assertEqual(inv.overdue_interest, 11.5)
