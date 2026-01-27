@@ -1,9 +1,14 @@
 name: CI
 
 on:
+  workflow_dispatch:
+  workflow_call:
   pull_request:
     branches:
-      - '**'
+      - '19*'
+  push:
+    branches:
+      - '19*'
 
 jobs:
   pre-commit:
