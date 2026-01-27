@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 17.0-20221116\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-02-08 09:14+0000\n"
-"PO-Revision-Date: 2023-02-08 11:23+0200\n"
+"PO-Revision-Date: 2026-01-27 10:14+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #. module: account_invoice_overdue_interest
 #: model_terms:ir.ui.view,arch_db:account_invoice_overdue_interest.report_invoice_document
@@ -37,13 +37,13 @@ msgstr "Kontakt"
 #: model:ir.model.fields,help:account_invoice_overdue_interest.field_res_partner__overdue_interest
 #: model:ir.model.fields,help:account_invoice_overdue_interest.field_res_users__overdue_interest
 msgid "Default overdue interest % for customer invoices"
-msgstr ""
+msgstr "Standardförseningsränta % för kundfakturor"
 
 #. module: account_invoice_overdue_interest
 #: model:ir.model.fields,help:account_invoice_overdue_interest.field_res_config_settings__overdue_interest
 #: model_terms:ir.ui.view,arch_db:account_invoice_overdue_interest.res_config_settings_view_form
 msgid "Default overdue interest % for new customers and invoices"
-msgstr ""
+msgstr "Standardförseningsränta % för nya kunder och fakturor"
 
 #. module: account_invoice_overdue_interest
 #: model:ir.model.fields,field_description:account_invoice_overdue_interest.field_account_move__display_name
@@ -91,4 +91,4 @@ msgstr "Dröjsmålsränta %"
 #. module: account_invoice_overdue_interest
 #: model:ir.model,name:account_invoice_overdue_interest.model_res_config_settings
 msgid "Procurement purchase grouping settings"
-msgstr ""
+msgstr "Inställningar för inköpsgruppering vid upphandling"
