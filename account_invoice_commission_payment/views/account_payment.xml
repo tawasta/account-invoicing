@@ -19,6 +19,7 @@
           class="oe_stat_button"
           name="button_commission_invoices"
           string="Commission invoices"
+          title="Commission invoices"
           type="object"
           invisible="not commission_move_line_ids"
           icon="fa-pencil-square-o"
@@ -27,6 +28,7 @@
           class="oe_stat_button"
           name="button_commission_invoice_lines"
           string="Commission lines"
+          title="Commission lines"
           type="object"
           invisible="not commission_move_line_ids"
           icon="fa-bars"
@@ -96,6 +98,7 @@
               <button
                 name="action_unlink_commission"
                 type="object"
+                title="Remove commission line"
                 icon="fa-trash text-danger"
                 optional="show"
                 class="oe_edit_only"

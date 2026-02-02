@@ -15,17 +15,11 @@ class AccountMoveLine(models.Model):
     )
 
     commission_payment_state = fields.Selection(
-        selection=[
-            ("draft", "Draft"),
-            ("posted", "Posted"),
-            ("cancel", "Cancelled"),
-        ],
         string="Commission",
         help="Commission payment state",
         related="commission_payment_id.state",
         readonly=True,
         copy=False,
-        default="draft",
     )
 
     def _compute_purchase_price_total(self):

@@ -5,7 +5,7 @@
     <field name="model">account.invoice.commission.payment.wizard</field>
     <field name="arch" type="xml">
       <form string="Create payment">
-        <group>
+        <group string="Payment details">
           <field name="payment_date" />
           <field name="commission_method" />
           <field name="commission_partner" />

@@ -1,4 +1,4 @@
-from odoo import _, fields, models
+from odoo import fields, models
 from odoo.exceptions import ValidationError
 
 
@@ -21,7 +21,7 @@ class AccountPayment(models.Model):
 
     def button_commission_invoices(self):
         action = {
-            "name": _("Commission Invoices"),
+            "name": self.env._("Commission Invoices"),
             "view_type": "form",
             "view_mode": "list,form",
             "res_model": "account.move",
@@ -36,7 +36,7 @@ class AccountPayment(models.Model):
 
     def button_commission_invoice_lines(self):
         action = {
-            "name": _("Commission Invoice lines"),
+            "name": self.env._("Commission Invoice lines"),
             "view_type": "form",
             "view_mode": "list",
             "res_model": "account.move.line",
@@ -76,7 +76,7 @@ class AccountPayment(models.Model):
 
                 record.amount = amount
             else:
-                raise ValidationError(_("Commission method is not set."))
+                raise ValidationError(self.env._("Commission method is not set."))
 
     def action_draft(self):
         res = super().action_draft()
