@@ -48,7 +48,7 @@ class AccountPayment(models.Model):
                     self.env.ref(
                         "account_invoice_commission_payment.move_line_tree_commission"
                     ).id,
-                    "tree",
+                    "list",
                 ),
             ],
         }
