@@ -60,7 +60,7 @@
             position="replace"
         >
             <t
-                t-esc="'%.2f'% float(amount_by_group[4].replace(o.currency_id.symbol, '').replace(' ', '').replace(',', '.'))"
+                t-esc="'%.2f'% float(amount_by_group[4].replace(o.currency_id.symbol, '').replace(' ', '').replace('\xa0', '').replace(',', '.'))"
             />
             <t t-esc="o.currency_id.symbol" />
         </xpath>
