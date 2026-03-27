@@ -10,6 +10,5 @@ class AccountMove(models.Model):
         index=True,
         copy=False,
         related="invoice_date_due",
-        states={"draft": [("readonly", False)]},
         store=True,
     )
