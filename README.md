@@ -43,8 +43,7 @@ addon | version | maintainers | summary
 [account_invoice_disable_auto_narration](account_invoice_disable_auto_narration/) | 17.0.1.0.0 |  | Don't reload narration when changing partner on invoices
 [account_invoice_disable_delivery_date_compute](account_invoice_disable_delivery_date_compute/) | 17.0.1.0.0 |  | Disable the computation of Delivery Date of invoices
 [account_invoice_down_payment_account](account_invoice_down_payment_account/) | 17.0.1.0.2 |  | Custom accounting account for down payments
-[account_invoice_due_date](account_invoice_due_date/) | 17.0.1.0.0 |  | Account invoice due date
-[account_invoice_due_date_as_date_in_treeview](account_invoice_due_date_as_date_in_treeview/) | 17.0.1.0.1 |  | Adds a date field, to supplement the core's 'X days remaining' field
+[account_invoice_due_date_as_date_in_treeview](account_invoice_due_date_as_date_in_treeview/) | 17.0.1.0.2 |  | Adds a date field, to supplement the core's 'X days remaining' field
 [account_invoice_email](account_invoice_email/) | 17.0.1.0.0 |  | Send invoice email to invoice email address instead of default email
 [account_invoice_inter_company_use_post](account_invoice_inter_company_use_post/) | 17.0.1.0.0 |  | Enable to create Intercompany invoices in invoice tree view
 [account_invoice_invoice_origin_no_copy](account_invoice_invoice_origin_no_copy/) | 17.0.1.0.0 |  | Clear the Source Document field when duplicating an invoice
