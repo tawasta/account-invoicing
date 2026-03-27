@@ -27,7 +27,7 @@ addon | version | maintainers | summary
 [account_fiscal_position_company_not_required](account_fiscal_position_company_not_required/) | 17.0.1.0.0 |  | Company will not be required on fiscal positions
 [account_fiscal_position_type](account_fiscal_position_type/) | 17.0.1.0.1 |  | Add a type for fiscal positions (domestic, EU, non-EU)
 [account_full_reconcile_name_field](account_full_reconcile_name_field/) | 17.0.1.0.0 |  | Adds name -field to account_full_reconcile table
-[account_invoice_accrual_rule](account_invoice_accrual_rule/) | 17.0.1.0.1 |  | Add accrual rules to invoices
+[account_invoice_accrual_rule](account_invoice_accrual_rule/) | 17.0.1.1.0 |  | Add accrual rules to invoices
 [account_invoice_auditlog_rules](account_invoice_auditlog_rules/) | 17.0.1.1.0 |  | Adds audit log rules for account.move and account.move.line
 [account_invoice_commission](account_invoice_commission/) | 17.0.1.0.0 |  | Add a 'commission paid' field for invoices and invoice lines
 [account_invoice_commission_manual](account_invoice_commission_manual/) | 17.0.1.0.1 |  | Manually set invoices as commissioned
@@ -43,8 +43,7 @@ addon | version | maintainers | summary
 [account_invoice_disable_auto_narration](account_invoice_disable_auto_narration/) | 17.0.1.0.0 |  | Don't reload narration when changing partner on invoices
 [account_invoice_disable_delivery_date_compute](account_invoice_disable_delivery_date_compute/) | 17.0.1.0.0 |  | Disable the computation of Delivery Date of invoices
 [account_invoice_down_payment_account](account_invoice_down_payment_account/) | 17.0.1.0.2 |  | Custom accounting account for down payments
-[account_invoice_due_date](account_invoice_due_date/) | 17.0.1.0.0 |  | Account invoice due date
-[account_invoice_due_date_as_date_in_treeview](account_invoice_due_date_as_date_in_treeview/) | 17.0.1.0.1 |  | Adds a date field, to supplement the core's 'X days remaining' field
+[account_invoice_due_date_as_date_in_treeview](account_invoice_due_date_as_date_in_treeview/) | 17.0.1.0.2 |  | Adds a date field, to supplement the core's 'X days remaining' field
 [account_invoice_email](account_invoice_email/) | 17.0.1.0.0 |  | Send invoice email to invoice email address instead of default email
 [account_invoice_inter_company_use_post](account_invoice_inter_company_use_post/) | 17.0.1.0.0 |  | Enable to create Intercompany invoices in invoice tree view
 [account_invoice_invoice_origin_no_copy](account_invoice_invoice_origin_no_copy/) | 17.0.1.0.0 |  | Clear the Source Document field when duplicating an invoice
@@ -61,7 +60,7 @@ addon | version | maintainers | summary
 [account_invoice_merge_never_merge_lines](account_invoice_merge_never_merge_lines/) | 17.0.1.0.0 |  | Never merge lines while merging invoices.
 [account_invoice_notice_period](account_invoice_notice_period/) | 17.0.1.0.1 |  | Notice period field for invoices and partners
 [account_invoice_nova_csv_export](account_invoice_nova_csv_export/) | 17.0.1.0.0 |  | Create a .csv file of customer invoices, for importing to Nova
-[account_invoice_overdue_interest](account_invoice_overdue_interest/) | 17.0.1.0.0 |  | Overdue interest % field for invoices and partners
+[account_invoice_overdue_interest](account_invoice_overdue_interest/) | 17.0.1.0.1 |  | Overdue interest % field for invoices and partners
 [account_invoice_partner_income_expense_account](account_invoice_partner_income_expense_account/) | 17.0.1.0.0 |  | Account Invoice: Partner-specific income and expense accounts
 [account_invoice_partner_warning_text](account_invoice_partner_warning_text/) | 17.0.1.0.0 |  | Adds Partner warning text to invoice
 [account_invoice_pivot_report_delivery_address](account_invoice_pivot_report_delivery_address/) | 17.0.1.0.1 |  | Group pivot report by delivery address
