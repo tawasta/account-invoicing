@@ -7,9 +7,7 @@ class AccountMove(models.Model):
     invoice_due_date = fields.Date(
         string="Due Date (as a date)",
         readonly=True,
-        index=True,
         copy=False,
         related="invoice_date_due",
-        states={"draft": [("readonly", False)]},
         store=True,
     )
