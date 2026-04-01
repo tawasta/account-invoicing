@@ -1,0 +1,444 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_invoice_commission_payment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0-20260118\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-02 14:09+0000\n"
+"PO-Revision-Date: 2026-02-02 16:13+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.8\n"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.report_payment_commissions_document
+msgid "<span>Invoice Date</span>"
+msgstr "<span>Laskun päivä</span>"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.report_payment_commissions_document
+msgid "<span>Invoice Number</span>"
+msgstr "<span>Laskun numero</span>"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.report_payment_commissions_document
+msgid "<span>Margin</span>"
+msgstr "<span>Marginaali</span>"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.report_payment_commissions_document
+msgid "<span>Payment</span>"
+msgstr "<span>Maksu</span>"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.report_payment_commissions_document
+msgid "<span>Product</span>"
+msgstr "<span>Tuote</span>"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.report_payment_commissions_document
+msgid "<span>Total</span>"
+msgstr "<span>Yhteensä</span>"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.report_payment_commissions_document
+msgid "<strong>Customer: </strong>"
+msgstr "<strong>Asiakas: </strong>"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.report_payment_commissions_document
+msgid "<strong>Memo: </strong>"
+msgstr "<strong>Muistio: </strong>"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.report_payment_commissions_document
+msgid "<strong>Payment Amount: </strong>"
+msgstr "<strong>Maksun määrä: </strong>"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.report_payment_commissions_document
+msgid "<strong>Payment Date: </strong>"
+msgstr "<strong>Maksupäivä: </strong>"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.report_payment_commissions_document
+msgid "<strong>Vendor: </strong>"
+msgstr "<strong>Toimittaja: </strong>"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_invoice_commission_payment_wizard__add_zero_sum_lines
+msgid "Add zero-sum invoice lines"
+msgstr "Lisää nollasummaiset rivit"
+
+#. module: account_invoice_commission_payment
+#. odoo-python
+#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:0
+msgid "Bank account could not be determined for '%s'"
+msgstr "Pankkitiliä ei voitu määrittää kumppanille '%s'"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.account_invoice_commission_payment_wizard_form
+msgid "Cancel"
+msgstr "Peru"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_move_line__commission_payment_state
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.view_account_payment_form
+msgid "Commission"
+msgstr "Komissio"
+
+#. module: account_invoice_commission_payment
+#. odoo-python
+#: code:addons/account_invoice_commission_payment/models/account_payment.py:0
+msgid "Commission Invoice lines"
+msgstr "Komissiolaskurivit"
+
+#. module: account_invoice_commission_payment
+#. odoo-python
+#: code:addons/account_invoice_commission_payment/models/account_payment.py:0
+msgid "Commission Invoices"
+msgstr "Komissiolaskut"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_invoice_commission_payment_wizard__commission_method
+msgid "Commission Method"
+msgstr "Komissiomenetelmä"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_invoice_commission_payment_wizard__commission_partner
+msgid "Commission Partner"
+msgstr "Komissiokumppani"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_bank_statement_line__commission_payment_count
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_move__commission_payment_count
+msgid "Commission Payment Count"
+msgstr "Komissiomaksujen määrä"
+
+#. module: account_invoice_commission_payment
+#. odoo-python
+#: code:addons/account_invoice_commission_payment/models/account_move.py:0
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_bank_statement_line__commission_payment_ids
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_move__commission_payment_ids
+msgid "Commission Payments"
+msgstr "Komissiomaksut"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.view_account_payment_form
+msgid "Commission invoices"
+msgstr "Komissiolaskut"
+
+#. module: account_invoice_commission_payment
+#. odoo-python
+#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:0
+msgid "Commission is already paid for move line %s"
+msgstr "Komissio on jo maksettu laskuriville %s"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.view_account_payment_form
+msgid "Commission lines"
+msgstr "Komissiorivit"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_payment__commission_method
+msgid "Commission method"
+msgstr "Komissiomenetelmä"
+
+#. module: account_invoice_commission_payment
+#. odoo-python
+#: code:addons/account_invoice_commission_payment/models/account_payment.py:0
+msgid "Commission method is not set."
+msgstr "Komissiomenetelmää ei ole annettu"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_move_line__commission_payment_id
+msgid "Commission payment"
+msgstr "Komissiomaksu"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.res_config_settings_view_form
+msgid "Commission payment communication"
+msgstr "Komission viesti"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,help:account_invoice_commission_payment.field_account_move_line__commission_payment_state
+msgid "Commission payment state"
+msgstr "Komissiomaksun tila"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_payment__commission_move_line_ids
+msgid "Commissioned lines"
+msgstr "Komissiorivit"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.view_move_form
+msgid "Commissions"
+msgstr "Komissiot"
+
+#. module: account_invoice_commission_payment
+#. odoo-python
+#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:0
+msgid ""
+"Commissions for %(count)d invoice(s) have been successfully generated. The "
+"total sum is %(amount)s%(currency)s"
+msgstr ""
+"Komissiot %(count)d laskulle on muodostettu onnistuneesti. Kokonaissumma on "
+"%(amount)s%(currency)s"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_invoice_commission_payment_wizard__communication
+msgid "Communication"
+msgstr "Viesti"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model,name:account_invoice_commission_payment.model_res_company
+msgid "Companies"
+msgstr "Yritykset"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model,name:account_invoice_commission_payment.model_res_config_settings
+msgid "Config Settings"
+msgstr "Konfiguraatioasetukset"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.account_invoice_commission_payment_wizard_form
+msgid "Confirm"
+msgstr "Vahvista"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields.selection,name:account_invoice_commission_payment.selection__account_invoice_commission_payment_wizard__commission_method__cost
+#: model:ir.model.fields.selection,name:account_invoice_commission_payment.selection__account_payment__commission_method__cost
+msgid "Cost price"
+msgstr "Kustannushinta"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_move_line__purchase_price_total
+msgid "Cost total"
+msgstr "Kokonaiskustannus"
+
+#. module: account_invoice_commission_payment
+#. odoo-python
+#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:0
+msgid "Could not find a payment journal for '%s'"
+msgstr "Maksupäiväkirjaa ei löytynyt '%s':lle"
+
+#. module: account_invoice_commission_payment
+#: model:ir.actions.act_window,name:account_invoice_commission_payment.action_create_payments
+msgid "Create commission payments"
+msgstr "Luo komissiomaksuja"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model,name:account_invoice_commission_payment.model_account_invoice_commission_payment_wizard
+msgid "Create commission payments from invoices"
+msgstr "Luo komissiomaksuja laskuilta"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.account_invoice_commission_payment_wizard_form
+msgid "Create payment"
+msgstr "Luo maksu"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_invoice_commission_payment_wizard__create_uid
+msgid "Created by"
+msgstr "Luonut"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_invoice_commission_payment_wizard__create_date
+msgid "Created on"
+msgstr "Luotu"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_res_company__commission_communication
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_res_config_settings__commission_communication
+msgid "Default commission communication"
+msgstr "Oletusviesti komissiomaksuille"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.res_config_settings_view_form
+msgid "Default communication for commission payments"
+msgstr "Oletusviesti komissiomaksuille"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_invoice_commission_payment_wizard__display_name
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_move__display_name
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_payment__display_name
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_res_company__display_name
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_invoice_commission_payment_wizard__id
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_move__id
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_move_line__id
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_payment__id
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_res_company__id
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_res_config_settings__id
+msgid "ID"
+msgstr "Tunnus"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,help:account_invoice_commission_payment.field_account_invoice_commission_payment_wizard__add_zero_sum_lines
+msgid ""
+"If unselected, zero-sum invoice lines are marked as commissioned and not "
+"added to the payment"
+msgstr ""
+"Jos tämä ei ole valittu, nollasummaiset rivit merkataan käsitellyiksi, "
+"mutta ei lisätä maksulle"
+
+#. module: account_invoice_commission_payment
+#. odoo-python
+#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:0
+msgid "Invoice '%s' has already been commissioned"
+msgstr "Lasku '%s' on jo komissioitu"
+
+#. module: account_invoice_commission_payment
+#. odoo-python
+#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:0
+msgid "Invoice '%s' has been refunded and can't be commissioned"
+msgstr "Lasku '%s' on hyvitetty eikä siitä voi tehdä komissiota"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields.selection,name:account_invoice_commission_payment.selection__account_invoice_commission_payment_wizard__commission_partner__invoice_partner
+msgid "Invoice partner"
+msgstr "Laskukumppani"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model,name:account_invoice_commission_payment.model_account_move
+msgid "Journal Entry"
+msgstr "Päiväkirjan kirjaus"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model,name:account_invoice_commission_payment.model_account_move_line
+msgid "Journal Item"
+msgstr "Päiväkirjatapahtuma"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_invoice_commission_payment_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Viimeksi päivittänyt"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_invoice_commission_payment_wizard__write_date
+msgid "Last Updated on"
+msgstr "Viimeksi päivitetty"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.move_line_tree_commission
+msgid "Margin"
+msgstr "Marginaali"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_payment__negative_amount
+msgid "Negative Amount"
+msgstr "Negatiivinen summa"
+
+#. module: account_invoice_commission_payment
+#. odoo-python
+#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:0
+msgid "Partner could not be determined for '%s'"
+msgstr "Kumppania ei voitu määrittää '%s'"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.move_line_tree_commission
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.view_account_payment_form
+msgid "Payment"
+msgstr "Maksu"
+
+#. module: account_invoice_commission_payment
+#: model:ir.actions.report,name:account_invoice_commission_payment.action_report_payment_commissions
+msgid "Payment Commissions"
+msgstr "Komissiomaksut"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields,field_description:account_invoice_commission_payment.field_account_invoice_commission_payment_wizard__payment_date
+msgid "Payment Date"
+msgstr "Maksupäivä"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.report_payment_commissions_document
+msgid "Payment commissions:"
+msgstr "Komissiomaksut"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.account_invoice_commission_payment_wizard_form
+msgid "Payment details"
+msgstr "Maksutiedot"
+
+#. module: account_invoice_commission_payment
+#. odoo-python
+#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:0
+msgid "Payment(s) created"
+msgstr "Maksu(t) luotu"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model,name:account_invoice_commission_payment.model_account_payment
+msgid "Payments"
+msgstr "Maksut"
+
+#. module: account_invoice_commission_payment
+#: model:ir.model.fields.selection,name:account_invoice_commission_payment.selection__account_invoice_commission_payment_wizard__commission_partner__product_owner
+msgid "Product owner"
+msgstr "Tuotteen omistaja"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.view_account_payment_form
+msgid "Recompute commission"
+msgstr "Laske komissio"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.view_account_payment_form
+msgid "Remove commission line"
+msgstr "Poista komissiorivi"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.move_line_tree_commission
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.view_account_payment_form
+msgid "Tax Excluded"
+msgstr "Veroton"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.move_line_tree_commission
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.view_account_payment_form
+msgid "Total"
+msgstr "Yhteensä"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.move_line_tree_commission
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.view_account_payment_form
+msgid "Total margin"
+msgstr "Marginaali yhteensä"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.move_line_tree_commission
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.view_account_payment_form
+msgid "Total payment"
+msgstr "Maksu yhteensä"
+
+#. module: account_invoice_commission_payment
+#. odoo-python
+#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:0
+msgid ""
+"You can only make payments from customer invoices. '%s' is not a customer "
+"invoice"
+msgstr ""
+"Voit luoda komissioita vain asiakaslaskuista. '%s' ei ole asiakaslasku"
+
+#. module: account_invoice_commission_payment
+#. odoo-python
+#: code:addons/account_invoice_commission_payment/wizards/account_invoice_commission_payment_wizard.py:0
+msgid "You can't make payment from an invoice that is not paid: '%s'"
+msgstr "Et voi tehdä komissiota laskusta, jota ei ole vielä maksettu: '%s'"
+
+#. module: account_invoice_commission_payment
+#: model_terms:ir.ui.view,arch_db:account_invoice_commission_payment.account_invoice_commission_payment_wizard_form
+msgid "or"
+msgstr "tai"
