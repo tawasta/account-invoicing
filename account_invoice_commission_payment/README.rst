@@ -10,7 +10,7 @@ Account Invoice Commission - Create commission payments from invoices
 
 Configuration
 =============
-* Optionally set the defaut commission communication text from Invoicing Settings
+* Optionally set the default commission communication text from Invoicing Settings
 
 Usage
 =====
