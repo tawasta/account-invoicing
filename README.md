@@ -60,7 +60,7 @@ addon | version | maintainers | summary
 [account_invoice_merge_never_merge_lines](account_invoice_merge_never_merge_lines/) | 17.0.1.0.0 |  | Never merge lines while merging invoices.
 [account_invoice_notice_period](account_invoice_notice_period/) | 17.0.1.0.1 |  | Notice period field for invoices and partners
 [account_invoice_nova_csv_export](account_invoice_nova_csv_export/) | 17.0.1.0.0 |  | Create a .csv file of customer invoices, for importing to Nova
-[account_invoice_overdue_interest](account_invoice_overdue_interest/) | 17.0.1.0.1 |  | Overdue interest % field for invoices and partners
+[account_invoice_overdue_interest](account_invoice_overdue_interest/) | 17.0.1.0.2 |  | Overdue interest % field for invoices and partners
 [account_invoice_partner_income_expense_account](account_invoice_partner_income_expense_account/) | 17.0.1.0.0 |  | Account Invoice: Partner-specific income and expense accounts
 [account_invoice_partner_warning_text](account_invoice_partner_warning_text/) | 17.0.1.0.0 |  | Adds Partner warning text to invoice
 [account_invoice_pivot_report_delivery_address](account_invoice_pivot_report_delivery_address/) | 17.0.1.0.1 |  | Group pivot report by delivery address
