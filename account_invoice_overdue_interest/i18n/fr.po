@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0-20250131\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-27 13:46+0000\n"
-"PO-Revision-Date: 2026-03-27 15:51+0200\n"
+"POT-Creation-Date: 2026-04-01 05:56+0000\n"
+"PO-Revision-Date: 2026-04-01 09:14+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -20,7 +20,7 @@ msgstr ""
 #. module: account_invoice_overdue_interest
 #: model_terms:ir.ui.view,arch_db:account_invoice_overdue_interest.report_invoice_document
 msgid "<strong>Overdue interest:</strong>"
-msgstr "<strong>Intérêts de retard:</strong>"
+msgstr "<strong>Taux de pénalité de retard:</strong>"
 
 #. module: account_invoice_overdue_interest
 #: model:ir.model,name:account_invoice_overdue_interest.model_res_company
@@ -35,12 +35,14 @@ msgstr "Contact"
 #. module: account_invoice_overdue_interest
 #: model_terms:ir.ui.view,arch_db:account_invoice_overdue_interest.res_config_settings_view_form
 msgid "Default overdue interest % for invoices"
-msgstr ""
+msgstr "Taux de pénalité de retard % par défaut pour les factures"
 
 #. module: account_invoice_overdue_interest
 #: model:ir.model.fields,help:account_invoice_overdue_interest.field_res_config_settings__overdue_interest
 msgid "Default overdue interest % for new customers and invoices"
 msgstr ""
+"Taux de pénalité de retard % par défaut pour les clients et les "
+"factures"
 
 #. module: account_invoice_overdue_interest
 #: model:ir.model,name:account_invoice_overdue_interest.model_account_move
@@ -56,7 +58,7 @@ msgstr "Pièce comptable"
 #: model:ir.model.fields,field_description:account_invoice_overdue_interest.field_res_partner__overdue_interest
 #: model:ir.model.fields,field_description:account_invoice_overdue_interest.field_res_users__overdue_interest
 msgid "Overdue interest %"
-msgstr "Intérêts de retard %"
+msgstr "Taux de pénalité de retard %"
 
 #. module: account_invoice_overdue_interest
 #: model:ir.model,name:account_invoice_overdue_interest.model_res_config_settings
