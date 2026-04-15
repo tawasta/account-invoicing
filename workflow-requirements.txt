@@ -1,1 +1,1 @@
-https://github.com/dakai-soft/margin-analysis/archive/refs/heads/19.0-mig-account-invoice-margin.zip#subdirectory=account_invoice_margin
+https://github.com/tawasta/oca-backports/archive/refs/heads/19.0.zip#subdirectory=account_invoice_margin
