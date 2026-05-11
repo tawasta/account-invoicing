@@ -72,5 +72,3 @@ class AccountPaymentTerm(models.Model):
                         "Please archive it instead of deleting."
                     )
                 )
-
-        return super().unlink()
