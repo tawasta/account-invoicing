@@ -86,6 +86,7 @@ addon | version | maintainers | summary
 [account_tax_report](account_tax_report/) | 17.0.1.0.0 |  | Finnish VAT-summary report.
 [invoice_merge_keep_ref](invoice_merge_keep_ref/) | 17.0.1.0.0 |  | Adds an option to preserve the 'ref' field when merging invoices
 [payment_link_paytrail_restriction](payment_link_paytrail_restriction/) | 17.0.1.0.1 |  | Payment link paytrail restriction
+[res_partner_bank_auto_allow_out_payment](res_partner_bank_auto_allow_out_payment/) | 17.0.1.0.0 |  | Automatically allows bank accounts and makes them trusted
 
 [//]: # (end addons)
 

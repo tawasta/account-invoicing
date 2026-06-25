@@ -1,0 +1,55 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* res_partner_bank_auto_allow_out_payment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20260619\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-25 10:56+0000\n"
+"PO-Revision-Date: 2026-06-25 10:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: res_partner_bank_auto_allow_out_payment
+#: model:ir.model.fields,field_description:res_partner_bank_auto_allow_out_payment.field_res_config_settings__auto_allow_out_payment
+#: model_terms:ir.ui.view,arch_db:res_partner_bank_auto_allow_out_payment.res_config_settings_view_form_inherit_auto_trust
+msgid "Automatically make bank accounts trusted"
+msgstr "Määritä pankkitilit automaattisesti luotettavaksi"
+
+#. module: res_partner_bank_auto_allow_out_payment
+#: model_terms:ir.ui.view,arch_db:res_partner_bank_auto_allow_out_payment.res_config_settings_view_form_inherit_auto_trust
+msgid "Automatically mark bank accounts as Trusted when they are created."
+msgstr "Merkkaa pankkitili luotettavaksi automaattisesti luonnin yhteydessä"
+
+#. module: res_partner_bank_auto_allow_out_payment
+#: model:ir.model,name:res_partner_bank_auto_allow_out_payment.model_res_partner_bank
+#: model_terms:ir.ui.view,arch_db:res_partner_bank_auto_allow_out_payment.res_config_settings_view_form_inherit_auto_trust
+msgid "Bank Accounts"
+msgstr "Pankkitilit"
+
+#. module: res_partner_bank_auto_allow_out_payment
+#. odoo-python
+#: code:addons/res_partner_bank_auto_allow_out_payment/models/res_partner_bank.py:0
+#: code:addons/res_partner_bank_auto_allow_out_payment/models/res_partner_bank.py:0
+#, python-format
+msgid ""
+"Bank account ending in %s was created and automatically marked as Trusted."
+msgstr "%s loppuinen pankkitili on luotu ja merkattu automaattisesti Luotettavaksi."
+
+#. module: res_partner_bank_auto_allow_out_payment
+#: model:ir.model,name:res_partner_bank_auto_allow_out_payment.model_res_config_settings
+msgid "Config Settings"
+msgstr "Asetukset"
+
+#. module: res_partner_bank_auto_allow_out_payment
+#. odoo-python
+#: code:addons/res_partner_bank_auto_allow_out_payment/models/res_partner_bank.py:0
+#: code:addons/res_partner_bank_auto_allow_out_payment/models/res_partner_bank.py:0
+#, python-format
+msgid "unknown"
+msgstr ""
