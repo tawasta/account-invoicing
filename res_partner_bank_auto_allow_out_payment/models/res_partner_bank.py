@@ -24,17 +24,18 @@ class ResPartnerBank(models.Model):
 
         if auto_trust:
             for bank in records:
-                acc_number = bank.acc_number or ""
-                acc_ending = acc_number[-4:] if len(acc_number) >= 4 else acc_number
-                if not acc_ending:
-                    acc_ending = _("unknown")
+                if bank.allow_out_payment:
+                    acc_number = bank.acc_number or ""
+                    acc_ending = acc_number[-4:] if len(acc_number) >= 4 else acc_number
+                    if not acc_ending:
+                        acc_ending = _("unknown")
 
-                bank.message_post(
-                    body=_(
-                        "Bank account ending in %s was created and"
-                        " automatically marked as Trusted.",
-                        acc_ending,
+                    bank.message_post(
+                        body=_(
+                            "Bank account ending in %s was created and"
+                            " automatically marked as Trusted.",
+                            acc_ending,
+                        )
                     )
-                )
 
         return records

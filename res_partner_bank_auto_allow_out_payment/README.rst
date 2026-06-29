@@ -23,6 +23,7 @@ Usage
 are automatically made trusted
 * Chatter message will appear in the bank accounts form of it becoming 
 trusted
+* Works on bank accounts added via expense reports in portal also
 
 Known issues / Roadmap
 ======================
