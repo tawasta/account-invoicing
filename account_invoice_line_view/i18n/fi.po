@@ -4,23 +4,38 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0-20240126\n"
+"Project-Id-Version: Odoo Server 19.0-20260810\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-03 06:00+0000\n"
-"PO-Revision-Date: 2024-07-03 09:01+0300\n"
+"POT-Creation-Date: 2026-08-26 10:20+0000\n"
+"PO-Revision-Date: 2026-08-26 13:21+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: \n"
-"X-Generator: Poedit 3.0.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #. module: account_invoice_line_view
 #: model:ir.model.fields,field_description:account_invoice_line_view.field_account_move_line__price_average
 msgid "Average price"
 msgstr "Keskihinta"
+
+#. module: account_invoice_line_view
+#: model:ir.model.fields.selection,name:account_invoice_line_view.selection__account_move_line__state__cancel
+msgid "Cancelled"
+msgstr "Peruutettu"
+
+#. module: account_invoice_line_view
+#: model:ir.model.fields,field_description:account_invoice_line_view.field_account_move_line__product_categ_id
+msgid "Category ID"
+msgstr "Kategoria"
+
+#. module: account_invoice_line_view
+#: model:ir.model.fields,field_description:account_invoice_line_view.field_account_move_line__commercial_partner_id
+msgid "Commercial Partner"
+msgstr "Kumppani"
 
 #. module: account_invoice_line_view
 #: model:ir.actions.act_window,name:account_invoice_line_view.account_invoice_line_customer_action
@@ -29,9 +44,19 @@ msgid "Customer invoice lines"
 msgstr "Asiakaslaskujen rivit"
 
 #. module: account_invoice_line_view
-#: model_terms:ir.ui.view,arch_db:account_invoice_line_view.view_account_invoice_line_line_tree
-msgid "Invoice Lines"
-msgstr "Laskurivit"
+#: model:ir.model.fields,field_description:account_invoice_line_view.field_account_move_line__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: account_invoice_line_view
+#: model:ir.model.fields.selection,name:account_invoice_line_view.selection__account_move_line__state__draft
+msgid "Draft"
+msgstr "Luonnos"
+
+#. module: account_invoice_line_view
+#: model:ir.model.fields,field_description:account_invoice_line_view.field_account_move_line__id
+msgid "ID"
+msgstr "ID"
 
 #. module: account_invoice_line_view
 #: model:ir.model.fields,field_description:account_invoice_line_view.field_account_move_line__date_invoice
@@ -41,18 +66,33 @@ msgstr "Laskun päiväys"
 #. module: account_invoice_line_view
 #: model:ir.model,name:account_invoice_line_view.model_account_move_line
 msgid "Journal Item"
-msgstr "Päiväkirjatapahtuma"
+msgstr "Kirjausrivi"
 
 #. module: account_invoice_line_view
-#: model:ir.model.fields,field_description:account_invoice_line_view.field_account_move_line__commercial_partner_id
 #: model:ir.model.fields,field_description:account_invoice_line_view.field_account_move_line__move_partner_id
-msgid "Partner"
+msgid "Move Partner"
 msgstr "Kumppani"
 
 #. module: account_invoice_line_view
-#: model:ir.model.fields,field_description:account_invoice_line_view.field_account_move_line__product_categ_id
-msgid "Product Category"
-msgstr "Kategoria"
+#: model:ir.model.fields,field_description:account_invoice_line_view.field_account_move_line__invoice_type
+msgid "Move Type"
+msgstr "Tyyppi"
+
+#. module: account_invoice_line_view
+#: model:ir.model.fields.selection,name:account_invoice_line_view.selection__account_move_line__state__open
+msgid "Open"
+msgstr "Avaa"
+
+#. module: account_invoice_line_view
+#: model:ir.model.fields.selection,name:account_invoice_line_view.selection__account_move_line__state__paid
+msgid "Paid"
+msgstr "Maksettu"
+
+#. module: account_invoice_line_view
+#: model:ir.model.fields.selection,name:account_invoice_line_view.selection__account_move_line__state__proforma
+#: model:ir.model.fields.selection,name:account_invoice_line_view.selection__account_move_line__state__proforma2
+msgid "Pro-forma"
+msgstr "Pro-forma"
 
 #. module: account_invoice_line_view
 #: model:ir.model.fields,field_description:account_invoice_line_view.field_account_move_line__product_tmpl_id
@@ -73,11 +113,6 @@ msgstr "Tila"
 #: model:ir.model.fields,help:account_invoice_line_view.field_account_move_line__product_tmpl_id
 msgid "Technical: used in views"
 msgstr "Tekninen: käytetty näkymissä"
-
-#. module: account_invoice_line_view
-#: model:ir.model.fields,field_description:account_invoice_line_view.field_account_move_line__invoice_type
-msgid "Type"
-msgstr "Tyyppi"
 
 #. module: account_invoice_line_view
 #: model:ir.actions.act_window,name:account_invoice_line_view.account_invoice_line_vendor_action
