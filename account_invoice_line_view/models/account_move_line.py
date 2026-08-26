@@ -17,20 +17,21 @@ class AccountMoveLine(models.Model):
     )
 
     commercial_partner_id = fields.Many2one(
-        string="Partner",
+        string="Commercial Partner",
         comodel_name="res.partner",
         related="move_id.commercial_partner_id",
         store=True,
     )
 
     move_partner_id = fields.Many2one(
-        string="Partner",
+        string="Move Partner",
         comodel_name="res.partner",
         related="move_id.partner_id",
         store=True,
     )
 
     product_categ_id = fields.Many2one(
+        string="Category ID",
         comodel_name="product.category",
         related="product_id.categ_id",
     )
@@ -67,13 +68,11 @@ class AccountMoveLine(models.Model):
             ("paid", "Paid"),
             ("cancel", "Cancelled"),
         ],
-        string="State",
-        related="move_id.state",
         store=True,
     )
 
     # Hard coded types were removed 12.10.2022
     invoice_type = fields.Selection(
-        string="Type",
+        string="Move Type",
         related="move_id.move_type",
     )

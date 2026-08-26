@@ -15,7 +15,7 @@
         />
         <field
           name="analytic_distribution"
-          groups="account.group_analytic_accounting"
+          groups="analytic.group_analytic_accounting"
           optional="hide"
         />
         <field name="move_partner_id" optional="show" />
