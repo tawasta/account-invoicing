@@ -22,7 +22,7 @@
     "name": "Account invoice line view",
     "summary": "Add a readonly list view where all invoice lines are listed",
     "category": "Invoicing",
-    "version": "19.0.1.0.0",
+    "version": "19.0.1.0.1",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Futural",
     "license": "AGPL-3",
