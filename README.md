@@ -20,6 +20,7 @@ addon | version | maintainers | summary
 [account_account_region_type](account_account_region_type/) | 17.0.1.0.1 |  | Set region type for an account
 [account_bank_statement_manual](account_bank_statement_manual/) | 17.0.1.0.0 |  | Allows inputting bank statement information manually
 [account_bank_statement_reconciled_color](account_bank_statement_reconciled_color/) | 17.0.1.0.1 |  | Show unreconciled bank statements in different color
+[account_credit_control_cron](account_credit_control_cron/) | 17.0.1.0.0 |  | Automate the daily credit control run (reminders to customers)
 [account_credit_control_sales_contact](account_credit_control_sales_contact/) | 17.0.1.0.0 |  | Account credit control sales contact
 [account_financial_report_amount_currency_error_fix](account_financial_report_amount_currency_error_fix/) | 17.0.1.0.0 |  | Fix for the amount_currency error for financial reports
 [account_financial_report_partner_ref](account_financial_report_partner_ref/) | 17.0.1.0.0 |  | A ref number of a partner is added to General Ledger report
