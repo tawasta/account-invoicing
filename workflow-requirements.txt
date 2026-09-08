@@ -1,0 +1,1 @@
+https://github.com/tawasta/l10n-finland/archive/refs/heads/19.0.zip#subdirectory=l10n_fi_country_groups
