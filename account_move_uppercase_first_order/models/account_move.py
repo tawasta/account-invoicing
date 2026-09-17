@@ -3,17 +3,15 @@ from odoo import api, fields, models
 
 class AccountMove(models.Model):
     _inherit = "account.move"
-    _order = "name_starts_upper desc, name asc, id desc"
+    _order = "name_sort asc, id desc"
 
-    # Tähän tallennettu flagi: True, jos nimi alkaa isolla kirjaimella.
-    name_starts_upper = fields.Boolean(
-        compute="_compute_name_starts_upper",
+    name_sort = fields.Char(
+        compute="_compute_name_sort",
         store=True,
         index=True,
     )
 
     @api.depends("name")
-    def _compute_name_starts_upper(self):
+    def _compute_name_sort(self):
         for rec in self:
-            n = (rec.name or "").strip()
-            rec.name_starts_upper = bool(n and n[:1].isalpha() and n[:1].isupper())
+            rec.name_sort = (rec.name or "").lower()
