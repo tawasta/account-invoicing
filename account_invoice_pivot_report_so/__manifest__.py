@@ -21,7 +21,7 @@
 {
     "name": "Account Invoice Pivot Report - Sale Order Field",
     "summary": "Adds Sale Order to Invoice Analysis pivot view",
-    "version": "19.0.1.0.0",
+    "version": "19.0.1.0.1",
     "category": "Reporting",
     "website": "https://github.com/tawasta/account-invoicing",
     "author": "Futural",
