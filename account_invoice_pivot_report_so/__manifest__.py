@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Author: Futural Oy
+#    Copyright 2020- Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "Account Invoice Pivot Report - SO",
-    "summary": "Account Invoice Pivot Report - SO",
+    "name": "Account Invoice Pivot Report - Sale Order Field",
+    "summary": "Adds Sale Order to Invoice Analysis pivot view",
     "version": "19.0.1.0.0",
     "category": "Reporting",
     "website": "https://github.com/tawasta/account-invoicing",

@@ -28,12 +28,13 @@ Contributors
 
 * Timo Kekäläinen <timo.kekalainen@tawasta.fi>
 * Joona Isoaho <joona.isoaho@futural.fi>
+* Timo Talvitie <timo.talvitie@futural.fi>
 
 Maintainer
 ----------
 
-.. image:: http://tawasta.fi/templates/tawastrap/images/logo.png
+.. image:: http://futural.fi/templates/tawastrap/images/logo.png
    :alt: Futural Oy
-   :target: http://tawasta.fi/
+   :target: http://futural.fi/
 
 This module is maintained by Futural Oy

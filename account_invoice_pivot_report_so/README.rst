@@ -2,15 +2,15 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-=================================
-Account Invoice Pivot Report - SO
-=================================
+===============================================
+Account Invoice Pivot Report - Sale Order Field
+===============================================
 
-* Account Invoice Pivot Report - SO
+* Adds Sale Order to Invoice Analysis pivot view
 
 Configuration
 =============
-\-
+* No needed
 
 Usage
 =====
@@ -28,12 +28,13 @@ Contributors
 
 * Valtteri Lattu <valtteri.lattu@tawasta.fi>
 * Joona Isoaho <joona.isoaho@futural.fi>
+* Timo Talvitie <timo.talvitie@futural.fi>
 
 Maintainer
 ----------
 
-.. image:: http://tawasta.fi/templates/tawastrap/images/logo.png
-   :alt: Oy Tawasta OS Technologies Ltd.
-   :target: http://tawasta.fi/
+.. image:: http://futural.fi/templates/tawastrap/images/logo.png
+   :alt: Futural Oy
+   :target: http://futural.fi/
 
-This module is maintained by Oy Tawasta OS Technologies Ltd.
+This module is maintained by Futural Oy
