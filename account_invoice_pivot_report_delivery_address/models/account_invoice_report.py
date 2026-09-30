@@ -1,13 +1,20 @@
-from odoo import fields, models
+from odoo import api, fields, models
+from odoo.tools import SQL
 
 
 class AccountInvoiceReport(models.Model):
     _inherit = "account.invoice.report"
 
-    partner_shipping_id = fields.Many2one("res.partner", string="Delivery Address")
+    partner_shipping_id = fields.Many2one(
+        "res.partner", string="Delivery Address", readonly=True
+    )
 
-    def _sub_select(self):
-        return super()._sub_select() + ", ai.partner_shipping_id as partner_shipping_id"
+    _depends = {
+        "account.move": ["partner_shipping_id"],
+    }
 
-    def _select(self):
-        return super()._select() + ", move.partner_shipping_id as partner_shipping_id"
+    @api.model
+    def _select(self) -> SQL:
+        return SQL(
+            "%s, move.partner_shipping_id AS partner_shipping_id", super()._select()
+        )

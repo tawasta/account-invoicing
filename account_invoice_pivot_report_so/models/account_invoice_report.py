@@ -1,15 +1,16 @@
-from odoo import fields, models
+from odoo import api, fields, models
+from odoo.tools import SQL
 
 
 class AccountInvoiceReport(models.Model):
     _inherit = "account.invoice.report"
 
-    sale_id = fields.Many2one("sale.order", readonly=True, string="SO-number")
+    sale_id = fields.Many2one("sale.order", readonly=True, string="Sale Order Number")
 
-    def _from(self):
-        return (
-            super()._from()
-            + """
+    @api.model
+    def _from(self) -> SQL:
+        return SQL(
+            """%s
            LEFT JOIN sale_order order_sale ON
                 order_sale.id =
                 (SELECT DISTINCT so.id
@@ -22,8 +23,10 @@ class AccountInvoiceReport(models.Model):
                 WHERE
                     am.move_type in ('out_invoice', 'out_refund') AND
                     am.id = move.id)
-            """
+            """,
+            super()._from(),
         )
 
-    def _select(self):
-        return super()._select() + ", order_sale.id as sale_id"
+    @api.model
+    def _select(self) -> SQL:
+        return SQL("%s, order_sale.id AS sale_id", super()._select())
