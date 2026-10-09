@@ -9,20 +9,16 @@ class AccountInvoiceReport(models.Model):
 
     @api.model
     def _from(self) -> SQL:
+        # The sale order is taken per invoice line: one invoice can contain lines
+        # of several sale orders. MIN keeps one order if a line has several.
         return SQL(
             """%s
-           LEFT JOIN sale_order order_sale ON
-                order_sale.id =
-                (SELECT DISTINCT so.id
-                    FROM sale_order so
-                    JOIN sale_order_line sol ON sol.order_id = so.id
-                    JOIN sale_order_line_invoice_rel soli_rel
-                    ON soli_rel.order_line_id = sol.id
-                    JOIN account_move_line aml ON aml.id = soli_rel.invoice_line_id
-                    JOIN account_move am ON am.id = aml.move_id
-                WHERE
-                    am.move_type in ('out_invoice', 'out_refund') AND
-                    am.id = move.id)
+            LEFT JOIN LATERAL (
+                SELECT MIN(sol.order_id) AS id
+                FROM sale_order_line_invoice_rel soli_rel
+                JOIN sale_order_line sol ON sol.id = soli_rel.order_line_id
+                WHERE soli_rel.invoice_line_id = line.id
+            ) order_sale ON TRUE
             """,
             super()._from(),
         )
