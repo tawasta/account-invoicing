@@ -20,6 +20,7 @@ addon | version | maintainers | summary
 [account_account_region_type](account_account_region_type/) | 17.0.1.0.1 |  | Set region type for an account
 [account_bank_statement_manual](account_bank_statement_manual/) | 17.0.1.0.0 |  | Allows inputting bank statement information manually
 [account_bank_statement_reconciled_color](account_bank_statement_reconciled_color/) | 17.0.1.0.1 |  | Show unreconciled bank statements in different color
+[account_credit_control_cron](account_credit_control_cron/) | 17.0.1.0.0 |  | Automate the daily credit control run (reminders to customers)
 [account_credit_control_sales_contact](account_credit_control_sales_contact/) | 17.0.1.0.0 |  | Account credit control sales contact
 [account_financial_report_amount_currency_error_fix](account_financial_report_amount_currency_error_fix/) | 17.0.1.0.0 |  | Fix for the amount_currency error for financial reports
 [account_financial_report_partner_ref](account_financial_report_partner_ref/) | 17.0.1.0.0 |  | A ref number of a partner is added to General Ledger report
@@ -37,7 +38,7 @@ addon | version | maintainers | summary
 [account_invoice_credit_note_header_text_and_date_delivered](account_invoice_credit_note_header_text_and_date_delivered/) | 17.0.1.0.0 |  | Copy Header and Date Delivered fields to a created Credit Note
 [account_invoice_default_parent](account_invoice_default_parent/) | 17.0.1.0.0 |  | Default parent for new shipping addresses
 [account_invoice_default_payment_term](account_invoice_default_payment_term/) | 17.0.1.0.0 |  | Set a default payment term for invoices if a partner does not have one
-[account_invoice_delivery_date_group](account_invoice_delivery_date_group/) | 17.0.1.1.0 |  | Some users can be added to a group to edit Delivery date
+[account_invoice_delivery_date_group](account_invoice_delivery_date_group/) | 17.0.1.1.1 |  | Some users can be added to a group to edit Delivery date
 [account_invoice_delivery_date_tracking](account_invoice_delivery_date_tracking/) | 17.0.1.0.0 |  | Track Delivery Date changes on invoices
 [account_invoice_description](account_invoice_description/) | 17.0.1.0.0 |  | Invoice internal note, that is not shown to partners
 [account_invoice_disable_auto_narration](account_invoice_disable_auto_narration/) | 17.0.1.0.0 |  | Don't reload narration when changing partner on invoices
@@ -86,6 +87,7 @@ addon | version | maintainers | summary
 [account_tax_report](account_tax_report/) | 17.0.1.0.0 |  | Finnish VAT-summary report.
 [invoice_merge_keep_ref](invoice_merge_keep_ref/) | 17.0.1.0.0 |  | Adds an option to preserve the 'ref' field when merging invoices
 [payment_link_paytrail_restriction](payment_link_paytrail_restriction/) | 17.0.1.0.1 |  | Payment link paytrail restriction
+[product_restrict_payment_acquirer_strict](product_restrict_payment_acquirer_strict/) | 17.0.1.0.0 |  | Adds a new strict mode that offers only payment providers allowed by every product in the order
 [res_partner_bank_auto_allow_out_payment](res_partner_bank_auto_allow_out_payment/) | 17.0.1.0.0 |  | Automatically allows bank accounts and makes them trusted
 
 [//]: # (end addons)
