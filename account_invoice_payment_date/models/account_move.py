@@ -1,4 +1,4 @@
-from odoo import fields, models
+from odoo import api, fields, models
 
 
 class AccountMove(models.Model):
@@ -11,11 +11,14 @@ class AccountMove(models.Model):
         store=True,
     )
 
-    def write(self, vals):
-        res = super().write(vals)
-        if "payment_state" in vals and vals["payment_state"] == "paid":
-            self._compute_payment_date()
+    @api.depends("amount_residual", "move_type", "state", "company_id")
+    def _compute_payment_state(self):
+        res = super()._compute_payment_state()
 
+        for move in self:
+            move._compute_payment_date()
+
+        # This function does not really return anything (usually)
         return res
 
     def _compute_payment_date(self):
@@ -25,6 +28,7 @@ class AccountMove(models.Model):
                 continue
 
             reconciled_payments = record._get_reconciled_payments()
+            reconciled_partial_payments = record._get_reconciled_invoices_partials()
 
             if reconciled_payments:
                 # Invoice has related payments
@@ -32,7 +36,7 @@ class AccountMove(models.Model):
                     record.payment_date = max(reconciled_payments.mapped("date"))
                 else:
                     record.payment_date = False
-            else:
+            elif reconciled_partial_payments:
                 # Invoice has no related payments,
                 # but has been marked as paid with an accounting entry
                 payment_date = False
@@ -40,11 +44,13 @@ class AccountMove(models.Model):
                     _partial,
                     _amount,
                     counterpart_line,
-                ) in record._get_reconciled_invoices_partials():
+                ) in reconciled_partial_payments[0]:
                     if not payment_date or counterpart_line.date > payment_date:
                         payment_date = counterpart_line.date
 
                 record.payment_date = payment_date
+            else:
+                record.payment_date = record.payment_date or False
 
     def _cron_compute_payment_date(self):
         records = self.search(
