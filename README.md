@@ -18,6 +18,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [account_account_region_type](account_account_region_type/) | 17.0.1.0.1 |  | Set region type for an account
+[account_bank_statement_line_readonly_view](account_bank_statement_line_readonly_view/) | 17.0.1.0.0 |  | Adds a readonly view for accounting users
 [account_bank_statement_manual](account_bank_statement_manual/) | 17.0.1.0.0 |  | Allows inputting bank statement information manually
 [account_bank_statement_reconciled_color](account_bank_statement_reconciled_color/) | 17.0.1.0.1 |  | Show unreconciled bank statements in different color
 [account_credit_control_cron](account_credit_control_cron/) | 17.0.1.0.0 |  | Automate the daily credit control run (reminders to customers)
@@ -55,6 +56,7 @@ addon | version | maintainers | summary
 [account_invoice_link_purchase_order](account_invoice_link_purchase_order/) | 17.0.1.2.0 |  | Link purchase orders to existing invoices
 [account_invoice_mandatory_payment_term](account_invoice_mandatory_payment_term/) | 17.0.1.0.0 |  | Set invoice payment term as mandatory
 [account_invoice_mass_post_with_loop](account_invoice_mass_post_with_loop/) | 17.0.1.0.0 |  | Small change to mass posting to loop through invoices
+[account_invoice_mass_sending_hide_duplicate_button](account_invoice_mass_sending_hide_duplicate_button/) | 17.0.1.0.0 |  | Hide duplicate sending button when OCA's mass sending module is installed
 [account_invoice_merge_current_date_as_default](account_invoice_merge_current_date_as_default/) | 17.0.1.0.0 |  | Suggest current date as the date of the merged invoice
 [account_invoice_merge_different_users](account_invoice_merge_different_users/) | 17.0.1.0.0 |  | Allow merging invoices with different users
 [account_invoice_merge_keep_ref](account_invoice_merge_keep_ref/) | 17.0.1.0.0 |  | Customer references are added to a merged invoice from invoices
