@@ -18,6 +18,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [account_account_region_type](account_account_region_type/) | 17.0.1.0.1 |  | Set region type for an account
+[account_bank_statement_line_readonly_view](account_bank_statement_line_readonly_view/) | 17.0.1.0.0 |  | Adds a readonly view for accounting users
 [account_bank_statement_manual](account_bank_statement_manual/) | 17.0.1.0.0 |  | Allows inputting bank statement information manually
 [account_bank_statement_reconciled_color](account_bank_statement_reconciled_color/) | 17.0.1.0.1 |  | Show unreconciled bank statements in different color
 [account_credit_control_cron](account_credit_control_cron/) | 17.0.1.0.0 |  | Automate the daily credit control run (reminders to customers)
