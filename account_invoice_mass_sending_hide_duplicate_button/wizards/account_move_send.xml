@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+  <record id="account_invoice_send_wizard_core_form_inherit" model="ir.ui.view">
+    <field name="model">account.move.send</field>
+    <field name="inherit_id" ref="account.account_move_send_form" />
+    <field name="arch" type="xml">
+
+      <!-- Hide core Send & Print button if multiple invoices have been selected
+        and they are sent by email, i.e. the job queue button is shown -->
+      <xpath expr="//button[@name='action_send_and_print']" position="attributes">
+        <attribute
+                    name="invisible"
+                >mode == 'invoice_multi' and checkbox_send_mail and mail_template_id</attribute>
+      </xpath>
+
+    </field>
+  </record>
+
+  <record id="account_invoice_send_wizard_oca_form_inherit" model="ir.ui.view">
+    <field name="model">account.move.send</field>
+    <field
+            name="inherit_id"
+            ref="account_invoice_mass_sending.account_move_send_wizard_form"
+        />
+    <field name="arch" type="xml">
+
+      <!-- Hide OCA mass sending button if multiple invoices have NOT been selected  -->
+      <xpath expr="//button[@name='enqueue_invoices']" position="attributes">
+        <attribute name="string">Send (via Job Queue)</attribute>
+        <attribute
+                    name="invisible"
+                >not checkbox_send_mail or not mail_template_id or mode != 'invoice_multi'</attribute>
+      </xpath>
+
+    </field>
+  </record>
+</odoo>
