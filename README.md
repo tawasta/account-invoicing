@@ -18,8 +18,10 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [account_account_region_type](account_account_region_type/) | 17.0.1.0.1 |  | Set region type for an account
+[account_bank_statement_line_readonly_view](account_bank_statement_line_readonly_view/) | 17.0.1.0.0 |  | Adds a readonly view for accounting users
 [account_bank_statement_manual](account_bank_statement_manual/) | 17.0.1.0.0 |  | Allows inputting bank statement information manually
 [account_bank_statement_reconciled_color](account_bank_statement_reconciled_color/) | 17.0.1.0.1 |  | Show unreconciled bank statements in different color
+[account_credit_control_cron](account_credit_control_cron/) | 17.0.1.0.0 |  | Automate the daily credit control run (reminders to customers)
 [account_credit_control_sales_contact](account_credit_control_sales_contact/) | 17.0.1.0.0 |  | Account credit control sales contact
 [account_financial_report_amount_currency_error_fix](account_financial_report_amount_currency_error_fix/) | 17.0.1.0.0 |  | Fix for the amount_currency error for financial reports
 [account_financial_report_partner_ref](account_financial_report_partner_ref/) | 17.0.1.0.0 |  | A ref number of a partner is added to General Ledger report
@@ -54,6 +56,7 @@ addon | version | maintainers | summary
 [account_invoice_link_purchase_order](account_invoice_link_purchase_order/) | 17.0.1.2.0 |  | Link purchase orders to existing invoices
 [account_invoice_mandatory_payment_term](account_invoice_mandatory_payment_term/) | 17.0.1.0.0 |  | Set invoice payment term as mandatory
 [account_invoice_mass_post_with_loop](account_invoice_mass_post_with_loop/) | 17.0.1.0.0 |  | Small change to mass posting to loop through invoices
+[account_invoice_mass_sending_hide_duplicate_button](account_invoice_mass_sending_hide_duplicate_button/) | 17.0.1.0.0 |  | Hide duplicate sending button when OCA's mass sending module is installed
 [account_invoice_merge_current_date_as_default](account_invoice_merge_current_date_as_default/) | 17.0.1.0.0 |  | Suggest current date as the date of the merged invoice
 [account_invoice_merge_different_users](account_invoice_merge_different_users/) | 17.0.1.0.0 |  | Allow merging invoices with different users
 [account_invoice_merge_keep_ref](account_invoice_merge_keep_ref/) | 17.0.1.0.0 |  | Customer references are added to a merged invoice from invoices
@@ -63,6 +66,7 @@ addon | version | maintainers | summary
 [account_invoice_overdue_interest](account_invoice_overdue_interest/) | 17.0.1.0.2 |  | Overdue interest % field for invoices and partners
 [account_invoice_partner_income_expense_account](account_invoice_partner_income_expense_account/) | 17.0.1.0.0 |  | Account Invoice: Partner-specific income and expense accounts
 [account_invoice_partner_warning_text](account_invoice_partner_warning_text/) | 17.0.1.0.0 |  | Adds Partner warning text to invoice
+[account_invoice_payment_date](account_invoice_payment_date/) | 17.0.1.0.0 |  | Save the date when invoice was fully paid
 [account_invoice_pivot_report_delivery_address](account_invoice_pivot_report_delivery_address/) | 17.0.1.0.1 |  | Group pivot report by delivery address
 [account_invoice_pivot_report_delivery_address_country](account_invoice_pivot_report_delivery_address_country/) | 17.0.1.0.1 |  | Group pivot report by delivery address country
 [account_invoice_pivot_report_product_template](account_invoice_pivot_report_product_template/) | 17.0.1.0.1 |  | Group pivot report by Product Template
@@ -74,6 +78,7 @@ addon | version | maintainers | summary
 [account_invoice_stock_picking_downpayment](account_invoice_stock_picking_downpayment/) | 17.0.1.1.1 |  | Prevent validating pickings with open down payments
 [account_invoice_vendor_invoice_purchase_representative](account_invoice_vendor_invoice_purchase_representative/) | 17.0.1.0.0 |  | Purchase Representative of Vendor Bill
 [account_invoice_vendor_invoice_to_sale](account_invoice_vendor_invoice_to_sale/) | 17.0.1.0.0 |  | Adds a wizards for creating a SO from vendor invoice
+[account_invoice_warn_on_multiple_variant_company](account_invoice_warn_on_multiple_variant_company/) | 17.0.1.0.0 |  | Show a warning on invoice form if invoice lines contain more than one variant company
 [account_lock_date_update_group](account_lock_date_update_group/) | 17.0.1.0.0 |  | This module adds a group for locking account move dates
 [account_move_line_delete_multiple](account_move_line_delete_multiple/) | 17.0.1.0.0 |  | Vendor Bills: Delete lines with checkboxes
 [account_move_payment_link](account_move_payment_link/) | 17.0.1.0.4 |  | Autogenerates a payment link that can embedded into an email template
@@ -86,6 +91,7 @@ addon | version | maintainers | summary
 [account_tax_report](account_tax_report/) | 17.0.1.0.0 |  | Finnish VAT-summary report.
 [invoice_merge_keep_ref](invoice_merge_keep_ref/) | 17.0.1.0.0 |  | Adds an option to preserve the 'ref' field when merging invoices
 [payment_link_paytrail_restriction](payment_link_paytrail_restriction/) | 17.0.1.0.1 |  | Payment link paytrail restriction
+[product_restrict_payment_acquirer_strict](product_restrict_payment_acquirer_strict/) | 17.0.1.0.0 |  | Adds a new strict mode that offers only payment providers allowed by every product in the order
 [res_partner_bank_auto_allow_out_payment](res_partner_bank_auto_allow_out_payment/) | 17.0.1.0.0 |  | Automatically allows bank accounts and makes them trusted
 
 [//]: # (end addons)
